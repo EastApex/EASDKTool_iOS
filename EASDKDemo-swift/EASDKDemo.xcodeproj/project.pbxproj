@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		130262CC28F54BF800331F86 /* EAWatchFace.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 130262CB28F54BF800331F86 /* EAWatchFace.bundle */; };
+		137C4C1C289B917500DD28DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137C4C1B289B917500DD28DC /* AppDelegate.swift */; };
+		137C4C1E289B917500DD28DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137C4C1D289B917500DD28DC /* SceneDelegate.swift */; };
+		137C4C20289B917500DD28DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137C4C1F289B917500DD28DC /* ViewController.swift */; };
+		137C4C23289B917500DD28DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 137C4C21289B917500DD28DC /* Main.storyboard */; };
+		137C4C25289B917700DD28DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 137C4C24289B917700DD28DC /* Assets.xcassets */; };
+		137C4C28289B917700DD28DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 137C4C26289B917700DD28DC /* LaunchScreen.storyboard */; };
+		138DDF3F28C1CA2B000D48F1 /* 001012_U6.1.bin in Resources */ = {isa = PBXBuildFile; fileRef = 138DDF3E28C1CA2B000D48F1 /* 001012_U6.1.bin */; };
+		13F3C64828F151450005F25B /* EABluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F3C64728F151450005F25B /* EABluetooth.framework */; };
+		4D32652883D68AE433F7F739 /* Pods_EASDKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7B7B216959EA38E55ABEBA /* Pods_EASDKDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1341469E28C9D63100216576 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		130262CB28F54BF800331F86 /* EAWatchFace.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = EAWatchFace.bundle; path = ../../SDK_File/EAWatchFace.bundle; sourceTree = "<group>"; };
+		137C4C18289B917500DD28DC /* EASDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EASDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		137C4C1B289B917500DD28DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		137C4C1D289B917500DD28DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		137C4C1F289B917500DD28DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		137C4C22289B917500DD28DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		137C4C24289B917700DD28DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		137C4C27289B917700DD28DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		137C4C29289B917700DD28DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		138DDF3E28C1CA2B000D48F1 /* 001012_U6.1.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 001012_U6.1.bin; sourceTree = "<group>"; };
+		13F3C64728F151450005F25B /* EABluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EABluetooth.framework; path = EASDKDemo/EABluetooth.framework; sourceTree = "<group>"; };
+		7E7B7B216959EA38E55ABEBA /* Pods_EASDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EASDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1E2E0464A7DB631C96C412E /* Pods-EASDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EASDKDemo.debug.xcconfig"; path = "Target Support Files/Pods-EASDKDemo/Pods-EASDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		BD846100A9CFFC529E35E5CF /* Pods-EASDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EASDKDemo.release.xcconfig"; path = "Target Support Files/Pods-EASDKDemo/Pods-EASDKDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		137C4C15289B917500DD28DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D32652883D68AE433F7F739 /* Pods_EASDKDemo.framework in Frameworks */,
+				13F3C64828F151450005F25B /* EABluetooth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		137C4C0F289B917500DD28DC = {
+			isa = PBXGroup;
+			children = (
+				137C4C1A289B917500DD28DC /* EASDKDemo */,
+				137C4C19289B917500DD28DC /* Products */,
+				A6F22B5041D9DD0F6F0F1EC7 /* Pods */,
+				F4EE9EFAFE4042BCEB410875 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		137C4C19289B917500DD28DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				137C4C18289B917500DD28DC /* EASDKDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		137C4C1A289B917500DD28DC /* EASDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				137C4C1B289B917500DD28DC /* AppDelegate.swift */,
+				137C4C1D289B917500DD28DC /* SceneDelegate.swift */,
+				137C4C1F289B917500DD28DC /* ViewController.swift */,
+				138DDF3E28C1CA2B000D48F1 /* 001012_U6.1.bin */,
+				130262CB28F54BF800331F86 /* EAWatchFace.bundle */,
+				137C4C21289B917500DD28DC /* Main.storyboard */,
+				137C4C24289B917700DD28DC /* Assets.xcassets */,
+				137C4C26289B917700DD28DC /* LaunchScreen.storyboard */,
+				137C4C29289B917700DD28DC /* Info.plist */,
+			);
+			path = EASDKDemo;
+			sourceTree = "<group>";
+		};
+		A6F22B5041D9DD0F6F0F1EC7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1E2E0464A7DB631C96C412E /* Pods-EASDKDemo.debug.xcconfig */,
+				BD846100A9CFFC529E35E5CF /* Pods-EASDKDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F4EE9EFAFE4042BCEB410875 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13F3C64728F151450005F25B /* EABluetooth.framework */,
+				7E7B7B216959EA38E55ABEBA /* Pods_EASDKDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		137C4C17289B917500DD28DC /* EASDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 137C4C2C289B917700DD28DC /* Build configuration list for PBXNativeTarget "EASDKDemo" */;
+			buildPhases = (
+				F0BD05BCAF0F810348B12825 /* [CP] Check Pods Manifest.lock */,
+				137C4C14289B917500DD28DC /* Sources */,
+				137C4C15289B917500DD28DC /* Frameworks */,
+				137C4C16289B917500DD28DC /* Resources */,
+				FECDB405DBD0643AB8D9A452 /* [CP] Embed Pods Frameworks */,
+				1341469E28C9D63100216576 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EASDKDemo;
+			productName = EASDKDemo;
+			productReference = 137C4C18289B917500DD28DC /* EASDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		137C4C10289B917500DD28DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					137C4C17289B917500DD28DC = {
+						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
+					};
+				};
+			};
+			buildConfigurationList = 137C4C13289B917500DD28DC /* Build configuration list for PBXProject "EASDKDemo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 137C4C0F289B917500DD28DC;
+			productRefGroup = 137C4C19289B917500DD28DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				137C4C17289B917500DD28DC /* EASDKDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		137C4C16289B917500DD28DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				137C4C28289B917700DD28DC /* LaunchScreen.storyboard in Resources */,
+				130262CC28F54BF800331F86 /* EAWatchFace.bundle in Resources */,
+				137C4C25289B917700DD28DC /* Assets.xcassets in Resources */,
+				137C4C23289B917500DD28DC /* Main.storyboard in Resources */,
+				138DDF3F28C1CA2B000D48F1 /* 001012_U6.1.bin in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F0BD05BCAF0F810348B12825 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EASDKDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FECDB405DBD0643AB8D9A452 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EASDKDemo/Pods-EASDKDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EASDKDemo/Pods-EASDKDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EASDKDemo/Pods-EASDKDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		137C4C14289B917500DD28DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				137C4C20289B917500DD28DC /* ViewController.swift in Sources */,
+				137C4C1C289B917500DD28DC /* AppDelegate.swift in Sources */,
+				137C4C1E289B917500DD28DC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		137C4C21289B917500DD28DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				137C4C22289B917500DD28DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		137C4C26289B917700DD28DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				137C4C27289B917700DD28DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		137C4C2A289B917700DD28DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		137C4C2B289B917700DD28DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		137C4C2D289B917700DD28DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1E2E0464A7DB631C96C412E /* Pods-EASDKDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q37WQFYX4X;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EASDKDemo",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EASDKDemo/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "App需要您的蓝牙服务，用于连接蓝牙设备。";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "App需要您的蓝牙服务，用于连接蓝牙设备。";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eastapex.EASDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EASDKDemo/EASDKDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		137C4C2E289B917700DD28DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD846100A9CFFC529E35E5CF /* Pods-EASDKDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q37WQFYX4X;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EASDKDemo",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EASDKDemo/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "App需要您的蓝牙服务，用于连接蓝牙设备。";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "App需要您的蓝牙服务，用于连接蓝牙设备。";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eastapex.EASDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EASDKDemo/EASDKDemo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		137C4C13289B917500DD28DC /* Build configuration list for PBXProject "EASDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				137C4C2A289B917700DD28DC /* Debug */,
+				137C4C2B289B917700DD28DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		137C4C2C289B917700DD28DC /* Build configuration list for PBXNativeTarget "EASDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				137C4C2D289B917700DD28DC /* Debug */,
+				137C4C2E289B917700DD28DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 137C4C10289B917500DD28DC /* Project object */;
+}

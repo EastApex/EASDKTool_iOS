@@ -1,0 +1,6 @@
+framework module EABluetooth {
+  umbrella header "EABluetooth.h"
+
+  export *
+  module * { export * }
+}

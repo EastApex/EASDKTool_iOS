@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WatchFacesViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYN-6m-VyG">
+                    <rect key="frame" x="12" y="114" width="39.5" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="1"/>
+                    <connections>
+                        <action selector="setWatchFacesAction:" destination="-1" eventType="touchUpInside" id="kGY-Gq-ziT"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="系统内置表盘（内置10个表盘，序号1~10）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAf-Hz-HXC">
+                    <rect key="frame" x="12" y="80" width="352" height="22"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自定义表盘(手表只支持4个自定义表盘)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1L-Jp-ie6">
+                    <rect key="frame" x="12" y="222" width="319" height="22"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lw3-fw-9eK">
+                    <rect key="frame" x="63.5" y="114" width="39.5" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="2"/>
+                    <connections>
+                        <action selector="setWatchFacesAction:" destination="-1" eventType="touchUpInside" id="0gQ-Ob-WIZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utQ-1t-hen">
+                    <rect key="frame" x="115" y="114" width="39.5" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="3"/>
+                    <connections>
+                        <action selector="setWatchFacesAction:" destination="-1" eventType="touchUpInside" id="Ql4-3H-xjv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txr-QP-4Gy">
+                    <rect key="frame" x="166.5" y="114" width="39.5" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="4"/>
+                    <connections>
+                        <action selector="setWatchFacesAction:" destination="-1" eventType="touchUpInside" id="eQJ-M0-Jpe"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8Z-ds-VAf">
+                    <rect key="frame" x="218" y="114" width="39.5" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="5"/>
+                    <connections>
+                        <action selector="setWatchFacesAction:" destination="-1" eventType="touchUpInside" id="Gag-k2-l2Y"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pye-uH-Cud">
+                    <rect key="frame" x="12" y="155" width="39.5" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="6"/>
+                    <connections>
+                        <action selector="setWatchFacesAction:" destination="-1" eventType="touchUpInside" id="gSi-iX-nhR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npi-ly-uhC">
+                    <rect key="frame" x="63.5" y="155" width="39.5" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="7"/>
+                    <connections>
+                        <action selector="setWatchFacesAction:" destination="-1" eventType="touchUpInside" id="Ppy-Uj-CBk"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4p-7I-v76">
+                    <rect key="frame" x="115" y="155" width="39.5" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="8"/>
+                    <connections>
+                        <action selector="setWatchFacesAction:" destination="-1" eventType="touchUpInside" id="i20-kx-Tto"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNr-2C-cba">
+                    <rect key="frame" x="166.5" y="155" width="39.5" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="9"/>
+                    <connections>
+                        <action selector="setWatchFacesAction:" destination="-1" eventType="touchUpInside" id="Xwx-FF-SS9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSJ-Qx-2P3">
+                    <rect key="frame" x="218" y="155" width="39.5" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="10"/>
+                    <connections>
+                        <action selector="setWatchFacesAction:" destination="-1" eventType="touchUpInside" id="vyw-aj-CKU"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ig6-7R-1KY">
+                    <rect key="frame" x="12" y="256" width="124" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="同步自定义表盘"/>
+                    <connections>
+                        <action selector="setCustomWatchFacesAction:" destination="-1" eventType="touchUpInside" id="uHH-h5-KNn"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Txr-QP-4Gy" firstAttribute="centerY" secondItem="lw3-fw-9eK" secondAttribute="centerY" id="1Fr-U8-n6e"/>
+                <constraint firstItem="K8Z-ds-VAf" firstAttribute="width" secondItem="kYN-6m-VyG" secondAttribute="width" id="9Pd-p2-nRv"/>
+                <constraint firstItem="xNr-2C-cba" firstAttribute="centerY" secondItem="npi-ly-uhC" secondAttribute="centerY" id="Bj6-oE-H1Y"/>
+                <constraint firstItem="j1L-Jp-ie6" firstAttribute="leading" secondItem="RAf-Hz-HXC" secondAttribute="leading" id="CJM-Wc-Rau"/>
+                <constraint firstItem="k4p-7I-v76" firstAttribute="centerY" secondItem="npi-ly-uhC" secondAttribute="centerY" id="Lcc-f9-ppm"/>
+                <constraint firstItem="RAf-Hz-HXC" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="12" id="OSP-oc-9Gz"/>
+                <constraint firstItem="npi-ly-uhC" firstAttribute="leading" secondItem="Pye-uH-Cud" secondAttribute="trailing" constant="12" id="PA8-57-5Vz"/>
+                <constraint firstItem="ig6-7R-1KY" firstAttribute="leading" secondItem="j1L-Jp-ie6" secondAttribute="leading" id="PKU-PK-FOd"/>
+                <constraint firstItem="lw3-fw-9eK" firstAttribute="width" secondItem="kYN-6m-VyG" secondAttribute="width" id="TCB-wI-0xc"/>
+                <constraint firstItem="Pye-uH-Cud" firstAttribute="width" secondItem="kYN-6m-VyG" secondAttribute="width" id="VD7-FA-jr0"/>
+                <constraint firstItem="lw3-fw-9eK" firstAttribute="centerY" secondItem="kYN-6m-VyG" secondAttribute="centerY" id="WR0-TR-zTo"/>
+                <constraint firstItem="rSJ-Qx-2P3" firstAttribute="width" secondItem="kYN-6m-VyG" secondAttribute="width" id="YT2-lI-p1i"/>
+                <constraint firstItem="Txr-QP-4Gy" firstAttribute="width" secondItem="kYN-6m-VyG" secondAttribute="width" id="bM2-oo-dlG"/>
+                <constraint firstItem="kYN-6m-VyG" firstAttribute="leading" secondItem="RAf-Hz-HXC" secondAttribute="leading" id="bWU-In-079"/>
+                <constraint firstItem="npi-ly-uhC" firstAttribute="centerY" secondItem="Pye-uH-Cud" secondAttribute="centerY" id="dj3-dY-IhQ"/>
+                <constraint firstItem="j1L-Jp-ie6" firstAttribute="top" secondItem="Pye-uH-Cud" secondAttribute="bottom" constant="36" id="eRk-gC-wlI"/>
+                <constraint firstItem="k4p-7I-v76" firstAttribute="leading" secondItem="npi-ly-uhC" secondAttribute="trailing" constant="12" id="fi7-Mk-lii"/>
+                <constraint firstItem="xNr-2C-cba" firstAttribute="leading" secondItem="k4p-7I-v76" secondAttribute="trailing" constant="12" id="gVr-wr-kpY"/>
+                <constraint firstItem="utQ-1t-hen" firstAttribute="leading" secondItem="lw3-fw-9eK" secondAttribute="trailing" constant="12" id="h1f-yd-oUx"/>
+                <constraint firstItem="Txr-QP-4Gy" firstAttribute="leading" secondItem="utQ-1t-hen" secondAttribute="trailing" constant="12" id="iE7-O7-0iS"/>
+                <constraint firstItem="rSJ-Qx-2P3" firstAttribute="leading" secondItem="xNr-2C-cba" secondAttribute="trailing" constant="12" id="jhG-aB-UNu"/>
+                <constraint firstItem="rSJ-Qx-2P3" firstAttribute="centerY" secondItem="npi-ly-uhC" secondAttribute="centerY" id="l9K-2p-bv9"/>
+                <constraint firstItem="Pye-uH-Cud" firstAttribute="top" secondItem="kYN-6m-VyG" secondAttribute="bottom" constant="10" id="lEw-ua-2Da"/>
+                <constraint firstItem="npi-ly-uhC" firstAttribute="width" secondItem="kYN-6m-VyG" secondAttribute="width" id="n8x-1m-6CF"/>
+                <constraint firstItem="RAf-Hz-HXC" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="36" id="nWR-S4-Xjh"/>
+                <constraint firstItem="k4p-7I-v76" firstAttribute="width" secondItem="kYN-6m-VyG" secondAttribute="width" id="oIT-aW-zee"/>
+                <constraint firstItem="ig6-7R-1KY" firstAttribute="top" secondItem="j1L-Jp-ie6" secondAttribute="bottom" constant="12" id="qj9-5U-92K"/>
+                <constraint firstItem="Pye-uH-Cud" firstAttribute="leading" secondItem="kYN-6m-VyG" secondAttribute="leading" id="sGV-va-ITX"/>
+                <constraint firstItem="lw3-fw-9eK" firstAttribute="leading" secondItem="kYN-6m-VyG" secondAttribute="trailing" constant="12" id="shH-Ru-DyT"/>
+                <constraint firstItem="utQ-1t-hen" firstAttribute="centerY" secondItem="lw3-fw-9eK" secondAttribute="centerY" id="sza-bE-WXP"/>
+                <constraint firstItem="utQ-1t-hen" firstAttribute="width" secondItem="kYN-6m-VyG" secondAttribute="width" id="tXm-Py-D6B"/>
+                <constraint firstItem="K8Z-ds-VAf" firstAttribute="leading" secondItem="Txr-QP-4Gy" secondAttribute="trailing" constant="12" id="uJN-bB-KKA"/>
+                <constraint firstItem="kYN-6m-VyG" firstAttribute="top" secondItem="RAf-Hz-HXC" secondAttribute="bottom" constant="12" id="utf-4a-9vk"/>
+                <constraint firstItem="K8Z-ds-VAf" firstAttribute="centerY" secondItem="lw3-fw-9eK" secondAttribute="centerY" id="xSh-dS-RHS"/>
+                <constraint firstItem="xNr-2C-cba" firstAttribute="width" secondItem="kYN-6m-VyG" secondAttribute="width" id="xvS-21-29U"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="109"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

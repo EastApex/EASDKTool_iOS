@@ -1,0 +1,34 @@
+[
+    {
+        "title":"个人信息",
+        "ctl":"UserInfoViewController"
+    },
+    {
+        "title":"同步时间",
+        "ctl":"SyncTimeViewController"
+    },
+    {
+        "title":"天气",
+        "ctl":"WeatherViewController"
+    },
+    {
+        "title":"经期数据设置",
+        "ctl":"MenstrualViewController"
+    },
+    {
+        "title":"表盘设置",
+        "ctl":"WatchFacesViewController"
+    },
+    {
+        "title":"获取大数据",
+        "ctl":"GitBigDataViewController"
+    },
+    {
+        "title":"手表操作手机",
+        "ctl":"OpsPhoneViewController"
+    },
+    {
+        "title":"OTA",
+        "ctl":"OTAViewController"
+    },
+]

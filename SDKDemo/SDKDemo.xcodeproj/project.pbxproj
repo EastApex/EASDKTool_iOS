@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		130262D028F54E7F00331F86 /* EAWatchFace.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 130262CF28F54E7F00331F86 /* EAWatchFace.bundle */; };
+		132A824A275DB3D600255741 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 132A8249275DB3D600255741 /* AppDelegate.m */; };
+		132A824D275DB3D600255741 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 132A824C275DB3D600255741 /* SceneDelegate.m */; };
+		132A8253275DB3D600255741 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 132A8251275DB3D600255741 /* Main.storyboard */; };
+		132A8255275DB3D800255741 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 132A8254275DB3D800255741 /* Assets.xcassets */; };
+		132A8258275DB3D800255741 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 132A8256275DB3D800255741 /* LaunchScreen.storyboard */; };
+		132A825B275DB3D800255741 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 132A825A275DB3D800255741 /* main.m */; };
+		13E36388275E1FF5001CC18A /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E36386275E1FF5001CC18A /* IndexViewController.m */; };
+		13E36389275E1FF5001CC18A /* IndexViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E36387275E1FF5001CC18A /* IndexViewController.xib */; };
+		13E3638C275E24F1001CC18A /* RadiusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E3638B275E24F1001CC18A /* RadiusView.m */; };
+		13E36391275EFC75001CC18A /* BluetoothFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E36390275EFC75001CC18A /* BluetoothFunc.m */; };
+		13E36398275F2A8A001CC18A /* DataInfoTypes.json in Resources */ = {isa = PBXBuildFile; fileRef = 13E36397275F2A8A001CC18A /* DataInfoTypes.json */; };
+		13E3639D275F3541001CC18A /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E3639B275F3541001CC18A /* UserInfoViewController.m */; };
+		13E3639E275F3541001CC18A /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E3639C275F3541001CC18A /* UserInfoViewController.xib */; };
+		13E363A1275F3E8E001CC18A /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E363A0275F3E8E001CC18A /* BaseViewController.m */; };
+		13E363A5275F5007001CC18A /* SyncTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E363A3275F5007001CC18A /* SyncTimeViewController.m */; };
+		13E363A6275F5007001CC18A /* SyncTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E363A4275F5007001CC18A /* SyncTimeViewController.xib */; };
+		13E363B4275F7B8A001CC18A /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E363B2275F7B8A001CC18A /* WeatherViewController.m */; };
+		13E363B5275F7B8A001CC18A /* WeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E363B3275F7B8A001CC18A /* WeatherViewController.xib */; };
+		13E363B7275F7D76001CC18A /* Weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 13E363B6275F7D76001CC18A /* Weather.json */; };
+		13E363C0275F8296001CC18A /* MenstrualViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E363BE275F8296001CC18A /* MenstrualViewController.m */; };
+		13E363C1275F8296001CC18A /* MenstrualViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E363BF275F8296001CC18A /* MenstrualViewController.xib */; };
+		13E363C527604CF5001CC18A /* WatchFacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E363C327604CF5001CC18A /* WatchFacesViewController.m */; };
+		13E363C627604CF5001CC18A /* WatchFacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E363C427604CF5001CC18A /* WatchFacesViewController.xib */; };
+		13E363C8276052FF001CC18A /* 86495739689050112.bin in Resources */ = {isa = PBXBuildFile; fileRef = 13E363C7276052FF001CC18A /* 86495739689050112.bin */; };
+		13E363CC27605827001CC18A /* GitBigDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E363CA27605827001CC18A /* GitBigDataViewController.m */; };
+		13E363CD27605827001CC18A /* GitBigDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E363CB27605827001CC18A /* GitBigDataViewController.xib */; };
+		13E363D1276065DE001CC18A /* OpsPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E363CF276065DE001CC18A /* OpsPhoneViewController.m */; };
+		13E363D2276065DE001CC18A /* OpsPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E363D0276065DE001CC18A /* OpsPhoneViewController.xib */; };
+		13E363D6276065FD001CC18A /* OTAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E363D4276065FD001CC18A /* OTAViewController.m */; };
+		13E363D7276065FD001CC18A /* OTAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E363D5276065FD001CC18A /* OTAViewController.xib */; };
+		13E363DB27609AD4001CC18A /* 0001001_R0.4.bin in Resources */ = {isa = PBXBuildFile; fileRef = 13E363D827609AD4001CC18A /* 0001001_R0.4.bin */; };
+		13E363DC27609AD4001CC18A /* 0001001_AP0.1B4.2.bin in Resources */ = {isa = PBXBuildFile; fileRef = 13E363D927609AD4001CC18A /* 0001001_AP0.1B4.2.bin */; };
+		13E363DD27609AD4001CC18A /* 0001001_R0.3.bin in Resources */ = {isa = PBXBuildFile; fileRef = 13E363DA27609AD4001CC18A /* 0001001_R0.3.bin */; };
+		13F3C64628F1511D0005F25B /* EABluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F3C64528F1511D0005F25B /* EABluetooth.framework */; };
+		DE2DC35DCF63B8A79EB3C399 /* Pods_SDKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BAD1F610E8D568D7395828 /* Pods_SDKDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		130262CF28F54E7F00331F86 /* EAWatchFace.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = EAWatchFace.bundle; path = ../../SDK_File/EAWatchFace.bundle; sourceTree = "<group>"; };
+		132A8245275DB3D600255741 /* SDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		132A8248275DB3D600255741 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		132A8249275DB3D600255741 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		132A824B275DB3D600255741 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		132A824C275DB3D600255741 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		132A8252275DB3D600255741 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		132A8254275DB3D800255741 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		132A8257275DB3D800255741 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		132A8259275DB3D800255741 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		132A825A275DB3D800255741 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		13E36385275E1FF5001CC18A /* IndexViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IndexViewController.h; sourceTree = "<group>"; };
+		13E36386275E1FF5001CC18A /* IndexViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IndexViewController.m; sourceTree = "<group>"; };
+		13E36387275E1FF5001CC18A /* IndexViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IndexViewController.xib; sourceTree = "<group>"; };
+		13E3638A275E24F1001CC18A /* RadiusView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadiusView.h; sourceTree = "<group>"; };
+		13E3638B275E24F1001CC18A /* RadiusView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadiusView.m; sourceTree = "<group>"; };
+		13E3638F275EFC75001CC18A /* BluetoothFunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluetoothFunc.h; sourceTree = "<group>"; };
+		13E36390275EFC75001CC18A /* BluetoothFunc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BluetoothFunc.m; sourceTree = "<group>"; };
+		13E36397275F2A8A001CC18A /* DataInfoTypes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DataInfoTypes.json; sourceTree = "<group>"; };
+		13E3639A275F3541001CC18A /* UserInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
+		13E3639B275F3541001CC18A /* UserInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
+		13E3639C275F3541001CC18A /* UserInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoViewController.xib; sourceTree = "<group>"; };
+		13E3639F275F3E8E001CC18A /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		13E363A0275F3E8E001CC18A /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		13E363A2275F5007001CC18A /* SyncTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SyncTimeViewController.h; sourceTree = "<group>"; };
+		13E363A3275F5007001CC18A /* SyncTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SyncTimeViewController.m; sourceTree = "<group>"; };
+		13E363A4275F5007001CC18A /* SyncTimeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SyncTimeViewController.xib; sourceTree = "<group>"; };
+		13E363B1275F7B8A001CC18A /* WeatherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
+		13E363B2275F7B8A001CC18A /* WeatherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
+		13E363B3275F7B8A001CC18A /* WeatherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherViewController.xib; sourceTree = "<group>"; };
+		13E363B6275F7D76001CC18A /* Weather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Weather.json; sourceTree = "<group>"; };
+		13E363BD275F8296001CC18A /* MenstrualViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenstrualViewController.h; sourceTree = "<group>"; };
+		13E363BE275F8296001CC18A /* MenstrualViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenstrualViewController.m; sourceTree = "<group>"; };
+		13E363BF275F8296001CC18A /* MenstrualViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenstrualViewController.xib; sourceTree = "<group>"; };
+		13E363C227604CF5001CC18A /* WatchFacesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WatchFacesViewController.h; sourceTree = "<group>"; };
+		13E363C327604CF5001CC18A /* WatchFacesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WatchFacesViewController.m; sourceTree = "<group>"; };
+		13E363C427604CF5001CC18A /* WatchFacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WatchFacesViewController.xib; sourceTree = "<group>"; };
+		13E363C7276052FF001CC18A /* 86495739689050112.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 86495739689050112.bin; sourceTree = "<group>"; };
+		13E363C927605827001CC18A /* GitBigDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GitBigDataViewController.h; sourceTree = "<group>"; };
+		13E363CA27605827001CC18A /* GitBigDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitBigDataViewController.m; sourceTree = "<group>"; };
+		13E363CB27605827001CC18A /* GitBigDataViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GitBigDataViewController.xib; sourceTree = "<group>"; };
+		13E363CE276065DE001CC18A /* OpsPhoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpsPhoneViewController.h; sourceTree = "<group>"; };
+		13E363CF276065DE001CC18A /* OpsPhoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpsPhoneViewController.m; sourceTree = "<group>"; };
+		13E363D0276065DE001CC18A /* OpsPhoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpsPhoneViewController.xib; sourceTree = "<group>"; };
+		13E363D3276065FD001CC18A /* OTAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTAViewController.h; sourceTree = "<group>"; };
+		13E363D4276065FD001CC18A /* OTAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTAViewController.m; sourceTree = "<group>"; };
+		13E363D5276065FD001CC18A /* OTAViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTAViewController.xib; sourceTree = "<group>"; };
+		13E363D827609AD4001CC18A /* 0001001_R0.4.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 0001001_R0.4.bin; sourceTree = "<group>"; };
+		13E363D927609AD4001CC18A /* 0001001_AP0.1B4.2.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 0001001_AP0.1B4.2.bin; sourceTree = "<group>"; };
+		13E363DA27609AD4001CC18A /* 0001001_R0.3.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 0001001_R0.3.bin; sourceTree = "<group>"; };
+		13F3C64528F1511D0005F25B /* EABluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EABluetooth.framework; sourceTree = "<group>"; };
+		53418515A5A920D5A564EC14 /* Pods-SDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKDemo.debug.xcconfig"; path = "Target Support Files/Pods-SDKDemo/Pods-SDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		5ADF6C43FF45789AC374F9F5 /* Pods-SDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKDemo.release.xcconfig"; path = "Target Support Files/Pods-SDKDemo/Pods-SDKDemo.release.xcconfig"; sourceTree = "<group>"; };
+		E5BAD1F610E8D568D7395828 /* Pods_SDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		132A8242275DB3D600255741 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE2DC35DCF63B8A79EB3C399 /* Pods_SDKDemo.framework in Frameworks */,
+				13F3C64628F1511D0005F25B /* EABluetooth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		132A823C275DB3D600255741 = {
+			isa = PBXGroup;
+			children = (
+				132A8247275DB3D600255741 /* SDKDemo */,
+				132A8246275DB3D600255741 /* Products */,
+				C0B398281AF45F6B05D2BB07 /* Pods */,
+				1902B0FC419E461BBF1687E2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		132A8246275DB3D600255741 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				132A8245275DB3D600255741 /* SDKDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		132A8247275DB3D600255741 /* SDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				132A8248275DB3D600255741 /* AppDelegate.h */,
+				132A8249275DB3D600255741 /* AppDelegate.m */,
+				132A824B275DB3D600255741 /* SceneDelegate.h */,
+				132A824C275DB3D600255741 /* SceneDelegate.m */,
+				13E3639F275F3E8E001CC18A /* BaseViewController.h */,
+				13E363A0275F3E8E001CC18A /* BaseViewController.m */,
+				13E3638E275EFC56001CC18A /* BluetoothFunc */,
+				13E3638D275EFC47001CC18A /* View */,
+				13E36399275F3510001CC18A /* Ctl */,
+				132A8251275DB3D600255741 /* Main.storyboard */,
+				132A8254275DB3D800255741 /* Assets.xcassets */,
+				132A8256275DB3D800255741 /* LaunchScreen.storyboard */,
+				132A8259275DB3D800255741 /* Info.plist */,
+				130262CF28F54E7F00331F86 /* EAWatchFace.bundle */,
+				132A825A275DB3D800255741 /* main.m */,
+				13E363C7276052FF001CC18A /* 86495739689050112.bin */,
+				13E363D927609AD4001CC18A /* 0001001_AP0.1B4.2.bin */,
+				13E363DA27609AD4001CC18A /* 0001001_R0.3.bin */,
+				13E363D827609AD4001CC18A /* 0001001_R0.4.bin */,
+				13E36397275F2A8A001CC18A /* DataInfoTypes.json */,
+				13E363B6275F7D76001CC18A /* Weather.json */,
+				13F3C64528F1511D0005F25B /* EABluetooth.framework */,
+			);
+			path = SDKDemo;
+			sourceTree = "<group>";
+		};
+		13E3638D275EFC47001CC18A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				13E3638A275E24F1001CC18A /* RadiusView.h */,
+				13E3638B275E24F1001CC18A /* RadiusView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		13E3638E275EFC56001CC18A /* BluetoothFunc */ = {
+			isa = PBXGroup;
+			children = (
+				13E3638F275EFC75001CC18A /* BluetoothFunc.h */,
+				13E36390275EFC75001CC18A /* BluetoothFunc.m */,
+			);
+			path = BluetoothFunc;
+			sourceTree = "<group>";
+		};
+		13E36399275F3510001CC18A /* Ctl */ = {
+			isa = PBXGroup;
+			children = (
+				13E36385275E1FF5001CC18A /* IndexViewController.h */,
+				13E36386275E1FF5001CC18A /* IndexViewController.m */,
+				13E36387275E1FF5001CC18A /* IndexViewController.xib */,
+				13E3639A275F3541001CC18A /* UserInfoViewController.h */,
+				13E3639B275F3541001CC18A /* UserInfoViewController.m */,
+				13E3639C275F3541001CC18A /* UserInfoViewController.xib */,
+				13E363A2275F5007001CC18A /* SyncTimeViewController.h */,
+				13E363A3275F5007001CC18A /* SyncTimeViewController.m */,
+				13E363A4275F5007001CC18A /* SyncTimeViewController.xib */,
+				13E363B1275F7B8A001CC18A /* WeatherViewController.h */,
+				13E363B2275F7B8A001CC18A /* WeatherViewController.m */,
+				13E363B3275F7B8A001CC18A /* WeatherViewController.xib */,
+				13E363BD275F8296001CC18A /* MenstrualViewController.h */,
+				13E363BE275F8296001CC18A /* MenstrualViewController.m */,
+				13E363BF275F8296001CC18A /* MenstrualViewController.xib */,
+				13E363C227604CF5001CC18A /* WatchFacesViewController.h */,
+				13E363C327604CF5001CC18A /* WatchFacesViewController.m */,
+				13E363C427604CF5001CC18A /* WatchFacesViewController.xib */,
+				13E363C927605827001CC18A /* GitBigDataViewController.h */,
+				13E363CA27605827001CC18A /* GitBigDataViewController.m */,
+				13E363CB27605827001CC18A /* GitBigDataViewController.xib */,
+				13E363CE276065DE001CC18A /* OpsPhoneViewController.h */,
+				13E363CF276065DE001CC18A /* OpsPhoneViewController.m */,
+				13E363D0276065DE001CC18A /* OpsPhoneViewController.xib */,
+				13E363D3276065FD001CC18A /* OTAViewController.h */,
+				13E363D4276065FD001CC18A /* OTAViewController.m */,
+				13E363D5276065FD001CC18A /* OTAViewController.xib */,
+			);
+			path = Ctl;
+			sourceTree = "<group>";
+		};
+		1902B0FC419E461BBF1687E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5BAD1F610E8D568D7395828 /* Pods_SDKDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0B398281AF45F6B05D2BB07 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53418515A5A920D5A564EC14 /* Pods-SDKDemo.debug.xcconfig */,
+				5ADF6C43FF45789AC374F9F5 /* Pods-SDKDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		132A8244275DB3D600255741 /* SDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 132A825E275DB3D800255741 /* Build configuration list for PBXNativeTarget "SDKDemo" */;
+			buildPhases = (
+				B5887421FF83B911D5D7E638 /* [CP] Check Pods Manifest.lock */,
+				132A8241275DB3D600255741 /* Sources */,
+				132A8242275DB3D600255741 /* Frameworks */,
+				132A8243275DB3D600255741 /* Resources */,
+				45ED508DCF04F67CD79A54C3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SDKDemo;
+			productName = SDKDemo;
+			productReference = 132A8245275DB3D600255741 /* SDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		132A823D275DB3D600255741 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					132A8244275DB3D600255741 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 132A8240275DB3D600255741 /* Build configuration list for PBXProject "SDKDemo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 132A823C275DB3D600255741;
+			productRefGroup = 132A8246275DB3D600255741 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				132A8244275DB3D600255741 /* SDKDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		132A8243275DB3D600255741 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13E363D7276065FD001CC18A /* OTAViewController.xib in Resources */,
+				132A8258275DB3D800255741 /* LaunchScreen.storyboard in Resources */,
+				130262D028F54E7F00331F86 /* EAWatchFace.bundle in Resources */,
+				13E363B5275F7B8A001CC18A /* WeatherViewController.xib in Resources */,
+				13E363C1275F8296001CC18A /* MenstrualViewController.xib in Resources */,
+				132A8255275DB3D800255741 /* Assets.xcassets in Resources */,
+				132A8253275DB3D600255741 /* Main.storyboard in Resources */,
+				13E363DC27609AD4001CC18A /* 0001001_AP0.1B4.2.bin in Resources */,
+				13E363B7275F7D76001CC18A /* Weather.json in Resources */,
+				13E363CD27605827001CC18A /* GitBigDataViewController.xib in Resources */,
+				13E363DD27609AD4001CC18A /* 0001001_R0.3.bin in Resources */,
+				13E3639E275F3541001CC18A /* UserInfoViewController.xib in Resources */,
+				13E363D2276065DE001CC18A /* OpsPhoneViewController.xib in Resources */,
+				13E36389275E1FF5001CC18A /* IndexViewController.xib in Resources */,
+				13E363A6275F5007001CC18A /* SyncTimeViewController.xib in Resources */,
+				13E363DB27609AD4001CC18A /* 0001001_R0.4.bin in Resources */,
+				13E36398275F2A8A001CC18A /* DataInfoTypes.json in Resources */,
+				13E363C627604CF5001CC18A /* WatchFacesViewController.xib in Resources */,
+				13E363C8276052FF001CC18A /* 86495739689050112.bin in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		45ED508DCF04F67CD79A54C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SDKDemo/Pods-SDKDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SDKDemo/Pods-SDKDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SDKDemo/Pods-SDKDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5887421FF83B911D5D7E638 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SDKDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		132A8241275DB3D600255741 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				132A824A275DB3D600255741 /* AppDelegate.m in Sources */,
+				13E363A5275F5007001CC18A /* SyncTimeViewController.m in Sources */,
+				13E363A1275F3E8E001CC18A /* BaseViewController.m in Sources */,
+				13E363B4275F7B8A001CC18A /* WeatherViewController.m in Sources */,
+				13E363D1276065DE001CC18A /* OpsPhoneViewController.m in Sources */,
+				132A825B275DB3D800255741 /* main.m in Sources */,
+				13E363C527604CF5001CC18A /* WatchFacesViewController.m in Sources */,
+				132A824D275DB3D600255741 /* SceneDelegate.m in Sources */,
+				13E363CC27605827001CC18A /* GitBigDataViewController.m in Sources */,
+				13E363D6276065FD001CC18A /* OTAViewController.m in Sources */,
+				13E3638C275E24F1001CC18A /* RadiusView.m in Sources */,
+				13E36391275EFC75001CC18A /* BluetoothFunc.m in Sources */,
+				13E3639D275F3541001CC18A /* UserInfoViewController.m in Sources */,
+				13E363C0275F8296001CC18A /* MenstrualViewController.m in Sources */,
+				13E36388275E1FF5001CC18A /* IndexViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		132A8251275DB3D600255741 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				132A8252275DB3D600255741 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		132A8256275DB3D800255741 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				132A8257275DB3D800255741 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		132A825C275DB3D800255741 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		132A825D275DB3D800255741 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		132A825F275DB3D800255741 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53418515A5A920D5A564EC14 /* Pods-SDKDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q37WQFYX4X;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = armv7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDKDemo",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SDKDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EASDK_demo;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "App需要您的蓝牙服务，用于连接蓝牙设备。";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "App需要您的蓝牙服务，用于连接蓝牙设备。";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eastapex.SDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		132A8260275DB3D800255741 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5ADF6C43FF45789AC374F9F5 /* Pods-SDKDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q37WQFYX4X;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = armv7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDKDemo",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SDKDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EASDK_demo;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "App需要您的蓝牙服务，用于连接蓝牙设备。";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "App需要您的蓝牙服务，用于连接蓝牙设备。";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eastapex.SDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		132A8240275DB3D600255741 /* Build configuration list for PBXProject "SDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				132A825C275DB3D800255741 /* Debug */,
+				132A825D275DB3D800255741 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		132A825E275DB3D800255741 /* Build configuration list for PBXNativeTarget "SDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				132A825F275DB3D800255741 /* Debug */,
+				132A8260275DB3D800255741 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 132A823D275DB3D600255741 /* Project object */;
+}
