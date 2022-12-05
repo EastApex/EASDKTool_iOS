@@ -77,7 +77,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// Screen type: 0: square screen 1: round screen
 @property(nonatomic, assign) NSInteger screenType;
 
-
+/// 不支持sn号绑定手表: 0:支持 1:不支持
+@property(nonatomic, assign) NSInteger notSupportSn;
 
 /// 获取手表相关信息
 /// @param data 数据流

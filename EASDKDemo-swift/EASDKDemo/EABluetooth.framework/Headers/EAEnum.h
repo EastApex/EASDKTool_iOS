@@ -227,10 +227,6 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     /// EAMonitorReminder
     EADataInfoTypeMonitorReminder = 45,
     
-    /// 提醒事件监测（读取）
-    /// read monitor reminder event
-    /// EAMonitorReminderRead
-    EADataInfoTypeMonitorReminderRead = 46,
     
     /// Operating Phone Commands
     /// 操作手机命令
@@ -1028,6 +1024,9 @@ typedef NS_ENUM(NSUInteger,EAPhoneOps) {
     /// Stop Looking for a Watch
     /// 停止寻找手表(固件需求)
     EAPhoneOpsStopSearchWatch = 11,
+    
+    /// 蓝牙一键连接请求(android)
+    EAPhoneOpsRequestBtOneKeyConnect = 12,
 };
 
 /// Operating mobile phone status
@@ -1406,9 +1405,9 @@ typedef NS_ENUM(NSUInteger,EASportType) {
     /// 板球
     EASportTypeBallCricket = 73,
 
-    /// Football or rugby
+    /// Rugby
     /// 橄榄球
-    EASportTypeBallFootball = 74,
+    EASportTypeBallRugby = 74,
 
     /// Racquetball
     /// 墙球
@@ -2086,7 +2085,7 @@ typedef NS_ENUM(NSUInteger, EAMonitorReminderType) {
     EAMonitorReminderTypeWashHands = 1,
 
     /** 久坐【未实现】 */
-    EAMonitorReminderTypeSedentary = 2,
+//    EAMonitorReminderTypeSedentary = 2,
 };
 
 

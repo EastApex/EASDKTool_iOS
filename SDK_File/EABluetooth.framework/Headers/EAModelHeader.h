@@ -72,7 +72,6 @@
 #import <EABluetooth/EABingingOps.h>
 #import <EABluetooth/EADeviceOps.h>
 #import <EABluetooth/EAPhoneOpsModel.h>
-#import <EABluetooth/EADataValue.h>
 #import <EABluetooth/EAMtuModel.h>
 
 
@@ -82,6 +81,9 @@
 #import <EABluetooth/EAOTAModel.h>
 
 
+// func
+#import <EABluetooth/EAFastGetSnNumberManager.h>
+#import <EABluetooth/EADataValue.h>
 
 
 #endif /* EAModelHeader_h */

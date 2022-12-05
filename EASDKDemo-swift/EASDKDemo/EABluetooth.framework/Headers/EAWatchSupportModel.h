@@ -133,6 +133,17 @@ NS_ASSUME_NONNULL_BEGIN
 /** 智慧运动 */
 @property(nonatomic, assign) BOOL smartSportsSetting;
 
+/** 提醒事件监测 */
+@property(nonatomic, assign) BOOL monitorReminder;
+
+/** 经典蓝牙一键连接功能 */
+@property(nonatomic, assign) BOOL btOneKeyConnect;
+
+/** 天气设置:空气质量 */
+@property(nonatomic, assign) BOOL weatherAir;
+
+/** 查找手表 */
+@property(nonatomic, assign) BOOL findWatch;
 
 + (EAWatchSupportModel *)getModelByData:(NSData *)data;
 

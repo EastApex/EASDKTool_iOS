@@ -168,11 +168,15 @@ typedef void(^UpdateValueBlock)(CBCharacteristic *characteristic,NSError *error)
 
 /// reconnection
 /// 重连设备
-- (void)reConnectToPeripheral ;
+- (void)reConnectToPeripheral;
 
 /// reconnection（Need the SN number of the watch）
 /// 重连设备（传手表的SN号）
 - (void)reConnectToPeripheral:(NSString *)sn;
+
+/// reconnection（Need the uuidString of the watch）
+/// 重连设备（传手表的uuidString）
+- (void)reConnectToPeripheralWithUUIDString:(NSString *)uuidString;
 
 /// cancel connection
 /// 取消连接（连接时可用）
@@ -201,6 +205,9 @@ typedef void(^UpdateValueBlock)(CBCharacteristic *characteristic,NSError *error)
 /// Gets the connected watch
 /// 获取链接的设备信息
 - (EAPeripheralModel *)getPeripheralModel;
+
+#pragma mark 分析广播包
+- (EAPeripheralModel *)analyseAdvertisementData:(NSDictionary *)advertisementData peripheral:(CBPeripheral *)peripheral  RSSI:( NSNumber *)RSSI;
 
 /// ignore：
 - (void)writeValue:(NSData *)Data forCharacteristic:(EACharacteristicType )characteristicType;
