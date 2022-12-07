@@ -7,7 +7,8 @@
 
 #import <Foundation/Foundation.h>
 #import <EABluetooth/EAEnum.h>
-#import <YYModel/YYModel.h>
+#import "EAClassInfo.h"
+#import "NSObject+EAModel.h"
 #import <EABluetooth/EADataValue.h>
 #import <EABluetooth/EAModelCustomPropertyMapperConfig.h>
 #import <EABluetooth/EADataInfoModel.h>

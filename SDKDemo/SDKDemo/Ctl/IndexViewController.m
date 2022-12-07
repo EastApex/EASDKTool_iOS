@@ -136,7 +136,7 @@
                     if (respondModel.eErrorCode == EARespondCodeTypeSuccess) {  // 用户点击确认
                         
                         EABingingOps *opsModel = [[EABingingOps alloc] init];
-                        opsModel.ops = EABindingOpsTypeNormalBegin; // 结束绑定
+                        opsModel.ops = EABindingOpsTypeEnd; // 结束绑定
                         opsModel.userId = @""; // 可以输入用户的id
                         [[EABleSendManager defaultManager] operationChangeModel:opsModel respond:^(EARespondModel * _Nonnull respondModel) {
                            
@@ -165,7 +165,7 @@
             }else {
                 // 不需要手表操作确定绑定
                 EABingingOps *opsModel = [[EABingingOps alloc] init];
-                opsModel.ops = EABindingOpsTypeNormalBegin; // 结束绑定
+                opsModel.ops = EABindingOpsTypeEnd; // 结束绑定
                 opsModel.userId = @""; // 可以输入用户的id
                 [[EABleSendManager defaultManager] operationChangeModel:opsModel respond:^(EARespondModel * _Nonnull respondModel) {
                    

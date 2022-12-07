@@ -3,7 +3,7 @@
 //  Template
 //
 //  Created by Aye on 2021/3/15.
-//  version: 2022.12.06 
+//
 
 /**
  
@@ -16,8 +16,8 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
-#import "EAPeripheralModel.h"
-#import "EABleConfig.h"
+#import <EABluetooth/EAPeripheralModel.h>
+#import <EABluetooth/EABleConfig.h>
 #import <EABluetooth/EAEnum.h>
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
