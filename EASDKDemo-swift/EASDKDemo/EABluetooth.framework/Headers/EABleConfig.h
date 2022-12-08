@@ -42,6 +42,7 @@ NSLog(@"[EALog]:%s:%d 👻 " format, __func__,__LINE__, ##__VA_ARGS__);\
 /// 工具 ，默认关闭
 @property (nonatomic, assign) BOOL tool;
 
+
 /// ignore：
 /// 显示信号量 ，默认关闭
 //@property (nonatomic, assign) BOOL showRSSI;
