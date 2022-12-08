@@ -11,7 +11,7 @@ target 'SDKDemo' do
   
 
   pod 'Protobuf', '~> 3.14.0'
-  pod 'YYModel'
+  pod 'YYKit'
   pod 'SAMKeychain'
   pod 'Realm'
   

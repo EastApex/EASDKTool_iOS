@@ -5,30 +5,32 @@ PODS:
     - Realm/Headers (= 10.20.0)
   - Realm/Headers (10.20.0)
   - SAMKeychain (1.5.3)
-  - YYModel (1.0.4)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - Masonry
   - Protobuf (~> 3.14.0)
   - Realm
   - SAMKeychain
-  - YYModel
+  - YYKit
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - Masonry
     - Protobuf
     - Realm
     - SAMKeychain
-    - YYModel
+    - YYKit
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   Protobuf: 0cde852566359049847168e51bd1c690e0f70056
   Realm: ae32bdc1da7d19c7617e0400201a77acd4a211b9
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
-  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 4ba88f737ea577aa166f68131d2310be34700b85
+PODFILE CHECKSUM: 4e485c86ea8dea7d9ec23452f3493fe044376dc3
 
 COCOAPODS: 1.11.3

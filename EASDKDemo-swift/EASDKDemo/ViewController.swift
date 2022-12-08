@@ -80,7 +80,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
 //
 //        EABleSendManager.default().operationGetInfo(with: EADataInfoType.sportShowData) { baseModel in
 //
-//            print(baseModel.yy_modelToJSONObject()!);
+//            print(baseModel.modelToJSONObject()!);
 //        }
         
 //        addReminder();
@@ -422,7 +422,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with: EADataInfoType.watch) { baseModel in
             
             let userModel = baseModel as! EAWatchModel;
-            print(userModel.yy_modelToJSONObject()!);
+            print(userModel.modelToJSONObject()!);
         }
     }
     
@@ -432,7 +432,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with: EADataInfoType.user) { baseModel in
             
             let userModel = baseModel as! EAUserModel;
-            print(userModel.yy_modelToJSONObject()!);
+            print(userModel.modelToJSONObject()!);
         }
     }
     
@@ -452,7 +452,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with: EADataInfoType.syncTime) { baseModel in
             
             let syncTime = baseModel as! EASyncTime;
-            print(syncTime.yy_modelToJSONObject()!);
+            print(syncTime.modelToJSONObject()!);
         }
     }
     
@@ -466,7 +466,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         syncTimeModel.timeZone = .east
         syncTimeModel.hour = 15;
         syncTimeModel.timeZoneMinute = 27;
-        print(syncTimeModel.yy_modelToJSONObject()!);
+        print(syncTimeModel.modelToJSONObject()!);
 
         
         EABleSendManager.default().operationChange(syncTimeModel) { respondModel in
@@ -508,7 +508,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with: EADataInfoType.blacklight) { baseModel in
             
             let model = baseModel as! EABlacklightModel;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
         }
     }
     
@@ -527,7 +527,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with: EADataInfoType.blacklightTimeout) { baseModel in
             
             let model = baseModel as! EABlacklightTimeoutModel;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
         }
     }
     
@@ -545,7 +545,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with: EADataInfoType.battery) { baseModel in
             
             let model = baseModel as! EABatteryModel;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
         }
     }
     
@@ -554,7 +554,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with: EADataInfoType.language) { baseModel in
             
             let model = baseModel as! EALanguageModel;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
         }
     }
     
@@ -573,7 +573,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with: EADataInfoType.language) { baseModel in
             
             let model = baseModel as! EAUnifiedUnitModel;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
         }
     }
     
@@ -601,7 +601,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with: EADataInfoType.notDisturb) { baseModel in
             
             let model = baseModel as! EANotDisturbModel;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
         }
     }
     
@@ -623,7 +623,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with: EADataInfoType.homeTimeZone) { baseModel in
             
             let model = baseModel as! EAHomeTimeZoneModel;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
         }
     }
     
@@ -646,7 +646,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with: EADataInfoType.dailyGoal) { baseModel in
             
             let model = baseModel as! EADailyGoalModel;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
         }
     }
     
@@ -671,7 +671,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with: EADataInfoType.autoCheckSleep) { baseModel in
             
             let model = baseModel as! EAAutoCheckSleepModel;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
         }
     }
     
@@ -694,7 +694,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with: EADataInfoType.autoCheckHeartRate) { baseModel in
             
             let model = baseModel as! EAAutoCheckHeartRateModel;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
         }
     }
     
@@ -713,7 +713,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with: EADataInfoType.autoCheckSedentariness) { baseModel in
             
             let model = baseModel as! EAAutoCheckSedentarinessModel;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
         }
     }
     
@@ -757,7 +757,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with:.socialSwitch) { baseModel in
             
             let model = baseModel as! EASocialSwitchModel;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
             
             model.sEmail.sw = 1;
             model.sEmail.remindActionType = .longShortVibration;
@@ -779,7 +779,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with:.reminder) { baseModel in
             
             let model = baseModel as! EAReminderOps;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
         }
     }
     
@@ -803,8 +803,8 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         model.eOps = .add;
         EABleSendManager.default().operationChange(model) { respondModel in
             
-            let dic = respondModel.yy_modelToJSONObject()! as! NSDictionary;
-            let reminderRespondModel = EAReminderRespondModel.yy_model(withJSON: dic);
+            let dic = respondModel.modelToJSONObject()! as! NSDictionary;
+            let reminderRespondModel = EAReminderRespondModel.model(withJSON: dic);
 
         }
     }
@@ -814,7 +814,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with:.reminder) { baseModel in
             
             let model = baseModel as! EAReminderOps;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
             
             let reminder1 = model.sIndexArray.firstObject as! EAReminderModel;
             reminder1.sw = 0;
@@ -835,7 +835,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with:.reminder) { baseModel in
             
             let model = baseModel as! EAReminderOps;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
             
             let reminder1 = model.sIndexArray.firstObject as! EAReminderModel;
             
@@ -854,7 +854,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with:.distanceUnit) { baseModel in
             
             let model = baseModel as! EADistanceUintModel;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
         }
     }
     
@@ -873,7 +873,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with:.weightUnit) { baseModel in
             
             let model = baseModel as! EAWeightUnitModel;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
         }
     }
     
@@ -892,7 +892,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with:.heartRateWaringSetting) { baseModel in
             
             let model = baseModel as! EAHeartRateWaringSettingModel;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
         }
     }
     
@@ -914,7 +914,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with:.caloriesSetting) { baseModel in
             
             let model = baseModel as! EACaloriesSettingModel;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
         }
     }
     
@@ -933,7 +933,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with:.gesturesSetting) { baseModel in
             
             let model = baseModel as! EAGesturesSettingModel;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
         }
     }
     
@@ -952,7 +952,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with:.combination) { baseModel in
             
             let model = baseModel as! EACombinationModel;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
             
             model.setVibrateIntensity = 1;
             model.eVibrateIntensity = .strong;
@@ -967,7 +967,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with:.homePage) { baseModel in
             
             let model = baseModel as! EAPageModel;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
         }
     }
     
@@ -998,7 +998,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with:.dialPlate) { baseModel in
             
             let model = baseModel as! EADialPlateModel;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
         }
     }
     
@@ -1059,7 +1059,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
             
             let model = baseModel as! EAAppMessageSwitchData;
             let appPushModel = EAShowAppMessageModel.allocInit(with: model);
-            print(appPushModel.yy_modelToJSONObject()!);
+            print(appPushModel.modelToJSONObject()!);
         }
     }
     
@@ -1079,7 +1079,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with:.habitTracker) { baseModel in
             
             let model = baseModel as! EAHabitTrackers;
-            print(model.yy_modelToJSONObject()!);
+            print(model.modelToJSONObject()!);
         }
     }
     
