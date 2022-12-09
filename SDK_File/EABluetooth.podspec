@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'EAModularity'
+  s.name             = 'EABluetooth'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of EAModularity.'
+  s.summary          = 'A short description of EABluetooth.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '12.0'
 
-  s.source_files = 'EAModularity/Classes/**/*'
+  s.source_files = 'EABluetooth/Classes/**/*'
   
   # s.resource_bundles = {
   #   'EAModularity' => ['EAModularity/Assets/*.png']
