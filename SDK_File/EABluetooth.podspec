@@ -1,0 +1,56 @@
+#
+# Be sure to run `pod lib lint EAModularity.podspec' to ensure this is a
+# valid spec before submitting.
+#
+# Any lines starting with a # are optional, but their use is encouraged
+# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
+#
+
+Pod::Spec.new do |s|
+  s.name             = 'EAModularity'
+  s.version          = '0.1.0'
+  s.summary          = 'A short description of EAModularity.'
+
+# This description is used to generate tags and improve search results.
+#   * Think: What does it do? Why did you write it? What is the focus?
+#   * Try to keep it short, snappy and to the point.
+#   * Write the description between the DESC delimiters below.
+#   * Finally, don't worry about the indent, CocoaPods strips it!
+
+  s.description      = <<-DESC
+TODO: Add long description of the pod here.
+                       DESC
+
+  s.homepage         = 'https://github.com/EastApex/EASDKTool_iOS'
+  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.author           = { 'Aye' => 'aye.zhang@qq.com' }
+  s.source           = { :git => 'https://github.com/EastApex/EASDKTool_iOS.git', :tag => s.version.to_s }
+  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+
+  s.ios.deployment_target = '12.0'
+
+  s.source_files = 'EAModularity/Classes/**/*'
+  
+  # s.resource_bundles = {
+  #   'EAModularity' => ['EAModularity/Assets/*.png']
+  # }
+
+  # s.public_header_files = 'Pod/Classes/**/*.h'
+  # s.frameworks = 'UIKit', 'MapKit'
+
+  s.dependency 'Protobuf', '~> 3.14.0'
+  s.dependency 'YYKit'
+  s.dependency 'Realm'  # realm 数据库
+  s.dependency 'SAMKeychain'
+
+  
+# s.resources = "Resources/*"  #工程需要引入的资源文件（图片，xib等）
+   s.resource_bundles = {'EAWatchFace' => ['EAWatchFace.bundle/*']} #工程需要引入的bundle
+  s.ios.vendored_frameworks = 'EABluetooth.framework'
+
+
+
+
+  
+end
