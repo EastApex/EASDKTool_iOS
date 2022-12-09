@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '12.0'
 
-  s.source_files = 'EABluetooth/Classes/**/*'
+  s.source_files = 'SDK_File/EABluetooth/Classes/**/*'
   
   # s.resource_bundles = {
   #   'EAModularity' => ['EAModularity/Assets/*.png']
@@ -46,8 +46,8 @@ TODO: Add long description of the pod here.
 
   
 # s.resources = "Resources/*"  #工程需要引入的资源文件（图片，xib等）
-   s.resource_bundles = {'EAWatchFace' => ['EAWatchFace.bundle/*']} #工程需要引入的bundle
-  s.ios.vendored_frameworks = 'EABluetooth.framework'
+   s.resource_bundles = {'EAWatchFace' => ['SDK_File/EAWatchFace.bundle/*']} #工程需要引入的bundle
+  s.ios.vendored_frameworks = 'SDK_File/EABluetooth.framework'
 
 
 
