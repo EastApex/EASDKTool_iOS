@@ -11,13 +11,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface EASportShowDataModel : EABaseModel
 
-@property(nonatomic, assign) NSInteger steps;
+@property(nonatomic, assign) NSInteger steps; // 单位：步
 
-@property(nonatomic, assign) NSInteger calorie;
+@property(nonatomic, assign) NSInteger calorie;// 单位：小卡
 
-@property(nonatomic, assign) NSInteger distance;
+@property(nonatomic, assign) NSInteger distance;// 单位：厘米
 
-@property(nonatomic, assign) NSInteger duration;
+@property(nonatomic, assign) NSInteger duration;// 单位:秒
 
 + (EASportShowDataModel *)getModelByData:(NSData *)data;
 

@@ -69,13 +69,6 @@ typedef void(^RespondBlock)(EARespondModel *respondModel);
 - (void)getBigDataRequestModel:(EAGetBigDataRequestModel *)model respond:(RespondBlock )respond;;
 
 
-/** 以下 为测试使用 */
-
-/// 分析大数据
-- (void)analyzeBigDataString:(NSString *)dataString;
-/// 分析大数据
-- (NSArray *)analyzeBigDataString:(NSString *)pbDataString andIdNmuber:(NSInteger )idNumber;
-
 
 /// ignore：
 - (void)setNilBlock;
