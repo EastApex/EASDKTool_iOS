@@ -9,9 +9,6 @@ target 'EASDKDemo' do
   pod 'Masonry'
   
 
-  pod 'Protobuf', '~> 3.14.0'
-  pod 'YYKit'
-  pod 'SAMKeychain'
-  pod 'Realm'
+pod 'EABluetooth', :git =>  'https://github.com/EastApex/EASDKTool_iOS.git'
 
 end

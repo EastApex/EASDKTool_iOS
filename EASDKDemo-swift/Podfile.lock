@@ -1,20 +1,22 @@
 PODS:
+  - EABluetooth (0.1.0):
+    - Protobuf (~> 3.14.0)
+    - Realm
+    - SAMKeychain
+    - YYKit
   - Masonry (1.1.0)
   - Protobuf (3.14.0)
-  - Realm (10.28.2):
-    - Realm/Headers (= 10.28.2)
-  - Realm/Headers (10.28.2)
+  - Realm (10.33.0):
+    - Realm/Headers (= 10.33.0)
+  - Realm/Headers (10.33.0)
   - SAMKeychain (1.5.3)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
+  - EABluetooth (from `https://github.com/EastApex/EASDKTool_iOS.git`)
   - Masonry
-  - Protobuf (~> 3.14.0)
-  - Realm
-  - SAMKeychain
-  - YYKit
 
 SPEC REPOS:
   trunk:
@@ -24,13 +26,23 @@ SPEC REPOS:
     - SAMKeychain
     - YYKit
 
+EXTERNAL SOURCES:
+  EABluetooth:
+    :git: https://github.com/EastApex/EASDKTool_iOS.git
+
+CHECKOUT OPTIONS:
+  EABluetooth:
+    :commit: ecdbc1caac9eaad654c4b0386baa958a8ce53684
+    :git: https://github.com/EastApex/EASDKTool_iOS.git
+
 SPEC CHECKSUMS:
+  EABluetooth: 96bbf13370680a21cf06b55d8ba4ef8fa21a7fff
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   Protobuf: 0cde852566359049847168e51bd1c690e0f70056
-  Realm: e617c54ad0f566b3d0f6a2abae7010de05f252ac
+  Realm: d4f810e161fa2c2c589b9860b6eb09238deacd73
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 817fbb2f2bc3de5e38544b6d7c878dc4f9fd56db
+PODFILE CHECKSUM: 152013a496044df2db6047324596900b6ea95ded
 
 COCOAPODS: 1.11.3

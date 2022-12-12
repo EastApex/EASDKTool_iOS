@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		130262CC28F54BF800331F86 /* EAWatchFace.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 130262CB28F54BF800331F86 /* EAWatchFace.bundle */; };
 		137C4C1C289B917500DD28DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137C4C1B289B917500DD28DC /* AppDelegate.swift */; };
 		137C4C1E289B917500DD28DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137C4C1D289B917500DD28DC /* SceneDelegate.swift */; };
 		137C4C20289B917500DD28DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137C4C1F289B917500DD28DC /* ViewController.swift */; };
@@ -15,7 +14,6 @@
 		137C4C25289B917700DD28DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 137C4C24289B917700DD28DC /* Assets.xcassets */; };
 		137C4C28289B917700DD28DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 137C4C26289B917700DD28DC /* LaunchScreen.storyboard */; };
 		138DDF3F28C1CA2B000D48F1 /* 001012_U6.1.bin in Resources */ = {isa = PBXBuildFile; fileRef = 138DDF3E28C1CA2B000D48F1 /* 001012_U6.1.bin */; };
-		13F3C64828F151450005F25B /* EABluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F3C64728F151450005F25B /* EABluetooth.framework */; };
 		4D32652883D68AE433F7F739 /* Pods_EASDKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7B7B216959EA38E55ABEBA /* Pods_EASDKDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +30,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		130262CB28F54BF800331F86 /* EAWatchFace.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = EAWatchFace.bundle; path = ../../SDK_File/EAWatchFace.bundle; sourceTree = "<group>"; };
 		137C4C18289B917500DD28DC /* EASDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EASDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		137C4C1B289B917500DD28DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		137C4C1D289B917500DD28DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +39,6 @@
 		137C4C27289B917700DD28DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		137C4C29289B917700DD28DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		138DDF3E28C1CA2B000D48F1 /* 001012_U6.1.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 001012_U6.1.bin; sourceTree = "<group>"; };
-		13F3C64728F151450005F25B /* EABluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EABluetooth.framework; path = EASDKDemo/EABluetooth.framework; sourceTree = "<group>"; };
 		7E7B7B216959EA38E55ABEBA /* Pods_EASDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EASDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E2E0464A7DB631C96C412E /* Pods-EASDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EASDKDemo.debug.xcconfig"; path = "Target Support Files/Pods-EASDKDemo/Pods-EASDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		BD846100A9CFFC529E35E5CF /* Pods-EASDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EASDKDemo.release.xcconfig"; path = "Target Support Files/Pods-EASDKDemo/Pods-EASDKDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -54,7 +50,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D32652883D68AE433F7F739 /* Pods_EASDKDemo.framework in Frameworks */,
-				13F3C64828F151450005F25B /* EABluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +81,6 @@
 				137C4C1D289B917500DD28DC /* SceneDelegate.swift */,
 				137C4C1F289B917500DD28DC /* ViewController.swift */,
 				138DDF3E28C1CA2B000D48F1 /* 001012_U6.1.bin */,
-				130262CB28F54BF800331F86 /* EAWatchFace.bundle */,
 				137C4C21289B917500DD28DC /* Main.storyboard */,
 				137C4C24289B917700DD28DC /* Assets.xcassets */,
 				137C4C26289B917700DD28DC /* LaunchScreen.storyboard */,
@@ -107,7 +101,6 @@
 		F4EE9EFAFE4042BCEB410875 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				13F3C64728F151450005F25B /* EABluetooth.framework */,
 				7E7B7B216959EA38E55ABEBA /* Pods_EASDKDemo.framework */,
 			);
 			name = Frameworks;
@@ -126,6 +119,7 @@
 				137C4C16289B917500DD28DC /* Resources */,
 				FECDB405DBD0643AB8D9A452 /* [CP] Embed Pods Frameworks */,
 				1341469E28C9D63100216576 /* CopyFiles */,
+				6313FCE1B0BCC70C6B7ACC49 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,7 +170,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				137C4C28289B917700DD28DC /* LaunchScreen.storyboard in Resources */,
-				130262CC28F54BF800331F86 /* EAWatchFace.bundle in Resources */,
 				137C4C25289B917700DD28DC /* Assets.xcassets in Resources */,
 				137C4C23289B917500DD28DC /* Main.storyboard in Resources */,
 				138DDF3F28C1CA2B000D48F1 /* 001012_U6.1.bin in Resources */,
@@ -186,6 +179,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6313FCE1B0BCC70C6B7ACC49 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EASDKDemo/Pods-EASDKDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EASDKDemo/Pods-EASDKDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EASDKDemo/Pods-EASDKDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F0BD05BCAF0F810348B12825 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

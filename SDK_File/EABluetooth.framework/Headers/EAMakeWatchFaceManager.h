@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)defaultManager;
 
 
-/// Creating thumbnails 【创建缩略图】
+/// Creating thumbnails 【创建表盘缩略图】
 /// @param backgroundImage backgroundImage
 /// @param colorType EATimerColorType 黑白色数字枚举
 /// @param size thumbnail size
