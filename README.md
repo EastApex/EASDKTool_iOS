@@ -27,3 +27,5 @@ https://github.com/EastApex/EASDKTool_iOS.git
 <p>2022-09-22:适配新型号手表，新增自定义表盘相关方法。
 <p>2022-09-08:修复一些bug。
 <p>2022-09-02:第一个版本。
+
+

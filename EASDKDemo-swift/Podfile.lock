@@ -32,7 +32,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   EABluetooth:
-    :commit: ecdbc1caac9eaad654c4b0386baa958a8ce53684
+    :commit: d0bc11d04c565390cfda58b5e29626d9539a7ca8
     :git: https://github.com/EastApex/EASDKTool_iOS.git
 
 SPEC CHECKSUMS:
