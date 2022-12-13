@@ -42,13 +42,13 @@
     "240,240":{
         "number":{
             "background":"0,0",
-            "hourHigh":"28,17",
-            "hourLow":"68,17",
-            "minuteHigh":"140,17",
-            "minuteLow":"180,17",
-            "maohao":"117,17",
-            "weekText":"58,70",
-            "dayText":"130,70"
+            "hourHigh":"28,47",
+            "hourLow":"68,47",
+            "minuteHigh":"140,47",
+            "minuteLow":"180,47",
+            "maohao":"117,47",
+            "weekText":"58,100",
+            "dayText":"130,100"
         },
         "point":{
             "hour":"108,56",
