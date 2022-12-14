@@ -2069,10 +2069,18 @@ typedef NS_ENUM(NSUInteger,EAPhoneContactFlag) {
 };
 
 #pragma mark - 自定义表盘时间颜色
-typedef NS_ENUM(NSUInteger, EATimerColorType) {
+typedef NS_ENUM(NSUInteger, EACWFTimerColorType) {
     
-    EATimerColorTypeBlack         = 0,
-    EATimerColorTypeWhite         = 1,
+    EACWFTimerColorTypeBlack         = 0,
+    EACWFTimerColorTypeWhite         = 1,
+    
+};
+
+#pragma mark - 自定义表盘风格类型
+typedef NS_ENUM(NSUInteger, EACWFStyleType) {
+    
+    EACWFStyleTypePictureNumber         = 1,// 图片数字表盘
+
 };
 
 #pragma mark - 手表形状

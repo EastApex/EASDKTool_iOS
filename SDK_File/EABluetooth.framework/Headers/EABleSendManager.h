@@ -42,7 +42,7 @@ typedef void(^RespondBlock)(EARespondModel *respondModel);
 - (BOOL)upgrade:(EAOTA *)ota;
 
 /// Customize the background watch face
-- (NSInteger )customWatchFaceBackgroundImage:(UIImage *)backgroundImage colorType:(EATimerColorType )colorType;
+- (NSInteger )customWatchFaceBackgroundImage:(UIImage *)backgroundImage colorType:(EACWFTimerColorType )colorType styleType:(EACWFStyleType)styleType;
 
 
 
