@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let config = EABleConfig.getDefault();
         config.debug = true;
         config.scanchannel = 8800;
+        config.deviceHeadNames = ["QCY Watch"];
         let bleManager = EABleManager.default()
         bleManager.bleConfig = config;
         

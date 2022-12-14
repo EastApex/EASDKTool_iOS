@@ -2072,7 +2072,14 @@ typedef NS_ENUM(NSUInteger,EAPhoneContactFlag) {
 typedef NS_ENUM(NSUInteger, EATimerColorType) {
     
     EATimerColorTypeBlack         = 0,
-    EATimerColorTypeWhite         
+    EATimerColorTypeWhite         = 1,
+};
+
+#pragma mark - 手表形状
+typedef NS_ENUM(NSUInteger, EAScreenType) {
+    
+    EAScreenTypeSquare          = 0, // 0: square screen
+    EAScreenTypeCircle          = 1, // 1: round screen
 };
 
 #pragma mark - 监测提醒类型

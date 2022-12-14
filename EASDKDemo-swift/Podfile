@@ -6,9 +6,9 @@ target 'EASDKDemo' do
  use_frameworks!
 
 
-  pod 'Masonry'
-  
+  	pod 'Masonry'
+	#pod 'EABluetooth', :git =>  'https://github.com/EastApex/EASDKTool_iOS.git'
 
-pod 'EABluetooth', :git =>  'https://github.com/EastApex/EASDKTool_iOS.git'
+	pod 'EABluetooth', :path => '../'
 
 end

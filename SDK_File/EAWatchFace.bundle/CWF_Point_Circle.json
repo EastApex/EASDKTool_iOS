@@ -8,7 +8,13 @@
             "minuteLow":"250,27",
             "maohao":"175,27",
             "weekText":"78,95",
-            "dayText":"195,95"
+            "dayText":"195,95",
+            "weekTextWidth":100,
+            "weekTextAlign":2,
+            "weekTextFont":5,
+            "dayTextWidth":50,
+            "dayTextAlign":0,
+            "dayTextFont":5,
         },
         "point":{
             "hour":"170,121",
@@ -16,7 +22,7 @@
             "minute":"167,75",
             "arcMinute":"11,125",
             "second":"172,49",
-            "arcSecond":"6,151",
+            "arcSecond":"6,151"
         }
     },
     "368,448":{
@@ -28,7 +34,13 @@
             "minuteLow":"255,35",
             "maohao":"179,35",
             "weekText":"95,125",
-            "dayText":"215,125"
+            "dayText":"215,125",
+            "weekTextWidth":100,
+            "weekTextAlign":2,
+            "weekTextFont":5,
+            "dayTextWidth":50,
+            "dayTextAlign":0,
+            "dayTextFont":5,
         },
         "point":{
             "hour":"175,145",
@@ -42,13 +54,19 @@
     "240,240":{
         "number":{
             "background":"0,0",
-            "hourHigh":"28,47",
-            "hourLow":"68,47",
-            "minuteHigh":"140,47",
-            "minuteLow":"180,47",
-            "maohao":"117,47",
-            "weekText":"58,100",
-            "dayText":"130,100"
+            "hourHigh":"49,37",
+            "hourLow":"81,37",
+            "minuteHigh":"130,37",
+            "minuteLow":"162,37",
+            "maohao":"113,37",
+            "weekText":"80,94",
+            "dayText":"133,94",
+            "weekTextWidth":50,
+            "weekTextAlign":2,
+            "weekTextFont":2,
+            "dayTextWidth":30,
+            "dayTextAlign":1,
+            "dayTextFont":2,
         },
         "point":{
             "hour":"108,56",
@@ -68,7 +86,13 @@
             "minuteLow":"180,27",
             "maohao":"117,27",
             "weekText":"58,75",
-            "dayText":"130,75"
+            "dayText":"130,75",
+            "weekTextWidth":50,
+            "weekTextAlign":2,
+            "weekTextFont":2,
+            "dayTextWidth":30,
+            "dayTextAlign":0,
+            "dayTextFont":2,
         },
         "point":{
             "hour":"108,76",
