@@ -26,6 +26,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 版本号
 @property(nonatomic,copy) NSString *version;
 
+/// Data flow of the bin file(binPath or binData just pass one of these values.)
+/// bin文件的数据流（binPath 或者 binData 2传一即可）
+@property(nonatomic,strong) NSData *binData;
 
 /// init
 + (EAFileModel *)allocInitWithPath:(NSString *)binPath otaType:(EAOtaRequestType )otaType version:(NSString *)version;
