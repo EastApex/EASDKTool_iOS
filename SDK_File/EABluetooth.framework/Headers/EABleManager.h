@@ -95,9 +95,14 @@ typedef NS_ENUM(NSUInteger, EAConnectStatus) {
 /// OTA进度
 #define kNTF_EAOTAAGPSDataing               @"EAOTAAGPSDataing"
 
-///
-#define kNTF_EABackgroundTask               @"EABackgroundTask"
+/////
+//#define kNTF_EABackgroundTask               @"EABackgroundTask"
 
+/// 实时数据
+#define kNTF_EARealTimeData                 @"EARealTimeData"
+
+/// App运动实时数据
+#define kNTF_EAAppSportRealTime             @"EAAppSportRealTime"
 
 
 #define kKeychainService        @"com.eastapex.bluetooth"
