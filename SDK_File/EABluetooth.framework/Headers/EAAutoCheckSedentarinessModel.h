@@ -41,6 +41,22 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSInteger sw;
 
 
+/** 午休开关 */
+@property(nonatomic, assign) NSInteger noonSw;
+
+/** 午休开始时间 ：小时 */
+@property(nonatomic, assign) NSInteger noonBeginHour;
+
+/** 午休开始时间 ：分钟 */
+@property(nonatomic, assign) NSInteger noonBeginMinute;
+
+/** 午休结束时间 ：小时 */
+@property(nonatomic, assign) NSInteger noonEndHour;
+
+/** 午休结束时间 ：分钟 */
+@property(nonatomic, assign) NSInteger noonEndMinute;
+
+
 
 + (EAAutoCheckSedentarinessModel *)getModelByData:(NSData *)data;
 

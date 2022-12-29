@@ -13,16 +13,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface EAPhoneOpsModel : EABaseModel
 
-@property(nonatomic, readwrite) EAPhoneOps eOps;
+@property(nonatomic, assign) EAPhoneOps eOps;
 
-@property(nonatomic, readwrite) EAPhoneOpsStatus eOpsStatus;
+@property(nonatomic, assign) EAPhoneOpsStatus eOpsStatus;
 
 
 + (EAPhoneOpsModel *)getModelByData:(NSData *)data;
-
-
-
-
 
 
 @end

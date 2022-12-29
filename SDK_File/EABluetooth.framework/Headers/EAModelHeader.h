@@ -67,13 +67,18 @@
 #import <EABluetooth/EATelephoneBookModel.h>
 #import <EABluetooth/EAWatchSupportModel.h>
 #import <EABluetooth/EAMonitorReminder.h>
+#import <EABluetooth/EARealTimeModel.h>
+#import <EABluetooth/EAAppSportRealTimeModel.h>
+#import <EABluetooth/EAAppLaunchSport.h>
+#import <EABluetooth/EAAppSendSportDetails.h>
+#import <EABluetooth/EAOnlyGetBigData.h>
 
 // ops
 #import <EABluetooth/EABingingOps.h>
 #import <EABluetooth/EADeviceOps.h>
 #import <EABluetooth/EAPhoneOpsModel.h>
 #import <EABluetooth/EAMtuModel.h>
-
+#import <EABluetooth/EAAppOps.h>
 
 // ota
 #import <EABluetooth/EAOtaRequest.h>

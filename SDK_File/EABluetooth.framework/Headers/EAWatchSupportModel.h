@@ -124,26 +124,36 @@ NS_ASSUME_NONNULL_BEGIN
 /// Support the bell
 @property(nonatomic, assign) BOOL ringtoneSupport;
 
-/** 有没GPS */
+/// 有没GPS
 @property(nonatomic, assign) BOOL gpsSetting;
 
-/** 体温测量 */
+/// 体温测量
 @property(nonatomic, assign) BOOL temperatureMonitoring;
 
-/** 智慧运动 */
+/// 智慧运动
 @property(nonatomic, assign) BOOL smartSportsSetting;
 
-/** 提醒事件监测 */
+/// 提醒事件监测
 @property(nonatomic, assign) BOOL monitorReminder;
 
-/** 经典蓝牙一键连接功能 */
+/// 经典蓝牙一键连接功能
 @property(nonatomic, assign) BOOL btOneKeyConnect;
 
-/** 天气设置:空气质量 */
+/// 天气设置:空气质量
 @property(nonatomic, assign) BOOL weatherAir;
 
-/** 查找手表 */
+/// 查找手表
 @property(nonatomic, assign) BOOL findWatch;
+
+/// 支持app运动
+@property(nonatomic, assign) BOOL supportAppSport;
+
+/// 支持app启动检测（心率、血氧、压力、呼吸等功能）
+@property(nonatomic, assign) BOOL supportAppDetection;
+
+/// 支持运动单独按类型获取
+@property(nonatomic, assign) BOOL supportOnlyGetBigData;
+
 
 + (EAWatchSupportModel *)getModelByData:(NSData *)data;
 

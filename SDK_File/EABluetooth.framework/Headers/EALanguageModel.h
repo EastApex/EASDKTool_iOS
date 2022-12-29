@@ -9,6 +9,15 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
+
+@interface EALanguageItemModel : EABaseModel
+
+
+@property(nonatomic, assign) EALanguageType languageName;
+
+@end
+
+
 /// Watch language information
 /// 设备语言
 @interface EALanguageModel : EABaseModel
@@ -16,7 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, assign) EALanguageType language;
 
-
+/// 支持的多语言
+/// support language
+@property(nonatomic, copy) NSArray<EALanguageItemModel*> *sLanguageArray;
 
 + (EALanguageModel *)getModelByData:(NSData *)data;
 

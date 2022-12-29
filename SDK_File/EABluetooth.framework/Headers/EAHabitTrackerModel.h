@@ -40,6 +40,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, copy,) NSString *content;
 
+/// 周期：
+@property(nonatomic, assign) NSInteger weekCycleBit;
+
 /** 标志  （read respond有效，write request set 0） */
 @property(nonatomic, assign) EAHabitTrackerFlag eFlag;
 
@@ -57,8 +60,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, assign) NSInteger id_p;
 
-/**  Up to 20 最多20个 */
+/**  Up to 12 最多12个 */
 @property(nonatomic, strong) NSMutableArray<EAHabitTrackerModel*> *sIndexArray;
+
+/// will delete id_ps  要删除的id_p
+@property(nonatomic,strong)NSMutableArray<NSNumber*> *sDelIndexArray;
+
 
 + (EAHabitTrackers *)getModelByData:(NSData *)data;
 

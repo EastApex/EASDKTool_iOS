@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class EAAppMessageSwitchData;
 
+
+
+
 @interface EAShowAppMessageModel : EABaseModel
 
 @property(nonatomic,assign) BOOL unknow;
@@ -55,12 +58,24 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign) BOOL tiktok;
 @property(nonatomic,assign) BOOL twitch;
 @property(nonatomic,assign) BOOL uberEats;
-
+@property(nonatomic,assign) BOOL doordash;
+@property(nonatomic,assign) BOOL grubhub;
+@property(nonatomic,assign) BOOL instacart;
+@property(nonatomic,assign) BOOL postmates;
+@property(nonatomic,assign) BOOL zoom;
+@property(nonatomic,assign) BOOL uber;
+@property(nonatomic,assign) BOOL appleEmail;
 
 // 获取App推送蓝牙传输对象数据
 - (EAAppMessageSwitchData *)getEAAppMessageSwitchData;
 
-+ (EAShowAppMessageModel *)allocInitWithAppMessageSwitchData:(EAAppMessageSwitchData *)appMessageSwitchData;
+
++ (EAShowAppMessageModel *)eaAllocInitWithAppMessageSwitchData:(EAAppMessageSwitchData *)appMessageSwitchData;
+
+/// 一键开启或者关闭
+/// - Parameter onOff: 开启或者关闭
++ (EAShowAppMessageModel *)eaAllocInitWithAllOnOff:(BOOL)onOff;
+
 
 @end
 
@@ -111,6 +126,13 @@ NS_ASSUME_NONNULL_BEGIN
  Tiktok = 40,
  Twitch = 41,
  UberEats = 42,
+ Doordash = 43,
+ Grubhub = 44,
+ Instacart = 45,
+ Postmates = 46,
+ Zoom = 47,
+ Uber = 48,
+ AppleEmail = 49,
  */
 @property(nonatomic, assign) BOOL sw;
 
@@ -121,12 +143,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic,strong) NSMutableArray<EAAppMessageSwitchModel*> *sAppSwArray;
 
+
 + (EAAppMessageSwitchData *)getModelByData:(NSData *)data;
 
-
 - (NSData *)getModelData ;
-
-
 
 
 @end

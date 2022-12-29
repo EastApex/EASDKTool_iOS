@@ -125,11 +125,13 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     /// 提醒回应
     EADataInfoTypeReminderRespond = 23,
     
+    /// ignore：
     /// Distance uint
     /// 距离单位
     /// EADistanceUintModel
     EADataInfoTypeDistanceUnit = 24,
     
+    /// ignore：
     /// Weight unit
     /// 重量单位
     /// EAWeightUnitModel
@@ -139,6 +141,7 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     /// 心率报警设置
     /// EAHeartRateWaringSettingModel
     EADataInfoTypeHeartRateWaringSetting = 26,
+    
     
     /// Base calorie switch
     /// 基础卡路里开关
@@ -180,9 +183,11 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     /// EAShowAppMessageModel
     EADataInfoTypeAppMessage = 34,
     
+    /// ignore：
     /// 血压校准值 （老人表）*/
     EADataInfoTypeBloodPressure = 36,
     
+    /// ignore：
     /// 自动监测 心率 血氧 血压 （老人表）
     EADataInfoTypeAutoMonitor = 37,
     
@@ -221,12 +226,22 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     /// EAWatchSupportModel
     EADataInfoTypeWatchSupport = 44,
     
-    
     /// 提醒事件监测
     /// Monitor reminder event
     /// EAMonitorReminder
     EADataInfoTypeMonitorReminder = 45,
     
+    /// App运动
+    EADataInfoTypeAppLaunchSport = 46,
+    
+    /// App发送运动数据（定时发送：单位秒）
+    EADataInfoTypeAppSendSportDetails = 47,
+    
+    /// App操作手表（开始/停止【心率、血氧、压力、呼吸】）
+    EADataInfoTypeAppOps = 48,
+    
+    /// 单独获取大数据（如步数、如心率）
+    EADataInfoTypeOnlyGetBigData = 49,
     
     /// Operating Phone Commands
     /// 操作手机命令
@@ -235,6 +250,13 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     
     /// MTU
     EADataInfoTypeMTU = 2006,
+    
+    /// 实时数据（具体数据需要调用大数据方法获取）
+    EADataInfoTypeRealTime = 2007,
+    
+    /// App运动实时数据
+    EADataInfoTypeAppSportRealTime = 2008,
+    
     
     /// Daily steps
     /// 大数据步数
@@ -351,13 +373,13 @@ typedef NS_ENUM(NSUInteger, EARespondCodeType) {
     /// 失败
     EARespondCodeTypeFail,
     
-    /// The maximum number supported is exceeded
-    /// 超过支持的最大数量
-    EARespondCodeTypeMemFull,
-    
-    /// Time to repeat
-    /// 时间重复
-    EARespondCodeTypeTimeConflict,
+    /// App发起运动回应状态（id=46）:手表正在运动，请结束后再开
+    EARespondCodeTypeWatchInMotion = 2,
+
+    /// 不允许读取
+    EARespondCodeTypeNotToRead = 998,
+    /// 不允许写入
+    EARespondCodeTypeNotToWirte = 999,
 };
 
 /// Binding type
@@ -740,6 +762,12 @@ typedef NS_ENUM(NSUInteger,EAWeatherType) {
     /// 沙尘暴
     /// Sandstorm
     EAWeatherTypeSandstorm = 13,
+    
+    /// 雾
+    EAWeatherTypeFog = 14,
+
+    /// 霾
+    EAWeatherTypeHaze = 15,
 };
 
 /// Air quality types
@@ -947,6 +975,29 @@ typedef NS_ENUM(NSUInteger,EAReminderEventOps) {
 };
 
 
+
+/// Reminder respond type
+/// MARK: -  提醒回应类型
+typedef NS_ENUM(NSUInteger, EAReminderRespondCodeType) {
+    
+    /// Success
+    /// 成功
+    EAReminderRespondCodeTypeSuccess = 0,
+    
+    /// Fail
+    /// 失败
+    EAReminderRespondCodeTypeFail,
+    
+    /// The maximum number supported is exceeded
+    /// 超过支持的最大数量
+    EAReminderRespondCodeTypeMemFull,
+    
+    /// Time to repeat
+    /// 时间重复
+    EAReminderRespondCodeTypeTimeConflict,
+};
+
+
 /// The unit distance
 /// MARK: - 距离单位类型
 typedef NS_ENUM(NSUInteger,EADistanceUnit) {
@@ -1025,8 +1076,34 @@ typedef NS_ENUM(NSUInteger,EAPhoneOps) {
     /// 停止寻找手表(固件需求)
     EAPhoneOpsStopSearchWatch = 11,
     
-    /// 蓝牙一键连接请求(android)
-    EAPhoneOpsRequestBtOneKeyConnect = 12,
+    /// 手表发起：暂停app运动
+    EAPhoneOpsAppSportPause = 13,
+
+    /// 手表发起：继续app运动
+    EAPhoneOpsAppSportContinue = 14,
+
+    /// 手表发起：结束app运动
+    EAPhoneOpsAppSportEnd = 15,
+    
+    /** 接听来电(android) */
+    EAPhoneOpsIncomingCallAccept = 16,
+
+    /** 拒接来电(android) */
+    EAPhoneOpsIncomingCallReject = 17,
+
+    /** 勿扰打开 */
+    EAPhoneOpsNotDisturbOpen = 18,
+
+    /** 勿扰关闭 */
+    EAPhoneOpsNotDisturbClose = 19,
+
+    /** 抬手亮屏打开 */
+    EAPhoneOpsGesturesOpen = 20,
+
+    /** 抬手亮屏关闭 */
+    EAPhoneOpsGesturesClose = 21,
+    
+    
 };
 
 /// Operating mobile phone status
@@ -1985,6 +2062,10 @@ typedef NS_ENUM(NSUInteger,EAHabitTrackerOps) {
     /// delete all
     /// 操作：删除全部
     EAHabitTrackerOpsDelAll = 3,
+    
+    /// delete more
+    /// 操作：删除多天
+    EAHabitTrackerOpsDelMore = 4,
 };
 
 /// Habit tracker icon type
@@ -2102,6 +2183,40 @@ typedef NS_ENUM(NSUInteger, EAMonitorReminderType) {
     /** 久坐【未实现】 */
 //    EAMonitorReminderTypeSedentary = 2,
 };
+
+#pragma mark - 运动状态
+typedef NS_ENUM(NSUInteger, EAAppLaunchSportStatus) {
+    
+    EAAppLaunchSportStatusClose = 0,
+    EAAppLaunchSportStatusStart = 1,
+    EAAppLaunchSportStatusPause = 2,
+};
+
+#pragma mark - App操作手表类型
+typedef NS_ENUM(NSUInteger, EAAppOpsType) {
+    
+    EAAppOpsTypeHr = 1, // 心率
+    EAAppOpsTypeStress = 2,// 压力
+    EAAppOpsTypeBloodOxygen = 3,// 血氧
+    EAAppOpsTypeBreathe = 4,// 呼吸
+};
+
+#pragma mark - 大数据类型（获取）
+typedef NS_ENUM(NSUInteger, EABigDataType) {
+    
+    EABigDataTypeSteps = 1,         // 步数
+    EABigDataTypeSleep = 2,         // 睡眠
+    EABigDataTypeHr = 3,            // 心率
+    EABigDataTypeGps = 4,           // GPS
+    EABigDataTypeMultiSports= 5,    // 多运动
+    EABigDataTypeBloodOxygen = 6,   // 血氧
+    EABigDataTypeStress = 7,        // 压力
+    EABigDataTypeStepFreq = 8,      // 步频
+    EABigDataTypeStepPace = 9,      // 配速
+    EABigDataTypeRestingHr = 10,    // 静态心率
+    EABigDataTypeHabitTracker = 11, // 习惯
+};
+
 
 
 #endif /* EAEnumh */
