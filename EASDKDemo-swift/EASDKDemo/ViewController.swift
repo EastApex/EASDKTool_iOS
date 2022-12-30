@@ -1058,7 +1058,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with:.appMessage) { baseModel in
             
             let model = baseModel as! EAAppMessageSwitchData;
-            let appPushModel = EAShowAppMessageModel.allocInit(with: model);
+            let appPushModel = EAShowAppMessageModel.eaAllocInit(with: model);
             print(appPushModel.modelToJSONObject()!);
         }
     }
