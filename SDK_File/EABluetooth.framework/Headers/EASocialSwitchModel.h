@@ -42,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) EASocialOps *sSms;
 
 /// Social
-/// 社交
+/// 社交（第三方App推送提醒 ）
 @property(nonatomic, strong) EASocialOps *sSocial;
 
 
@@ -51,7 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /// Schedule
-/// 日程
+/// 日程（iPhone日历提醒）
 @property(nonatomic, strong) EASocialOps *sSchedule;
 
 

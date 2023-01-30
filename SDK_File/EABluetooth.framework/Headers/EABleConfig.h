@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 #define EALog(format, ...) {\
 if ([EABleConfig logEnable]) {\
 NSLog(@"[EALog]:%s:%d 👻 " format, __func__,__LINE__, ##__VA_ARGS__);\
+if ([EABleConfig saveLogEnable] && !isatty(STDOUT_FILENO)) {\
+freopen([[EABleConfig getLogPath] cStringUsingEncoding:NSASCIIStringEncoding], "a+", stderr);\
+}\
 }\
 }\
 
@@ -33,6 +36,10 @@ NSLog(@"[EALog]:%s:%d 👻 " format, __func__,__LINE__, ##__VA_ARGS__);\
 /// 测试专用（请在调试阶段设置使用=》0:删除大数据，1:不删除大数据）
 @property (nonatomic, assign) NSInteger isTest;
 
+/// Whether to save logs. This parameter is disabled by default
+/// 是否保存日志，默认关闭,需要 debug 为YES才能起作用
+@property (nonatomic, assign) BOOL saveLog;
+
 /// ignore：
 /// 工具 ，默认关闭
 @property (nonatomic, assign) BOOL tool;
@@ -46,13 +53,17 @@ NSLog(@"[EALog]:%s:%d 👻 " format, __func__,__LINE__, ##__VA_ARGS__);\
 //@property (nonatomic, assign) BOOL showRSSI;
 
 
-/// 初始化默认配置,不是单例（debug:NO,scanchannel:8800,canScanAllDevices:NO,isTest:0）
+/// 初始化默认配置,不是单例（debug:NO,scanchannel:8800,canScanAllDevices:NO,isTest:NO,saveLog:NO）
 + (EABleConfig *)getDefaultConfig;
 
 
 + (BOOL)logEnable;
 
 + (BOOL)toolEnable;
+
++ (BOOL)saveLogEnable;
+
++ (NSString *)getLogPath;
 @end
 
 NS_ASSUME_NONNULL_END

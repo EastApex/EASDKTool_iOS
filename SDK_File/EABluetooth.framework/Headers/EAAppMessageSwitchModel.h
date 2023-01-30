@@ -11,6 +11,61 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class EAAppMessageSwitchData;
 
+typedef NS_OPTIONS(NSUInteger, EAShowAppType) {
+    
+    EAShowAppTypeUnknow         = 0,
+    EAShowAppTypeWechat         = 1,
+    EAShowAppTypeQQ             = 2,
+    EAShowAppTypeFacebook       = 3,
+    EAShowAppTypeTwitter        = 4,
+    EAShowAppTypeMessenger      = 5,
+    EAShowAppTypeHangouts       = 6,
+    EAShowAppTypeGmail          = 7,
+    EAShowAppTypeViber          = 8,
+    EAShowAppTypeSnapchat       = 9,
+    EAShowAppTypeWhatsApp       = 10,
+    EAShowAppTypeInstagram      = 11,
+    EAShowAppTypeLinkedin       = 12,
+    EAShowAppTypeLine           = 13,
+    EAShowAppTypeSkype          = 14,
+    EAShowAppTypeBooking        = 15,
+    EAShowAppTypeAirbnb         = 16,
+    EAShowAppTypeFlipboard      = 17,
+    EAShowAppTypeSpotify        = 18,
+    EAShowAppTypePandora        = 19,
+    EAShowAppTypeTelegram       = 20,
+    EAShowAppTypeDropbox        = 21,
+    EAShowAppTypeWaze           = 22,
+    EAShowAppTypeLift           = 23,
+    EAShowAppTypeSlack          = 24,
+    EAShowAppTypeShazam         = 25,
+    EAShowAppTypeDeliveroo      = 26,
+    EAShowAppTypeKakaotalk      = 27,
+    EAShowAppTypePinterest      = 28,
+    EAShowAppTypeTumblr         = 29,
+    EAShowAppTypeVk             = 30,
+    EAShowAppTypeYoutube        = 31,
+    EAShowAppTypeOutlook        = 32,
+    EAShowAppTypeAmazon         = 33,
+    EAShowAppTypeDiscord        = 34,
+    EAShowAppTypeGithub         = 35,
+    EAShowAppTypeGoogleMaps     = 36,
+    EAShowAppTypeNewsBreak      = 37,
+    EAShowAppTypeReddit         = 38,
+    EAShowAppTypeTeams          = 39,
+    EAShowAppTypeTiktok         = 40,
+    EAShowAppTypeTwitch         = 41,
+    EAShowAppTypeUberEats       = 42,
+    EAShowAppTypeDoordash       = 43,
+    EAShowAppTypeGrubhub        = 44,
+    EAShowAppTypeInstacart      = 45,
+    EAShowAppTypePostmates      = 46,
+    EAShowAppTypeZoom           = 47,
+    EAShowAppTypeUber           = 48,
+    EAShowAppTypeAppleEmail     = 49,
+};
+
+
 
 
 
@@ -76,6 +131,16 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameter onOff: 开启或者关闭
 + (EAShowAppMessageModel *)eaAllocInitWithAllOnOff:(BOOL)onOff;
 
+/// 一键开启或者关闭
+/// - Parameter onOff: 开启或者关闭
+/// - Parameter showAppTypes: [数组]开启或者关闭的App类型
+/// -
+/// - Sample Code:
+/// -
+/// -   NSArray *showAppTypes = @[@(EAShowAppTypeWechat), @(EAShowAppTypeGmail)];
+/// -   EAShowAppMessageModel *eaShowAppMessageModel = [EAShowAppMessageModel eaAllocInitWithOnOff:YES showAppTypes:showAppTypes];
+/// -
++ (EAShowAppMessageModel *)eaAllocInitWithOnOff:(BOOL)onOff showAppTypes:(NSArray *)showAppTypes;
 
 @end
 
@@ -116,6 +181,7 @@ NS_ASSUME_NONNULL_BEGIN
  tumblr =29;
  vk =30;
  youtube=31;
+ outlook=32;
  Amazon = 33,
  Discord = 34,
  Github = 35,

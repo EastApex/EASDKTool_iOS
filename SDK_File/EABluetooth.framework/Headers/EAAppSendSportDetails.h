@@ -9,6 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
+/// 发送APP记录运动信息
+/// 运动暂停后，需要停止发送此命令，如果需要恢复运动，继续发此命名给手表即可
 @interface EAAppSendSportDetails : EABaseModel
 
 /// 当前总运动时长(单位:秒)

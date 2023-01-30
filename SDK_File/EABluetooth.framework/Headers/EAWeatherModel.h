@@ -15,11 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface EADayWeatherModel : EABaseModel
 
 /// Weather Conditions (Day)
-/// 天气状况 （日间）
+/// 天气状况 （日间）：如果不需要夜间天气，请将 eNightType 也设为 eDayType的值
 @property(nonatomic, assign) EAWeatherType eDayType;
 
 /// Weather Conditions (night)
-/// 天气状况 （夜间）
+/// 天气状况 （夜间）如果不需要夜间天气，请将 eNightType 也设为 eDayType的值
 @property(nonatomic, assign) EAWeatherType eNightType;
 
 /// The lowest temperature

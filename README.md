@@ -7,6 +7,8 @@
 https://github.com/EastApex/EASDKTool_iOS.git
 
 ### Release Notes:
+<p>2023-01-30:
+    <br>fixed ios connect camera bug
 <p>2022-12-29:
     <br>1.BT one-click connection.
     <br>2. Add App sports.
@@ -27,6 +29,8 @@ https://github.com/EastApex/EASDKTool_iOS.git
 <p>2022-09-02: First release.
 
 ### 更新说明：
+<p>2023-01-30:
+    <br>修复连接相机的bug
 <p>2022-12-29:
     <br>1.BT一键连接。
     <br>2.新增App运动。

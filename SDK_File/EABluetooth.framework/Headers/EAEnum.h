@@ -720,7 +720,7 @@ typedef NS_ENUM(NSUInteger,EAWeatherType) {
     EAWeatherTypeGloomy = 2,
     
     /// A shower or Drizzle
-    /// 阵雨（300 305 309 350）
+    /// 阵雨（小雨）（300 305 309 350）
     EAWeatherTypeDrizzle = 3,
     
     /// Strong rain shower or Moderate rain
@@ -736,7 +736,7 @@ typedef NS_ENUM(NSUInteger,EAWeatherType) {
     EAWeatherTypeHeavyRain = 6,
     
     /// Sleet or Freezing rain
-    /// 冻雨（313 404 405 406 456）
+    /// 冻雨（雨夹雪）（313 404 405 406 456）
     EAWeatherTypeSleet = 7,
     
     /// Light snow
@@ -2154,14 +2154,14 @@ typedef NS_ENUM(NSUInteger, EACWFTimerColorType) {
     
     EACWFTimerColorTypeBlack         = 0,
     EACWFTimerColorTypeWhite         = 1,
-    
+    EACWFTimerColorTypeYellow        = 2,
 };
 
 #pragma mark - 自定义表盘风格类型
 typedef NS_ENUM(NSUInteger, EACWFStyleType) {
     
-    EACWFStyleTypePictureNumber         = 1,// 图片数字表盘
-
+    EACWFStyleTypePictureNumber         = 1,    // 图片数字表盘
+    EACWFStyleTypeNumber                = 2,    // 数字表盘
 };
 
 #pragma mark - 手表形状
@@ -2170,6 +2170,19 @@ typedef NS_ENUM(NSUInteger, EAScreenType) {
     EAScreenTypeSquare          = 0, // 0: square screen
     EAScreenTypeCircle          = 1, // 1: round screen
 };
+
+#pragma mark - 时间类型
+typedef NS_ENUM(NSUInteger, EATimeType) {
+    
+    EATimeTypeHighHour          = 0, // 0: Hour high【时高位】
+    EATimeTypeLowHour           = 1, // 1: Low high【时低位】
+    
+    EATimeTypeHighMinute        = 10, // 10: Hour minute【时高位】
+    EATimeTypeLowMinute         = 11, // 11: Low minute【时低位】
+    
+    EATimeTypeColon             = 100,// 100:Colon【冒号】==> :
+};
+
 
 #pragma mark - 监测提醒类型
 typedef NS_ENUM(NSUInteger, EAMonitorReminderType) {

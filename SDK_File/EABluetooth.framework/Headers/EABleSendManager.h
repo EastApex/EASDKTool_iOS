@@ -57,8 +57,12 @@ typedef void(^RespondBlock)(EARespondModel *respondModel);
 - (BOOL)upgrade:(EAOTA *)ota;
 
 /// Customize the background watch face
+/// 自定义背景图片的表盘
 - (NSInteger )customWatchFaceBackgroundImage:(UIImage *)backgroundImage colorType:(EACWFTimerColorType )colorType styleType:(EACWFStyleType)styleType;
 
+/// Digital watch face with custom background picture
+/// 自定义背景图片的数字表盘
+- (NSInteger )customNumberWatchFaceBackgroundImage:(UIImage *)backgroundImage color:(UIColor *)color ;
 
 
 
