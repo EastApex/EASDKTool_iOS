@@ -99,7 +99,6 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
 //
 //        };
         
-        self.perform(#selector(customPictureWatchFace), with: nil, afterDelay: 3)
 
     }
     
@@ -1155,5 +1154,26 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         }
     }
  
+    func getTelephoneBook(){
+        
+        EABleSendManager.default().operationGetInfo(with:.readTelephoneBook) { baseModel in
+            
+            let model = baseModel as! EAReadTelephoneBookModel;
+        }
+    }
+    
+    func setTelephoneBook() {
+        
+        let book1 = EAContactModel.eaAllocInit(withName: "apple", eelephoneNumber: "123456")
+        let book2 = EAContactModel.eaAllocInit(withName: "Tomy", eelephoneNumber: "128258")
+        
+        let eaTelephoneBookModel = EATelephoneBookModel.eaAllocInit(withList: [book1,book2])
+        
+        EABleSendManager.default().operationChange(eaTelephoneBookModel) { eaRespondModel in
+            
+            
+        }
+    }
+    
 }
 
