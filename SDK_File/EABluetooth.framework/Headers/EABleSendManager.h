@@ -65,7 +65,7 @@ typedef void(^RespondBlock)(EARespondModel *respondModel);
 /// - Parameters:
 ///   - backgroundImage: background image【背景图片】
 ///   - numberList: Array of time numeric models【时间数字模型数组，必须含有时高位、时低位、分高位、分低位】
-- (NSInteger )creatPictureNumberThumbnailWithBackgroundImage:(UIImage *)backGroundImage list:(NSArray <EACustomNumberWatchFaceModel *>*)numberList;
+- (NSInteger )customNumberWatchFaceBackgroundImage:(UIImage *)backGroundImage list:(NSArray <EACustomNumberWatchFaceModel *>*)numberList;
 
 
 
