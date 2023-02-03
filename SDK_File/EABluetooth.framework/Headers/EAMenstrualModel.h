@@ -21,13 +21,16 @@ NS_ASSUME_NONNULL_BEGIN
 /// 提示的天数：（如果e_type是安全期，days>0，则表示下一个经期的天数。如果是经期，days>0，则代表经期第几天)
 @property(nonatomic, assign) NSInteger days;
 
+
 @end
 
 
+/// id = 32:Physiological cycle
+/// id = 32:生理周期
 @interface EAMenstruals : EABaseModel
 
-/// A maximum of 45 are supported
-/// 最多支持45个
+/// Cycle data（A maximum of 45 are supported）
+/// 生理周期数据（最多支持45个）
 @property(nonatomic, strong) NSMutableArray<EAMenstrualModel*> *sDateArray;
 
 
@@ -35,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// start: indicates the start date. eg. 2022-02-06 [yyyy-MM-dd]
 /// keepDay: indicates the keepDay duration. eg.7
 /// cycleDay: cycle . eg.28
-+ (EAMenstruals *)allocInitWithStartDate:(NSString *)start keepDay:(NSInteger)keepDay cycleDay:(NSInteger)cycleDay;
++ (EAMenstruals *)eaAllocInitWithStartDate:(NSString *)start keepDay:(NSInteger)keepDay cycleDay:(NSInteger)cycleDay;
 
 
 @end

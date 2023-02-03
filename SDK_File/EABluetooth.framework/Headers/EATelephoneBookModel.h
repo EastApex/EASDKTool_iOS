@@ -30,8 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-/// Transfers the contact data model to the watch
-///【向手表传输联系人数据模型】
+/// id = 42: Mobile phone directory[Transfers the contact data model to the watch]
+/// id = 42: 手机通信录【向手表传输联系人数据模型】
 @interface EATelephoneBookModel : EABaseModel
 
 /// ignore

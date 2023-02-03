@@ -10,8 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-/// Base calorie switch
-/// 基础卡路里开关
+/// id = 27: Base calorie switch
+/// id = 27: 基础卡路里开关
 @interface EACaloriesSettingModel : EABaseModel
 
 /// Switch: 0 Off 1 on

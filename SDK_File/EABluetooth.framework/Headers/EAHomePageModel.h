@@ -16,15 +16,24 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+
+/// id = 31: 手表一级菜单设置
+/// id = 31: Level 1 menu Settings
 @interface EAHomePageModel : EABaseModel
 
 
+/// 设置新的菜单类型
+/// Set a new menu type
 @property(nonatomic, strong) NSMutableArray<EAPageModel*> *sPageArray;
 
+
+/// Menu types supported for setting
+/// 支持设置的菜单类型
 @property(nonatomic, strong) NSMutableArray<EAPageModel*> *supportPageArray;
 
 
 + (EAHomePageModel *)getModelByData:(NSData *)data;
+
 @end
 
 NS_ASSUME_NONNULL_END

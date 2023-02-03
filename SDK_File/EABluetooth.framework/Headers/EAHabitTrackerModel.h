@@ -10,6 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
+/// id = 38: 习惯追踪
+/// id = 38: Habit Tracker
 @interface EAHabitTrackerModel : EABaseModel
 
 @property(nonatomic, assign) EAHabitTrackerIconType eIconId;

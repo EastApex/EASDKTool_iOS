@@ -9,8 +9,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-/// Time when the screen automatically dies
-/// 屏幕背景光熄灭时间
+/// id = 8 : Time when the screen automatically dies
+/// id = 8 : 屏幕背景光熄灭时间
 @interface EABlacklightTimeoutModel : EABaseModel
 
 /// Automatic screen off time (unit: second)

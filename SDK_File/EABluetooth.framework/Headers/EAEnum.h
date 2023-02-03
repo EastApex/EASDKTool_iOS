@@ -231,17 +231,39 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     /// EAMonitorReminder
     EADataInfoTypeMonitorReminder = 45,
     
-    /// App运动
-    EADataInfoTypeAppLaunchSport = 46,
+    /// App地图运动
+    EADataInfoTypeAppLaunchMapSport = 46,
     
-    /// App发送运动数据（定时发送：单位秒）
-    EADataInfoTypeAppSendSportDetails = 47,
+    /// App发送地图运动数据（定时发送：单位秒）
+    EADataInfoTypeAppSendMapSportDetails = 47,
     
     /// App操作手表（开始/停止【心率、血氧、压力、呼吸】）
     EADataInfoTypeAppOps = 48,
     
-    /// 单独获取大数据（如步数、如心率）
+    /// id = 49: 单独获取大数据（如步数、如心率）
+    /// id = 49: Get big data separately (e.g. steps, e.g. heart rate)
     EADataInfoTypeOnlyGetBigData = 49,
+    
+    /// id = 50 ：自动睡眠血氧监测（夜间血氧监测）
+    /// id = 50: Automatic sleep oxygen monitoring (night oxygen monitoring)
+    EADataInfoTypeSleepBloodOxygenMonitor = 50,
+    
+    /// id = 51 ：自动压力监测
+    /// id = 51: Automatic pressure monitoring
+    EADataInfoTypeStressMonitor = 51,
+    
+    /// id = 52 ：实时数据开关
+    /// id = 52: real-time data switch
+    EADataInfoTypeSendRealTimeDataOnOff = 52,
+    
+    /// id = 53 ：震动模式
+    /// id = 53: vibrate mode
+    EADataInfoTypeVibrateIntensity = 53,
+    
+    /// id = 54 ：APP启动手表运动（投屏运动）
+    /// id = 54: APP starts watch motion (screen motion)
+    EADataInfoTypeAppLaunchScreenSport = 54,
+    
     
     /// Operating Phone Commands
     /// 操作手机命令
@@ -256,6 +278,9 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     
     /// App运动实时数据
     EADataInfoTypeAppSportRealTime = 2008,
+    
+    /// 上报启动手表测量结果【id = 48 测量结果）】
+    EADataInfoTypeAppOpsData = 2009,
     
     
     /// Daily steps
@@ -596,6 +621,28 @@ typedef NS_ENUM(NSUInteger,EALanguageType) {
     /// 瑞典文
     EALanguageTypeSwedish = 18,
     
+    ///  土耳其文
+    ///  Osmanli
+    EALanguageTypeOsmanli = 19,
+
+    ///  捷克语
+    ///  Czech
+    EALanguageTypeCzech = 20,
+
+    ///  印度尼西亚文
+    EALanguageTypeIndonesia = 21,
+
+    ///  马来西亚语
+    ///  Indonesia
+    EALanguageTypeMelayu = 22,
+
+    ///  德语
+    ///  German
+    EALanguageTypeGerman = 23,
+
+    ///  波斯语
+    ///  Farsi
+    EALanguageTypeFarsi = 24,
 };
 
 
@@ -972,6 +1019,14 @@ typedef NS_ENUM(NSUInteger,EAReminderEventOps) {
     /// delete all alarm clock & remind
     ///  操作：删除全部闹钟及提醒
     EAReminderEventOpsDelRemindAlarm = 5,
+    
+    /// 操作：根据类型替换所有(需要id=44：reminder_all_in_and_replace_type_setting为1才支持)
+    /// replace all with type(This parameter is supported only when id=44: reminder_all_in_and_replace_type_setting is 1)
+    EAReminderEventOpsReplaceType = 6,
+
+    /// 操作：替换所有(需要id=44：reminder_all_in_and_replace_type_setting为1才支持)
+    /// replace all(This parameter is supported only when id=44: reminder_all_in_and_replace_type_setting is 1)
+    EAReminderEventOpsAllIn = 7,
 };
 
 
@@ -1085,22 +1140,22 @@ typedef NS_ENUM(NSUInteger,EAPhoneOps) {
     /// 手表发起：结束app运动
     EAPhoneOpsAppSportEnd = 15,
     
-    /** 接听来电(android) */
+    ///  接听来电(android) */
     EAPhoneOpsIncomingCallAccept = 16,
 
-    /** 拒接来电(android) */
+    ///  拒接来电(android) */
     EAPhoneOpsIncomingCallReject = 17,
 
-    /** 勿扰打开 */
+    ///  勿扰打开 */
     EAPhoneOpsNotDisturbOpen = 18,
 
-    /** 勿扰关闭 */
+    ///  勿扰关闭 */
     EAPhoneOpsNotDisturbClose = 19,
 
-    /** 抬手亮屏打开 */
+    ///  抬手亮屏打开 */
     EAPhoneOpsGesturesOpen = 20,
 
-    /** 抬手亮屏关闭 */
+    ///  抬手亮屏关闭 */
     EAPhoneOpsGesturesClose = 21,
     
     
@@ -1934,7 +1989,8 @@ typedef NS_ENUM(NSUInteger,EAStressDataType) {
     EAStressDataTypeStressHigh = 4,
 };
 
-/// MARK: - 振动模式
+/// MARK: - 震动类型
+/// Vibration type
 typedef NS_ENUM(NSUInteger,EAVibrateIntensityType) {
     
     /// Light
@@ -1949,6 +2005,9 @@ typedef NS_ENUM(NSUInteger,EAVibrateIntensityType) {
     /// 强
     EAVibrateIntensityTypeStrong = 2,
     
+    /// Not Vibrate
+    /// 不震动
+    EAVibrateIntensityTypeNotVibrate = 3,
 };
 
 /// MARK: - 一级菜单样式
@@ -2174,26 +2233,26 @@ typedef NS_ENUM(NSUInteger, EAScreenType) {
 #pragma mark - 时间类型
 typedef NS_ENUM(NSUInteger, EATimeType) {
     
-    EATimeTypeHighHour          = 0, // 0: Hour high【时高位】
-    EATimeTypeLowHour           = 1, // 1: Low high【时低位】
+    EATimeTypeLowHour           = 0,    // 0: Low high【时低位】==》“0~9”
+    EATimeTypeLowMinute         = 1,    // 1: Low minute【分低位】==》“0~9”
+
+    EATimeTypeHighMinute        = 10,    // 10: Hour minute【分高位】==》“0~5”
+    EATimeTypeHighHour          = 11,   // 11: Hour high【时高位】==》“0~2”
     
-    EATimeTypeHighMinute        = 10, // 10: Hour minute【时高位】
-    EATimeTypeLowMinute         = 11, // 11: Low minute【时低位】
-    
-    EATimeTypeColon             = 100,// 100:Colon【冒号】==> :
+    EATimeTypeColon             = 100,  // 100:Colon【冒号】==> “:”
 };
 
 
 #pragma mark - 监测提醒类型
 typedef NS_ENUM(NSUInteger, EAMonitorReminderType) {
     
-    /** 喝水 */
+    /// 喝水
     EAMonitorReminderTypeDrink = 0,
 
-    /** 洗手 */
+    /// 洗手
     EAMonitorReminderTypeWashHands = 1,
 
-    /** 久坐【未实现】 */
+    /// 久坐【未实现】
 //    EAMonitorReminderTypeSedentary = 2,
 };
 

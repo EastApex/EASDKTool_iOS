@@ -25,8 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-/// Social alert switch
-/// 社交提醒开关
+/// id = 21 : Social alert switch
+/// id = 21 : 社交提醒开关
 @interface EASocialSwitchModel : EABaseModel
 
 /// incoming call

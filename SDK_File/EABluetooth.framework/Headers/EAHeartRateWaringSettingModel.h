@@ -10,8 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-/// Heart rate alarm setting
-/// 心率报警门限设置
+/// id = 26: Heart rate alarm setting
+/// id = 26: 心率报警门限设置
 @interface EAHeartRateWaringSettingModel : EABaseModel
 
 /// Switch: 0 Off 1 on

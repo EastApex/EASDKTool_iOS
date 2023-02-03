@@ -8,8 +8,8 @@
 #import <EABluetooth/EABaseModel.h>
 NS_ASSUME_NONNULL_BEGIN
 
-/// Sedentary monitoring
-/// 久坐监测
+/// id = 18 : Sedentary monitoring
+/// id = 18 : 久坐监测
 @interface EAAutoCheckSedentarinessModel : EABaseModel
 
 ///  Interval: The unit is minute. 0 indicates that the monitoring function is disabled

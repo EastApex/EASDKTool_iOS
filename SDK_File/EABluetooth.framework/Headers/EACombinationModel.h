@@ -10,8 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-/// Basic Device Information
-/// 设备基本信息【不支持修改】
+/// id = 30: Basic Device Information[cannot be modified]
+/// id = 30: 设备基本信息【不支持修改】
 @interface EACombinationModel : EABaseModel
 
 /// charging state [cannot be modified]
@@ -63,6 +63,12 @@ NS_ASSUME_NONNULL_BEGIN
 ///  Online custom dial ID [cannot be modified]
 /// 在线自定义表盘id 【不支持修改】
 @property(nonatomic, copy,readonly) NSString *userWfId;
+
+/// 睡眠血氧监测开关 【不支持修改】
+@property(nonatomic, assign) NSInteger sleepBloodOxygenSw;
+
+///  压力监测开关 【不支持修改】
+@property(nonatomic, assign) NSInteger stressSw;
 
 + (EACombinationModel *)getModelByData:(NSData *)data;
 

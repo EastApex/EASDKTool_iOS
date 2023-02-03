@@ -11,8 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-/// Watch the information
-/// 手表信息
+/// id = 3: Watch the information
+/// id = 3: 手表信息
 @interface EAWatchModel : EABaseModel
 
 /// Watch SN no.

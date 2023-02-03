@@ -9,9 +9,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
-/// Distance the unit
-/// 距离单位
+// disuse
+// 弃用
+/// id = 24: Distance the unit
+/// id = 24: 距离单位
 @interface EADistanceUintModel : EABaseModel
 
 @property(nonatomic, assign) EADistanceUnit unit;

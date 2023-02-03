@@ -10,8 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-/// Automatic heart rate monitoring
-/// 自动心率监测
+/// id = 17 : Automatic heart rate monitoring
+/// id = 17 : 自动心率监测
 @interface EAAutoCheckHeartRateModel : EABaseModel
 
 /// Interval: Unit: minute. 0 indicates that the monitoring function is disabled

@@ -93,6 +93,8 @@ weekCycleBit 为127 即 开启每天监测功能
 
 
 
+/// id = 22 : 提醒（闹钟）
+/// id = 22: Reminder (alarm clock)
 @interface EAReminderOps : EABaseModel
 
 /// Reminder event operations
@@ -105,6 +107,8 @@ weekCycleBit 为127 即 开启每天监测功能
 
 @property(nonatomic,strong) NSMutableArray<EAReminderModel*> *sIndexArray;
 
+/** 类型：当ops = replace_type时需要填入 */
+@property(nonatomic, assign) EAReminderEventType eType;
 
 + (EAReminderOps *)getModelByData:(NSData *)data ;
 

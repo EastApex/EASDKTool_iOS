@@ -9,7 +9,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-/// 同步时间
+/// id = 5: 同步时间
+/// id = 5: indicates the synchronization time
 @interface EASyncTime : EABaseModel
 
 /// year

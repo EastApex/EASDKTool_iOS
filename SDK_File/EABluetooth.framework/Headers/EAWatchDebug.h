@@ -9,6 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
+/// 手表debug数据
 @interface EAWatchDebug : EABaseModel
 
 /** 操作 0设备的死机信息 1设备的内存信息*/

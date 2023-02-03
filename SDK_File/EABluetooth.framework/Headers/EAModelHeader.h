@@ -69,9 +69,14 @@
 #import <EABluetooth/EAMonitorReminder.h>
 #import <EABluetooth/EARealTimeModel.h>
 #import <EABluetooth/EAAppSportRealTimeModel.h>
-#import <EABluetooth/EAAppLaunchSport.h>
-#import <EABluetooth/EAAppSendSportDetails.h>
+#import <EABluetooth/EAAppLaunchMapSport.h>
+#import <EABluetooth/EAAppSendMapSportDetails.h>
 #import <EABluetooth/EAOnlyGetBigData.h>
+#import <EABluetooth/EASleepBloodOxygenMonitor.h>
+#import <EABluetooth/EAStressMonitor.h>
+#import <EABluetooth/EASendRealTimeDataOnOff.h>
+#import <EABluetooth/EAVibrateIntensity.h>
+#import <EABluetooth/EAAppLaunchScreenSport.h>
 
 // ops
 #import <EABluetooth/EABingingOps.h>
@@ -79,6 +84,7 @@
 #import <EABluetooth/EAPhoneOpsModel.h>
 #import <EABluetooth/EAMtuModel.h>
 #import <EABluetooth/EAAppOps.h>
+#import <EABluetooth/EAAppOpsDataModel.h>
 
 // ota
 #import <EABluetooth/EAOtaRequest.h>
@@ -90,5 +96,6 @@
 #import <EABluetooth/EAFastGetSnNumberManager.h>
 #import <EABluetooth/EADataValue.h>
 
+#import <EABluetooth/EACustomNumberWatchFaceModel.h>
 
 #endif /* EAModelHeader_h */

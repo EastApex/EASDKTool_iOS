@@ -63,6 +63,8 @@ typedef NS_OPTIONS(NSUInteger, EAShowAppType) {
     EAShowAppTypeZoom           = 47,
     EAShowAppTypeUber           = 48,
     EAShowAppTypeAppleEmail     = 49,
+    EAShowAppTypeDingTalk       = 50,
+    EAShowAppTypeAlipay         = 51,
 };
 
 
@@ -120,7 +122,8 @@ typedef NS_OPTIONS(NSUInteger, EAShowAppType) {
 @property(nonatomic,assign) BOOL zoom;
 @property(nonatomic,assign) BOOL uber;
 @property(nonatomic,assign) BOOL appleEmail;
-
+@property(nonatomic,assign) BOOL dingTalk ;
+@property(nonatomic,assign) BOOL alipay;
 // 获取App推送蓝牙传输对象数据
 - (EAAppMessageSwitchData *)getEAAppMessageSwitchData;
 
@@ -199,12 +202,15 @@ typedef NS_OPTIONS(NSUInteger, EAShowAppType) {
  Zoom = 47,
  Uber = 48,
  AppleEmail = 49,
+ DingTalk = 50,
+ Alipay = 51,
  */
 @property(nonatomic, assign) BOOL sw;
 
 @end
 
-
+/// id = 34: 手机各个APP推送开关
+/// id = 34: Push switch of each APP on mobile phone
 @interface EAAppMessageSwitchData : EABaseModel
 
 @property(nonatomic,strong) NSMutableArray<EAAppMessageSwitchModel*> *sAppSwArray;

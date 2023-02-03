@@ -9,8 +9,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-/// Binding watch
-/// 绑定操作 
+/// id = 6 : Binding watch
+/// id = 6 : 绑定操作
 @interface EABingingOps : EABaseModel
 
 /// Binding watch operation type: defalut set EABindingOpsTypeEnd

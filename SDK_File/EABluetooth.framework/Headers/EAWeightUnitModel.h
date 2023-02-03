@@ -9,7 +9,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// Weight unit
+// disuse
+// 弃用
+/// id = 25: Weight unit
+/// id = 25: 重量单位
 @interface EAWeightUnitModel : EABaseModel
 
 @property(nonatomic, assign) EAWeightUnit unit;

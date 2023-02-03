@@ -50,13 +50,9 @@ weekCycleBit 为127 即 开启每天监测功能
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// 提醒事件监测
-/// Monitor reminder event
+/// id = 45 ：提醒事件监测
+/// id = 45 ：Monitor reminder event
 @interface EAMonitorReminder : EABaseModel
-
-
-
-
 
 
 /** 提醒事件类型 */

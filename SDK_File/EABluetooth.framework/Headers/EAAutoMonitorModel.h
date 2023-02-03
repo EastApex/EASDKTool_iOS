@@ -9,6 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+// disuse
+// 弃用
+/// id = 36: 自动监测开关
 @interface EAAutoMonitorModel : EABaseModel
 
 /** 心率自动监测 */

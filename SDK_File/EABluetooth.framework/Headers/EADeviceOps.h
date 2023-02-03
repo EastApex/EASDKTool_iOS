@@ -9,8 +9,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-/// Operating the watch
-/// 操作设备
+/// id = 12 : Operating the watch
+/// id = 12 : 操作设备
 @interface EADeviceOps : EABaseModel
 
 

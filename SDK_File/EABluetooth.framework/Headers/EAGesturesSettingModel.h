@@ -10,8 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-/// Raise the screen switch
-/// 抬手亮屏开关
+/// id = 28: Raise the screen switch
+/// id = 28: 抬手亮屏开关
 @interface EAGesturesSettingModel : EABaseModel
 
 /// Raised my hand against the bright screen type

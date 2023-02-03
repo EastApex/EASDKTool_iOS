@@ -10,6 +10,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
+/// id = 11 : 手表单位（公制、英制）
+/// id = 11 : 手表单位（公制、英制）
 @interface EAUnifiedUnitModel : EABaseModel
 
 

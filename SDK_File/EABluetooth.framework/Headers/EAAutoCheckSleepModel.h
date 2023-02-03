@@ -9,8 +9,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-/// Automatic sleep monitoring
-/// 自动睡眠监测设置
+/// id = 16 : Automatic sleep monitoring
+/// id = 16 : 自动睡眠监测设置
 @interface EAAutoCheckSleepModel : EABaseModel
 
 /*

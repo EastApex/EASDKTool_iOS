@@ -10,8 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-/// Big data acquisition command
-/// 获取大数据请求
+/// id = 29: Big data acquisition command
+/// id = 29: 获取大数据请求
 @interface EAGetBigDataRequestModel : EABaseModel
 
 /// Set the following properties to return first

@@ -12,9 +12,20 @@ NS_ASSUME_NONNULL_BEGIN
 //自定义打印
 #define EALog(format, ...) {\
 if ([EABleConfig logEnable]) {\
-NSLog(@"[EALog]:%s:%d 👻 " format, __func__,__LINE__, ##__VA_ARGS__);\
+NSLog(@"[EALog]%s-%d " format, __func__,__LINE__, ##__VA_ARGS__);\
 if ([EABleConfig saveLogEnable] && !isatty(STDOUT_FILENO)) {\
-freopen([[EABleConfig getLogPath] cStringUsingEncoding:NSASCIIStringEncoding], "a+", stderr);\
+NSString *logFirstString = [NSString stringWithFormat:@"【%d】",__LINE__];\
+NSString *logLastString = [NSString stringWithFormat:@""format,##__VA_ARGS__];\
+NSString *logString = [logFirstString stringByAppendingString:logLastString];\
+logString = [logString stringByAppendingString:@"\n"];\
+NSFileHandle *fileHandle = [NSFileHandle fileHandleForWritingAtPath:[EABleConfig getLogPath]];\
+if (!fileHandle) {\
+    [@"" writeToFile:[EABleConfig getLogPath] atomically:YES encoding:NSUTF8StringEncoding error:nil];\
+    fileHandle = [NSFileHandle fileHandleForWritingAtPath:[EABleConfig getLogPath]];\
+}\
+[fileHandle seekToEndOfFile];\
+[fileHandle writeData:[logString dataUsingEncoding:NSUTF8StringEncoding]];\
+[fileHandle closeFile];\
 }\
 }\
 }\

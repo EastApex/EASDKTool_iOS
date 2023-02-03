@@ -9,8 +9,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-/// User information
-/// 用户信息
+/// id = 4: User information
+/// id = 4: 用户信息
 @interface EAUserModel : EABaseModel
 
 /// sex

@@ -9,6 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
+/// id = 41 : 手表配对情况
+/// id = 41 : Watch matching condition
 @interface EABlePairStateModel : EABaseModel
 /** 0: 没有配对 1: 已经配对 */
 @property(nonatomic, assign) BOOL secState;

@@ -9,9 +9,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
+// disuse
+// 弃用
 
+/// id:14 家乡时区信息
 
-/// 家乡时区信息
 @interface EAHomeTimeZoneItem : EABaseModel
 
 /// 家乡时区: 0时区、东时区、西时区

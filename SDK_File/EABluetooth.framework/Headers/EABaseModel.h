@@ -17,9 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface EABaseModel : NSObject
 
 
-
-
-
 /// MARK: - 通用转换方法
 /// @param data 数据流
 /// @param aClass 数据流转换后的类型

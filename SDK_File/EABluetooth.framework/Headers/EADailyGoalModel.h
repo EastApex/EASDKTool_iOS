@@ -23,8 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-/// Daily target value setting
-/// 日常目标值设置
+/// id = 15 : Daily target value setting
+/// id = 15 : 日常目标值设置
 @interface EADailyGoalModel : EABaseModel
 
 

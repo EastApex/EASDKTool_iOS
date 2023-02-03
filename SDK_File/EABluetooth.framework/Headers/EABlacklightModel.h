@@ -9,8 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// The screen brightness of watch
-/// 屏幕亮度
+/// id = 7 : The screen brightness of watch
+/// id = 7 : 屏幕亮度
 @interface EABlacklightModel : EABaseModel
 
 /// brightness  0~100

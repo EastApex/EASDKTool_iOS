@@ -9,6 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
+/// id = 40: 手表日常界面数据
+/// id = 40: daily interface data of the watch
 @interface EASportShowDataModel : EABaseModel
 
 @property(nonatomic, assign) NSInteger steps; // 单位：步
