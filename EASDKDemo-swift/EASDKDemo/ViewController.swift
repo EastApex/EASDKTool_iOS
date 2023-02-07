@@ -986,7 +986,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
     
     func setPeriod(){
         
-        let model = EAMenstruals.allocInit(withStartDate: "2022-08-16", keepDay: 7, cycleDay: 28);
+        let model = EAMenstruals.eaAllocInit(withStartDate: "2022-08-16", keepDay: 7, cycleDay: 28);
         EABleSendManager.default().operationChange(model) { respondModel in
 
         }
@@ -1164,14 +1164,47 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
     
     func setTelephoneBook() {
         
-        let book1 = EAContactModel.eaAllocInit(withName: "apple", eelephoneNumber: "123456")
-        let book2 = EAContactModel.eaAllocInit(withName: "Tomy", eelephoneNumber: "128258")
+      // Method 1
+//        let book1 = EAContactModel.eaAllocInit(withName: "apple", eelephoneNumber: "123456")
+//        let book2 = EAContactModel.eaAllocInit(withName: "Tomy", eelephoneNumber: "128258")
+//
+//        let eaTelephoneBookModel = EATelephoneBookModel.eaAllocInit(withList: [book1,book2])
+//
+//        EABleSendManager.default().operationChange(eaTelephoneBookModel) { eaRespondModel in
+//
+//
+//        }
         
-        let eaTelephoneBookModel = EATelephoneBookModel.eaAllocInit(withList: [book1,book2])
+        // Method 2
+        let contacts = NSMutableArray.init();
+        for i in 0..<12 {
+            
+            let contact = EAContactModel.eaAllocInit(withName: "apple" + String(i), eelephoneNumber: "123456" + String(i))
+            contacts.add(contact);
+        }
         
-        EABleSendManager.default().operationChange(eaTelephoneBookModel) { eaRespondModel in
+        if contacts.count <= 10 {
             
+            let eaTelephoneBookModel = EATelephoneBookModel.eaAllocInit(withList: contacts as! [EAContactModel])
+            EABleSendManager.default().operationChange(eaTelephoneBookModel) { eaRespondModel in
+
+
+            }
+        }else if contacts.count > 10 {
             
+            let eaTelephoneBookModel1 = EATelephoneBookModel.eaAllocInit(withList: contacts.subarray(with: NSMakeRange(0, 10)) as! [EAContactModel])
+            eaTelephoneBookModel1.eFlag = .begin
+            EABleSendManager.default().operationChange(eaTelephoneBookModel1) { eaRespondModel in
+
+
+            }
+            
+            let eaTelephoneBookModel2 = EATelephoneBookModel.eaAllocInit(withList: contacts.subarray(with: NSMakeRange(10, contacts.count - 10)) as! [EAContactModel])
+            eaTelephoneBookModel2.eFlag = .proceed
+            EABleSendManager.default().operationChange(eaTelephoneBookModel2) { eaRespondModel in
+
+
+            }
         }
     }
     
