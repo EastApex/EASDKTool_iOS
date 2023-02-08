@@ -1047,6 +1047,10 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         let backgroundImage = UIImage.init(named: "picture")!;
         EABleSendManager.default().customWatchFaceBackgroundImage(backgroundImage, colorType: .white ,styleType: .pictureNumber);
         
+        
+        
+        
+        
     }
     
     
