@@ -22,7 +22,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param data 数据流
 + (EARespondModel *)getModelByData:(NSData *)data;
 
++ (instancetype)eaInitSuccWithRequestId:(EADataInfoType)requestId;
 + (instancetype)eaInitErrorWithRequestId:(EADataInfoType)requestId;
+
++ (instancetype)eaInitMemFullWithRequestId:(EADataInfoType)requestId;
++ (instancetype)eaInitTimeConflictWithRequestId:(EADataInfoType)requestId;
 
 + (instancetype)eaInitNotReadWithRequestId:(EADataInfoType)requestId;
 + (instancetype)eaInitNotWriteWithRequestId:(EADataInfoType)requestId;

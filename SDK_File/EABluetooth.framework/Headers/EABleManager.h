@@ -6,12 +6,17 @@
 //  version: 2022.12.06 
 
 /**
+
+ Demo & SDK
+ https://github.com/EastApex/EASDKTool_iOS.git
  
- SDK接入文档
  SDK access documentation
- https://www.showdoc.com.cn/2042713679210858/0
+ https://www.showdoc.com.cn/2042713679210858/0  password:123456
  
- 当前版本：2023.02.03
+ Version：2023.02.08
+ 1.Fixed the watch face bule bug;
+ 2.Class EAMenstruals add new method and abandon method; Detail to see class 'EAMenstruals';
+ 3.Modify setting the callback of EAReminderModel and EAHabitTrackerModel to EARespondModel. Deprecated EAReminderRespondModel and EAHabitTrackerRespondModel;
  
  */
 

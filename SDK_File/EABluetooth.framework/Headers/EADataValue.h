@@ -39,7 +39,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// 10进制转16进制
 /// @param tmpid 10进制
 /// @param byteNumber 多少byte
-/// @param isSmall 是否是小端
 + (NSString *)eaConvertToHexByTen:(NSInteger)tmpid andByteNumber:(NSInteger)byteNumber;
 
 

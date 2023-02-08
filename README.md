@@ -7,6 +7,10 @@
 https://github.com/EastApex/EASDKTool_iOS.git
 
 ### Release Notes:
+<p>2023.02.08
+     <br>1.Fixed the watch face bule bug;
+     <br>2.Class EAMenstruals add new method and abandon method; Detail to see class 'EAMenstruals';
+     <br>3.Modify setting the callback of EAReminderModel and EAHabitTrackerModel to EARespondModel. Deprecated EAReminderRespondModel and EAHabitTrackerRespondModel;
 <p>2023-02-03:
     <br>1. New enumeration values:
     <br>&nbsp; &nbsp; id = 10: Language (Turkish, Czech, Indonesian, Bahasa Malaysia, German, Farsi)
@@ -61,6 +65,10 @@ https://github.com/EastApex/EASDKTool_iOS.git
 <p>2022-09-02: First release.
 
 ### 更新说明：
+<p> 2023.02.08
+    <br> 1.修复蓝色表盘bug;
+    <br> 2.类EAMenstruals增加了新方法和放弃方法;详细信息见类'EAMenstruals';
+    <br> 3.修改EAReminderModel和EAHabitTrackerModel的回调设置为EARespondModel。弃用EAReminderRespondModel和EAHabitTrackerRespondModel;
 <p>2023-02-03:
     <br>1.新增枚举值：
     <br>&nbsp;&nbsp;id = 10：语言  》（土耳其文、捷克语、印度尼西亚文、马来西亚语、德语、波斯语）

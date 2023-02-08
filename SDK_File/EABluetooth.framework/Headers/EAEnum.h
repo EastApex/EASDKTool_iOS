@@ -401,6 +401,15 @@ typedef NS_ENUM(NSUInteger, EARespondCodeType) {
     /// App发起运动回应状态（id=46）:手表正在运动，请结束后再开
     EARespondCodeTypeWatchInMotion = 2,
 
+
+    /// The maximum number supported is exceeded
+    /// 超过支持的最大数量
+    EARespondCodeTypeMemFull = 902,
+    
+    /// Time to repeat
+    /// 时间重复
+    EARespondCodeTypeTimeConflict = 903,
+    
     /// 不允许读取
     EARespondCodeTypeNotToRead = 998,
     /// 不允许写入
