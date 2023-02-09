@@ -396,11 +396,10 @@ typedef NS_ENUM(NSUInteger, EARespondCodeType) {
     
     /// Fail
     /// 失败
-    EARespondCodeTypeFail,
+    EARespondCodeTypeFail = 1,
     
     /// App发起运动回应状态（id=46）:手表正在运动，请结束后再开
     EARespondCodeTypeWatchInMotion = 2,
-
 
     /// The maximum number supported is exceeded
     /// 超过支持的最大数量
@@ -411,8 +410,11 @@ typedef NS_ENUM(NSUInteger, EARespondCodeType) {
     EARespondCodeTypeTimeConflict = 903,
     
     /// 不允许读取
+    /// Not to read
     EARespondCodeTypeNotToRead = 998,
+    
     /// 不允许写入
+    ///Not to wirte
     EARespondCodeTypeNotToWirte = 999,
 };
 

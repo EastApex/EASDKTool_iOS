@@ -239,11 +239,12 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
     @IBAction func searchWatch(_ sender: Any) {
         
         EABleManager.default().scanPeripherals();
-        
+
         tbView.isHidden = false
-        
-        
+
+
         EABleManager.default().unbindAndResetPeripheral()
+                
     }
     
     func showView(){

@@ -74,7 +74,7 @@
 #import <EABluetooth/EAOnlyGetBigData.h>
 #import <EABluetooth/EASleepBloodOxygenMonitor.h>
 #import <EABluetooth/EAStressMonitor.h>
-#import <EABluetooth/EASendRealTimeDataOnOff.h>
+#import <EABluetooth/EASendRealTimeDataOnOff.h>
 #import <EABluetooth/EAVibrateIntensity.h>
 #import <EABluetooth/EAAppLaunchScreenSport.h>
 

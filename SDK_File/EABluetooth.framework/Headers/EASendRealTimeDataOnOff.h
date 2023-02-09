@@ -1,5 +1,5 @@
 //
-//  EASendRealTimeDataOnOff.h
+//  EASendRealTimeDataOnOff.h
 //  EABluetooth
 //
 //  Created by Aye on 2023/2/3.

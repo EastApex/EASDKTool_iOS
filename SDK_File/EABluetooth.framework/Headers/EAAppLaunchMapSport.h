@@ -16,8 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// Listen to the notification [kNTF_EAAppSportRealTime] and implement the notification method to obtain EAAppSportRealTimeModel object
 @interface EAAppLaunchMapSport : EABaseModel
 
-/// 运动状态：0关闭 1开启 2暂停
-/// Motion status: 0 Off 1 On 2 Pause
+/// 运动状态：0关闭 1开启 2暂停（若暂停后恢复运动，请查看 class EAAppSendMapSportDetails ）
+/// Motion status: 0 Off 1 On 2 Pause(See class EAAppSendMapSportDetails if you resume sports after pausing.)
 @property(nonatomic, assign) EAAppLaunchSportStatus status;
 
 /// 运动类型(仅支持运动类型序号为 1~6)
@@ -28,6 +28,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// Interval for reporting data (Default: 5 seconds) : (Unit: second
 @property(nonatomic, assign) NSInteger interval;
 
+
+
+
+/// init
+/// - Parameters:
+///   - status: Motion Status
+///   - eSportType: Motion Type
+///   - interval: Interval for reporting data
 + (instancetype )eaInitWithStatus:(EAAppLaunchSportStatus)status sportType:(EASportType)eSportType interval:(NSInteger)interval;
 
 

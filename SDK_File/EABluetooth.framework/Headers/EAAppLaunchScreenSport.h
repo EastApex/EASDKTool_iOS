@@ -28,7 +28,7 @@ typedef NS_ENUM(NSUInteger, EAAppLaunchScreenSportStatus) {
 
 /// 运动类型
 /// Type of motion
-@property(nonatomic, readwrite) EASportType eSportType;
+@property(nonatomic, assign) EASportType eSportType;
 
 /// 运动状态：0结束 1开启 2暂停 3继续
 /// Motion status: 0 End 1 Start 2 Pause 3 Continue

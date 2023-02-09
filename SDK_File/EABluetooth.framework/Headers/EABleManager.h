@@ -13,10 +13,9 @@
  SDK access documentation
  https://www.showdoc.com.cn/2042713679210858/0  password:123456
  
- Version：2023.02.08
- 1.Fixed the watch face bule bug;
- 2.Class EAMenstruals add new method and abandon method; Detail to see class 'EAMenstruals';
- 3.Modify setting the callback of EAReminderModel and EAHabitTrackerModel to EARespondModel. Deprecated EAReminderRespondModel and EAHabitTrackerRespondModel;
+ Version：2023.02.09
+ 1.Fixed the problem of duplicate data in big data.【修复大数据重复数据问题】
+ 2.
  
  */
 
