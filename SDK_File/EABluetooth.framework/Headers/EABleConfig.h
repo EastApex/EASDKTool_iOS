@@ -51,13 +51,23 @@ if (!fileHandle) {\
 /// 是否保存日志，默认关闭,需要 debug 为YES才能起作用
 @property (nonatomic, assign) BOOL saveLog;
 
+
+/// 工厂
+@property (nonatomic, copy) NSArray *uuids;
+
 /// ignore：
 /// 工具 ，默认关闭
 @property (nonatomic, assign) BOOL tool;
 
 /// ignore：
+/// 工厂
+@property (nonatomic, assign) BOOL factory;
+
+/// ignore：
 /// 扫描所有设备 ，默认关闭
 @property (nonatomic, assign) BOOL canScanAllDevices;
+
+
 
 /// ignore：
 /// 显示信号量 ，默认关闭
