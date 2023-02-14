@@ -4,26 +4,26 @@ PODS:
     - Realm
     - SAMKeychain
     - YYKit
-  - Masonry (1.1.0)
   - Protobuf (3.14.0)
   - Realm (10.33.0):
     - Realm/Headers (= 10.33.0)
   - Realm/Headers (10.33.0)
   - SAMKeychain (1.5.3)
+  - SnapKit (5.6.0)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - EABluetooth (from `../`)
-  - Masonry
+  - SnapKit
 
 SPEC REPOS:
   trunk:
-    - Masonry
     - Protobuf
     - Realm
     - SAMKeychain
+    - SnapKit
     - YYKit
 
 EXTERNAL SOURCES:
@@ -32,12 +32,12 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   EABluetooth: 4c959b13638ffe156b52ac1f999131562c6bdd68
-  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   Protobuf: 0cde852566359049847168e51bd1c690e0f70056
   Realm: d4f810e161fa2c2c589b9860b6eb09238deacd73
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: b590565a0dec2a239f96d7dcfff80971d69b4850
+PODFILE CHECKSUM: ddfd2e2fbb3ddf539c79480b694b4cee87a62207
 
 COCOAPODS: 1.11.3

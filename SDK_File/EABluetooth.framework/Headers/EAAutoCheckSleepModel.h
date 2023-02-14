@@ -68,7 +68,11 @@ weekCycleBit 为127 即 开启每天监测功能
 + (EAAutoCheckSleepModel *)getModelByData:(NSData *)data;
 
 
-
++ (instancetype)eaInitWithWeekCycleBit:(NSInteger )weekCycleBit
+                             beginHour:(NSInteger )beginHour
+                           beginMinute:(NSInteger )beginMinute
+                               endHour:(NSInteger )endHour
+                             endMinute:(NSInteger )endMinute;
 
 @end
 

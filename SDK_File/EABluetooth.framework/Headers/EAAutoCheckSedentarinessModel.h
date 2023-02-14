@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// id = 18 : 久坐监测
 @interface EAAutoCheckSedentarinessModel : EABaseModel
 
-///  Interval: The unit is minute. 0 indicates that the monitoring function is disabled
-/// 间隔时长：单位分钟，0为关闭监测功能
+///  Interval: The unit is minute.
+/// 间隔时长：单位分钟，
 @property(nonatomic, assign) NSInteger  interval;
 
 /** 周期：位对应从bit0~bit6对应周日~周六
@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSInteger  stepThreshold;
 
 
-/// 久坐开关 (10:关闭，11:打开)（如果手机能读到10或11，代表设备已经支持了这个开关，就不用interval来控制关闭了）
+/// 久坐开关 (10:关闭，11:打开)
 @property(nonatomic, assign) NSInteger sw;
 
 

@@ -7,6 +7,9 @@
 https://github.com/EastApex/EASDKTool_iOS.git
 
 ### Release Notes:
+<p>2023.02.14
+     <br>1.Add part of the sample
+     
 <p>2023.02.08
      <br>1.Fixed the watch face bule bug;
      <br>2.Class EAMenstruals add new method and abandon method; Detail to see class 'EAMenstruals';
@@ -65,6 +68,9 @@ https://github.com/EastApex/EASDKTool_iOS.git
 <p>2022-09-02: First release.
 
 ### 更新说明：
+<p>2023.02.14
+     <br>1.添加一部分示例
+     
 <p> 2023.02.08
     <br> 1.修复蓝色表盘bug;
     <br> 2.类EAMenstruals增加了新方法和放弃方法;详细信息见类'EAMenstruals';

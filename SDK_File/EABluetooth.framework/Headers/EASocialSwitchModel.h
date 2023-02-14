@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 提醒方式
 @property(nonatomic, assign) EARemindActionType remindActionType;
 
++ (instancetype)eaInitWithOnOff:(BOOL)onOff remindActionType:(EARemindActionType)remindActionType;
+
 @end
 
 
@@ -59,8 +61,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (EASocialSwitchModel *)getModelByData:(NSData *)data ;
 
 
-- (NSData *)getModelData ;
-
++ (instancetype)eaInitWithRemindActionType:(EARemindActionType)remindActionType incomingcall:(BOOL)incomingcall missedcall:(BOOL)missedcall sms:(BOOL)sms social:(BOOL)social email:(BOOL)email schedule:(BOOL)schedule;
 
 @end
 

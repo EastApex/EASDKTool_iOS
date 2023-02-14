@@ -73,7 +73,7 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     
     /// Operating the watch
     /// 操作手表
-    /// see class
+    /// EADeviceOps
     EADataInfoTypeDeviceOps = 12,
     
     /// Do not disturb Settings
@@ -221,7 +221,7 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     EADataInfoTypeReadTelephoneBook = 43,
     
     
-    /// 手表支持设置的功能（备注：EAWatchModel.projSettings = 1 才支持此协议）
+    /// 手表支持的功能（备注：EAWatchModel.projSettings = 1 才支持此协议）
     /// The watch supports Settings(note: EAWatchModel.projSettings = 1 to support this agreement)
     /// EAWatchSupportModel
     EADataInfoTypeWatchSupport = 44,

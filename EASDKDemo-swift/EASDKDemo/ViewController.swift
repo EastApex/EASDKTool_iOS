@@ -6,10 +6,14 @@
 //
 
 import UIKit
-
 import EABluetooth
 
 class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSource, UITableViewDelegate {
+    
+    var alertView: UIAlertController!
+    var ids: NSMutableArray!
+    
+    var litsCtl : UINavigationController!
     
     @IBOutlet weak var tbView: UITableView!
     var dataSource:NSMutableArray = []
@@ -41,10 +45,18 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleManager.default().stopScanPeripherals()
         EABleManager.default().connect(toPeripheral: peripheralModel);
         
+        self.present(alertView, animated: true, completion: nil)
     }
     
     
     func didDiscoverPeripheral(_ peripheralModel: EAPeripheralModel) {
+        
+        if ids.contains(peripheralModel.peripheral.identifier.uuidString) {
+            
+            return
+        }
+        
+        ids.add(peripheralModel.peripheral.identifier.uuidString);
         
         print(peripheralModel.peripheral.name!)
         
@@ -60,6 +72,10 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        alertView = UIAlertController.init(title: "Connecting", message: "Please Wait", preferredStyle: .alert)
+
+        ids = NSMutableArray.init()
+        
         EABleManager.default().delegate = self;
         
         tbView.dataSource = self
@@ -72,33 +88,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
     func loadWatchData(){
         
         setSyncTime()
-//        getWatchUserInfo();
-//
-//        // pair watch
-//        opsWatch(EADeviceOpsType.showiPhonePairingAlert)
-//
-//
-//        EABleSendManager.default().operationGetInfo(with: EADataInfoType.sportShowData) { baseModel in
-//
-//            print(baseModel.modelToJSONObject()!);
-//        }
-        
-//        addReminder();
-        
-//        operateWatch()
-//
-//        getSocialSwitchModel ()
-//
-//        setAppPushModel()
-//
-//        getAppPushModel()
-        
-        
-        
-//        EABleSendManager.default().operationgGetBigData(EAGetBigDataRequestModel.init()) { respondModel in
-//
-//        };
-        
+
 
     }
     
@@ -135,6 +125,8 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
     @objc func connectDisconnect(){
         
         print("connectDisconnect")
+        
+        litsCtl.dismiss(animated: true);
     }
     
     @objc func blePoweredOn(){
@@ -144,6 +136,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
     @objc func blePoweredOff(){
         
         print("blePoweredOff")
+        litsCtl.dismiss(animated: true);
     }
     
     @objc func operatingPhone(_ no:NSNotification){
@@ -249,12 +242,19 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
     
     func showView(){
         
+        alertView.dismiss(animated: true)
+        
         dataSource.removeAllObjects()
         tbView.reloadData()
+        tbView.isHidden = true
+        ids.removeAllObjects()
         
-        bindingWatch("10086")
+        bindingWatch("")
         
-        
+        let listViewController = ListViewController()
+        litsCtl = UINavigationController(rootViewController: listViewController)
+        litsCtl.modalPresentationStyle = .fullScreen
+        self.present(litsCtl, animated: true, completion: nil)
         
 
         

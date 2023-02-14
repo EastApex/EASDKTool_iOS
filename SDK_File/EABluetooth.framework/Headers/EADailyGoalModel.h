@@ -19,6 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// 目标值
 @property(nonatomic, assign) NSInteger goal;
 
+
++ (instancetype)eaInitWithOnOff:(BOOL)onOff
+                           goal:(NSInteger)goal;
+
 @end
 
 
@@ -52,6 +56,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (EADailyGoalModel *)getModelByData:(NSData *)data;
 
+
++ (instancetype)eaInitWithOnOff:(BOOL)onOff
+                       stepGoal:(NSInteger)stepGoal
+                    calorieGoal:(NSInteger)calorieGoal
+                   distanceGoal:(NSInteger)distanceGoal
+                   durationGoal:(NSInteger)durationGoal
+                      sleepGoal:(NSInteger)sleepGoal;
 
 
 
