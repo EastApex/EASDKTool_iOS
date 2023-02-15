@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) EAUnifiedUnit unit;
 
 
-+ (EAUnifiedUnitModel *)getModelByData:(NSData *)data;
+
 
 
 

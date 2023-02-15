@@ -38,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 获取数据类型 -- 子类必须要重写此方法
 - (EADataInfoModel *)getDataInfoModel;
 
-
++ (instancetype )getModelByData:(NSData *)data;
 
 
 @end

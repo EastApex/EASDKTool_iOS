@@ -65,7 +65,6 @@ weekCycleBit 为127 即 开启每天监测功能
 @property(nonatomic, assign) NSInteger endMinute;
 
 
-+ (EAAutoCheckSleepModel *)getModelByData:(NSData *)data;
 
 
 + (instancetype)eaInitWithWeekCycleBit:(NSInteger )weekCycleBit
@@ -73,6 +72,8 @@ weekCycleBit 为127 即 开启每天监测功能
                            beginMinute:(NSInteger )beginMinute
                                endHour:(NSInteger )endHour
                              endMinute:(NSInteger )endMinute;
+
+
 
 @end
 

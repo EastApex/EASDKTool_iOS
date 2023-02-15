@@ -38,6 +38,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, assign) NSInteger restingHrDataReq;
 
+
++ (instancetype)eaInit;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

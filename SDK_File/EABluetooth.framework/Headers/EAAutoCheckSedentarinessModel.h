@@ -58,7 +58,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-+ (EAAutoCheckSedentarinessModel *)getModelByData:(NSData *)data;
+
 
 
 

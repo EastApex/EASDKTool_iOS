@@ -85,7 +85,7 @@ NS_ASSUME_NONNULL_BEGIN
 /** 杯：喝多少杯水，一杯水 = 200ml（reminder_type = Drink） */
 @property(nonatomic, assign) NSInteger cup;
 
-+ (EAMonitorReminder *)initDrinkMonitorWithOnOff:(BOOL)sw
++ (EAMonitorReminder *)eaInitDrinkMonitorWithOnOff:(BOOL)sw
                                         interval:(NSInteger)interval
                                     weekCycleBit:(NSInteger)weekCycleBit
                                        beginHour:(NSInteger)beginHour
@@ -95,7 +95,7 @@ NS_ASSUME_NONNULL_BEGIN
                                              cup:(NSInteger)cup;
 
 
-+ (EAMonitorReminder *)initWashHandsMonitorWithOnOff:(BOOL)sw
++ (EAMonitorReminder *)eaInitWashHandsMonitorWithOnOff:(BOOL)sw
                                             interval:(NSInteger)interval
                                         weekCycleBit:(NSInteger)weekCycleBit
                                            beginHour:(NSInteger)beginHour
@@ -113,7 +113,7 @@ NS_ASSUME_NONNULL_BEGIN
 //                                       stepThreshold:(NSInteger)stepThreshold;
 
 
-+ (EAMonitorReminder *)getModelByData:(NSData *)data;
+
 @end
 
 

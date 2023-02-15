@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, assign) NSInteger duration;// 单位:秒
 
-+ (EASportShowDataModel *)getModelByData:(NSData *)data;
+
 
 @end
 

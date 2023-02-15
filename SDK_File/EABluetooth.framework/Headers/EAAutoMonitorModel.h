@@ -26,7 +26,6 @@ NS_ASSUME_NONNULL_BEGIN
 /** 自动监测 间隔（分钟）*/
 @property(nonatomic, assign) NSInteger checkTime;
 
-+ (EAAutoMonitorModel *)getModelByData:(NSData *)data;
 
 
 @end

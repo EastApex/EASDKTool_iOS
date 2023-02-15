@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 /** 0: 没有配对 1: 已经配对 */
 @property(nonatomic, assign) BOOL secState;
 
-+ (EABlePairStateModel *)getModelByData:(NSData *)data;
+
 @end
 
 NS_ASSUME_NONNULL_END

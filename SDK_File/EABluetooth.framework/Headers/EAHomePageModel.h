@@ -32,7 +32,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) NSMutableArray<EAPageModel*> *supportPageArray;
 
 
-+ (EAHomePageModel *)getModelByData:(NSData *)data;
+
+
+
+
 
 @end
 

@@ -27,12 +27,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,  assign) NSInteger endMinute;
 
 
-/// MARK: - 获取抬手亮屏开关设置相关信息
-/// @param data 数据流
-+ (EAGesturesSettingModel *)getModelByData:(NSData *)data;
 
 
 
+/// 【全天候开启】
++ (instancetype)eaInitAllDay;
+
+
+/// 【关闭】
++ (instancetype)eaInitClose;
 
 @end
 

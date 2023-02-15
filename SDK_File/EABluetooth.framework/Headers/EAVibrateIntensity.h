@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype )eaInitWithVibrateIntensityType:(EAVibrateIntensityType )eaVibrateIntensityType;
 
 
-+ (instancetype )getModelByData:(NSData *)data;
+
 @end
 
 NS_ASSUME_NONNULL_END

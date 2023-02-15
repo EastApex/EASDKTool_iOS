@@ -70,7 +70,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///  压力监测开关 【不支持修改】
 @property(nonatomic, assign) NSInteger stressSw;
 
-+ (EACombinationModel *)getModelByData:(NSData *)data;
+
+
+
 
 @end
 

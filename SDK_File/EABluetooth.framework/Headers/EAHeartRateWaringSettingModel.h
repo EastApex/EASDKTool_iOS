@@ -28,9 +28,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-+ (EAHeartRateWaringSettingModel *)getModelByData:(NSData *)data;
 
 
++ (instancetype)eaInitWithSwitch:(NSInteger)sw maxHr:(NSInteger)maxHr minHr:(NSInteger)minHr;
 
 
 

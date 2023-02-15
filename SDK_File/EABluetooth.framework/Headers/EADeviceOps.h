@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) EADeviceOpsStatus deviceOpsStatus;
 
 
-+ (EADeviceOps *)getModelByData:(NSData *)data;
+
 
 
 @end

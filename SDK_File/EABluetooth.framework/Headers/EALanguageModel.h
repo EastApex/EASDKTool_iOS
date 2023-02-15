@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// support language
 @property(nonatomic, copy) NSArray<EALanguageItemModel*> *sLanguageArray;
 
-+ (EALanguageModel *)getModelByData:(NSData *)data;
+
 
 
 

@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSInteger interval;
 
 
-+ (EAAutoCheckHeartRateModel *)getModelByData:(NSData *)data;
+
 
 
 

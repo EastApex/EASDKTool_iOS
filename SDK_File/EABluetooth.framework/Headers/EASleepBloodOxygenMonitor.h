@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSInteger interval;
 
 
+
+
 /// init【初始化】
 /// - Parameters:
 ///   - sw: on-off Zero off, one on[0关，1开]
@@ -29,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype )eaInitWithOnOff:(BOOL)sw interval:(NSInteger)interval;
 
 
-+ (instancetype )getModelByData:(NSData *)data;
+
 
 @end
 

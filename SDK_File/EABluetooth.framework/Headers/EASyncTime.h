@@ -59,9 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-/// 获取同步时间相关信息
-/// @param data 数据流
-+ (EASyncTime *)getModelByData:(NSData *)data;
+
 
 
 

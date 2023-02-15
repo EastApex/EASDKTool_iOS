@@ -9,6 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_CLASS_DEPRECATED_IOS(9_0, 9_0, "No longer supported; please adopt EARespondModel") __TVOS_PROHIBITED
 @interface EAReminderRespondModel : EABaseModel
 
 /** 操作状态 */
@@ -18,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSInteger id_p;
 
 
-+ (EAReminderRespondModel *)getModelByData:(NSData *)data;
+
 
 
 @end

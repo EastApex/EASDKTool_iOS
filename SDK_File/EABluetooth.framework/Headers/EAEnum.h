@@ -16,22 +16,22 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     EADataInfoTypeRespond = 1,
     EADataInfoTypeRequest = 2,
     
-    ///Watch information
-    ///手表
+    /// id = 3: Watch information
+    /// id = 3: 手表
     ///EAWatchModel
     EADataInfoTypeWatch = 3,
     
-    ///User information
-    ///用户
+    /// id = 4: User information
+    /// id = 4: 用户
     ///EAUserModel
     EADataInfoTypeUser = 4,
     
-    ///Sync watch time
-    ///同步时间
+    /// id = 5: Sync watch time
+    /// id = 5: 同步时间
     ///EASyncTime
     EADataInfoTypeSyncTime = 5,
     
-    ///
+    /// id = 6: Binding
     /// Swift
     /// Get value of watch to judge bindingType == .unBound need set EABingingOps().ops = .end to complete the binding
     /// if (baseModel as! EAWatchModel).bindingType == .unBound {
@@ -42,157 +42,155 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     /// }
     ///
     /// 获取手表信息，EAWatchModel.bindingType == .unBound 需要设置 EABingingOps().ops = .end 来完成绑定
-    ///
     /// EABingingOps
     EADataInfoTypeBinding = 6,
     
-    /// The screen brightness of watch
-    /// 屏幕亮度
+    /// id = 7:The screen brightness of watch
+    /// id = 7:屏幕亮度
     /// EABlacklightModel
     EADataInfoTypeBlacklight = 7,
     
-    /// Time when the screen automatically dies
-    /// 屏幕自动灭屏时间
+    /// id = 8:Time when the screen automatically dies
+    /// id = 8:屏幕自动灭屏时间
     /// EABlacklightTimeoutModel
     EADataInfoTypeBlacklightTimeout = 8,
     
-    /// Watch power information
-    /// 手表电量信息
+    /// id = 9: Watch power information
+    /// id = 9: 手表电量信息
     /// EABatteryModel
     EADataInfoTypeBattery = 9,
     
-    /// Watch language information
-    /// 手表语言信息
+    /// id = 10: Watch language information
+    /// id = 10: 手表语言信息
     /// EALanguageModel
     EADataInfoTypeLanguage = 10,
     
-    /// watch unit
-    /// 统一手表单位
+    /// id = 11: watch unit
+    /// id = 11: 统一手表单位
     ///  EAUnifiedUnitModel
     EADataInfoTypeUnifiedUnit = 11,
     
-    /// Operating the watch
-    /// 操作手表
+    /// id = 12: Operating the watch
+    /// id = 12: 操作手表
     /// EADeviceOps
     EADataInfoTypeDeviceOps = 12,
     
-    /// Do not disturb Settings
-    /// 免打扰设置
+    /// id = 13: Do not disturb Settings
+    /// id = 13: 免打扰设置
     /// EANotDisturbModel
     EADataInfoTypeNotDisturb = 13,
     
     /// ignore：
-    /// Home time zone setting
-    /// 家乡时区设置
+    /// id = 14: Home time zone setting
+    /// id = 14: 家乡时区设置
     /// EAHomeTimeZoneItem
     EADataInfoTypeHomeTimeZone = 14,
     
-    /// Daily target value setting
-    /// 日常目标值设置
+    /// id = 15: Daily target value setting
+    /// id = 15: 日常目标值设置
     /// EADailyGoalModel
     EADataInfoTypeDailyGoal = 15,
     
-    /// Automatic sleep monitoring
-    /// 自动睡眠监测
+    /// id = 16: Automatic sleep monitoring
+    /// id = 16: 自动睡眠监测
     /// EAAutoCheckSleepModel
     EADataInfoTypeAutoCheckSleep = 16,
     
-    /// Automatic heart rate monitoring
-    /// 自动心率监测
+    /// id = 17: Automatic heart rate monitoring
+    /// id = 17: 自动心率监测
     /// EAAutoCheckHeartRateModel
     EADataInfoTypeAutoCheckHeartRate = 17,
     
-    /// Sedentary monitoring
-    /// 久坐监测
+    /// id = 18: Sedentary monitoring
+    /// id = 18: 久坐监测
     /// EAAutoCheckSedentarinessModel
     EADataInfoTypeAutoCheckSedentariness = 18,
     
-    /// Weather
-    /// 天气
+    /// id = 20: Weather
+    /// id = 20: 天气
     /// EAWeatherModel and EADayWeatherModel
     EADataInfoTypeWeather = 20,
     
-    /// Social alert switch
-    /// 社交提醒开关
+    /// id = 21: Social alert switch
+    /// id = 21: 社交提醒开关
     /// EASocialSwitchModel
     EADataInfoTypeSocialSwitch = 21,
     
-    /// Reminder
-    /// 提醒
+    /// id = 22: Reminder
+    /// id = 22: 提醒
     /// EAReminderOps and EAReminderModel
     EADataInfoTypeReminder = 22,
     
-    /// 提醒回应
+    /// id = 23: 提醒回应
     EADataInfoTypeReminderRespond = 23,
     
     /// ignore：
-    /// Distance uint
-    /// 距离单位
+    /// id = 24: Distance uint
+    /// id = 24: 距离单位
     /// EADistanceUintModel
     EADataInfoTypeDistanceUnit = 24,
     
     /// ignore：
-    /// Weight unit
-    /// 重量单位
+    /// id = 25: Weight unit
+    /// id = 25: 重量单位
     /// EAWeightUnitModel
     EADataInfoTypeWeightUnit = 25,
     
-    /// Heart rate alarm setting
-    /// 心率报警设置
+    /// id = 26: Heart rate alarm setting
+    /// id = 26: 心率报警设置
     /// EAHeartRateWaringSettingModel
     EADataInfoTypeHeartRateWaringSetting = 26,
     
-    
-    /// Base calorie switch
-    /// 基础卡路里开关
+    /// id = 27: Base calorie switch
+    /// id = 27: 基础卡路里开关
     /// EACaloriesSettingModel
     EADataInfoTypeCaloriesSetting = 27,
     
-    /// Raise the screen switch
-    /// 抬手亮屏开关
+    /// id = 28: Raise the screen switch
+    /// id = 28: 抬手亮屏开关
     /// EAGesturesSettingModel
     EADataInfoTypeGesturesSetting = 28,
     
-    /// Big data acquisition command
-    /// 大数据获取命令
+    /// id = 29: Big data acquisition command
+    /// id = 29: 大数据获取命令
     /// EAGetBigDataRequestModel
     EADataInfoTypeGetBigData = 29,
     
-    /// Basic Device Information
-    /// 设备基本信息
+    /// id = 30: Basic Device Information
+    /// id = 30: 设备基本信息
     /// EACombinationModel
     EADataInfoTypeCombination = 30,
     
-    /// Level 1 menu setting command
-    /// 一级菜单设置命令
+    /// id = 31: Level 1 menu setting command
+    /// id = 31: 一级菜单设置命令
     /// EAHomePageModel
     EADataInfoTypeHomePage = 31,
     
-    /// Period
-    /// 经期
+    /// id = 32: Period
+    /// id = 32: 经期
     /// EAMenstruals
     EADataInfoTypeMenstrual = 32,
     
-    /// The watch face command
-    /// 表盘命令
+    /// id = 33: The watch face command
+    /// id = 33: 表盘命令
     /// EADialPlateModel
     EADataInfoTypeDialPlate = 33,
     
-    /// Message push switch
-    /// 消息推送开关
+    /// id = 34: Message push switch
+    /// id = 34: 消息推送开关
     /// EAShowAppMessageModel
     EADataInfoTypeAppMessage = 34,
     
     /// ignore：
-    /// 血压校准值 （老人表）*/
+    /// id = 36: 血压校准值 （老人表）*/
     EADataInfoTypeBloodPressure = 36,
     
     /// ignore：
-    /// 自动监测 心率 血氧 血压 （老人表）
+    /// id = 37: 自动监测 心率 血氧 血压 （老人表）
     EADataInfoTypeAutoMonitor = 37,
     
-    /// Habit tracker
-    /// 习惯追踪
+    /// id = 38: Habit tracker
+    /// id = 38: 习惯追踪
     /// EAHabitTrackerModel
     EADataInfoTypeHabitTracker = 38,
     
@@ -200,44 +198,47 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     /// 习惯追踪回应
     EADataInfoTypeHabitTrackerRespond = 39,
     
-    /// Value displayed on the motion screen of the current watch
-    /// 当前手表运动界面显示值
+    /// id = 40: Value displayed on the motion screen of the current watch
+    /// id = 40: 当前手表运动界面显示值
     /// EASportShowDataModel
     EADataInfoTypeSportShowData = 40,
     
-    /// Gets Bluetooth pairing status
-    /// 获取蓝牙配对状态
+    /// id = 41: Gets Bluetooth pairing status
+    /// id = 41: 获取蓝牙配对状态
     /// EABlePairStateModel
     EADataInfoTypeBlePairState = 41,
     
-    /// Telephone book
-    /// 通讯录
+    /// id = 42: Telephone book
+    /// id = 42: 通讯录
     /// EATelephoneBookModel and EAContactModel
     EADataInfoTypeTelephoneBook = 42,
     
-    /// Read telephone book
-    /// 读取通讯录
+    /// id = 43: Read telephone book
+    /// id = 43: 读取通讯录
     /// EAReadTelephoneBookModel and EAPhoneModel
     EADataInfoTypeReadTelephoneBook = 43,
     
     
-    /// 手表支持的功能（备注：EAWatchModel.projSettings = 1 才支持此协议）
-    /// The watch supports Settings(note: EAWatchModel.projSettings = 1 to support this agreement)
+    /// id = 44: 手表支持的功能（备注：EAWatchModel.projSettings = 1 才支持此协议）
+    /// id = 44: The watch supports Settings(note: EAWatchModel.projSettings = 1 to support this agreement)
     /// EAWatchSupportModel
     EADataInfoTypeWatchSupport = 44,
     
-    /// 提醒事件监测
-    /// Monitor reminder event
+    /// id = 45: 提醒事件监测
+    /// id = 45: Monitor reminder event
     /// EAMonitorReminder
     EADataInfoTypeMonitorReminder = 45,
     
-    /// App地图运动
+    /// id = 46: App地图运动
+    /// id = 46: App launch map sport
     EADataInfoTypeAppLaunchMapSport = 46,
     
-    /// App发送地图运动数据（定时发送：单位秒）
+    /// id = 47: App发送地图运动数据（定时发送：单位秒）
+    /// id = 47: App sends map motion data (timed transmission: unit of second)
     EADataInfoTypeAppSendMapSportDetails = 47,
     
-    /// App操作手表（开始/停止【心率、血氧、压力、呼吸】）
+    /// id = 48: App操作手表（开始/停止【心率、血氧、压力、呼吸】）
+    /// id = 48: App operation watch (start/stop [heart rate, blood oxygen, pressure, breathing])
     EADataInfoTypeAppOps = 48,
     
     /// id = 49: 单独获取大数据（如步数、如心率）

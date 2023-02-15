@@ -18,7 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) EADistanceUnit unit;
 
 
-+ (EADistanceUintModel *)getModelByData:(NSData *)data;
 
 @end
 

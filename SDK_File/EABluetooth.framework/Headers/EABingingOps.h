@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 日常步数记录方式：0: 正常模式  1: 计步数据固定间隔存储（30分钟）
 @property(nonatomic, assign) NSInteger bindMod;
 
-+ (EABingingOps *)getModelByData:(NSData *)data ;
+
 
 @end
 

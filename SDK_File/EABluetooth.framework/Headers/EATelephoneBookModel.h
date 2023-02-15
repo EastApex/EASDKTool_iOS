@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - name: Contact name【名字】
 ///   - num: Telephone number【电话号码】
-+ (instancetype)eaAllocInitWithName:(NSString *)name eelephoneNumber:(NSString *)num;
++ (instancetype)eaAllocInitWithName:(NSString *)name telephoneNumber:(NSString *)num;
 
 @end
 
@@ -48,8 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameter list: Contact number group【联系人数组】
 + (instancetype)eaAllocInitWithList:(NSArray <EAContactModel *>*)list;
 
-/// ignore
-+ (EATelephoneBookModel *)getModelByData:(NSData *)data;
+
 
 @end
 
@@ -76,8 +75,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// ignore
 @property(nonatomic, readonly) NSUInteger sIndexArray_Count;
 
-/// ignore
-+ (EATelephoneBookModel *)getModelByData:(NSData *)data;
+
 
 @end
 

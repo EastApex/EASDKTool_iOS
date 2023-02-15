@@ -13,10 +13,9 @@
  SDK access documentation
  https://www.showdoc.com.cn/2042713679210858/0  password:123456
  
- Version：2023.02.13
- 1.Fixed.
- 
- */
+ Version：2023.02.15
+ 1.The SDK adds some necessary instructions and methods
+  */
 
 
 #import <Foundation/Foundation.h>

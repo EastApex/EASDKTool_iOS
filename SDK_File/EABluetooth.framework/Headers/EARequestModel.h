@@ -30,9 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSData *)getRequestModelData;
 
-/// 获取回应数据
-/// @param data 数据流
-+ (EARequestModel *)getModelByData:(NSData *)data;
+
 @end
 
 

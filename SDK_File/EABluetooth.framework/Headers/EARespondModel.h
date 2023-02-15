@@ -18,9 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) EARespondCodeType eErrorCode;
 
 
-/// 获取回应数据
-/// @param data 数据流
-+ (EARespondModel *)getModelByData:(NSData *)data;
 
 + (instancetype)eaInitSuccWithRequestId:(EADataInfoType)requestId;
 + (instancetype)eaInitErrorWithRequestId:(EADataInfoType)requestId;

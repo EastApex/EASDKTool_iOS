@@ -69,7 +69,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)NSMutableArray<NSNumber*> *sDelIndexArray;
 
 
-+ (EAHabitTrackers *)getModelByData:(NSData *)data;
+
 
 @end
 
@@ -78,6 +78,7 @@ NS_ASSUME_NONNULL_BEGIN
  *     write request：   (上位机--->固件 id：38)        respond：（固件--->上位机 id：39）
  *     read  request:     不支持            respond：不支持
  **/
+NS_CLASS_DEPRECATED_IOS(9_0, 9_0, "No longer supported; please adopt EARespondModel") __TVOS_PROHIBITED
 @interface EAHabitTrackerRespondModel : EABaseModel
 
 /** 操作状态 */
@@ -87,6 +88,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSInteger id_p;
 
 + (EAHabitTrackerRespondModel *)getModelByData:(NSData *)data;
+
+
 @end
 
 

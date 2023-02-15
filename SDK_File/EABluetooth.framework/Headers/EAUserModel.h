@@ -36,9 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 肤色 
 @property(nonatomic, assign) EASkinColorType eSkinColor;
 
-/// 获取用户相关信息
-/// @param data 数据流
-+ (EAUserModel *)getModelByData:(NSData *)data;
+
 
 
 

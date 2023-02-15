@@ -26,8 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong) NSString *log;
 
 
-/// MARK: - 获取设备表盘信息
-+ (EAWatchDebug *)getModelByData:(NSData *)data;
+
 
 
 @end

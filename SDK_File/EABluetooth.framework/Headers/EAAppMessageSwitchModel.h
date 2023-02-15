@@ -216,9 +216,8 @@ typedef NS_OPTIONS(NSUInteger, EAShowAppType) {
 @property(nonatomic,strong) NSMutableArray<EAAppMessageSwitchModel*> *sAppSwArray;
 
 
-+ (EAAppMessageSwitchData *)getModelByData:(NSData *)data;
 
-- (NSData *)getModelData ;
+
 
 
 @end

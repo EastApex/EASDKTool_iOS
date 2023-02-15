@@ -98,6 +98,7 @@ typedef void(^RespondBlock)(EARespondModel *respondModel);
 - (void)setchannelDataNil;
 - (void)setBleQueueNil;
 - (void)setIsConnected:(BOOL)isConnected;
+- (EAWatchModel *)getConnectWatchModel;
 @end
 
 NS_ASSUME_NONNULL_END

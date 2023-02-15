@@ -38,7 +38,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// 已存在线自定义表盘id3
 @property(nonatomic, copy) NSString *userWfId3;
 
-+ (EADialPlateModel *)getModelByData:(NSData *)data;
+
+/// Set the built-in dial
++ (instancetype)eaInitBuiltInWatchFaceWithID:(NSInteger )id_p;
+
+
 
 @end
 

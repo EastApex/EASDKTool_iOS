@@ -129,11 +129,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// Phone contact
 @property(nonatomic, assign) BOOL phoneContact;
 
-/// 功能：支持铃声（有喇叭）
+/// 功能与协议：支持铃声（有喇叭）
 /// Support the bell
 @property(nonatomic, assign) BOOL ringtoneSupport;
 
-/// 功能：有没GPS
+/// 功能与协议：有没GPS
 @property(nonatomic, assign) BOOL gpsSetting;
 
 /// 功能：体温测量
@@ -148,10 +148,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// 功能：经典蓝牙一键连接功能
 @property(nonatomic, assign) BOOL btOneKeyConnect;
 
-/// 功能:天气支持空气质量（id = 20）
+/// 功能与协议:天气支持空气质量（id = 20）
 @property(nonatomic, assign) BOOL weatherAir;
 
-/// 功能：查找手表（id = 20）
+/// 功能与协议：查找手表（id = 20）
 @property(nonatomic, assign) BOOL findWatch;
 
 /// 功能与协议：支持app地图运动（id = 46）
@@ -182,7 +182,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) BOOL appLaunchScreenSport;
 
 
-+ (EAWatchSupportModel *)getModelByData:(NSData *)data;
+
 
 
 @end

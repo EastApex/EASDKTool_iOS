@@ -59,7 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSInteger endMinute;
 
 
-+ (EANotDisturbModel *)getModelByData:(NSData *)data;
+
 
 
 @end

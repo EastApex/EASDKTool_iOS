@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, assign) EAWeightUnit unit;
 
-+ (EAWeightUnitModel *)getModelByData:(NSData *)data;
+
 
 
 

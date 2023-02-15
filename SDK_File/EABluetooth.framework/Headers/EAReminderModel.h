@@ -8,6 +8,8 @@
 #import <EABluetooth/EABaseModel.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
+
 /*
 Cycle: == "Sunday ~ Saturday,
 0: off 1: on
@@ -78,16 +80,65 @@ weekCycleBit 为127 即 开启每天监测功能
 /// on-off: 0 off 1 on
 @property(nonatomic, assign) NSInteger sw;
 
-/// Secondary reminder on-off: 0 off 1 on
+/// Secondary reminder on-off(Snooze on-off): 0 off 1 on
 @property(nonatomic, assign) NSInteger secSw;
 
-/// Sleep duration
+/// Sleep duration(Snooze Duration)
 @property(nonatomic, assign) NSInteger sleepDuration;
 
 @property(nonatomic, assign) EARemindActionType remindActionType;
 
 /// if reminderEventType==.User [EAReminderEventTypeUser] needs to be set
 @property(nonatomic, strong) NSString *content;
+
+
+/// Single Reminder【单次提醒】
+/// - Parameters:
+///   - reminderEventType: Reminder Event Type
+///   - year: year
+///   - month: month
+///   - day: day
+///   - hour: hour
+///   - minute: minute
+///   - onOff: onOff
+///   - snooze:  Secondary reminder on-off(Snooze on-off)
+///   - snoozeDuration: Sleep duration(Snooze Duration)
+///   - remindActionType: Remind action type
+///   - content: if reminderEventType==.User [EAReminderEventTypeUser] needs to be set
++ (instancetype)eaInitSingleReminderWithReminderEventType:(EAReminderEventType)reminderEventType
+                                                     year:(NSInteger)year
+                                                    month:(NSInteger)month
+                                                      day:(NSInteger)day
+                                                     hour:(NSInteger)hour
+                                                   minute:(NSInteger)minute
+                                                    onOff:(NSInteger)onOff
+                                                   snooze:(NSInteger)snooze
+                                           snoozeDuration:(NSInteger)snoozeDuration
+                                         remindActionType:(EARemindActionType )remindActionType
+                                                  content:(NSString *)content;
+
+
+
+/// Cycle Reminder【周期提醒】
+/// - Parameters:
+///   - reminderEventType: Reminder Event Type
+///   - weekCycleBit: weekCycleBit
+///   - hour:   hour
+///   - minute: minute
+///   - onOff: onOff
+///   - snooze: Secondary reminder on-off(Snooze on-off)
+///   - snoozeDuration: Sleep duration(Snooze Duration)
+///   - remindActionType: Remind action type
+///   - content: if reminderEventType==.User [EAReminderEventTypeUser] needs to be set
++ (instancetype)eaInitCycleReminderWithReminderEventType:(EAReminderEventType)reminderEventType
+                                            weekCycleBit:(NSInteger)weekCycleBit
+                                                    hour:(NSInteger)hour
+                                                  minute:(NSInteger)minute
+                                                   onOff:(NSInteger)onOff
+                                                  snooze:(NSInteger)snooze
+                                          snoozeDuration:(NSInteger)snoozeDuration
+                                        remindActionType:(EARemindActionType )remindActionType
+                                                 content:(NSString *)content;
 
 @end
 
@@ -110,13 +161,46 @@ weekCycleBit 为127 即 开启每天监测功能
 /** 类型：当ops = replace_type时需要填入 */
 @property(nonatomic, assign) EAReminderEventType eType;
 
-+ (EAReminderOps *)getModelByData:(NSData *)data ;
-
-
-- (NSData *)getModelData ;
 
 
 
+/// Add one reminder【新增提醒】
+/// - Parameter eaReminderModel: Class EAReminderModel Object
++ (instancetype)eaInitAddOneWithReminderModel:(EAReminderModel *)eaReminderModel;
+
+
+/// Edit reminder【修改提醒】
+/// The method "EABleSendManager.default().operationGetInfo(with:.reminder) {baseModel in}" needs to be called to get an object of "EAReminderModel"
+/// 【需要调用此方法"EABleSendManager.default().operationGetInfo(with: .reminder) { baseModel in }"获取"EAReminderModel"的对象】
++ (instancetype)eaInitEditWithReminderModel:(EAReminderModel *)eaReminderModel;
+
+
+/// Delete One reminder【删除提醒】
+/// The method "EABleSendManager.default().operationGetInfo(with:.reminder) {baseModel in}" needs to be called to get the value of id_p for "EAReminderModel"
+/// 【需要调用此方法"EABleSendManager.default().operationGetInfo(with: .reminder) { baseModel in }"获取"EAReminderModel"的id_p的值】
++ (instancetype)eaInitDeleteOneWithReminderModelId:(NSInteger )id_p;
+
+
+/// Delete all alarm 【删除所有的闹钟】
++ (instancetype)eaInitDeleteAllAlarm;
+
+
+/// Delete all schedule(All reminders except the alarm clock) 【删除所有的日程（除闹钟之外的所有提醒）】
++ (instancetype)eaInitDeleteAllSchedule;
+
+
+/// Delete all reminder【删除所有提醒】
++ (instancetype)eaInitDeleteAllReminder;
+
+
+/// Replace all reminder data of the same type for the watch according to the reminder type【根据提醒类型替换手表的所有相同类型的提醒数据】
+/// (Supported only when id=44: reminder_all_in_and_replace_type_setting is true)【需要id=44：reminder_all_in_and_replace_type_setting为true才支持)】
++ (instancetype)eaInitReplaceAllWithReminderEventType:(EAReminderEventType )type list:(NSMutableArray<EAReminderModel *> *)list;
+
+
+/// Replace all reminder data【替换手表的提醒数据】
+/// (Supported only when id=44: reminder_all_in_and_replace_type_setting is true)【需要id=44：reminder_all_in_and_replace_type_setting为true才支持)】
++ (instancetype)eaInitReplaceAllWithList:(NSMutableArray<EAReminderModel *> *)list;
 
 @end
 

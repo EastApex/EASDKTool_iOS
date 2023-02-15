@@ -43,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) NSMutableArray<EAHomeTimeZoneItem*> *sHomeArray;
 
 
-+ (EAHomeTimeZoneModel *)getModelByData:(NSData *)data;
+
 
 
 

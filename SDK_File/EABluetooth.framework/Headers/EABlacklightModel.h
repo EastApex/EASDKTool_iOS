@@ -18,9 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSInteger level;
 
 
-/// MARK: - 获取屏幕亮度相关信息
-/// @param data 数据流
-+ (EABlacklightModel *)getModelByData:(NSData *)data;
+
 
 
 

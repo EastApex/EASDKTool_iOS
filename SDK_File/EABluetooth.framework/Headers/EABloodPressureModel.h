@@ -22,7 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSInteger lowBloodVal;
 
 
-+ (EABloodPressureModel *)getModelByData:(NSData *)data;
 
 @end
 

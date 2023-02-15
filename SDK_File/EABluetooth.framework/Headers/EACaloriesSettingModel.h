@@ -19,7 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSInteger sw;
 
 
-+ (EACaloriesSettingModel *)getModelByData:(NSData *)data;
+
++ (instancetype)eaInitWithSwitch:(NSInteger)sw;
 
 
 @end

@@ -83,9 +83,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 最大支持表盘内存大小（存储空间,单位KB）
 @property(nonatomic, assign) NSInteger maxWatchSize;
 
-/// 获取手表相关信息
-/// @param data 数据流
-+ (EAWatchModel *)getModelByData:(NSData *)data;
+
 
 
 

@@ -23,6 +23,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// 当前总距离（单位:厘米）
 @property(nonatomic, assign) NSInteger distance;
 
+/// 配速（单位:秒/KM）
+@property(nonatomic, assign) NSInteger pace;
+
+/// 步频（单位:步/分钟）
+@property(nonatomic, assign) NSInteger cadence;
+
 /// 当前总次数（跳绳当前跳了多少下）
 @property(nonatomic, assign) NSInteger count;
 
@@ -31,6 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 当前时间戳
 @property(nonatomic, assign) NSInteger timestamp;
+
+
 
 + (EAAppSportRealTimeModel *)getModelByData:(NSData *)data;
 

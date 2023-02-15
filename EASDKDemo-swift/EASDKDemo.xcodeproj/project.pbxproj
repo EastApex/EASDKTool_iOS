@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131C5F8A299CD359006BBD53 /* MonitorReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131C5F89299CD359006BBD53 /* MonitorReminderViewController.swift */; };
 		137C4C1C289B917500DD28DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137C4C1B289B917500DD28DC /* AppDelegate.swift */; };
 		137C4C1E289B917500DD28DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137C4C1D289B917500DD28DC /* SceneDelegate.swift */; };
 		137C4C20289B917500DD28DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137C4C1F289B917500DD28DC /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 		1386FC7C299B57670000BE56 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1386FC7B299B57670000BE56 /* ListViewController.swift */; };
 		1386FC84299B7E790000BE56 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1386FC83299B7E790000BE56 /* Command.swift */; };
 		1386FC90299B8B720000BE56 /* Cmd_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1386FC8F299B8B720000BE56 /* Cmd_Model.swift */; };
+		1386FC92299CB6A00000BE56 /* RemiderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1386FC91299CB6A00000BE56 /* RemiderViewController.swift */; };
 		138DDF3F28C1CA2B000D48F1 /* 001012_U6.1.bin in Resources */ = {isa = PBXBuildFile; fileRef = 138DDF3E28C1CA2B000D48F1 /* 001012_U6.1.bin */; };
 		4D32652883D68AE433F7F739 /* Pods_EASDKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7B7B216959EA38E55ABEBA /* Pods_EASDKDemo.framework */; };
 /* End PBXBuildFile section */
@@ -33,6 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		131C5F89299CD359006BBD53 /* MonitorReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorReminderViewController.swift; sourceTree = "<group>"; };
 		137C4C18289B917500DD28DC /* EASDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EASDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		137C4C1B289B917500DD28DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		137C4C1D289B917500DD28DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +47,7 @@
 		1386FC7B299B57670000BE56 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		1386FC83299B7E790000BE56 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		1386FC8F299B8B720000BE56 /* Cmd_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cmd_Model.swift; sourceTree = "<group>"; };
+		1386FC91299CB6A00000BE56 /* RemiderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemiderViewController.swift; sourceTree = "<group>"; };
 		138DDF3E28C1CA2B000D48F1 /* 001012_U6.1.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 001012_U6.1.bin; sourceTree = "<group>"; };
 		7E7B7B216959EA38E55ABEBA /* Pods_EASDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EASDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E2E0464A7DB631C96C412E /* Pods-EASDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EASDKDemo.debug.xcconfig"; path = "Target Support Files/Pods-EASDKDemo/Pods-EASDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 				137C4C1D289B917500DD28DC /* SceneDelegate.swift */,
 				137C4C1F289B917500DD28DC /* ViewController.swift */,
 				1386FC7B299B57670000BE56 /* ListViewController.swift */,
+				1386FC91299CB6A00000BE56 /* RemiderViewController.swift */,
+				131C5F89299CD359006BBD53 /* MonitorReminderViewController.swift */,
 				1386FC83299B7E790000BE56 /* Command.swift */,
 				1386FC8F299B8B720000BE56 /* Cmd_Model.swift */,
 				138DDF3E28C1CA2B000D48F1 /* 001012_U6.1.bin */,
@@ -254,6 +260,8 @@
 				137C4C20289B917500DD28DC /* ViewController.swift in Sources */,
 				137C4C1C289B917500DD28DC /* AppDelegate.swift in Sources */,
 				1386FC7C299B57670000BE56 /* ListViewController.swift in Sources */,
+				131C5F8A299CD359006BBD53 /* MonitorReminderViewController.swift in Sources */,
+				1386FC92299CB6A00000BE56 /* RemiderViewController.swift in Sources */,
 				1386FC84299B7E790000BE56 /* Command.swift in Sources */,
 				1386FC90299B8B720000BE56 /* Cmd_Model.swift in Sources */,
 				137C4C1E289B917500DD28DC /* SceneDelegate.swift in Sources */,
