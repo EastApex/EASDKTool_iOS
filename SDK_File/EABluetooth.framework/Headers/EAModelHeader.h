@@ -95,19 +95,7 @@
 // func
 #import <EABluetooth/EAFastGetSnNumberManager.h>
 #import <EABluetooth/EADataValue.h>
+
 #import <EABluetooth/EACustomNumberWatchFaceModel.h>
-
-// DB
-#import <EABluetooth/EADBSportModel.h>
-#import <EABluetooth/EADBStepModel.h>
-#import <EABluetooth/EADBHrModel.h>
-#import <EABluetooth/EADBDayHrModel.h>
-#import <EABluetooth/EADBRestingHrModel.h>
-#import <EABluetooth/EADBStressModel.h>
-#import <EABluetooth/EADBBloodOxygenModel.h>
-#import <EABluetooth/EADBGPSModel.h>
-#import <EABluetooth/EADBPaceModel.h>
-#import <EABluetooth/EADBFrequencyModel.h>
-
 
 #endif /* EAModelHeader_h */

@@ -69,6 +69,8 @@ typedef NS_OPTIONS(NSUInteger, EAShowAppType) {
 
 
 
+
+
 @interface EAShowAppMessageModel : EABaseModel
 
 @property(nonatomic,assign) BOOL unknow;

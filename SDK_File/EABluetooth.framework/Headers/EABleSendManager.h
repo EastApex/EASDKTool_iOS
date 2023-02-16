@@ -21,7 +21,6 @@ typedef void(^RespondBlock)(EARespondModel *respondModel);
 @interface EABleSendManager : NSObject
 
 
-
 /// The singleton 单例
 + (instancetype)defaultManager;
 
@@ -43,10 +42,6 @@ typedef void(^RespondBlock)(EARespondModel *respondModel);
 /// Get big data by bigDataType 【Data will not be available until the watch sends the big data message：EAPhoneOpsBig8803DataUpdateFinish】
 /// 获取大数据【需要等待手表发送完成大数据消息才会有数据：EAPhoneOpsBig8803DataUpdateFinish】
 - (NSArray *)getBigDataWithBigDataType:(EADataInfoType)bigDataType;
-
-/// 获取睡眠大数据
-/// - Parameter mergeTime: 当天睡眠合并间隔时长，单位分钟【昨天的18点至今天的18点，为今天睡眠】
-- (NSDictionary *)getSleepBigDataWithMergeTime:(NSInteger)mergeTime;
 
 
 /// Retrieve audio data [Call this method to retrieve audio data only when notification 'recording completed' is received]
@@ -70,6 +65,7 @@ typedef void(^RespondBlock)(EARespondModel *respondModel);
 ///   To check the origin and other information of each element, please check CWF_Point_Circle.json or CWF_Point_Square.json of EAWatchFace.bundle
 ///   【查看各个元素的原点等信息请查看EAWatchFace.bundle的CWF_Point_Circle.json或者CWF_Point_Square.json】
 - (NSInteger )customWatchFaceBackgroundImage:(UIImage *)backGroundImage colorType:(EACWFTimerColorType )colorType styleType:(EACWFStyleType)styleType;
+
 
 /// Customize the background watch face 【自定义背景图片的表盘】
 /// - Parameters:
