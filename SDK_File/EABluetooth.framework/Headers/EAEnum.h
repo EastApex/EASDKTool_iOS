@@ -1829,6 +1829,9 @@ typedef NS_ENUM(NSUInteger,EASportType) {
     
 };
 
+
+
+
 /// OTA respond status
 /// MARK: - OTA 响应类型
 typedef NS_ENUM(NSUInteger,EAOtaRespondStatus) {

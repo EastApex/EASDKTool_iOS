@@ -12,6 +12,10 @@ class Command: NSObject {
 
     class func getData(dataInfoType:EADataInfoType) {
         
+//        Get the relevant data of the watch
+//        Parameter description: EADataInfoType is an enumeration of data types supported by the watch.
+//        Eg: EADataInfoType.watch is watch information and returns EAWatchModel data type
+        
         EABleSendManager.default().operationGetInfo(with: dataInfoType) { baseModel in
             
             print(baseModel.modelToJSONObject()!);
@@ -35,6 +39,11 @@ class Command: NSObject {
     class public func notSupportSetData() {
         
         print("⚠️⚠️⚠️ Not support set this data")
+    }
+    
+    class public func notSupportGetData() {
+        
+        print("⚠️⚠️⚠️ Not support get this data")
     }
     
     class func getAllBigData(){

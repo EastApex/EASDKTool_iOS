@@ -65,11 +65,11 @@ weekCycleBit 为127 即 开启每天监测功能
 @property(nonatomic, assign) NSInteger hour;
 
 @property(nonatomic, assign) NSInteger minute;
-
+/// year (You can leave it unset)
 @property(nonatomic, assign) NSInteger year;
-
+/// month (You can leave it unset)
 @property(nonatomic, assign) NSInteger month;
-
+/// day (You can leave it unset)
 @property(nonatomic, assign) NSInteger day;
 
 /** 周期：位对应从bit0~bit6对应周日~周六

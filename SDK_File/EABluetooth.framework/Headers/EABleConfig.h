@@ -68,6 +68,10 @@ if (!fileHandle) {\
 @property (nonatomic, assign) BOOL canScanAllDevices;
 
 
+/// SDK分析处理大数据,isTest必须设为NO，不然不会处理
+@property (nonatomic, assign) BOOL analyzeBigData;
+
+
 
 /// ignore：
 /// 显示信号量 ，默认关闭

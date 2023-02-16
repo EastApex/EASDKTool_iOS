@@ -17,6 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// 运动类型
 @property(nonatomic, assign) EASportType eType;
 
+/// Sport type
+/// 猎声运动类型
+@property(nonatomic, assign) NSInteger hlSportType;
+
 /// begin timestamp
 /// 起始时间戳
 @property(nonatomic, assign) NSInteger beginTimeStamp;
@@ -107,7 +111,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSInteger count;
 
 /// ignore：
-/// 有效时长【UTE设备特有】
+/// 有效时长
 @property (nonatomic,assign) NSInteger validTime;
 
 @end

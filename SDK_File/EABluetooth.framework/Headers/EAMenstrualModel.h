@@ -35,6 +35,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /// Obtain period data
+/// start: indicates the start date. eg. 2022-02-06 [yyyy-MM-dd]
+/// keepDay: indicates the keepDay duration. eg.7 （value：5~15）
+/// cycleDay: cycle . eg.28 （value：22~45）
+
 + (EAMenstruals *)eaAllocInitWithStartDate:(NSString *)start keepDay:(NSInteger)keepDay cycleDay:(NSInteger)cycleDay DEPRECATED_MSG_ATTRIBUTE("Please use [EAMenstruals eaAllocInitWithStartDate: keepDay: cycleDay: judgeCurrentTime:]");
 
 

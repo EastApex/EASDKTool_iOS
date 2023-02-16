@@ -22,12 +22,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// 电量值 【不支持修改】
 @property(nonatomic, assign) NSInteger batLevel;
 
-/// Automatic pressure monitoring switch[cannot be modified]
-/// 自动压力监测开关【不支持修改】
+/// Automatic pressure monitoring switch
+/// 自动压力监测开关
 @property(nonatomic, assign) NSInteger autoPressureSw;
 
-/// Automatic sedentary monitoring switch [cannot be modified]
-/// 自动久坐监测开关【不支持修改】
+/// Automatic sedentary monitoring switch
+/// 自动久坐监测开关
 @property(nonatomic, assign) NSInteger autoSedentarinessSw;
 
 /// Raise the screen setting switch[cannot be modified]
@@ -38,12 +38,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// 振动模式【不支持修改】
 @property(nonatomic, assign) EAVibrateIntensityType eVibrateIntensity;
 
-/// way of wearing[cannot be modified]
-/// 佩戴方式【不支持修改】
+/// way of wearing
+/// 佩戴方式
 @property(nonatomic, assign) EAWearWayType eHandInfo;
 
-/// Setting Units[cannot be modified]
-/// 单位设置【不支持修改】
+/// Setting Units
+/// 单位设置
 @property(nonatomic, assign) EAUnifiedUnit eUnitFormat;
 
 /// Heart rate monitoring switch [cannot be modified]

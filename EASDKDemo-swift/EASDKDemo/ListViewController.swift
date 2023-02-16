@@ -10,7 +10,7 @@ import SnapKit
 import EABluetooth
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-
+    public var type:NSInteger! = 0
     var tableView : UITableView!
     static let cellId = "cellIdl"
     var dataSource : NSMutableArray!
@@ -18,9 +18,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
-        
-        self.title = "Command";
         
         view.backgroundColor = UIColor.white
         
@@ -84,39 +81,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         setInfo.setValue("Command【指令】", forKey: "title")
         setInfo.setObject(setList, forKey: "list" as NSCopying)
         dataSource.add(setInfo)
-        
-        
-        let getBigDataList:NSArray = [
-            "id:29 \nGet all the big data【获取所有大数据】",
-            "id:49 \nGet big data separately by type【按类型单独获取大数据】"
-        ]
-        let getBigDataInfo = NSMutableDictionary.init()
-        getBigDataInfo.setValue("Get big data【大数据】", forKey: "title")
-        getBigDataInfo.setObject(getBigDataList, forKey: "list" as NSCopying)
-        dataSource.add(getBigDataInfo)
-        
-        
-        let list3:NSArray = [
-            "OTA",
-            "Online Watch Face",
-            "Custom Background Watch Face",
-        ]
-        let info3 = NSMutableDictionary.init()
-        info3.setValue("OTA", forKey: "title")
-        info3.setObject(list3, forKey: "list" as NSCopying)
-        dataSource.add(info3)
-        
-        
-        let list4:NSArray = [
-            "unbind【解绑】",
-            "Unbind & reset【解绑并重置】",
-            "disconnect【断开连接】"
-        ]
-        let info4 = NSMutableDictionary.init()
-        info4.setValue("Unstrap a Watch【解绑手表】", forKey: "title")
-        info4.setObject(list4, forKey: "list" as NSCopying)
-        dataSource.add(info4)
-        
+
         
     }
     
@@ -169,40 +134,107 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             let dateType = NSNumber.init(string: dataInfoTypeString)
             let dataInfoType = (dateType?.uintValue)!
             
-            command(dataInfoType: EADataInfoType(rawValue: dataInfoType) ?? .watch)
-        }else if indexPath.section == 1 {
-            
-            switch indexPath.row {
-            case 0: Command.getAllBigData();break
-            case 1: Command.getBigData(.stepData);break
-            default:break;
-            }
-            
-        }else if indexPath.section == 2 {
-            
-            switch indexPath.row {
-            case 0: Command.OTA();break
-            case 1: Command.onlineWatchFace();break
-            case 2: Command.customPictureWatchFace();break
-            default:break;
-            }
-        }else if indexPath.section == 2 {
-            
-            switch indexPath.row {
-            case 0: Command.unbind();break
-            case 1: Command.unbindAndReset();break
-            case 2: Command.disconnect();break
-            default:break;
+            if type==0 {
+                
+                getCommand(dataInfoType: EADataInfoType(rawValue: dataInfoType) ?? .watch)
+                
+            }else {
+                
+                setCommand(dataInfoType: EADataInfoType(rawValue: dataInfoType) ?? .watch)
             }
         }
     }
     
-    func command(dataInfoType:EADataInfoType) {
+    func getCommand(dataInfoType:EADataInfoType) {
         
-        // get
-        Command.getData(dataInfoType: dataInfoType);
+//        Command.getData(dataInfoType: dataInfoType);
         
-        // set
+        switch dataInfoType {
+        case .watch: // id: 3
+            Cmd_WatchInfo.getData();break
+        case .user: // id: 4
+            Cmd_UserInfo.getData();break
+        case .syncTime:// id: 5
+            Cmd_SyncTime.getData();break
+        case .blacklight:// id: 7
+            Cmd_Blacklight.getData();break
+        case .blacklightTimeout:// id: 8
+            Cmd_BlacklightTimeout.getData();break
+        case .battery:// id: 9
+            Cmd_Battery.getData();break
+        case .language:// id: 10
+            Cmd_Language.getData();break
+        case .unifiedUnit:// id: 11
+            Cmd_Unit.getData();break
+        case .deviceOps:// id: 12
+            Cmd_DeviceOps.getData();break
+        case .notDisturb:// id: 13
+            Cmd_DND.getData();break
+        case .dailyGoal:// id: 15
+            Cmd_DailyGoal.getData();break
+        case .autoCheckSleep:// id: 16
+            Cmd_CheckSleep.getData();break
+        case .autoCheckHeartRate:// id: 17
+            Cmd_CheckHeartRate.getData();break
+        case .autoCheckSedentariness:// id: 19
+            Cmd_CheckSedentariness.getData();break
+        case .weather:// id: 20
+            Cmd_Weather.getData();break
+        case .socialSwitch:// id: 21
+            Cmd_SocialSwitch.getData();break
+        case .reminder:// id: 22
+            do {
+                let rCtl = RemiderViewController()
+                self.navigationController?.pushViewController(rCtl, animated: true)
+            };break
+        case .heartRateWaringSetting:// id: 26
+            Cmd_HeartRateWaringSetting.getData();break
+        case .caloriesSetting:// id: 27
+            Cmd_CaloriesSetting.getData();break
+        case .gesturesSetting:// id: 28
+            Cmd_CaloriesSetting.getData();break
+        case .combination:// id: 30
+            Cmd_Combination.getData();break
+        case .homePage:// id: 30
+            Cmd_HomePage.getData();break
+        case .menstrual:// id: 32
+            Cmd_Menstrual.getData();break
+        case .dialPlate:// id: 33
+            Cmd_WatchFace.getData();break
+        case .appMessage:// id: 34
+            Cmd_AppMessage.getData();break
+        case .habitTracker:// id: 38
+            Cmd_HabitTracker.getData();break
+        case .sportShowData:// id: 40
+            Cmd_SportShowData.getData();break
+        case .blePairState:// id: 41
+            Cmd_BlePairState.getData();break
+        case .telephoneBook:// id: 42
+            Command.notSupportGetData();break
+        case .readTelephoneBook:// id: 43
+            Cmd_TelephoneBook.getData();break
+        case .watchSupport:// id: 44
+            Cmd_WatchSupport.getData();break
+        case .monitorReminder:// id: 45
+            do{
+                let rCtl = MonitorReminderViewController()
+                self.navigationController?.pushViewController(rCtl, animated: true)
+            };break
+//        case .appLaunchMapSport:// id: 46
+//            Command.notSupportSetData();break
+        case .stressMonitor:// id: 51
+            Cmd_StressMonitor.getData();break
+        case .sendRealTimeDataOnOff:// id: 52
+            Cmd_SendRealTimeDataOnOff.getData();break
+        case .vibrateIntensity:// id: 53
+            Cmd_VibrateIntensity.getData();break
+        default:break
+
+        }
+    }
+    
+    func setCommand(dataInfoType:EADataInfoType) {
+
         switch dataInfoType {
         case .watch: // id: 3
             Command.notSupportSetData();break

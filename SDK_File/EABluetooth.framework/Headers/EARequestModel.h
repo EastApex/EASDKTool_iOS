@@ -17,7 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSInteger requestId;
 
 /** 附加类型
- 目前 读取 requestId = 45 使用
+ 目前  读取 requestId = 45 使用
+      读取 requestId = 22 使用
  */
 @property(nonatomic, assign) NSInteger type;
 

@@ -188,6 +188,10 @@ typedef void(^UpdateValueBlock)(CBCharacteristic *characteristic,NSError *error)
 /// 重连设备（传手表的SN号）
 - (void)reConnectToPeripheral:(NSString *)sn;
 
+
+///// 连接并重置，绑定手表
+//- (void)connectAndResetPeripheral:(NSString *)sn userId:(NSString *)userId respond:(void (^)(NSError *error))respond;
+
 /// reconnection（Need the uuidString of the watch）
 /// 重连设备（传手表的uuidString）
 - (void)reConnectToPeripheralWithUUIDString:(NSString *)uuidString;
@@ -207,6 +211,9 @@ typedef void(^UpdateValueBlock)(CBCharacteristic *characteristic,NSError *error)
 /// Chain breaking watch (does not remove association)
 /// 断链设备(不移除关联，会自动重连设备)
 - (void)disconnectPeripheral;
+
+
+
 
 /// Check whether to enable Bluetooth
 /// 是否开启蓝牙

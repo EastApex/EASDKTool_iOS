@@ -99,11 +99,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         
         NotificationCenter.default.addObserver(self, selector: #selector(blePoweredOn), name: NSNotification.Name(kNTF_EABlePoweredOn), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(blePoweredOff), name: NSNotification.Name(kNTF_EABlePoweredOff), object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(operatingPhone), name: NSNotification.Name(kNTF_EAGetDeviceOpsPhoneMessage), object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(finishOTA), name: NSNotification.Name(kNTF_EAOTAAGPSDataFinish), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(ingOTA), name: NSNotification.Name(kNTF_EAOTAAGPSDataing), object: nil)
+
         
     }
     
@@ -138,95 +134,9 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         listCtl.dismiss(animated: true);
     }
     
-    @objc func operatingPhone(_ no:NSNotification){
-        
-        let operatingModel = no.object as! EAPhoneOpsModel
-        
-        // see enum EAPhoneOps
-        
-        switch operatingModel.eOps {
-            
-        case .searchPhone:
-            
-            print("search Phone")
-            
-            break
-        case .stopSearchPhone:
-            
-            print("stop search Phone")
-            break
-            
-        case .big8803DataUpdateFinish:
-            
-            print("Watch sending big data done")
-            
-            // daliy step data
-            let stepData = EABleSendManager.default().getBigData(withBigDataType: .stepData);
-            // heart rate data
-            let heartRateData = EABleSendManager.default().getBigData(withBigDataType: .heartRateData);
-            // sports data
-            let sportsData = EABleSendManager.default().getBigData(withBigDataType: .sportsData);
-            // stress data
-            let stressData = EABleSendManager.default().getBigData(withBigDataType: .stressData);
-            // Blood oxygen data
-            let bloodOxygenData = EABleSendManager.default().getBigData(withBigDataType: .bloodOxygenData);
-            // resting heart rate
-            let restingHeartRateData = EABleSendManager.default().getBigData(withBigDataType: .restingHeartRateData);
-            // GPS data
-            let gpsData = EABleSendManager.default().getBigData(withBigDataType: .gpsData);
-            // stride frequency
-            let stepFreqData = EABleSendManager.default().getBigData(withBigDataType: .stepFreqData);
-            // stride Pace
-            let stepPaceData = EABleSendManager.default().getBigData(withBigDataType: .stepPaceData);
-            // habit tracker data
-            let habitTrackerData = EABleSendManager.default().getBigData(withBigDataType: .habitTrackerData);
-            // sleep data
-            let sleepData = EABleSendManager.default().getBigData(withBigDataType: .sleepData);
-            
-            break
-        default:
-            
-            break
-        }
-        
-    }
     
-    @objc func finishOTA(){
-        
-        
-    }
-    @objc func ingOTA(_ no:NSNotification){
-        
-        let operatingModel = no.object as! NSNumber
-
-        if operatingModel.intValue < 0 { // failing 失败
-            
-            if operatingModel.intValue == -1 {
-                
-                /// Failure to send OTA data: Reject OTA request => Other reasons
-                /// 发送OTA数据失败：拒绝ota请求=>其他原因
-            }
-            
-            if operatingModel.intValue == -2 {
-                
-                /// Failed to send OTA data: Reject OTA request => The device has updated the version
-                /// 发送OTA数据失败：拒绝ota请求=>设备已经更新此版本
-            }
-            
-            if operatingModel.intValue == -4 {
-                
-                /// Failed to send OTA data: transmission completed. CRC check error
-                /// 发送OTA数据失败：传输完成，crc校验错误
-                
-            }
-            
-        }else {
-            
-            // The current progress 当前进度
-            
-        }
-        
-    }
+    
+    
     
     @IBAction func searchWatch(_ sender: Any) {
         
@@ -250,7 +160,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         
         bindingWatch("")
         
-        let listViewController = ListViewController()
+        let listViewController = WatchViewController()
         listCtl = UINavigationController(rootViewController: listViewController)
         listCtl.modalPresentationStyle = .fullScreen
         self.present(listCtl, animated: true, completion: nil)

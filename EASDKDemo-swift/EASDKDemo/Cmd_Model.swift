@@ -9,6 +9,23 @@ import Foundation
 import UIKit
 import EABluetooth
 
+class Cmd_WatchInfo {
+
+    class func setData() {
+
+        Command.notSupportSetData()
+    }
+    
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .watch) { baseModel in
+            
+            let model = baseModel as! EAWatchModel;
+            print(model.id_p)
+        }
+    }
+}
+
 class Cmd_UserInfo {
 
     class func setData() {
@@ -21,6 +38,15 @@ class Cmd_UserInfo {
         model.wearWayType = .leftHand
         Command.setData(model: model);
     }
+    
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .user) { baseModel in
+            
+            let model = baseModel as! EAUserModel;
+            print(model.age)
+        }
+    }
 }
 
 class Cmd_SyncTime {
@@ -31,6 +57,14 @@ class Cmd_SyncTime {
         Command.setData(model: model);
     }
     
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .syncTime) { baseModel in
+            
+            let model = baseModel as! EASyncTime;
+            print(model.year)
+        }
+    }
 }
 
 class Cmd_Blacklight {
@@ -40,6 +74,15 @@ class Cmd_Blacklight {
         let model = EABlacklightModel.init();
         model.level = 50;
         Command.setData(model: model);
+    }
+    
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .blacklight) { baseModel in
+            
+            let model = baseModel as! EABlacklightModel;
+            print(model.level)
+        }
     }
 }
 
@@ -51,7 +94,32 @@ class Cmd_BlacklightTimeout {
         model.timeOut = 10; // unit: second
         Command.setData(model: model);
     }
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .blacklightTimeout) { baseModel in
+            
+            let model = baseModel as! EABlacklightTimeoutModel;
+            print(model.timeOut)
+        }
+    }
 }
+
+class Cmd_Battery{
+    
+    class func setData()  {
+        
+        Command.notSupportSetData()
+    }
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .battery) { baseModel in
+            
+            let model = baseModel as! EABatteryModel;
+            print(model.level)
+        }
+    }
+}
+
 
 class Cmd_Language {
     
@@ -60,6 +128,14 @@ class Cmd_Language {
         let model = EALanguageModel.init();
         model.language = .english;
         Command.setData(model: model);
+    }
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .language) { baseModel in
+            
+            let model = baseModel as! EALanguageModel;
+            print(model.language.rawValue)
+        }
     }
 }
 
@@ -71,16 +147,100 @@ class Cmd_Unit {
         model.unit = .lengthUnitMetric;
         Command.setData(model: model);
     }
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .unifiedUnit) { baseModel in
+            
+            let model = baseModel as! EAUnifiedUnitModel;
+            print(model.unit.rawValue)
+        }
+    }
 }
 
 class Cmd_DeviceOps {
     
     class func setData()  {
         
+        /**【EAOperationWatchType】
+         /// factory data reset
+         /// 恢复出厂设置
+         EADeviceOpsTypeRestoreFactory = 0,
+         
+         /// Restart the watch
+         /// 重启手表
+         EADeviceOpsTypeReset = 1,
+         
+         /// Watch to turn it off
+         /// 手表关机
+         EADeviceOpsTypePowerOff = 2,
+         
+         /// Disconnect the bluetooth
+         /// 断开蓝牙
+         EADeviceOpsTypeDisconnectBle = 3,
+         
+         /// Go into flight mode
+         /// 进入飞行模式
+         EADeviceOpsTypeEnteringFlightMode = 4,
+         
+         /// Light up the screen
+         /// 点亮屏幕
+         EADeviceOpsTypeLightUpTheScreen = 5,
+         
+         /// Put out the screen
+         /// 熄灭屏幕
+         EADeviceOpsTypeTurnOffTheScreen = 6,
+         
+         /// Stop Looking for your phone
+         /// 停止寻找手机(上位机需求)
+         EADeviceOpsTypeStopSearchPhone = 7,
+         
+         /// 工厂模式专用：进入工厂测试模式
+         EADeviceOpsTypeEnterFactoryTestMode = 8,
+
+         /// 工厂模式专用：退出工厂测试模式
+         EADeviceOpsTypeExitFactoryTestMode = 9,
+         
+         /// Looking for a watch
+         /// 寻找手表
+         EADeviceOpsTypeStartSearchWatch = 10,
+         
+         /// Stop Looking for a Watch
+         /// 停止寻找手表
+         EADeviceOpsTypeStopSearchWatch = 11,
+         
+         /// Exit the photo
+         /// 退出拍照
+         EADeviceOpsTypeStopCamera = 12,
+         
+         /// Enable Watch operation The pairing box is displayed on the IOS phone
+         /// 使能手表操作IOS手机弹出配对框
+         EADeviceOpsTypeShowiPhonePairingAlert = 13,
+         */
+        
+        // You will need to view the enumeration [EAOperationWatchType] to manipulate the watch to perform the corresponding action.
+        // 你需要查看枚举【EAOperationWatchType】来操控手表做出对应的动作。
+        let model = EADeviceOps.init()
+        model.deviceOpsType = .lightUpTheScreen
+        model.deviceOpsStatus = .execute
+        Command.setData(model: model);
+    }
+    
+    class func findWatch() {
         let model = EADeviceOps.init()
         model.deviceOpsType = .startSearchWatch
         model.deviceOpsStatus = .execute
         Command.setData(model: model);
+    }
+    class func stopFindWatch() {
+        
+        let model = EADeviceOps.init()
+        model.deviceOpsType = .stopSearchWatch
+        model.deviceOpsStatus = .execute
+        Command.setData(model: model);
+    }
+    class func getData(){
+        
+        Command.notSupportGetData()
     }
 }
 
@@ -96,6 +256,15 @@ class Cmd_DND {
         model.endMinute = 0
         Command.setData(model: model);
     }
+    
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .notDisturb) { baseModel in
+            
+            let model = baseModel as! EANotDisturbModel;
+            print(model.sw)
+        }
+    }
 }
 
 class Cmd_DailyGoal {
@@ -104,6 +273,15 @@ class Cmd_DailyGoal {
         
         let model = EADailyGoalModel.eaInitWith(onOff: 1, stepGoal: 6000, calorieGoal: (500 * 1000), distanceGoal: (2 * 1000 * 100), durationGoal: (30 * 60), sleepGoal: (8 * 60 * 60))
         Command.setData(model: model);
+    }
+    
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .dailyGoal) { baseModel in
+            
+            let model = baseModel as! EADailyGoalModel;
+            print(model.sStep.goal)
+        }
     }
 }
 
@@ -115,6 +293,15 @@ class Cmd_CheckSleep {
         let model = EAAutoCheckSleepModel.eaInit(withWeekCycleBit: weekCycleBit, beginHour: 0, beginMinute: 0, endHour: 23, endMinute: 59)
         Command.setData(model: model);
     }
+    
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .autoCheckSleep) { baseModel in
+            
+            let model = baseModel as! EAAutoCheckSleepModel;
+            print(model.weekCycleBit)
+        }
+    }
 }
 
 class Cmd_CheckHeartRate {
@@ -124,6 +311,15 @@ class Cmd_CheckHeartRate {
         let model = EAAutoCheckHeartRateModel.init()
         model.interval = 10 // unit:minute ,if value is 0 close this.
         Command.setData(model: model);
+    }
+    
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .autoCheckHeartRate) { baseModel in
+            
+            let model = baseModel as! EAAutoCheckHeartRateModel;
+            print(model.interval)
+        }
     }
 }
 
@@ -141,6 +337,15 @@ class Cmd_CheckSedentariness {
         model.endMinute = 0
         model.stepThreshold = 10 // Step threshold: Below this threshold indicates sedentary behavior
         Command.setData(model: model);
+    }
+    
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .autoCheckSedentariness) { baseModel in
+            
+            let model = baseModel as! EAAutoCheckSedentarinessModel;
+            print(model.interval)
+        }
     }
 }
 
@@ -163,6 +368,11 @@ class Cmd_Weather {
        
         Command.setData(model: model);
     }
+    
+    class func getData(){
+        
+        Command.notSupportGetData()
+    }
 }
 class Cmd_SocialSwitch {
     
@@ -170,6 +380,15 @@ class Cmd_SocialSwitch {
         
         let model = EASocialSwitchModel.eaInit(with: .oneLongVibration, incomingcall: 1, missedcall: 1, sms: 1, social: 1, email: 1, schedule: 1);
         Command.setData(model: model);
+    }
+    
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .socialSwitch) { baseModel in
+            
+            let model = baseModel as! EASocialSwitchModel;
+            print(model.sIncomingcall.sw)
+        }
     }
 }
 
@@ -179,7 +398,8 @@ class Cmd_Reminder {
         
         EABleSendManager.default().operationGetInfo(with: .reminder) { baseModel in
             
-            let reminderOps = baseModel as! EAReminderOps;
+            let model = baseModel as! EAReminderOps;
+            print(model.sIndexArray)
         }
     }
     
@@ -252,6 +472,15 @@ class Cmd_HeartRateWaringSetting {
         let model = EAHeartRateWaringSettingModel.eaInit(withSwitch: 1, maxHr: 180, minHr: 50)
         Command.setData(model: model);
     }
+    
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .heartRateWaringSetting) { baseModel in
+            
+            let model = baseModel as! EAHeartRateWaringSettingModel;
+            print(model.maxHr)
+        }
+    }
 }
 
 class Cmd_CaloriesSetting {
@@ -260,6 +489,30 @@ class Cmd_CaloriesSetting {
         
         let model = EACaloriesSettingModel.eaInit(withSwitch: 1)
         Command.setData(model: model);
+    }
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .caloriesSetting) { baseModel in
+            
+            let model = baseModel as! EACaloriesSettingModel;
+            print(model.sw)
+        }
+    }
+}
+
+class Cmd_Combination {
+    
+    class func setData() {
+        
+        Command.notSupportSetData()
+    }
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .combination) { baseModel in
+            
+            let model = baseModel as! EACombinationModel;
+            print(model.notDisturbSw)
+        }
     }
 }
 
@@ -270,13 +523,22 @@ class Cmd_GesturesSetting {
         let model = EACaloriesSettingModel.eaInit(withSwitch: 1)
         Command.setData(model: model);
     }
+    
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .gesturesSetting) { baseModel in
+            
+            let model = baseModel as! EACaloriesSettingModel;
+            print(model.sw)
+        }
+    }
 }
 
 class Cmd_HomePage {
     
     class func setData() {
         
-        EABleSendManager.default().operationGetInfo(with: .reminder) { baseModel in
+        EABleSendManager.default().operationGetInfo(with: .homePage) { baseModel in
             
             let model = baseModel as! EAHomePageModel;
             
@@ -285,6 +547,21 @@ class Cmd_HomePage {
                 
                 model.sPageArray = NSMutableArray(array: model.supportPageArray)
                 Command.setData(model: model);
+            }else {
+                
+                Command.notSupportSetData();
+            }
+        }
+    }
+    
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .homePage) { baseModel in
+            
+            let model = baseModel as! EAHomePageModel;
+            if model.supportPageArray.count > 0 {
+                
+             
             }else {
                 
                 Command.notSupportSetData();
@@ -300,6 +577,11 @@ class Cmd_Menstrual {
         let model = EAMenstruals.eaAllocInit(withStartDate: "2023-02-15", keepDay: 7, cycleDay: 28, judgeCurrentTime: true)
         Command.setData(model: model);
     }
+    class func getData(){
+        
+        Command.notSupportGetData();
+
+    }
 }
 
 class Cmd_WatchFace {
@@ -308,6 +590,15 @@ class Cmd_WatchFace {
         
         let model = EADialPlateModel.eaInitBuiltInWatchFace(withID: 1)
         Command.setData(model: model);
+    }
+    
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .dialPlate) { baseModel in
+            
+            let model = baseModel as! EADialPlateModel;
+            print(model.id_p)
+        }
     }
 }
 
@@ -319,6 +610,16 @@ class Cmd_AppMessage {
         let model = eaShowAppMessageModel.getEAAppMessageSwitchData()
         Command.setData(model: model);
     }
+    
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .appMessage) { baseModel in
+            
+            let model = baseModel as! EAAppMessageSwitchData;
+            let showAppMessageModel = EAShowAppMessageModel.eaAllocInit(with: model)
+            print(showAppMessageModel.facebook)
+        }
+    }
 }
 
 class Cmd_HabitTracker {
@@ -327,7 +628,51 @@ class Cmd_HabitTracker {
         
         
     }
+    
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .habitTracker) { baseModel in
+            
+            let model = baseModel as! EAHabitTrackers;
+            print(model.sIndexArray)
+        }
+    }
 }
+
+class Cmd_SportShowData {
+    
+    class func setData() {
+        
+        Command.notSupportSetData()
+    }
+    
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .sportShowData) { baseModel in
+            
+            let model = baseModel as! EASportShowDataModel;
+            print(model.steps)
+        }
+    }
+}
+
+class Cmd_BlePairState {
+    
+    class func setData() {
+        
+        Command.notSupportSetData()
+    }
+    
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .blePairState) { baseModel in
+            
+            let model = baseModel as! EABlePairStateModel;
+            print(model.secState)
+        }
+    }
+}
+
 
 class Cmd_TelephoneBook {
     
@@ -364,8 +709,37 @@ class Cmd_TelephoneBook {
               Command.setData(model: eaTelephoneBookModel2);
           }
     }
+    
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .readTelephoneBook) { baseModel in
+            
+            let model = baseModel as! EAReadTelephoneBookModel;
+            print(model.sIndexArray)
+        }
+    }
 }
 
+
+class Cmd_WatchSupport {
+    
+    class func setData() {
+        
+        Command.notSupportSetData()
+    }
+    
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .watchSupport) { baseModel in
+            
+            if baseModel.isKind(of: EAWatchSupportModel.self) {
+                
+                let model = baseModel as! EAWatchSupportModel;
+                print(model.scheduleSetting)
+            }
+        }
+    }
+}
 
 class Cmd_MonitorReminder {
     
@@ -416,6 +790,16 @@ class Cmd_StressMonitor {
         let model = EAStressMonitor.eaInitWith(onOff: true);
         Command.setData(model: model);
     }
+    
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .stressMonitor) { baseModel in
+            
+            
+            let model = baseModel as! EAStressMonitor;
+            print(model.sw)
+        }
+    }
 }
 
 class Cmd_SendRealTimeDataOnOff {
@@ -425,6 +809,14 @@ class Cmd_SendRealTimeDataOnOff {
         let model = EASendRealTimeDataOnOff.eaInitWith(onOff: true)
         Command.setData(model: model);
     }
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .sendRealTimeDataOnOff) { baseModel in
+            
+            let model = baseModel as! EASendRealTimeDataOnOff;
+            print(model.sw)
+        }
+    }
 }
 
 class Cmd_VibrateIntensity {
@@ -433,5 +825,14 @@ class Cmd_VibrateIntensity {
         
         let model = EAVibrateIntensity.eaInit(with: .strong)
         Command.setData(model: model);
+    }
+    
+    class func getData(){
+        
+        EABleSendManager.default().operationGetInfo(with: .vibrateIntensity) { baseModel in
+            
+            let model = baseModel as! EAVibrateIntensity;
+            print(model.eVibrateIntensity.rawValue)
+        }
     }
 }
