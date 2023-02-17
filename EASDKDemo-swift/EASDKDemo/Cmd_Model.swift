@@ -454,6 +454,11 @@ class Cmd_Reminder {
         
         let model = EAReminderOps.eaInitAddOne(with: reminderModel)
         Command.setData(model: model);
+        
+        let reminderModel1 = EAReminderModel.eaInitSingleReminder(with: .sleep, year: 2023, month: 2, day: 17, hour: 14, minute: 14, onOff: 1, snooze: 0, snoozeDuration: 10, remindActionType: .longVibration, content: "")
+        
+        let model1 = EAReminderOps.eaInitAddOne(with: reminderModel1)
+        Command.setData(model: model1);
     }
     
     class func edit() {
@@ -465,9 +470,8 @@ class Cmd_Reminder {
                 
                 if reminderOps.sIndexArray.count > 0 {
                     
-                    let reminderModel = reminderOps.sIndexArray.firstObject as! EAReminderModel
-                    reminderModel.hour = 10
-                    reminderModel.minute = 20
+                    let reminderModel = reminderOps.sIndexArray.object(at: 1) as! EAReminderModel
+                    reminderModel.sw = 0
                     
                     let model = EAReminderOps.eaInitEdit(with: reminderModel);
                     Command.setData(model: model);
