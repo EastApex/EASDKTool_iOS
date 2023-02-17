@@ -120,8 +120,9 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
     @objc func connectDisconnect(){
         
         print("connectDisconnect")
-        
-        listCtl.dismiss(animated: true);
+        if ((listCtl) != nil) {
+            listCtl.dismiss(animated: true);
+        }
     }
     
     @objc func blePoweredOn(){

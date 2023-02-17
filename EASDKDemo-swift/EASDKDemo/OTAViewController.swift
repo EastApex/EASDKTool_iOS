@@ -9,6 +9,7 @@ import UIKit
 import EABluetooth
 class OTAViewController: UIViewController  , UITableViewDelegate, UITableViewDataSource {
     
+    var alertView: UIAlertController!
     var tableView : UITableView!
     static let cellId = "cellIdl"
     var dataSource : NSMutableArray!
@@ -20,6 +21,7 @@ class OTAViewController: UIViewController  , UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        alertView = UIAlertController.init(title: "Under upgrade", message: "Please Wait", preferredStyle: .alert)
         
         view.backgroundColor = UIColor.white
         
@@ -67,6 +69,8 @@ class OTAViewController: UIViewController  , UITableViewDelegate, UITableViewDat
 
         if operatingModel.intValue < 0 { // failing 失败
             
+            alertView.dismiss(animated: true)
+            
             if operatingModel.intValue == -1 {
                 
                 /// Failure to send OTA data: Reject OTA request => Other reasons
@@ -90,6 +94,10 @@ class OTAViewController: UIViewController  , UITableViewDelegate, UITableViewDat
             
             // The current progress 当前进度
             
+            if (operatingModel.floatValue  >= 0.99) {
+                
+                alertView.dismiss(animated: true)
+            }
         }
         
     }
@@ -123,10 +131,27 @@ class OTAViewController: UIViewController  , UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     
+        self.present(alertView, animated: true, completion: nil)
         switch indexPath.row {
-        case 0: Command.OTA();break
+        case 0: do {
+            
+            var aa:Bool = Command.OTA()
+            if !aa {
+                
+                alertView.dismiss(animated: true)
+            }
+            
+        };break
         case 1: Command.onlineWatchFace();break
-        case 2: Command.customPictureWatchFace();break
+        case 2: do {
+            let result:NSInteger = Command.customPictureWatchFace()
+            if result < 1 {
+                
+                alertView.dismiss(animated: true)
+            }else {
+                
+            }
+        };break
         default:break;
         }
     }

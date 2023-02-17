@@ -19,6 +19,7 @@ class Command: NSObject {
         EABleSendManager.default().operationGetInfo(with: dataInfoType) { baseModel in
             
             print(baseModel.modelToJSONObject()!);
+            print(baseModel.className())
         }
     }
     
@@ -26,12 +27,15 @@ class Command: NSObject {
         
         EABleSendManager.default().operationChange(model) { respondModel in
             
-            if respondModel.eErrorCode == .success {
+            if respondModel.isKind(of: EARespondModel.self) {
                 
-                print("Succ")
-            }else {
-                
-                print("Fail")
+                if respondModel.eErrorCode == .success {
+                    
+                    print("Succ")
+                }else {
+                    
+                    print("Fail")
+                }
             }
         }
     }
@@ -72,7 +76,7 @@ class Command: NSObject {
         Command.setData(model: model)
     }
     
-    class func OTA(){
+    class func OTA() -> Bool{
         
         /* OTA
         add Notification:
@@ -83,7 +87,7 @@ class Command: NSObject {
         let file2 =  EAFileModel.allocInit(withPath: "", otaType: .res, version: "R0.4")
         let file3 =  EAFileModel.allocInit(withPath: "", otaType: .res, version: "R0.5")
 
-        EABleSendManager.default().upgradeFiles([file1,file2,file3]);
+        return EABleSendManager.default().upgradeFiles([file1,file2,file3]);
     }
     
     class func onlineWatchFace(){
@@ -100,7 +104,7 @@ class Command: NSObject {
         
     }
     
-    class func customPictureWatchFace(){
+    class func customPictureWatchFace() -> NSInteger {
         
         /**
          Add notification to view progress 添加通知 查看进度
@@ -119,12 +123,12 @@ class Command: NSObject {
          */
         
         let backgroundImage = UIImage.init(named: "picture")!;
-        EABleSendManager.default().customWatchFaceBackgroundImage(backgroundImage, colorType: .white ,styleType: .pictureNumber);
+       return EABleSendManager.default().customWatchFaceBackgroundImage(backgroundImage, colorType: .white ,styleType: .pictureNumber);
         
         
         // thumbnail path
-        let thumbnailPath = EACreatThumbnail.creatThumbnail(withBackgroundImage: backgroundImage, colorType: .white, styleType: .pictureNumber)
-        let image = UIImage.init(contentsOfFile: thumbnailPath)
+//        let thumbnailPath = EACreatThumbnail.creatThumbnail(withBackgroundImage: backgroundImage, colorType: .white, styleType: .pictureNumber)
+//        let image = UIImage.init(contentsOfFile: thumbnailPath)
         
     }
 

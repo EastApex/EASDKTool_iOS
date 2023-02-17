@@ -195,7 +195,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             Cmd_CaloriesSetting.getData();break
         case .combination:// id: 30
             Cmd_Combination.getData();break
-        case .homePage:// id: 30
+        case .homePage:// id: 31
             Cmd_HomePage.getData();break
         case .menstrual:// id: 32
             Cmd_Menstrual.getData();break
@@ -281,7 +281,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             Cmd_CaloriesSetting.setData();break
         case .combination:// id: 30
             Command.notSupportSetData();break
-        case .homePage:// id: 30
+        case .homePage:// id: 31
             Cmd_HomePage.setData();break
         case .menstrual:// id: 32
             Cmd_Menstrual.setData();break

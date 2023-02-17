@@ -20,8 +20,10 @@ class Cmd_WatchInfo {
         
         EABleSendManager.default().operationGetInfo(with: .watch) { baseModel in
             
-            let model = baseModel as! EAWatchModel;
-            print(model.id_p)
+            if baseModel.isKind(of: EAWatchModel.self) {
+                let model = baseModel as! EAWatchModel;
+                print(model.id_p)
+            }
         }
     }
 }
@@ -43,8 +45,10 @@ class Cmd_UserInfo {
         
         EABleSendManager.default().operationGetInfo(with: .user) { baseModel in
             
-            let model = baseModel as! EAUserModel;
-            print(model.age)
+            if baseModel.isKind(of: EAUserModel.self) {
+                let model = baseModel as! EAUserModel;
+                print(model.age)
+            }
         }
     }
 }
@@ -61,8 +65,10 @@ class Cmd_SyncTime {
         
         EABleSendManager.default().operationGetInfo(with: .syncTime) { baseModel in
             
-            let model = baseModel as! EASyncTime;
-            print(model.year)
+            if baseModel.isKind(of: EASyncTime.self) {
+                let model = baseModel as! EASyncTime;
+                print(model.year)
+            }
         }
     }
 }
@@ -80,8 +86,10 @@ class Cmd_Blacklight {
         
         EABleSendManager.default().operationGetInfo(with: .blacklight) { baseModel in
             
-            let model = baseModel as! EABlacklightModel;
-            print(model.level)
+            if baseModel.isKind(of: EABlacklightModel.self) {
+                let model = baseModel as! EABlacklightModel;
+                print(model.level)
+            }
         }
     }
 }
@@ -98,8 +106,10 @@ class Cmd_BlacklightTimeout {
         
         EABleSendManager.default().operationGetInfo(with: .blacklightTimeout) { baseModel in
             
-            let model = baseModel as! EABlacklightTimeoutModel;
-            print(model.timeOut)
+            if baseModel.isKind(of: EABlacklightTimeoutModel.self) {
+                let model = baseModel as! EABlacklightTimeoutModel;
+                print(model.timeOut)
+            }
         }
     }
 }
@@ -114,8 +124,10 @@ class Cmd_Battery{
         
         EABleSendManager.default().operationGetInfo(with: .battery) { baseModel in
             
-            let model = baseModel as! EABatteryModel;
-            print(model.level)
+            if baseModel.isKind(of: EABatteryModel.self) {
+                let model = baseModel as! EABatteryModel;
+                print(model.level)
+            }
         }
     }
 }
@@ -133,8 +145,10 @@ class Cmd_Language {
         
         EABleSendManager.default().operationGetInfo(with: .language) { baseModel in
             
-            let model = baseModel as! EALanguageModel;
-            print(model.language.rawValue)
+            if baseModel.isKind(of: EALanguageModel.self) {
+                let model = baseModel as! EALanguageModel;
+                print(model.language.rawValue)
+            }
         }
     }
 }
@@ -151,8 +165,10 @@ class Cmd_Unit {
         
         EABleSendManager.default().operationGetInfo(with: .unifiedUnit) { baseModel in
             
-            let model = baseModel as! EAUnifiedUnitModel;
-            print(model.unit.rawValue)
+            if baseModel.isKind(of: EAUnifiedUnitModel.self) {
+                let model = baseModel as! EAUnifiedUnitModel;
+                print(model.unit.rawValue)
+            }
         }
     }
 }
@@ -261,8 +277,10 @@ class Cmd_DND {
         
         EABleSendManager.default().operationGetInfo(with: .notDisturb) { baseModel in
             
-            let model = baseModel as! EANotDisturbModel;
-            print(model.sw)
+            if baseModel.isKind(of: EANotDisturbModel.self) {
+                let model = baseModel as! EANotDisturbModel;
+                print(model.sw)
+            }
         }
     }
 }
@@ -279,8 +297,10 @@ class Cmd_DailyGoal {
         
         EABleSendManager.default().operationGetInfo(with: .dailyGoal) { baseModel in
             
-            let model = baseModel as! EADailyGoalModel;
-            print(model.sStep.goal)
+            if baseModel.isKind(of: EADailyGoalModel.self) {
+                let model = baseModel as! EADailyGoalModel;
+                print(model.sStep.goal)
+            }
         }
     }
 }
@@ -298,8 +318,10 @@ class Cmd_CheckSleep {
         
         EABleSendManager.default().operationGetInfo(with: .autoCheckSleep) { baseModel in
             
-            let model = baseModel as! EAAutoCheckSleepModel;
-            print(model.weekCycleBit)
+            if baseModel.isKind(of: EAAutoCheckSleepModel.self) {
+                let model = baseModel as! EAAutoCheckSleepModel;
+                print(model.weekCycleBit)
+            }
         }
     }
 }
@@ -317,8 +339,10 @@ class Cmd_CheckHeartRate {
         
         EABleSendManager.default().operationGetInfo(with: .autoCheckHeartRate) { baseModel in
             
-            let model = baseModel as! EAAutoCheckHeartRateModel;
-            print(model.interval)
+            if baseModel.isKind(of: EAAutoCheckHeartRateModel.self) {
+                let model = baseModel as! EAAutoCheckHeartRateModel;
+                print(model.interval)
+            }
         }
     }
 }
@@ -343,8 +367,10 @@ class Cmd_CheckSedentariness {
         
         EABleSendManager.default().operationGetInfo(with: .autoCheckSedentariness) { baseModel in
             
-            let model = baseModel as! EAAutoCheckSedentarinessModel;
-            print(model.interval)
+            if baseModel.isKind(of: EAAutoCheckSedentarinessModel.self) {
+                let model = baseModel as! EAAutoCheckSedentarinessModel;
+                print(model.interval)
+            }
         }
     }
 }
@@ -386,8 +412,12 @@ class Cmd_SocialSwitch {
         
         EABleSendManager.default().operationGetInfo(with: .socialSwitch) { baseModel in
             
-            let model = baseModel as! EASocialSwitchModel;
-            print(model.sIncomingcall.sw)
+            if baseModel.isKind(of: EASocialSwitchModel.self) {
+                
+                let model = baseModel as! EASocialSwitchModel;
+                print(model.sIncomingcall.sw)
+                
+            }
         }
     }
 }
@@ -398,8 +428,10 @@ class Cmd_Reminder {
         
         EABleSendManager.default().operationGetInfo(with: .reminder) { baseModel in
             
-            let model = baseModel as! EAReminderOps;
-            print(model.sIndexArray)
+            if baseModel.isKind(of: EAReminderOps.self) {
+                let model = baseModel as! EAReminderOps;
+                print(model.sIndexArray)
+            }
         }
     }
     
@@ -428,16 +460,18 @@ class Cmd_Reminder {
         
         EABleSendManager.default().operationGetInfo(with: .reminder) { baseModel in
             
-            let reminderOps = baseModel as! EAReminderOps;
-            
-            if reminderOps.sIndexArray.count > 0 {
+            if baseModel.isKind(of: EAReminderOps.self) {
+                let reminderOps = baseModel as! EAReminderOps;
                 
-                let reminderModel = reminderOps.sIndexArray.firstObject as! EAReminderModel
-                reminderModel.hour = 10
-                reminderModel.minute = 20
-                
-                let model = EAReminderOps.eaInitEdit(with: reminderModel);
-                Command.setData(model: model);
+                if reminderOps.sIndexArray.count > 0 {
+                    
+                    let reminderModel = reminderOps.sIndexArray.firstObject as! EAReminderModel
+                    reminderModel.hour = 10
+                    reminderModel.minute = 20
+                    
+                    let model = EAReminderOps.eaInitEdit(with: reminderModel);
+                    Command.setData(model: model);
+                }
             }
         }
     }
@@ -446,15 +480,16 @@ class Cmd_Reminder {
         
         EABleSendManager.default().operationGetInfo(with: .reminder) { baseModel in
             
-            let reminderOps = baseModel as! EAReminderOps;
-            
-            if reminderOps.sIndexArray.count > 0 {
+            if baseModel.isKind(of: EAReminderOps.self) {
+                let reminderOps = baseModel as! EAReminderOps;
                 
-                let reminderModel = reminderOps.sIndexArray.firstObject as! EAReminderModel
-                
-                let model = EAReminderOps.eaInitDeleteOne(withReminderModelId: reminderModel.id_p);
-                Command.setData(model: model);
-            }
+                if reminderOps.sIndexArray.count > 0 {
+                    
+                    let reminderModel = reminderOps.sIndexArray.firstObject as! EAReminderModel
+                    
+                    let model = EAReminderOps.eaInitDeleteOne(withReminderModelId: reminderModel.id_p);
+                    Command.setData(model: model);
+                }}
         }
     }
     
@@ -476,9 +511,10 @@ class Cmd_HeartRateWaringSetting {
     class func getData(){
         
         EABleSendManager.default().operationGetInfo(with: .heartRateWaringSetting) { baseModel in
-            
-            let model = baseModel as! EAHeartRateWaringSettingModel;
-            print(model.maxHr)
+            if baseModel.isKind(of: EAHeartRateWaringSettingModel.self) {
+                let model = baseModel as! EAHeartRateWaringSettingModel;
+                print(model.maxHr)
+            }
         }
     }
 }
@@ -494,8 +530,10 @@ class Cmd_CaloriesSetting {
         
         EABleSendManager.default().operationGetInfo(with: .caloriesSetting) { baseModel in
             
-            let model = baseModel as! EACaloriesSettingModel;
-            print(model.sw)
+            if baseModel.isKind(of: EACaloriesSettingModel.self) {
+                let model = baseModel as! EACaloriesSettingModel;
+                print(model.sw)
+            }
         }
     }
 }
@@ -510,8 +548,10 @@ class Cmd_Combination {
         
         EABleSendManager.default().operationGetInfo(with: .combination) { baseModel in
             
-            let model = baseModel as! EACombinationModel;
-            print(model.notDisturbSw)
+            if baseModel.isKind(of: EACombinationModel.self) {
+                let model = baseModel as! EACombinationModel;
+                print(model.notDisturbSw)
+            }
         }
     }
 }
@@ -528,8 +568,10 @@ class Cmd_GesturesSetting {
         
         EABleSendManager.default().operationGetInfo(with: .gesturesSetting) { baseModel in
             
-            let model = baseModel as! EACaloriesSettingModel;
-            print(model.sw)
+            if baseModel.isKind(of: EACaloriesSettingModel.self) {
+                let model = baseModel as! EACaloriesSettingModel;
+                print(model.sw)
+            }
         }
     }
 }
@@ -540,16 +582,19 @@ class Cmd_HomePage {
         
         EABleSendManager.default().operationGetInfo(with: .homePage) { baseModel in
             
-            let model = baseModel as! EAHomePageModel;
-            
-            
-            if model.supportPageArray.count > 0 {
+            if baseModel.isKind(of: EAHomePageModel.self) {
+                let model = baseModel as! EAHomePageModel;
                 
-                model.sPageArray = NSMutableArray(array: model.supportPageArray)
-                Command.setData(model: model);
-            }else {
                 
-                Command.notSupportSetData();
+                if model.supportPageArray.count > 0 {
+                    
+                    let homePageModel = EAHomePageModel.init()
+                    homePageModel.sPageArray = NSMutableArray(array: model.supportPageArray)
+                    Command.setData(model: homePageModel);
+                }else {
+                    
+                    Command.notSupportSetData();
+                }
             }
         }
     }
@@ -558,13 +603,16 @@ class Cmd_HomePage {
         
         EABleSendManager.default().operationGetInfo(with: .homePage) { baseModel in
             
-            let model = baseModel as! EAHomePageModel;
-            if model.supportPageArray.count > 0 {
+            if baseModel.isKind(of: EAHomePageModel.self) {
+                let model = baseModel as! EAHomePageModel;
+                if model.supportPageArray.count > 0 {
+                    
+                    
+                }else {
+                    
+                    Command.notSupportSetData();
+                }
                 
-             
-            }else {
-                
-                Command.notSupportSetData();
             }
         }
     }
@@ -596,8 +644,11 @@ class Cmd_WatchFace {
         
         EABleSendManager.default().operationGetInfo(with: .dialPlate) { baseModel in
             
-            let model = baseModel as! EADialPlateModel;
-            print(model.id_p)
+            if baseModel.isKind(of: EADialPlateModel.self) {
+                let model = baseModel as! EADialPlateModel;
+                print(model.id_p)
+                
+            }
         }
     }
 }
@@ -615,9 +666,11 @@ class Cmd_AppMessage {
         
         EABleSendManager.default().operationGetInfo(with: .appMessage) { baseModel in
             
-            let model = baseModel as! EAAppMessageSwitchData;
-            let showAppMessageModel = EAShowAppMessageModel.eaAllocInit(with: model)
-            print(showAppMessageModel.facebook)
+            if baseModel.isKind(of: EAAppMessageSwitchData.self) {
+                let model = baseModel as! EAAppMessageSwitchData;
+                let showAppMessageModel = EAShowAppMessageModel.eaAllocInit(with: model)
+                print(showAppMessageModel.facebook)
+            }
         }
     }
 }
@@ -633,8 +686,10 @@ class Cmd_HabitTracker {
         
         EABleSendManager.default().operationGetInfo(with: .habitTracker) { baseModel in
             
-            let model = baseModel as! EAHabitTrackers;
-            print(model.sIndexArray)
+            if baseModel.isKind(of: EAHabitTrackers.self) {
+                let model = baseModel as! EAHabitTrackers;
+                print(model.sIndexArray)
+            }
         }
     }
 }
@@ -650,8 +705,10 @@ class Cmd_SportShowData {
         
         EABleSendManager.default().operationGetInfo(with: .sportShowData) { baseModel in
             
-            let model = baseModel as! EASportShowDataModel;
-            print(model.steps)
+            if baseModel.isKind(of: EASportShowDataModel.self) {
+                let model = baseModel as! EASportShowDataModel;
+                print(model.steps)
+            }
         }
     }
 }
@@ -667,8 +724,10 @@ class Cmd_BlePairState {
         
         EABleSendManager.default().operationGetInfo(with: .blePairState) { baseModel in
             
-            let model = baseModel as! EABlePairStateModel;
-            print(model.secState)
+            if baseModel.isKind(of: EABlePairStateModel.self) {
+                let model = baseModel as! EABlePairStateModel;
+                print(model.secState)
+            }
         }
     }
 }
@@ -714,8 +773,10 @@ class Cmd_TelephoneBook {
         
         EABleSendManager.default().operationGetInfo(with: .readTelephoneBook) { baseModel in
             
-            let model = baseModel as! EAReadTelephoneBookModel;
-            print(model.sIndexArray)
+            if baseModel.isKind(of: EAReadTelephoneBookModel.self) {
+                let model = baseModel as! EAReadTelephoneBookModel;
+                print(model.sIndexArray)
+            }
         }
     }
 }
@@ -750,7 +811,10 @@ class Cmd_MonitorReminder {
         request.type = Int(EAMonitorReminderType.drink.rawValue)
         EABleSendManager.default().operationGetInfo(with: request) { baseModel in
             
-            
+            if baseModel.isKind(of: EAMonitorReminder.self) {
+                
+                
+            }
         }
     }
     
@@ -767,7 +831,10 @@ class Cmd_MonitorReminder {
         request.type = Int(EAMonitorReminderType.washHands.rawValue)
         EABleSendManager.default().operationGetInfo(with: request) { baseModel in
             
-            
+            if baseModel.isKind(of: EAMonitorReminder.self) {
+                
+                
+            }
         }
     }
     
@@ -795,9 +862,15 @@ class Cmd_StressMonitor {
         
         EABleSendManager.default().operationGetInfo(with: .stressMonitor) { baseModel in
             
-            
-            let model = baseModel as! EAStressMonitor;
-            print(model.sw)
+            if baseModel.isKind(of: EAStressMonitor.self) {
+                
+                let model = baseModel as! EAStressMonitor;
+                print(model.sw)
+                
+            }else if baseModel.isKind(of: EARespondModel.self) {
+                
+                print(baseModel.modelToJSONObject()!);
+            }
         }
     }
 }
@@ -813,8 +886,14 @@ class Cmd_SendRealTimeDataOnOff {
         
         EABleSendManager.default().operationGetInfo(with: .sendRealTimeDataOnOff) { baseModel in
             
-            let model = baseModel as! EASendRealTimeDataOnOff;
-            print(model.sw)
+            if baseModel.isKind(of: EASendRealTimeDataOnOff.self) {
+                
+                let model = baseModel as! EASendRealTimeDataOnOff;
+                print(model.sw)
+            }else if baseModel.isKind(of: EARespondModel.self) {
+                
+                print(baseModel.modelToJSONObject()!);
+            }
         }
     }
 }
@@ -831,8 +910,13 @@ class Cmd_VibrateIntensity {
         
         EABleSendManager.default().operationGetInfo(with: .vibrateIntensity) { baseModel in
             
-            let model = baseModel as! EAVibrateIntensity;
-            print(model.eVibrateIntensity.rawValue)
+            if baseModel.isKind(of: EAVibrateIntensity.self) {
+                let model = baseModel as! EAVibrateIntensity;
+                print(model.eVibrateIntensity.rawValue)
+            }else if baseModel.isKind(of: EARespondModel.self) {
+                
+                print(baseModel.modelToJSONObject()!);
+            }
         }
     }
 }
