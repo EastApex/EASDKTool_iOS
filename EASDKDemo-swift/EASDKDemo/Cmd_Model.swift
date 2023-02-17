@@ -883,7 +883,7 @@ class Cmd_SendRealTimeDataOnOff {
         Command.setData(model: model);
     }
     class func getData(){
-        
+                
         EABleSendManager.default().operationGetInfo(with: .sendRealTimeDataOnOff) { baseModel in
             
             if baseModel.isKind(of: EASendRealTimeDataOnOff.self) {
