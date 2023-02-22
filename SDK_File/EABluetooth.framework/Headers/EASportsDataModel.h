@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /// 多运动数据
-@interface EASportsDataModel : EABaseModel
+@interface EASportsDataModel : EABigDataModel
 
 /// Sport type
 /// 运动类型

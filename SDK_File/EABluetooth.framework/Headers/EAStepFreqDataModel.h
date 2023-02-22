@@ -10,11 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /// 步频数据
-@interface EAStepFreqDataModel : EABaseModel
+@interface EAStepFreqDataModel : EABigDataModel
 
-/// The time stamp
-/// 时间戳
-@property(nonatomic, assign) NSInteger timeStamp;
 
 /// stride frequency
 /// 步频值

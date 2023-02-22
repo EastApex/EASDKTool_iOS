@@ -43,4 +43,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+
+@interface EABigDataModel : EABaseModel
+
+/// The time stamp
+/// 时间戳
+@property(nonatomic, assign) NSInteger timeStamp;
+
+@end
+
 NS_ASSUME_NONNULL_END

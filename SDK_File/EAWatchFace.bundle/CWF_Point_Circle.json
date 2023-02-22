@@ -69,12 +69,12 @@
             "dayTextFont":2,
         },
         "point":{
-            "hour":"108,56",
-            "arcHour":"12,64",
-            "minute":"108,30",
-            "arcMinute":"12,90",
-            "second":"112,12",
-            "arcSecond":"8,108",
+            "hour":"115,65",
+            "arcHour":"5,55",
+            "minute":"115,23",
+            "arcMinute":"5,97",
+            "second":"116,9",
+            "arcSecond":"4,111",
         }
     },
     "240,280":{

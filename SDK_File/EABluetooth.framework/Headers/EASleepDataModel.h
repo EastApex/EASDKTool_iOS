@@ -10,11 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /// 睡眠数据
-@interface EASleepDataModel : EABaseModel
+@interface EASleepDataModel : EABigDataModel
 
-/// The time stamp
-/// 时间戳
-@property(nonatomic, assign) NSInteger timeStamp;
 
 /// sleep status
 /// 睡眠node

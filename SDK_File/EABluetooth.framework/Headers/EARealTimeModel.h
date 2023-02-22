@@ -36,7 +36,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSInteger batLev;
 
 
-+ (EARealTimeModel *)getModelByData:(NSData *)data;
 
 @end
 

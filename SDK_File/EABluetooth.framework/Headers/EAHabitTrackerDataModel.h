@@ -10,11 +10,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-@interface EAHistoryHabitTrackerModel : EABaseModel
+@interface EAHistoryHabitTrackerModel : EABigDataModel
 
-/// The time stamp
-/// 时间戳
-@property(nonatomic, assign) NSInteger timeStamp;
+
 
 @property(nonatomic, readwrite) EAHabitTrackerIconType eIconId;
 

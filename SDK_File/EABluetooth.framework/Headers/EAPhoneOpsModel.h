@@ -18,7 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) EAPhoneOpsStatus eOpsStatus;
 
 
-+ (EAPhoneOpsModel *)getModelByData:(NSData *)data;
 
 
 @end

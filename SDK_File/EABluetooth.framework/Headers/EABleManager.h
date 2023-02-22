@@ -11,10 +11,11 @@
  https://github.com/EastApex/EASDKTool_iOS.git
  
  SDK access documentation
- https://www.showdoc.com.cn/2042713679210858/0  password:123456
+ https://www.showdoc.com.cn/2042713679210858/0
  
- Version：2023.02.17
- 1.Improve data collection by SDKlog.
+ Date：2023-02-22
+ Version：1.0.65.1
+ 1.Add a pointer dial.
  2.Fixed some bug.
   */
 

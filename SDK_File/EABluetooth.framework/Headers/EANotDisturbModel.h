@@ -38,8 +38,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// id = 13: 免打扰设置
 @interface EANotDisturbModel : EABaseModel
 
-/// EADeviceOpsType
-/// 开关： 0关闭 1打开
+/// App set DND time range switch: 0 off 1 On
+/// App设置免打扰时间段开关： 0关闭 1打开
 @property(nonatomic, assign) NSInteger sw;
 
 /// begin hour
@@ -58,8 +58,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///  结束时间 ：分钟
 @property(nonatomic, assign) NSInteger endMinute;
 
-
-
+/// 手表免打扰开关： 0关闭 1打开
+/// Watch do not disturb switch: 0 off 1 On
+@property(nonatomic, assign) NSInteger watchSw;
 
 
 @end

@@ -11,11 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /// 压力数据
-@interface EAStressDataModel : EABaseModel
-
-/// The time stamp
-/// 时间戳
-@property(nonatomic, assign) NSInteger timeStamp;
+@interface EAStressDataModel : EABigDataModel
 
 /// stess
 /// 压力 

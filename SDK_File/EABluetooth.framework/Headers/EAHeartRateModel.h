@@ -11,11 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /// 心率数据
-@interface EAHeartRateModel : EABaseModel
+@interface EAHeartRateModel : EABigDataModel
 
-/// The time stamp
-/// 时间戳
-@property(nonatomic, assign) NSInteger timeStamp;
 
 /// heart rate
 /// 心率值

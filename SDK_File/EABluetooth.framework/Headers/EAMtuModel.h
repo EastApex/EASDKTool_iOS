@@ -15,7 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSInteger mtuValue;
 
 
-+ (EAMtuModel *)getModelByData:(NSData *)data;
 
 
 @end

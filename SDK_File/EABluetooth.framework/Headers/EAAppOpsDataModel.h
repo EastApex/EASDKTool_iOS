@@ -24,10 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 结果
 @property(nonatomic, assign) NSInteger value;
 
-/// 状态：0失败 1成功 2异常
+/// 状态：0失败 1成功 
 @property(nonatomic, assign) NSInteger status;
 
-+ (EAAppOpsDataModel *)getModelByData:(NSData *)data;
 @end
 
 NS_ASSUME_NONNULL_END

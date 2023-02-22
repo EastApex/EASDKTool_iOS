@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, assign) EARespondCodeType eErrorCode;
 
+/** 提醒id: 在write request的ops为新增 编辑回应中赋值，其他情况为0 */
+@property(nonatomic, assign) NSInteger id_p;
 
 
 + (instancetype)eaInitSuccWithRequestId:(EADataInfoType)requestId;
@@ -28,6 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)eaInitNotReadWithRequestId:(EADataInfoType)requestId;
 + (instancetype)eaInitNotWriteWithRequestId:(EADataInfoType)requestId;
 
++ (instancetype)eaInitSuccWithRequestId:(EADataInfoType)requestId id_p:(NSInteger)id_p;
++ (instancetype)eaInitErrorWithRequestId:(EADataInfoType)requestId id_p:(NSInteger)id_p;
 @end
 
 NS_ASSUME_NONNULL_END

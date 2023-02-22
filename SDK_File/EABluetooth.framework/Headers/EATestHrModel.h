@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface EATestHrModel : EABaseBigDataModel
+@interface EATestHrModel : EABigDataModel
 
 @property(nonatomic, assign) NSInteger hrValue;
 

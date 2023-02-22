@@ -11,11 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /// GPS 数据
-@interface EAGPSDataModel : EABaseModel
+@interface EAGPSDataModel : EABigDataModel
 
-/// The time stamp
-/// 时间戳
-@property(nonatomic, assign) NSInteger timeStamp;
 
 /// latitude
 ///  纬度

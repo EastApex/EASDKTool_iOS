@@ -11,11 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /// 血氧数据
-@interface EABloodOxygenDataModel : EABaseModel
+@interface EABloodOxygenDataModel : EABigDataModel
 
-/// The time stamp
-/// 时间戳
-@property(nonatomic, assign) NSInteger timeStamp;
 
 /// blood Oxygen
 /// 血氧

@@ -43,8 +43,11 @@ NSString *logString = [NSString stringWithFormat:@""format,##__VA_ARGS__];\
 /// 是否保存日志，默认关闭,需要 debug 为YES才能起作用
 @property (nonatomic, assign) BOOL saveLog;
 
+/// SDK不开启重连手表，默认关闭
+@property (nonatomic, assign) BOOL sdkNotOpenReconnectWatch;
 
-/// 工厂
+
+/// 默认 ”8800“
 @property (nonatomic, copy) NSArray *uuids;
 
 /// ignore：

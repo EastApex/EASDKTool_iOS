@@ -13,11 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Daily steps
 /// 日常步数
-@interface EAStepModel : EABaseModel
+@interface EAStepModel : EABigDataModel
 
-/// The time stamp
-/// 时间戳
-@property(nonatomic, assign) NSInteger timeStamp;
 
 /// steps
 ///运动数据：步数

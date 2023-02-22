@@ -28,7 +28,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// Interval for reporting data (Default: 5 seconds) : (Unit: second
 @property(nonatomic, assign) NSInteger interval;
 
-
+/// 检测状态（不开启运动，只检测运动是否可以开启）
+/// Detection status (do not enable motion, only detect whether motion can be enabled)
+@property(nonatomic, assign) NSInteger checkSport;
 
 
 /// init

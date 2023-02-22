@@ -122,6 +122,7 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     EADataInfoTypeReminder = 22,
     
     /// id = 23: 提醒回应
+    /// 'EAReminderRespondModel' is deprecated, please adopt EARespondModel
     EADataInfoTypeReminderRespond = 23,
     
     /// ignore：
@@ -196,6 +197,7 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     
     /// Habit tracker respond
     /// 习惯追踪回应
+    /// 'EAHabitTrackerRespondModel' is deprecated, please adopt EARespondModel
     EADataInfoTypeHabitTrackerRespond = 39,
     
     /// id = 40: Value displayed on the motion screen of the current watch
@@ -231,40 +233,53 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     
     /// id = 46: App地图运动
     /// id = 46: App launch map sport
+    /// EAAppLaunchMapSport
     EADataInfoTypeAppLaunchMapSport = 46,
     
     /// id = 47: App发送地图运动数据（定时发送：单位秒）
     /// id = 47: App sends map motion data (timed transmission: unit of second)
+    /// EAAppSendMapSportDetails
     EADataInfoTypeAppSendMapSportDetails = 47,
     
     /// id = 48: App操作手表（开始/停止【心率、血氧、压力、呼吸】）
     /// id = 48: App operation watch (start/stop [heart rate, blood oxygen, pressure, breathing])
+    /// EAAppOps
     EADataInfoTypeAppOps = 48,
     
     /// id = 49: 单独获取大数据（如步数、如心率）
     /// id = 49: Get big data separately (e.g. steps, e.g. heart rate)
+    /// EAOnlyGetBigData
     EADataInfoTypeOnlyGetBigData = 49,
     
     /// id = 50 ：自动睡眠血氧监测（夜间血氧监测）
     /// id = 50: Automatic sleep oxygen monitoring (night oxygen monitoring)
+    /// EASleepBloodOxygenMonitor
     EADataInfoTypeSleepBloodOxygenMonitor = 50,
     
     /// id = 51 ：自动压力监测
     /// id = 51: Automatic pressure monitoring
+    /// EAStressMonitor
     EADataInfoTypeStressMonitor = 51,
     
     /// id = 52 ：实时数据开关
     /// id = 52: real-time data switch
+    /// EASendRealTimeDataOnOff
     EADataInfoTypeSendRealTimeDataOnOff = 52,
     
     /// id = 53 ：震动模式
     /// id = 53: vibrate mode
+    /// EAVibrateIntensity
     EADataInfoTypeVibrateIntensity = 53,
     
     /// id = 54 ：APP启动手表运动（投屏运动）
     /// id = 54: APP starts watch motion (screen motion)
+    /// EAAppLaunchScreenSport
     EADataInfoTypeAppLaunchScreenSport = 54,
     
+    /// id = 55 ：经期提醒
+    /// id = 55: Menstrual reminder
+    /// EAMenstrualReminder
+    EADataInfoTypeMenstrualReminder = 55,
     
     /// Operating Phone Commands
     /// 操作手机命令
@@ -340,7 +355,6 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     EADataInfoTypeHabitTrackerData = 3011,
     
 
-    
     /// OTA命令
     EADataInfoTypeOTARequest = 9001,
     
@@ -648,13 +662,9 @@ typedef NS_ENUM(NSUInteger,EALanguageType) {
     ///  Indonesia
     EALanguageTypeMelayu = 22,
 
-    ///  德语
-    ///  German
-    EALanguageTypeGerman = 23,
-
     ///  波斯语
     ///  Farsi
-    EALanguageTypeFarsi = 24,
+    EALanguageTypeFarsi = 23,
 };
 
 
@@ -2231,8 +2241,9 @@ typedef NS_ENUM(NSUInteger, EACWFTimerColorType) {
 #pragma mark - 自定义表盘风格类型
 typedef NS_ENUM(NSUInteger, EACWFStyleType) {
     
-    EACWFStyleTypePictureNumber         = 1,    // 图片数字表盘
-    EACWFStyleTypeNumber                = 2,    // 数字表盘
+    EACWFStyleTypePictureNumber         = 1,    // Picture digital dial【图片数字表盘】
+    EACWFStyleTypePointer               = 2,    // Pointer dial【指针表盘】
+    
 };
 
 #pragma mark - 手表形状
@@ -2255,20 +2266,20 @@ typedef NS_ENUM(NSUInteger, EATimeType) {
 };
 
 
-#pragma mark - 监测提醒类型
+#pragma mark - Monitor alert type【监测提醒类型】
 typedef NS_ENUM(NSUInteger, EAMonitorReminderType) {
     
-    /// 喝水
+    /// Drink【喝水】
     EAMonitorReminderTypeDrink = 0,
 
-    /// 洗手
+    /// wash hands【洗手】
     EAMonitorReminderTypeWashHands = 1,
 
-    /// 久坐【未实现】
-//    EAMonitorReminderTypeSedentary = 2,
+    /// take medicine【吃药】
+    EAMonitorReminderTypeTakeMedicine = 2,
 };
 
-#pragma mark - 运动状态
+#pragma mark - Sport status【运动状态】
 typedef NS_ENUM(NSUInteger, EAAppLaunchSportStatus) {
     
     EAAppLaunchSportStatusClose = 0,
@@ -2276,7 +2287,7 @@ typedef NS_ENUM(NSUInteger, EAAppLaunchSportStatus) {
     EAAppLaunchSportStatusPause = 2,
 };
 
-#pragma mark - App操作手表类型
+#pragma mark - App operation watch type【App操作手表类型】
 typedef NS_ENUM(NSUInteger, EAAppOpsType) {
     
     EAAppOpsTypeHr = 1, // 心率
