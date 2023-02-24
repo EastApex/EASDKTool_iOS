@@ -7,6 +7,9 @@
 https://github.com/EastApex/EASDKTool_iOS.git
 
 ### Release Notes:
+<p>2023-02-24
+       <br>Version：1.0.65.3
+       <br>1.Fixed the watch is disconnected from the outside and cannot communicate with each other after reconnecting.【修复手表以外断连，重新连接后不能相互通讯问题。】
 <p>2023-02-22
       <br>Version：1.0.65.1
       <br>1.Add a pointer dial.
