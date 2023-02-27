@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /// Obtain period data
-+ (EAMenstruals *)eaAllocInitWithStartDate:(NSString *)start keepDay:(NSInteger)keepDay cycleDay:(NSInteger)cycleDay DEPRECATED_MSG_ATTRIBUTE("Please use [EAMenstruals eaAllocInitWithStartDate: keepDay: cycleDay: judgeCurrentTime:]");
++ (EAMenstruals *)eaAllocInitWithStartDate:(NSString *)start keepDay:(NSInteger)keepDay cycleDay:(NSInteger)cycleDay DEPRECATED_MSG_ATTRIBUTE("Please use \"eaAllocInitWithStartDate: keepDay: cycleDay: judgeCurrentTime:\"");
 
 
 

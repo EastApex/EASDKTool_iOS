@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 结果
 @property(nonatomic, assign) NSInteger value;
 
-/// 状态：0失败 1成功 
+/// 状态：0失败 1成功 2开始测量
 @property(nonatomic, assign) NSInteger status;
 
 @end

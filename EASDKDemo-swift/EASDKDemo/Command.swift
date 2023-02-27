@@ -122,13 +122,35 @@ class Command: NSObject {
          The class EAWatchModel is available in watch size
          */
         
+        
         let backgroundImage = UIImage.init(named: "picture")!;
-       return EABleSendManager.default().customWatchFaceBackgroundImage(backgroundImage, colorType: .white ,styleType: .pictureNumber);
+        
+        /// Type 1 => number watch face and thumbnail
+//        let thumbnail = EAMakeWatchFaceManager.eaGetNumberThumbnail(with: backgroundImage, colorType: .white);
+//        let result = EAMakeWatchFaceManager.eaOtaNumberWatchFace(with: backgroundImage, colorType: .white)
         
         
-        // thumbnail path
-//        let thumbnailPath = EACreatThumbnail.creatThumbnail(withBackgroundImage: backgroundImage, colorType: .white, styleType: .pictureNumber)
-//        let image = UIImage.init(contentsOfFile: thumbnailPath)
+        
+        /// Type 2 => pointer watch face and thumbnail
+        let thumbnail = EAMakeWatchFaceManager.eaGetPointerThumbnail(with: backgroundImage, colorType: .white, scaleStyle: .bar);
+        let result = EAMakeWatchFaceManager.eaOtaPointerWatchFace(with: backgroundImage, colorType: .white, scaleStyle: .bar)
+        
+        
+        
+        
+        /// Type 3 => Digital watch face with fully custom picture and thumbnail
+    
+//        let numberModel_hh = EACustomNumberWatchFaceModel.eaAllocInit(with: .highHour, font: UIFont.systemFont(ofSize: 60), color: UIColor.blue, point: CGPoint(x: 40, y: 50))
+//        let numberModel_lh = EACustomNumberWatchFaceModel.eaAllocInit(with: .lowHour, font: UIFont.systemFont(ofSize: 60), color: UIColor.blue, point: CGPoint(x: 80, y: 50))
+//        let numberModel_hm = EACustomNumberWatchFaceModel.eaAllocInit(with: .highMinute, font: UIFont.systemFont(ofSize: 60), color: UIColor.blue, point: CGPoint(x: 140, y: 50))
+//        let numberModel_lm = EACustomNumberWatchFaceModel.eaAllocInit(with: .lowMinute, font: UIFont.systemFont(ofSize: 60), color: UIColor.blue, point: CGPoint(x: 180, y: 50))
+//        let list = NSArray(objects: numberModel_hh,numberModel_lh,numberModel_hm,numberModel_lm) as! [EACustomNumberWatchFaceModel]
+//        let thumbnail = EAMakeWatchFaceManager.eaGetNumberThumbnail(with: backgroundImage, list: list)
+//        let result = EAMakeWatchFaceManager.eaOtaNumberWatchFace(with: backgroundImage, list: list)
+        
+        
+        return result;
+
         
     }
 

@@ -58,22 +58,10 @@ typedef void(^RespondBlock)(EARespondModel *respondModel);
 
 
 /// Customize the background watch face【自定义背景图片的表盘】
-/// - Parameters:
-///   - backGroundImage: background image【背景图片】
-///   - colorType: EACWFTimerColorType
-///   - styleType: EACWFStyleType
-///   To check the origin and other information of each element, please check CWF_Point_Circle.json or CWF_Point_Square.json of EAWatchFace.bundle
-///   【查看各个元素的原点等信息请查看EAWatchFace.bundle的CWF_Point_Circle.json或者CWF_Point_Square.json】
-- (NSInteger )customWatchFaceBackgroundImage:(UIImage *)backGroundImage colorType:(EACWFTimerColorType )colorType styleType:(EACWFStyleType)styleType;
-
+- (NSInteger )customWatchFaceBackgroundImage:(UIImage *)backGroundImage colorType:(EACWFTimerColorType )colorType styleType:(EACWFStyleType)styleType DEPRECATED_MSG_ATTRIBUTE("Please use \"Class EAMakeWatchFaceManager func\"");
 
 /// Customize the background watch face 【自定义背景图片的表盘】
-/// - Parameters:
-///   - backgroundImage: background image【背景图片】
-///   - numberList: Array of time numeric models【时间数字模型数组，必须含有时高位、时低位、分高位、分低位】
-- (NSInteger )customNumberWatchFaceBackgroundImage:(UIImage *)backGroundImage list:(NSArray <EACustomNumberWatchFaceModel *>*)numberList;
-
-
+- (NSInteger )customNumberWatchFaceBackgroundImage:(UIImage *)backGroundImage list:(NSArray <EACustomNumberWatchFaceModel *>*)numberList DEPRECATED_MSG_ATTRIBUTE("Please use \"Class EAMakeWatchFaceManager func\"");
 
 
 

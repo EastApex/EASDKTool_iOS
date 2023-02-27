@@ -13,11 +13,18 @@
  SDK access documentation
  https://www.showdoc.com.cn/2042713679210858/0
  
- Date：2023-02-24
- Version：1.0.65.3
- 1.Fixed the watch is disconnected from the outside and cannot communicate with each other after reconnecting.【修复手表以外断连，重新连接后不能相互通讯问题。】
- 2.
+ Date：2023-02-27
+ Version：1.0.65.4
+ 1.Fixed sleep data without sleep status issues.
+ 2.Fixed daily data missing some calories.
+ 3.Added ‘Class EAMakeWatchFaceManager’, a unified management class for custom watch faces. ‘Class EACreatThumbnail’ and ‘Function EABleManager.default().customWatchFaceBackgroundImage:’、‘Function EABleManager.default().customNumberWatchFaceBackgroundImage:’will not be maintained later.
+ 4.Added custom pointer dial and scale selection.For details, see Class EAMakeWatchFaceManager
+ 
   */
+
+
+
+
 
 
 #import <Foundation/Foundation.h>

@@ -8,9 +8,10 @@
 #ifndef EAModelHeader_h
 #define EAModelHeader_h
 
+
+
+
 // model
-
-
 #import <EABluetooth/EAPeripheralModel.h>
 #import <EABluetooth/EAWatchModel.h>
 #import <EABluetooth/EAUserModel.h>
@@ -95,7 +96,7 @@
 // func
 #import <EABluetooth/EAFastGetSnNumberManager.h>
 #import <EABluetooth/EADataValue.h>
-
 #import <EABluetooth/EACustomNumberWatchFaceModel.h>
+
 
 #endif /* EAModelHeader_h */

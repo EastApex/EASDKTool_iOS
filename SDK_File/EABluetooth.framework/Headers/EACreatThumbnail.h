@@ -12,6 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
+NS_CLASS_DEPRECATED_IOS(9_0, 9_0, "No longer supported; please adopt EAMakeWatchFaceManager") __TVOS_PROHIBITED
 @interface EACreatThumbnail : NSObject
 
 
@@ -41,6 +42,10 @@ NS_ASSUME_NONNULL_BEGIN
                                   thumbnailSize:(CGSize )thumbnailSize
                                    cornerRadius:(NSInteger )cornerRadius
                                      screenType:(EAScreenType )screenType;
+
+
+
+
 
 
 

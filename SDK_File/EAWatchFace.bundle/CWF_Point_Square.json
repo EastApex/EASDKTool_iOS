@@ -70,12 +70,12 @@
                        
         },
         "point":{
-            "hour":"108,56",
-            "arcHour":"12,64",
-            "minute":"108,30",
-            "arcMinute":"12,90",
-            "second":"112,12",
-            "arcSecond":"8,108",
+            "hour":"115,65",
+            "arcHour":"5,55",
+            "minute":"115,23",
+            "arcMinute":"5,97",
+            "second":"116,9",
+            "arcSecond":"4,111",
         }
     },
     "240,280":{
@@ -86,8 +86,8 @@
             "minuteHigh":"140,27",
             "minuteLow":"180,27",
             "maohao":"117,27",
-            "weekText":"58,75",
-            "dayText":"130,75",
+            "weekText":"50,75",
+            "dayText":"140,75",
             "weekTextWidth":100,
             "weekTextAlign":2,
             "weekTextFont":4,
@@ -96,12 +96,12 @@
             "dayTextFont":4,
         },
         "point":{
-            "hour":"108,76",
-            "arcHour":"12,64",
-            "minute":"108,50",
-            "arcMinute":"12,90",
-            "second":"112,32",
-            "arcSecond":"8,108",
+            "hour":"112,83",
+            "arcHour":"8,57",
+            "minute":"112,40",
+            "arcMinute":"8,100",
+            "second":"114,27",
+            "arcSecond":"6,113",
         }
     },
 }

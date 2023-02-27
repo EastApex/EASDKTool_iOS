@@ -6,7 +6,8 @@
 //
 
 #import <EABluetooth/EABaseModel.h>
-
+#import <EABluetooth/EARespondModel.h>
+#import <EABluetooth/EARequestModel.h>
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -82,9 +83,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 最大支持表盘内存大小（存储空间,单位KB）
 @property(nonatomic, assign) NSInteger maxWatchSize;
-
-
-
 
 
 
