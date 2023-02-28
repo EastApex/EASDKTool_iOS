@@ -14,11 +14,10 @@
  https://www.showdoc.com.cn/2042713679210858/0
  
  Date：2023-02-27
- Version：1.0.65.4
- 1.Fixed sleep data without sleep status issues.
- 2.Fixed daily data missing some calories.
- 3.Added ‘Class EAMakeWatchFaceManager’, a unified management class for custom watch faces. ‘Class EACreatThumbnail’ and ‘Function EABleManager.default().customWatchFaceBackgroundImage:’、‘Function EABleManager.default().customNumberWatchFaceBackgroundImage:’will not be maintained later.
- 4.Added custom pointer dial and scale selection.For details, see Class EAMakeWatchFaceManager
+ Version：1.0.65.5
+ 1.Fix the problem that the thumbnail of the custom watch face is blurred.
+ 2.Modify the dependent library without specifying the version.
+
  
   */
 
