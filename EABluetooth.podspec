@@ -39,7 +39,7 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
 
-  s.dependency 'Protobuf', '~> 3.14.0'
+  s.dependency 'Protobuf'
   s.dependency 'YYKit'
   s.dependency 'Realm'  # realm 数据库
   s.dependency 'SAMKeychain'

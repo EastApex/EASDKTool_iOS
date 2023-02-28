@@ -7,6 +7,18 @@
 https://github.com/EastApex/EASDKTool_iOS.git
 
 ### Release Notes:
+<p> Date：2023-02-28
+        <br>Version：1.0.65.5
+        <br>1.Fix the problem that the thumbnail of the custom watch face is blurred.
+        <br>2.Modify the dependent library without specifying the version.
+
+<p>Date：2023-02-27
+        <br>Version：1.0.65.4
+        <br>1.Fixed sleep data without sleep status issues.
+        <br>2.Fixed daily data missing some calories.
+        <br>3.Added ‘Class EAMakeWatchFaceManager’, a unified management class for custom watch faces. ‘Class EACreatThumbnail’ and ‘Function EABleManager.default().customWatchFaceBackgroundImage:’、‘Function EABleManager.default().customNumberWatchFaceBackgroundImage:’will not be maintained later.
+        <br>4.Added custom pointer dial and scale selection.For details, see Class EAMakeWatchFaceManager
+ 
 <p>2023-02-24
        <br>Version：1.0.65.3
        <br>1.Fixed the watch is disconnected from the outside and cannot communicate with each other after reconnecting.【修复手表以外断连，重新连接后不能相互通讯问题。】
