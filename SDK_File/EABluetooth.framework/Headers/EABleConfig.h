@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define EALog(format, ...) {\
 if ([EABleConfig logEnable]) {\
 NSLog(@"[EALog]%s-%d " format, __func__,__LINE__, ##__VA_ARGS__);\
-if ([EABleConfig saveLogEnable] && !isatty(STDOUT_FILENO)) {\
+if ([EABleConfig saveLogEnable]) {\
 NSString *logString = [NSString stringWithFormat:@""format,##__VA_ARGS__];\
 [EABleConfig writeLog:logString];\
 }\

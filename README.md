@@ -7,6 +7,21 @@
 https://github.com/EastApex/EASDKTool_iOS.git
 
 ### Release Notes:
+
+ <p> Date：2023-03-08
+         <br>SDK
+         <br>Version：1.0.65.6
+         <br>1.Fixed EASyncTime.getCurrent()==>timeZoneMinute error.
+         <br>2.Add default custom digital watch face method. See class EAMakeWatchFaceManager.
+         <br>3.Added custom pointer watch face method. See class EAMakeWatchFaceManager.
+         <br>4.Fix missing motion data.
+         <br>5.When OTA, the lower version of bin is ignored.
+         <br>6.Add comments to motion type enumeration values. See EAEnum.h ==> EASportType
+         
+         <br>Swift Demo
+         <br>1.Add watch operation mobile phone example.
+         <br>2.Fixed incorrect lifting screen example.
+        
 <p> Date：2023-02-28
         <br>Version：1.0.65.5
         <br>1.Fix the problem that the thumbnail of the custom watch face is blurred.

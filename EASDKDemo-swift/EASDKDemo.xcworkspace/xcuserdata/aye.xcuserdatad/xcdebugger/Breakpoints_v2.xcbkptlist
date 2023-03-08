@@ -23,8 +23,8 @@
             filePath = "EASDKDemo/Cmd_Model.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "589"
-            endingLineNumber = "589"
+            startingLineNumber = "603"
+            endingLineNumber = "603"
             landmarkName = "setData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -39,8 +39,8 @@
             filePath = "EASDKDemo/Cmd_Model.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "869"
-            endingLineNumber = "869"
+            startingLineNumber = "886"
+            endingLineNumber = "886"
             landmarkName = "getData()"
             landmarkType = "7">
          </BreakpointContent>

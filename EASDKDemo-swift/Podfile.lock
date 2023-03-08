@@ -1,6 +1,6 @@
 PODS:
   - EABluetooth (0.1.0):
-    - Protobuf (~> 3.14.0)
+    - Protobuf
     - Realm
     - SAMKeychain
     - YYKit
@@ -31,7 +31,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  EABluetooth: 4c959b13638ffe156b52ac1f999131562c6bdd68
+  EABluetooth: bbae81d4001aebe389e48a4a6c37bbc3f4c2390f
   Protobuf: 0cde852566359049847168e51bd1c690e0f70056
   Realm: d4f810e161fa2c2c589b9860b6eb09238deacd73
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c

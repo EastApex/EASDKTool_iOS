@@ -2266,15 +2266,24 @@ typedef NS_ENUM(NSUInteger, EAScreenType) {
 #pragma mark - 时间类型
 typedef NS_ENUM(NSUInteger, EATimeType) {
     
-    EATimeTypeLowHour           = 0,    // 0: Low high【时低位】==》“0~9”
-    EATimeTypeLowMinute         = 1,    // 1: Low minute【分低位】==》“0~9”
+    EATimeTypeLowHour           = 0,        // 0: Low high【时低位】==》“0~9”
+    EATimeTypeLowMinute         = 1,        // 1: Low minute【分低位】==》“0~9”
 
-    EATimeTypeHighMinute        = 10,    // 10: Hour minute【分高位】==》“0~5”
-    EATimeTypeHighHour          = 11,   // 11: Hour high【时高位】==》“0~2”
+    EATimeTypeHighMinute        = 10,       // 10: Hour minute【分高位】==》“0~5”
+    EATimeTypeHighHour          = 11,       // 11: Hour high【时高位】==》“0~2”
     
-    EATimeTypeColon             = 100,  // 100:Colon【冒号】==> “:”
+    EATimeTypeColon             = 100,      // 100:Colon【冒号】==> “:”
+    
+    EATimeTypeDate              = 1000,      // 101:Date【几号】
+    EATimeTypeWeek              = 1001,      // 101:Week【星期几】
 };
 
+typedef NS_ENUM(NSUInteger, EAPointerType) {
+    
+    EAPointerTypeHour   = 1,
+    EAPointerTypeMinute = 10,
+    EAPointerTypeSecond = 100,
+};
 
 #pragma mark - Monitor alert type【监测提醒类型】
 typedef NS_ENUM(NSUInteger, EAMonitorReminderType) {

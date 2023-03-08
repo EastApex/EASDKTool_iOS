@@ -42,6 +42,7 @@ class WatchViewController: UIViewController , UITableViewDelegate, UITableViewDa
             "Get big data",
             "OTA & Watch Face",
             "Control Watch",
+            "Control phone",
             "Unstrap a Watch",
         ]
         let setInfo = NSMutableDictionary.init()
@@ -112,6 +113,11 @@ class WatchViewController: UIViewController , UITableViewDelegate, UITableViewDa
             self.navigationController?.pushViewController(rCtl, animated: true)
         };break
         case 5:   do {
+            let rCtl = ControlPhoneViewController()
+            rCtl.title = title
+            self.navigationController?.pushViewController(rCtl, animated: true)
+        };break
+        case 6:   do {
             let rCtl = UnbindViewController()
             rCtl.title = title
             self.navigationController?.pushViewController(rCtl, animated: true)

@@ -123,7 +123,7 @@ class Command: NSObject {
          */
         
         
-        let backgroundImage = UIImage.init(named: "picture")!;
+        let backgroundImage = UIImage.init(named: "picture240*240")!;
         
         /// Type 1 => number watch face and thumbnail
 //        let thumbnail = EAMakeWatchFaceManager.eaGetNumberThumbnail(with: backgroundImage, colorType: .white);
@@ -132,8 +132,8 @@ class Command: NSObject {
         
         
         /// Type 2 => pointer watch face and thumbnail
-        let thumbnail = EAMakeWatchFaceManager.eaGetPointerThumbnail(with: backgroundImage, colorType: .white, scaleStyle: .bar);
-        let result = EAMakeWatchFaceManager.eaOtaPointerWatchFace(with: backgroundImage, colorType: .white, scaleStyle: .bar)
+//        let thumbnail = EAMakeWatchFaceManager.eaGetPointerThumbnail(with: backgroundImage, colorType: .white, scaleStyle: .bar);
+//        let result = EAMakeWatchFaceManager.eaOtaPointerWatchFace(with: backgroundImage, colorType: .white, scaleStyle: .bar)
         
         
         
@@ -145,10 +145,20 @@ class Command: NSObject {
 //        let numberModel_hm = EACustomNumberWatchFaceModel.eaAllocInit(with: .highMinute, font: UIFont.systemFont(ofSize: 60), color: UIColor.blue, point: CGPoint(x: 140, y: 50))
 //        let numberModel_lm = EACustomNumberWatchFaceModel.eaAllocInit(with: .lowMinute, font: UIFont.systemFont(ofSize: 60), color: UIColor.blue, point: CGPoint(x: 180, y: 50))
 //        let list = NSArray(objects: numberModel_hh,numberModel_lh,numberModel_hm,numberModel_lm) as! [EACustomNumberWatchFaceModel]
+//
 //        let thumbnail = EAMakeWatchFaceManager.eaGetNumberThumbnail(with: backgroundImage, list: list)
 //        let result = EAMakeWatchFaceManager.eaOtaNumberWatchFace(with: backgroundImage, list: list)
         
         
+        /// Type 4 =>
+        ///
+        let hModel = EACustomPointerWatchFaceModel.eaInit(withPoniterImage: UIImage.init(named: "h")!, pointerType: .hour, originalPoint: CGPoint(x: 180, y: 50), rotationPoint: CGPoint(x: 180, y: 50))
+        let mModel = EACustomPointerWatchFaceModel.eaInit(withPoniterImage: UIImage.init(named: "m")!, pointerType: .minute, originalPoint: CGPoint(x: 180, y: 50), rotationPoint: CGPoint(x: 180, y: 50))
+        let sModel = EACustomPointerWatchFaceModel.eaInit(withPoniterImage: UIImage.init(named: "s")!, pointerType: .second, originalPoint: CGPoint(x: 180, y: 50), rotationPoint: CGPoint(x: 180, y: 50))
+        let list = NSArray(objects: hModel,mModel,sModel) as! [EACustomPointerWatchFaceModel]
+        
+        let thumbnail = EAMakeWatchFaceManager.eaGetPointerThumbnail(with: backgroundImage, list: list)
+        let result = EAMakeWatchFaceManager.eaOtaPointerThumbnail(with: backgroundImage, list: list)
         return result;
 
         

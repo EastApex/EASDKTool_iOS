@@ -41,6 +41,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype )eaInitWithStatus:(EAAppLaunchSportStatus)status sportType:(EASportType)eSportType interval:(NSInteger)interval;
 
 
+/// Detects whether motion can be turned on
++ (void)eaInitCheckSport:(void (^)(EARespondCodeType eaRespondCodeType))result;
+
 @end
 
 NS_ASSUME_NONNULL_END

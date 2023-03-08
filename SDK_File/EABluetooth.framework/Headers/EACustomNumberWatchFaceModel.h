@@ -41,8 +41,36 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - point: Origin position【原点位置】
 + (instancetype)eaAllocInitWithTimeType:(EATimeType )eaTimeType font:(UIFont *)font color:(UIColor *)color point:(CGPoint )point;
 
+- (NSArray *)getRGB;
 
 @end
+
+
+
+/// Pointer model
+/// 时针模型
+@interface EACustomPointerWatchFaceModel : NSObject
+
+/// image
+@property(nonatomic,strong) UIImage *poniterImage;
+
+/// Pointer type
+@property(nonatomic,assign) EAPointerType eaPointerType;
+
+/// original point
+/// 原点
+@property(nonatomic,assign) CGPoint originalPoint;
+
+/// Point of rotation
+/// 旋转点：时针的旋转点
+@property(nonatomic,assign) CGPoint rotationPoint;
+
+
++ (instancetype)eaInitWithPoniterImage:(UIImage *)poniterImage pointerType:(EAPointerType)eaPointerType originalPoint:(CGPoint)originalPoint rotationPoint:(CGPoint)rotationPoint;
+
+@end
+
+
 
 
 typedef NS_ENUM(NSUInteger, EATimerType) {

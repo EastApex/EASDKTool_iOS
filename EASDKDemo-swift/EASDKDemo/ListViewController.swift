@@ -192,7 +192,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         case .caloriesSetting:// id: 27
             Cmd_CaloriesSetting.getData();break
         case .gesturesSetting:// id: 28
-            Cmd_CaloriesSetting.getData();break
+            Cmd_GesturesSetting.getData();break
         case .combination:// id: 30
             Cmd_Combination.getData();break
         case .homePage:// id: 31
@@ -278,7 +278,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         case .caloriesSetting:// id: 27
             Cmd_CaloriesSetting.setData();break
         case .gesturesSetting:// id: 28
-            Cmd_CaloriesSetting.setData();break
+            Cmd_GesturesSetting.setData();break
         case .combination:// id: 30
             Command.notSupportSetData();break
         case .homePage:// id: 31

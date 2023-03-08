@@ -78,6 +78,7 @@
 #import <EABluetooth/EASendRealTimeDataOnOff.h>
 #import <EABluetooth/EAVibrateIntensity.h>
 #import <EABluetooth/EAAppLaunchScreenSport.h>
+#import <EABluetooth/EAMenstrualReminder.h>
 
 // ops
 #import <EABluetooth/EABingingOps.h>

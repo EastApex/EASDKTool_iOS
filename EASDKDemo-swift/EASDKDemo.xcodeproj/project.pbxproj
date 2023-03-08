@@ -13,6 +13,7 @@
 		131C5F90299DC6AC006BBD53 /* ControlWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131C5F8F299DC6AC006BBD53 /* ControlWatchViewController.swift */; };
 		131C5F92299DC6B5006BBD53 /* OTAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131C5F91299DC6B5006BBD53 /* OTAViewController.swift */; };
 		131C5F94299DC70D006BBD53 /* UnbindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131C5F93299DC70D006BBD53 /* UnbindViewController.swift */; };
+		1336F61329B856AC008760E9 /* ControlPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1336F61229B856AC008760E9 /* ControlPhoneViewController.swift */; };
 		137C4C1C289B917500DD28DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137C4C1B289B917500DD28DC /* AppDelegate.swift */; };
 		137C4C1E289B917500DD28DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137C4C1D289B917500DD28DC /* SceneDelegate.swift */; };
 		137C4C20289B917500DD28DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137C4C1F289B917500DD28DC /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 		131C5F8F299DC6AC006BBD53 /* ControlWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlWatchViewController.swift; sourceTree = "<group>"; };
 		131C5F91299DC6B5006BBD53 /* OTAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTAViewController.swift; sourceTree = "<group>"; };
 		131C5F93299DC70D006BBD53 /* UnbindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnbindViewController.swift; sourceTree = "<group>"; };
+		1336F61229B856AC008760E9 /* ControlPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPhoneViewController.swift; sourceTree = "<group>"; };
 		137C4C18289B917500DD28DC /* EASDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EASDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		137C4C1B289B917500DD28DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		137C4C1D289B917500DD28DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				1386FC7B299B57670000BE56 /* ListViewController.swift */,
 				131C5F8D299DC698006BBD53 /* GetBigDataViewController.swift */,
 				131C5F8F299DC6AC006BBD53 /* ControlWatchViewController.swift */,
+				1336F61229B856AC008760E9 /* ControlPhoneViewController.swift */,
 				131C5F91299DC6B5006BBD53 /* OTAViewController.swift */,
 				131C5F93299DC70D006BBD53 /* UnbindViewController.swift */,
 				1386FC91299CB6A00000BE56 /* RemiderViewController.swift */,
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1336F61329B856AC008760E9 /* ControlPhoneViewController.swift in Sources */,
 				131C5F8E299DC698006BBD53 /* GetBigDataViewController.swift in Sources */,
 				137C4C20289B917500DD28DC /* ViewController.swift in Sources */,
 				131C5F94299DC70D006BBD53 /* UnbindViewController.swift in Sources */,

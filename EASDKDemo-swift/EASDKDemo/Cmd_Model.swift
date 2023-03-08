@@ -58,6 +58,7 @@ class Cmd_SyncTime {
     class func setData()  {
         
         let model = EASyncTime.getCurrent();
+        model.timeZoneMinute = 30;
         Command.setData(model: model);
     }
     
@@ -564,17 +565,30 @@ class Cmd_GesturesSetting {
     
     class func setData() {
         
-        let model = EACaloriesSettingModel.eaInit(withSwitch: 1)
+        // open
+        let model = EAGesturesSettingModel.eaInitAllDay();
         Command.setData(model: model);
+        
+        // close
+//        let model2 = EAGesturesSettingModel.eaInitClose();
+//        Command.setData(model: model2);
+        
+        // note：
+        // Time range setting is not supported.
     }
     
     class func getData(){
         
         EABleSendManager.default().operationGetInfo(with: .gesturesSetting) { baseModel in
             
-            if baseModel.isKind(of: EACaloriesSettingModel.self) {
-                let model = baseModel as! EACaloriesSettingModel;
-                print(model.sw)
+            if baseModel.isKind(of: EAGesturesSettingModel.self) {
+                let model = baseModel as! EAGesturesSettingModel;
+                if (model.eBrightSrc == .close) {
+                    print("gesturesSetting status : off");
+                }else {
+                   
+                    print("gesturesSetting status : on");
+                }
             }
         }
     }
@@ -631,8 +645,11 @@ class Cmd_Menstrual {
     }
     class func getData(){
         
-        Command.notSupportGetData();
+        // 不支持读取手表的经期数据，可以使用 下面方法 获取 经期数据.
+        // Menstrual data of the watch is not supported. You can use the following method to obtain menstrual data.
+        let model = EAMenstruals.eaAllocInit(withStartDate: "2023-02-15", keepDay: 7, cycleDay: 28, judgeCurrentTime: true)
 
+        Command.notSupportGetData();
     }
 }
 
