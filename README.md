@@ -9,16 +9,16 @@ https://github.com/EastApex/EASDKTool_iOS.git
 ### Release Notes:
  <p> Date：2023-03-17
  
-         <br>SDK
-         <br>Version：1.0.66.1
-         <br> 1. Add command timeout response.
-         <br> 2. Modify mtu greater than 509 communication problem.
-         <br> 3. When modifying the search device, disconnect the connected device.
-         <br> 4. Modify the universal style custom dial
-         <br> 5. ENUM EALanguageType new language enumeration type (Vietnamese, Belarusian, Hungarian)
+         SDK
+         Version：1.0.66.1
+         1. Add command timeout response.
+         2. Modify mtu greater than 509 communication problem.
+         3. When modifying the search device, disconnect the connected device.
+         4. Modify the universal style custom dial
+         5. ENUM EALanguageType new language enumeration type (Vietnamese, Belarusian, Hungarian)
          
-         <br>Swift Demo
-         <br>1.Change OTA Custom Watch Face
+         Swift Demo
+         1.Change OTA Custom Watch Face
          
  <p> Date：2023-03-08
          <br>SDK
