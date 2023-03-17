@@ -43,19 +43,19 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSInteger sw;
 
 /// begin hour
-///  开始时间 ：小时
+/// 开始时间 ：小时
 @property(nonatomic, assign) NSInteger beginHour;
 
 /// begin minute
-///  开始时间 ：分钟
+/// 开始时间 ：分钟
 @property(nonatomic, assign) NSInteger beginMinute;
 
 /// end hour
-///  结束时间 ：小时
+/// 结束时间 ：小时
 @property(nonatomic, assign) NSInteger endHour;
 
 /// end minute
-///  结束时间 ：分钟
+/// 结束时间 ：分钟
 @property(nonatomic, assign) NSInteger endMinute;
 
 /// 手表免打扰开关： 0关闭 1打开

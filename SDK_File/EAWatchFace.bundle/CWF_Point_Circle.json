@@ -24,5 +24,31 @@
             "second":"114,7",
             "arcSecond":"6,113",
         }
+    },
+    "466,466":{
+        "number":{
+            "background":"0,0",
+            "hourHigh":"49,37",
+            "hourLow":"81,37",
+            "minuteHigh":"130,37",
+            "minuteLow":"162,37",
+            "maohao":"113,37",
+            "weekText":"80,94",
+            "dayText":"133,94",
+            "weekTextWidth":50,
+            "weekTextAlign":2,
+            "weekTextFont":2,
+            "dayTextWidth":30,
+            "dayTextAlign":1,
+            "dayTextFont":2,
+        },
+        "point":{
+            "hour":"223,126",
+            "arcHour":"10,112",
+            "minute":"223,41",
+            "arcMinute":"10,192",
+            "second":"225,17",
+            "arcSecond":"8,213",
+        }
     }
 }

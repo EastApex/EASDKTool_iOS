@@ -424,6 +424,11 @@ typedef NS_ENUM(NSUInteger, EARespondCodeType) {
     /// 时间重复
     EARespondCodeTypeTimeConflict = 903,
     
+    
+    /// 超时
+    /// Time Out
+    EARespondCodeTypeTimeOut = 997,
+    
     /// 不允许读取
     /// Not to read
     EARespondCodeTypeNotToRead = 998,
@@ -431,6 +436,8 @@ typedef NS_ENUM(NSUInteger, EARespondCodeType) {
     /// 不允许写入
     ///Not to wirte
     EARespondCodeTypeNotToWirte = 999,
+    
+    
 };
 
 /// Binding type
@@ -665,6 +672,18 @@ typedef NS_ENUM(NSUInteger,EALanguageType) {
     ///  波斯语
     ///  Farsi
     EALanguageTypeFarsi = 23,
+    
+    ///越南语
+    ///Vietnamese
+    EALanguageTypeVietnamese = 24,
+
+    ///白俄罗斯语
+    ///Belarusian
+    EALanguageTypeBelarusian = 25,
+
+    ///匈牙利语
+    ///Hungarian
+    EALanguageTypeHungarian = 26,
 };
 
 
@@ -1267,51 +1286,51 @@ typedef NS_ENUM(NSUInteger,EASportType) {
     /// 日常运动
     EASportTypeDaily = 0,
 
-    /// Ourdoor walking
+    /// Outdoor Walk
     /// 户外步行
     EASportTypeOurdoorWalking = 1,
 
-    /// Ourdoor running
+    /// Outdoor Run
     /// 户外跑步
     EASportTypeOurdoorRunning = 2,
 
-    /// Outdoor on foot
-    /// 户外徒步
+    /// Hike
+    /// 户外徒步、远足
     EASportTypeOurdoorOnFoot = 3,
 
-    /// Ourdoor on mountaineering
-    /// 户外登山
+    /// Mountaineer
+    /// 户外登山、登山
     EASportTypeOurdoorOnMountaineering = 4,
 
-    /// Outdoor trail running
-    /// 户外越野跑
+    /// Trail Run
+    /// 户外越野跑、越野跑
     EASportTypeOurdoorTrailRunning = 5,
 
-    /// Outdoor cycling
-    /// 户外单车
+    /// Cycling
+    /// 户外单车、室外骑行
     EASportTypeOurdoorCycling = 6,
 
-    /// Outdoor swimming
-    /// 户外游泳
+    /// Outdoor Swim
+    /// 户外游泳、室外游泳
     EASportTypeOutdoorSwimming = 7,
 
-    /// Indoor walking
-    /// 室内步行
+    /// Stepper
+    /// 室内步行、踏步机
     EASportTypeIndoorWalking = 8,
 
-    /// Indoor running
-    /// 室内跑步
+    /// Treadmill
+    /// 室内跑步、 跑步机
     EASportTypeIndoorRunning = 9,
 
-    /// Indoor exercise
-    /// 室内锻炼
+    /// Physical Training
+    /// 室内锻炼、体能训练
     EASportTypeIndoorExercise = 10,
 
-    /// Indoor cycling
-    /// 室内单车
+    /// Indoor Cycle
+    /// 室内单车、室内骑行
     EASportTypeIndoorCycling = 11,
 
-    /// The elliptical machine
+    /// Elliptical Trainer
     /// 椭圆机
     EASportTypeElliptical = 12,
 
@@ -1320,78 +1339,78 @@ typedef NS_ENUM(NSUInteger,EASportType) {
     EASportTypeYoga = 13,
 
     /// Rowing
+    /// Rowing Machine
     /// 划船机
     EASportTypeRowing = 14,
 
-    /// Indoor swimming
+    /// Indoor Swim
     /// 室内游泳
     EASportTypeIndoorSwimming = 15,
 
-    /// sports climbing
+    /// Rock Climb
     /// 攀岩
     EASportTypeOdRock = 16,
 
-    /// skateboarding
+    /// Skateboard
     /// 滑板
     EASportTypeOdSkate = 17,
 
-    /// Roller skating
+    /// Roller Skating
     /// 轮滑
     EASportTypeOdRoller = 18,
 
-    /// parkour
+    /// Parkour
     /// 跑酷
     EASportTypeOdParkour = 19,
 
-    /// A parachute jump
+    /// Skydive
     /// 跳伞
     EASportTypeOdParachute = 20,
 
-    /// Hit
     /// HIIT
     EASportTypeTrainHit = 21,
 
-    /// Weight lifting
+    /// Weightlifting
     /// 举重
     EASportTypeTrainWeight = 22,
 
-    /// Tablet support
+    /// Plank
     /// 平板支撑
     EASportTypeTrainPlank = 23,
 
-    /// Jumping jacks
+    /// Jumping Jack
     /// 开合跳
     EASportTypeTrainJumping = 24,
 
-    /// Climb building machine
+    /// Stair Machine
     /// 爬楼机
     EASportTypeTrainStair = 25,
 
-    /// Core training
+    /// Core Training
     /// 核心训练
     EASportTypeTrainCore = 26,
 
-    /// Flexible training
+    /// Flexibility Training
     /// 柔韧训练
     EASportTypeTrainFlex = 27,
 
-    /// pilates
+    /// Pilates
     /// 普拉提
     EASportTypeTrainPilates = 28,
 
-    /// The tensile
+    /// Stretch
     /// 拉伸
     EASportTypeTrainStretch = 29,
 
-    /// Strength training
+    /// Strength Training
     /// 力量训练
     EASportTypeTrainStrength = 30,
 
-    /// Cross training
+    /// Cross Training
     /// 交叉训练
     EASportTypeTrainCross = 31,
 
-    /// The dumbbell training
+    /// Dumbbell Training
     /// 哑铃训练
     EASportTypeTrainDumbbell = 32,
 
@@ -1399,27 +1418,27 @@ typedef NS_ENUM(NSUInteger,EASportType) {
     /// 硬拉
     EASportTypeTrainDeadlift = 33,
 
-    /// sit-ups
+    /// Sit Ups
     /// 仰卧起坐
     EASportTypeTrainSit = 34,
 
-    /// Functional training
+    /// Functional Training
     /// 功能性训练
     EASportTypeTrainFuncition = 35,
 
-    /// Upper limb training
+    /// Upper Body Training
     /// 上肢训练
     EASportTypeTrainUpper = 36,
 
-    /// Lower limb training
+    /// Lower Body Training
     /// 下肢训练
     EASportTypeTrainLower = 37,
 
-    /// Abdominal muscle training
+    /// Abs Training
     /// 腹肌训练
     EASportTypeTrainAbs = 38,
 
-    /// The back of the train
+    /// Back Training
     /// 背部训练
     EASportTypeTrainBack = 39,
 
@@ -1427,39 +1446,39 @@ typedef NS_ENUM(NSUInteger,EASportType) {
     /// 帆船
     EASportTypeWaterSailboat = 40,
 
-    /// Pulp board
+    /// SUP
     /// 浆板
     EASportTypeWaterSup = 41,
 
-    /// Water polo
+    /// Water Polo
     /// 水球
     EASportTypeWaterPolo = 42,
 
-    /// The stroke
+    /// Thrash
     /// 划水
     EASportTypeWaterThrash = 43,
 
-    /// canoe
+    /// Kayak
     /// 皮划艇
     EASportTypeWaterKayak = 44,
 
-    /// drifting
+    /// Drifting
     /// 漂流
     EASportTypeWaterDrifting = 45,
 
-    /// rowing
+    /// Boating
     /// 划船
     EASportTypeWaterBoating = 46,
 
-    /// Fin swimming
+    /// Fin Swim
     /// 蹼泳
     EASportTypeWaterFin = 47,
 
-    /// The diving
+    /// Diving
     /// 跳水
     EASportTypeWaterDiving = 48,
 
-    /// Synchronized swimming
+    /// Artistic Swim
     /// 花样游泳
     EASportTypeWaterArtistic = 49,
 
@@ -1471,11 +1490,11 @@ typedef NS_ENUM(NSUInteger,EASportType) {
     /// 风筝冲浪
     EASportTypeWaterKitesurfing = 51,
 
-    /// Atv
+    /// ATV
     /// 沙滩车
     EASportTypeWaterAtv = 52,
 
-    /// Beach football
+    /// Beach Soccer
     /// 沙滩足球
     EASportTypeWaterBeach = 53,
 
@@ -1491,11 +1510,11 @@ typedef NS_ENUM(NSUInteger,EASportType) {
     /// 体操
     EASportTypeDanceGymnastics = 56,
 
-    /// Setting-up exercise
+    /// Aerobics
     /// 健身操
     EASportTypeDanceAerobics = 57,
 
-    /// HipHop
+    /// Hip-Hop
     /// 街舞
     EASportTypeDanceHipHop = 58,
 
@@ -1511,7 +1530,7 @@ typedef NS_ENUM(NSUInteger,EASportType) {
     /// 摔跤
     EASportTypeFightWrestling = 61,
 
-    /// Taichi
+    /// Tai-Chi
     /// 太极
     EASportTypeFightTaichi = 62,
 
@@ -1531,7 +1550,7 @@ typedef NS_ENUM(NSUInteger,EASportType) {
     /// 空手道
     EASportTypeFightKarate = 66,
 
-    /// Free combat
+    /// Free Sparring
     /// 自由搏击
     EASportTypeFightFreeSparring = 67,
 
@@ -1583,19 +1602,19 @@ typedef NS_ENUM(NSUInteger,EASportType) {
     /// 藤球
     EASportTypeBallRaga = 79,
 
-    /// snowmobiles
+    /// Snowboard
     /// 雪车
     EASportTypeSnowBoard = 80,
 
-    /// Double plate skiing
+    /// Skis
     /// 双板滑雪
     EASportTypeSnowSkis = 81,
 
-    /// Ice Hockey
+    /// Puck
     /// 冰球
     EASportTypeSnowPuck = 82,
 
-    /// skating
+    /// Skate
     /// 滑冰
     EASportTypeSnowSkate = 83,
 
@@ -1603,11 +1622,11 @@ typedef NS_ENUM(NSUInteger,EASportType) {
     /// 冰壶
     EASportTypeSnowCurling = 84,
 
-    /// Snowboarding
+    /// Snowmobile
     /// 单板滑雪
     EASportTypeSnowMobile = 85,
 
-    /// Luge
+    /// Sled
     /// 雪橇
     EASportTypeSnowSled = 86,
 
@@ -1627,15 +1646,15 @@ typedef NS_ENUM(NSUInteger,EASportType) {
     /// 保龄球
     EASportTypeLeisureBowling = 90,
 
-    /// billiards
+    /// Billiards
     /// 台球
     EASportTypeLeisureBilliards = 91,
 
-    /// archery
+    /// Archery
     /// 射箭
     EASportTypeLeisureArchery = 92,
 
-    /// darts
+    /// Darts
     /// 飞镖
     EASportTypeLeisureDarts = 93,
 
@@ -1643,11 +1662,12 @@ typedef NS_ENUM(NSUInteger,EASportType) {
     /// 骑马
     EASportTypeLeisureHorse = 94,
 
-    /// The hoop
+    /// Hula Hoop
     /// 呼啦圈
     EASportTypeLeisureHula = 95,
 
     /// Flying a kite
+    /// Kite
     /// 放风筝
     EASportTypeLeisureKite = 96,
 
@@ -1663,11 +1683,11 @@ typedef NS_ENUM(NSUInteger,EASportType) {
     /// 马术
     EASportTypeLeisureEquestrian = 99,
 
-    /// Cycle racing
+    /// Racing
     /// 赛车
     EASportTypeLeisureRacing = 100,
 
-    /// Free exercise
+    /// Free Exercise
     /// 自由锻炼
     EASportTypeOtherFree = 101,
 
@@ -1679,15 +1699,15 @@ typedef NS_ENUM(NSUInteger,EASportType) {
     /// 上楼梯
     EASportTypeOtherClimb = 103,
 
-    /// Tug of war
+    /// Push Pull
     /// 拔河
     EASportTypeOtherPush = 104,
 
-    /// Horizontal bar
+    /// Horizontal Bar
     /// 单杠
     EASportTypeOtherHorizontal = 105,
 
-    /// Parallel bars
+    /// Parallel Bars
     /// 双杠
     EASportTypeOtherParallel = 106,
 
@@ -2250,8 +2270,8 @@ typedef NS_ENUM(NSUInteger, EACWFStyleType) {
 typedef NS_ENUM(NSUInteger, EACWFPointerScaleStyle) {
     
     EACWFPointerScaleStyleNone          = 0,    // None【无刻度】
-    EACWFPointerScaleStyleBar           = 1,    // Bar scale【条形刻度】
-    EACWFPointerScaleStyleDigitalBar    = 2,    // Digital bar scale【数字条形刻度】
+//    EACWFPointerScaleStyleBar           = 1,    // Bar scale【条形刻度】
+//    EACWFPointerScaleStyleDigitalBar    = 2,    // Digital bar scale【数字条形刻度】
 //    EACWFPointerScaleStyleRoman         = 3,    // Roman number【罗马数字】
 //    EACWFPointerScaleStyleDiamond       = 4,    // Diamond【钻石】
 };

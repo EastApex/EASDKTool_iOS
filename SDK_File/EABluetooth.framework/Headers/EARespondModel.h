@@ -32,6 +32,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)eaInitSuccWithRequestId:(EADataInfoType)requestId id_p:(NSInteger)id_p;
 + (instancetype)eaInitErrorWithRequestId:(EADataInfoType)requestId id_p:(NSInteger)id_p;
+
++ (instancetype)eaInitTimeOutWithRequestId:(EADataInfoType)requestId;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -13,19 +13,20 @@
  SDK access documentation
  https://www.showdoc.com.cn/2042713679210858/0
  
- Date：2023-03-03
- Version：1.0.65.6
- 1.Fixed EASyncTime.getCurrent()==>timeZoneMinute error.
- 2.Add default custom digital watch face method. See class EAMakeWatchFaceManager.
- 3.Added custom pointer watch face method. See class EAMakeWatchFaceManager.
- 4.Fix missing motion data.
- 5.When OTA, the lower version of bin is ignored.
+ Date：2023-03-17
+ Version：1.0.66.1
+ 1. Add command timeout response.
+ 2. Modify mtu greater than 509 communication problem.
+ 3. When modifying the search device, disconnect the connected device.
+ 4. Modify the universal style custom dial
+ 5. ENUM EALanguageType new language enumeration type (Vietnamese, Belarusian, Hungarian)
+ 
+ 1.添加命令超时回应。
+ 2.修改 mtu 大于509 通讯问题。
+ 3.修改 搜索设备时，断开已连接的设备。
+ 4.修改通用样式自定义表盘
+ 5.ENUM EALanguageType新增语言枚举类型（越南语、白俄罗斯语、匈牙利语）
   */
-
-
-
-
-
 
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
@@ -41,15 +42,15 @@ NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSUInteger, EAConnectStatus) {
     
     /// Connect failed
-    /// 链接失败
+    /// 连接失败
     EAConnectStatusFailed = 0,
     
     /// Connect succeed
-    /// 链接成功
+    /// 连接成功
     EAConnectStatusSucceed = 1,
     
     /// Disconnect
-    /// 断开链接
+    /// 断开连接
     EAConnectStatusDisconnect = 2,
     
     /// Bluetooth on
@@ -61,11 +62,11 @@ typedef NS_ENUM(NSUInteger, EAConnectStatus) {
     EABlePoweredOff = 4,
     
     /// Connect failed and need removed pairing
-    /// 链接失败,需要忽略设备
+    /// 连接失败,需要忽略设备
     EAConnectStatusFailedWithRemovedPairing = 5,
     
     /// Connect failed time out
-    /// 链接失败,超时
+    /// 连接失败,超时
     EAConnectStatusFailedWithTimeOut = 6,
     
 };
@@ -79,7 +80,7 @@ typedef NS_ENUM(NSUInteger, EAConnectStatus) {
 #define kNTF_EAConnectStatusSucceed             @"EAConnectStatusSucceed"
 
 /// Notification Name: Disconnect
-/// 断开链接
+/// 断开连接
 #define kNTF_EAConnectStatusDisconnect          @"EAConnectStatusDisconnect"
 
 /// Notification Name:Connection attempt succeeded (service not obtained)
@@ -102,11 +103,11 @@ typedef NS_ENUM(NSUInteger, EAConnectStatus) {
 
 /// Notification Name: OTA data transmission is complete
 /// OTA数据传输完成
-#define kNTF_EAOTAAGPSDataFinish            @"EAOTAAGPSDataFinish"
+#define kNTF_EAOTAAGPSDataFinish            @"EAOTADataFinish"
 
 /// Notification Name: OTA progress
 /// OTA进度
-#define kNTF_EAOTAAGPSDataing               @"EAOTAAGPSDataing"
+#define kNTF_EAOTAAGPSDataing               @"EAOTADataing"
 
 /// 实时数据
 /// Real time data
@@ -219,8 +220,8 @@ typedef void(^UpdateValueBlock)(CBCharacteristic *characteristic,NSError *error)
 /// 解绑设备并重置（移除关联，不会自动重连）
 - (void)unbindAndResetPeripheral;
 
-/// Chain breaking watch (does not remove association)
-/// 断链设备(不移除关联，会自动重连设备)
+/// Disconnects watch (does not remove association)
+/// 断连设备(不移除关联，会自动重连设备)
 - (void)disconnectPeripheral;
 
 /// Check whether to enable Bluetooth
@@ -232,7 +233,7 @@ typedef void(^UpdateValueBlock)(CBCharacteristic *characteristic,NSError *error)
 - (BOOL)isConnected;
 
 /// Gets the connected watch
-/// 获取链接的设备信息
+/// 获取连接的设备信息
 - (EAPeripheralModel *)getPeripheralModel;
 
 #pragma mark 分析广播包

@@ -179,9 +179,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// Weather supports air quality
 @property(nonatomic, assign) BOOL weatherAir;
 
-/// 查找手表（id = 20）
-/// 支持app地图运动
-/// Support app map movement
+///（id = 12）
+/// 查找手表
+/// findWatch
 @property(nonatomic, assign) BOOL findWatch;
 
 /// （id = 46）

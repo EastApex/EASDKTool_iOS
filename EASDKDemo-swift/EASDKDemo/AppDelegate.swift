@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let config = EABleConfig.getDefault();
         config.debug = true;
         config.saveLog = true;// Whether to save logs. This parameter is disabled by default.This function takes effect only when 'config.debug' is set to YES
-//        config.deviceHeadNames = ["QCY Watch"] //["APEX G02"];
+//        config.deviceHeadNames = ["QCY Watch GTR","FLEX CONNECT"] //["APEX G02"];
         let bleManager = EABleManager.default()
         bleManager.bleConfig = config;
         

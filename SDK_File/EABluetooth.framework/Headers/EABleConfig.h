@@ -46,9 +46,11 @@ NSString *logString = [NSString stringWithFormat:@""format,##__VA_ARGS__];\
 /// SDK不开启重连手表，默认关闭
 @property (nonatomic, assign) BOOL sdkNotOpenReconnectWatch;
 
-
 /// 默认 ”8800“
 @property (nonatomic, copy) NSArray *uuids;
+
+/// Enable command timeout response.  Defalut NO,
+@property (nonatomic, assign) BOOL openCmdTimeOut;
 
 /// ignore：
 /// 工具 ，默认关闭

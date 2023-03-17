@@ -12,13 +12,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface EAPeripheralModel : NSObject<NSCopying>
 
-@property(nonatomic,strong) CBPeripheral *peripheral;           // 设备
-@property(nonatomic,strong) NSNumber *RSSI;                     // 设备 RSSI
-@property(nonatomic,strong) NSDictionary *advertisementData;    //
-@property(nonatomic,strong) NSString *SN;                       // sn号 或者 mac地址
-@property(nonatomic,strong) NSString *clientCode;               // 客户编码
+/// CBPeripheral
+@property(nonatomic,strong) CBPeripheral *peripheral;
+@property(nonatomic,strong) NSNumber *RSSI;
+/// Broadcast packet
+@property(nonatomic,strong) NSDictionary *advertisementData;
+/// sn号 或者 mac地址
+@property(nonatomic,strong) NSString *SN;
+@property(nonatomic,strong) NSString *clientCode;
 
+/// Bluetooth watch name
+@property(nonatomic,strong) NSString *localName;
 
+/// ignore
+@property(nonatomic,strong) NSString *kehuhao;
+@property(nonatomic,strong) NSString *banben;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -33,7 +33,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 穿戴方式
 @property(nonatomic, assign) EAWearWayType wearWayType;
 
-/// 肤色 
+/// Note：This parameter is optional. It is not required
+/// Skin Color
+/// 肤色
 @property(nonatomic, assign) EASkinColorType eSkinColor;
 
 

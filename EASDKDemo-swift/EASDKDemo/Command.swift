@@ -123,7 +123,35 @@ class Command: NSObject {
          */
         
         
-        let backgroundImage = UIImage.init(named: "picture240*240")!;
+        let eaWatchModel = EABleSendManager.default().getConnectWatchModel()
+        var backgroundImage : UIImage = UIImage.init();
+        switch eaWatchModel.width {
+        case 240:
+            switch eaWatchModel.height {
+            case 240:
+                backgroundImage = UIImage.init(named: "picture240*240")!;
+                break;
+            case 280:
+                backgroundImage = UIImage.init(named: "picture240*280")!;
+                break;
+            default:
+                break;
+            }
+            break
+//        case 368:
+//            switch eaWatchModel.height {
+//            case 448:
+//                backgroundImage = UIImage.init(named: "picture240*240")!;
+//                break;
+//            default:
+//                break;
+//            }
+//            break
+        default:
+            break
+        }
+        
+ 
         
         /// Type 1 => number watch face and thumbnail
 //        let thumbnail = EAMakeWatchFaceManager.eaGetNumberThumbnail(with: backgroundImage, colorType: .white);
@@ -131,38 +159,105 @@ class Command: NSObject {
         
         
         
-        /// Type 2 => pointer watch face and thumbnail
+//        / Type 2 => pointer watch face and thumbnail
 //        let thumbnail = EAMakeWatchFaceManager.eaGetPointerThumbnail(with: backgroundImage, colorType: .white, scaleStyle: .bar);
-//        let result = EAMakeWatchFaceManager.eaOtaPointerWatchFace(with: backgroundImage, colorType: .white, scaleStyle: .bar)
+        let result = EAMakeWatchFaceManager.eaOtaPointerWatchFace(with: backgroundImage, colorType: .white, scaleStyle: .none)
         
         
+        // Type 3 => Digital watch face with color custom picture and thumbnail
+//        let thumbnail = EAMakeWatchFaceManager.eaGetDefaultNumberThumbnail(with: backgroundImage, color: .red)
+//        let result = EAMakeWatchFaceManager.eaOtaDefaultNumberWatchFace(with: backgroundImage, color: UIColor.red)
         
         
-        /// Type 3 => Digital watch face with fully custom picture and thumbnail
-    
+//        // Type 4 => Digital watch face with fully custom picture and thumbnail
+//
 //        let numberModel_hh = EACustomNumberWatchFaceModel.eaAllocInit(with: .highHour, font: UIFont.systemFont(ofSize: 60), color: UIColor.blue, point: CGPoint(x: 40, y: 50))
 //        let numberModel_lh = EACustomNumberWatchFaceModel.eaAllocInit(with: .lowHour, font: UIFont.systemFont(ofSize: 60), color: UIColor.blue, point: CGPoint(x: 80, y: 50))
 //        let numberModel_hm = EACustomNumberWatchFaceModel.eaAllocInit(with: .highMinute, font: UIFont.systemFont(ofSize: 60), color: UIColor.blue, point: CGPoint(x: 140, y: 50))
 //        let numberModel_lm = EACustomNumberWatchFaceModel.eaAllocInit(with: .lowMinute, font: UIFont.systemFont(ofSize: 60), color: UIColor.blue, point: CGPoint(x: 180, y: 50))
-//        let list = NSArray(objects: numberModel_hh,numberModel_lh,numberModel_hm,numberModel_lm) as! [EACustomNumberWatchFaceModel]
-//
+//        let numberModel_date = EACustomNumberWatchFaceModel.eaAllocInit(with: .date, font: UIFont.systemFont(ofSize: 60), color: UIColor.blue, point: CGPoint(x: 120, y: 150))
+//        let list = NSArray(objects: numberModel_hh,numberModel_lh,numberModel_hm,numberModel_lm,numberModel_date) as! [EACustomNumberWatchFaceModel]
 //        let thumbnail = EAMakeWatchFaceManager.eaGetNumberThumbnail(with: backgroundImage, list: list)
 //        let result = EAMakeWatchFaceManager.eaOtaNumberWatchFace(with: backgroundImage, list: list)
         
         
-        /// Type 4 =>
+        /// Type 5 =>
         ///
-        let hModel = EACustomPointerWatchFaceModel.eaInit(withPoniterImage: UIImage.init(named: "h")!, pointerType: .hour, originalPoint: CGPoint(x: 180, y: 50), rotationPoint: CGPoint(x: 180, y: 50))
-        let mModel = EACustomPointerWatchFaceModel.eaInit(withPoniterImage: UIImage.init(named: "m")!, pointerType: .minute, originalPoint: CGPoint(x: 180, y: 50), rotationPoint: CGPoint(x: 180, y: 50))
-        let sModel = EACustomPointerWatchFaceModel.eaInit(withPoniterImage: UIImage.init(named: "s")!, pointerType: .second, originalPoint: CGPoint(x: 180, y: 50), rotationPoint: CGPoint(x: 180, y: 50))
-        let list = NSArray(objects: hModel,mModel,sModel) as! [EACustomPointerWatchFaceModel]
+//        let hModel = EACustomPointerWatchFaceModel.eaInit(withPoniterImage: UIImage.init(named: "h")!, pointerType: .hour, originalPoint: CGPoint(x: 180, y: 50), rotationPoint: CGPoint(x: 180, y: 50))
+//        let mModel = EACustomPointerWatchFaceModel.eaInit(withPoniterImage: UIImage.init(named: "m")!, pointerType: .minute, originalPoint: CGPoint(x: 180, y: 50), rotationPoint: CGPoint(x: 180, y: 50))
+//        let sModel = EACustomPointerWatchFaceModel.eaInit(withPoniterImage: UIImage.init(named: "s")!, pointerType: .second, originalPoint: CGPoint(x: 180, y: 50), rotationPoint: CGPoint(x: 180, y: 50))
+//        let list = NSArray(objects: hModel,mModel,sModel) as! [EACustomPointerWatchFaceModel]
+//
+//        let thumbnail = EAMakeWatchFaceManager.eaGetPointerThumbnail(with: backgroundImage, list: list)
+//        let result = EAMakeWatchFaceManager.eaOtaPointerThumbnail(with: backgroundImage, list: list)
+    
         
-        let thumbnail = EAMakeWatchFaceManager.eaGetPointerThumbnail(with: backgroundImage, list: list)
-        let result = EAMakeWatchFaceManager.eaOtaPointerThumbnail(with: backgroundImage, list: list)
+        
+        
         return result;
 
         
     }
+    
+    class func customWatchFaceType1() -> NSInteger {
+        
+        let backgroundImage = self.getBgImage()
+        
+//      let thumbnail = EAMakeWatchFaceManager.eaGetNumberThumbnail(with: backgroundImage, colorType: .white);
+         let result = EAMakeWatchFaceManager.eaOtaNumberWatchFace(with: backgroundImage, colorType: .white)
+        return result;
+    }
+    
+    class func customWatchFaceType2() -> NSInteger {
+        
+        let backgroundImage = self.getBgImage()
+//        let thumbnail = EAMakeWatchFaceManager.eaGetPointerThumbnail(with: backgroundImage, colorType: .white, scaleStyle: .bar);
+        let result = EAMakeWatchFaceManager.eaOtaPointerWatchFace(with: backgroundImage, colorType: .white, scaleStyle: .none)
+        return result;
+    }
+    
+    class func customWatchFaceType3() -> NSInteger {
+        
+        let backgroundImage = self.getBgImage()
+//        let thumbnail = EAMakeWatchFaceManager.eaGetDefaultNumberThumbnail(with: backgroundImage, color: .red)
+        let result = EAMakeWatchFaceManager.eaOtaDefaultNumberWatchFace(with: backgroundImage, color: UIColor.white)
+        return result;
+    }
+    
+    
+    class func getBgImage() -> UIImage {
+        
+        let eaWatchModel = EABleSendManager.default().getConnectWatchModel()
+        var backgroundImage : UIImage = UIImage.init();
+        switch eaWatchModel.width {
+        case 240:
+            switch eaWatchModel.height {
+            case 240:
+                backgroundImage = UIImage.init(named: "picture240*240")!;
+                break;
+            case 280:
+                backgroundImage = UIImage.init(named: "picture240*280")!;
+                break;
+            default:
+                break;
+            }
+            break
+//        case 368:
+//            switch eaWatchModel.height {
+//            case 448:
+//                backgroundImage = UIImage.init(named: "picture240*240")!;
+//                break;
+//            default:
+//                break;
+//            }
+//            break
+        default:
+            break
+        }
+        
+        return backgroundImage
+    }
+    
 
     class func unbind(){
         

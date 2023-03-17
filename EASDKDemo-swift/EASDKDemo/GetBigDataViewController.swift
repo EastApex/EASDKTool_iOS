@@ -39,6 +39,7 @@ class GetBigDataViewController: UIViewController  , UITableViewDelegate, UITable
         dataSource = NSMutableArray.init();
         
         let setList:NSArray = [
+            "Check whether the agreement supports separate access to big data.(id:44 Cmd_WatchSupport.getData() ==> supportOnlyGetBigData)",
             "id:29 \nGet all the big data【获取所有大数据】",
             "id:49 \nGet big data separately by type【按类型单独获取大数据】"
         ]
@@ -63,6 +64,13 @@ class GetBigDataViewController: UIViewController  , UITableViewDelegate, UITable
         case .big8803DataUpdateFinish:
             
             print("Watch sending big data done")
+            
+            /**
+             
+             When the watch sends this notification type [.big8803DataUpdateFinish], it means that the watch big data has been sent. At this time, you can call the SDK method to obtain different types of big data [EABleSendManager.default().getBigData()].
+             
+             */
+            
             
             // daliy step data
             let stepData = EABleSendManager.default().getBigData(withBigDataType: .stepData);
@@ -123,8 +131,8 @@ class GetBigDataViewController: UIViewController  , UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch indexPath.row {
-        case 0: Command.getAllBigData();break
-        case 1: Command.getBigData(.stepData);break
+        case 1: Command.getAllBigData();break
+        case 2: Command.getBigData(.stepData);break
         default:break;
         }
     }

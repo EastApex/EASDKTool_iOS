@@ -83,6 +83,8 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         tbView.isHidden = true
         
         addNotification()
+        
+
     }
     
     func loadWatchData(){
@@ -147,7 +149,8 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
 
 
         EABleManager.default().unbindAndResetPeripheral()
-                
+          
+        EABleManager.default().getPeripheralModel();
     }
     
     func showView(){

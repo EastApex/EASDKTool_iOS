@@ -67,8 +67,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 睡眠血氧监测开关 【不支持修改】
 @property(nonatomic, assign) NSInteger sleepBloodOxygenSw;
 
-///  压力监测开关 【不支持修改】
-@property(nonatomic, assign) NSInteger stressSw;
+/////  压力监测开关 【不支持修改】
+//@property(nonatomic, assign) NSInteger stressSw;
 
 
 

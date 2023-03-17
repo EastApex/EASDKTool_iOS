@@ -44,7 +44,9 @@ class OTAViewController: UIViewController  , UITableViewDelegate, UITableViewDat
         let setList:NSArray = [
             "OTA",
             "Online Watch Face",
-            "Custom Background Watch Face",
+            "Custom Watch Face: Type 1 = number",
+            "Custom Watch Face: Type 2 = pointer",
+            "Custom Watch Face: Type 3 = number & color",
         ]
         let setInfo = NSMutableDictionary.init()
         setInfo.setObject(setList, forKey: "list" as NSCopying)
@@ -144,12 +146,24 @@ class OTAViewController: UIViewController  , UITableViewDelegate, UITableViewDat
         };break
         case 1: Command.onlineWatchFace();break
         case 2: do {
-            let result:NSInteger = Command.customPictureWatchFace()
+            let result:NSInteger = Command.customWatchFaceType1()
             if result < 1 {
                 
                 alertView.dismiss(animated: true)
-            }else {
+            }
+        };break
+        case 3: do {
+            let result:NSInteger = Command.customWatchFaceType2()
+            if result < 1 {
                 
+                alertView.dismiss(animated: true)
+            }
+        };break
+        case 4: do {
+            let result:NSInteger = Command.customWatchFaceType3()
+            if result < 1 {
+                
+                alertView.dismiss(animated: true)
             }
         };break
         default:break;

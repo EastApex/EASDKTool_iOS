@@ -33,6 +33,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign) CGPoint point;
 
 
+@property(nonatomic,assign) NSInteger textWidth;
+
 ///  Initialization method【初始化方法】
 /// - Parameters:
 ///   - eaTimeType: Time type【时间类型】

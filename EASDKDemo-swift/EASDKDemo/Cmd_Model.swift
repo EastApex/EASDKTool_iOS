@@ -280,7 +280,6 @@ class Cmd_DND {
             
             if baseModel.isKind(of: EANotDisturbModel.self) {
                 let model = baseModel as! EANotDisturbModel;
-                print(model.sw)
             }
         }
     }
@@ -591,6 +590,7 @@ class Cmd_GesturesSetting {
                 }
             }
         }
+        
     }
 }
 
