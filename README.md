@@ -8,6 +8,7 @@ https://github.com/EastApex/EASDKTool_iOS.git
 
 ### Release Notes:
  <p> Date：2023-03-17
+ 
          <br>SDK
          <br>Version：1.0.66.1
          <br> 1. Add command timeout response.
