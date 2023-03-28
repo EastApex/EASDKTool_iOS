@@ -55,6 +55,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)eaConvertToTenByHex:(NSString *)hexString;
 
 
+/// data 转10进制
+/// @param data data
++ (NSString *)eaConvertToTenByData:(NSData *)data small:(BOOL)isSmall ;
+
 /// 16进制转字符串
 /// @param data 16进制
 + (NSString *)eaConvertToHexStringByData:(NSData *)data;

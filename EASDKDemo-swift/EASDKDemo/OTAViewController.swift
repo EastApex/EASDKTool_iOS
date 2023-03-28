@@ -47,6 +47,7 @@ class OTAViewController: UIViewController  , UITableViewDelegate, UITableViewDat
             "Custom Watch Face: Type 1 = number",
             "Custom Watch Face: Type 2 = pointer",
             "Custom Watch Face: Type 3 = number & color",
+            "Custom Watch Face: Type 4 = number & color",
         ]
         let setInfo = NSMutableDictionary.init()
         setInfo.setObject(setList, forKey: "list" as NSCopying)
@@ -161,6 +162,13 @@ class OTAViewController: UIViewController  , UITableViewDelegate, UITableViewDat
         };break
         case 4: do {
             let result:NSInteger = Command.customWatchFaceType3()
+            if result < 1 {
+                
+                alertView.dismiss(animated: true)
+            }
+        };break
+        case 5: do {
+            let result:NSInteger = Command.customWatchFaceType4()
             if result < 1 {
                 
                 alertView.dismiss(animated: true)

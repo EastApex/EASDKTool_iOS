@@ -45,6 +45,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSArray *)getRGB;
 
++ (CGSize)eaGetNumberSizeForFont:(UIFont *)font;
+
 @end
 
 

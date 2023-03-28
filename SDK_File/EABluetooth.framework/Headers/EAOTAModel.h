@@ -67,9 +67,22 @@ NS_ASSUME_NONNULL_BEGIN
 /// bin文件的数据流（binPath 或者 binData 2传一即可）
 @property(nonatomic,strong) NSData *binData;
 
-/// init
-+ (EAFileModel *)allocInitWithPath:(NSString *)binPath otaType:(EAOtaRequestType )otaType version:(NSString *)version;
 
+/// set watch face id,max 32.
+/// 设置表盘id，最长32
+@property(nonatomic,strong) NSString *watchFaceId;
+
+
+
+/// init
++ (EAFileModel *)eaInitWithPath:(NSString *)binPath otaType:(EAOtaRequestType )otaType version:(NSString *)version;
+
+/// init watch face file
++ (EAFileModel *)eaInitWatchFaceFileWithPath:(NSString *)binPath version:(NSString *)version watchFaceId:(NSString *)watchFaceId;
+
+
+
++ (EAFileModel *)allocInitWithPath:(NSString *)binPath otaType:(EAOtaRequestType )otaType version:(NSString *)version DEPRECATED_MSG_ATTRIBUTE("Please use \"eaInitWithPath: otaType: version:\"");
 @end
 
 

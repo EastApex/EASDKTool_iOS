@@ -79,12 +79,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) EAScreenType screenType;
 
 /// 不支持sn号绑定手表: 0:支持 1:不支持
+/// Binding a watch sn is not supported: 0: The watch SN is supported. 1: The watch SN is not supported
 @property(nonatomic, assign) NSInteger notSupportSn;
 
 /// 最大支持表盘内存大小（存储空间,单位KB）
+/// Maximum supported dial memory size (storage space, unit KB)
 @property(nonatomic, assign) NSInteger maxWatchSize;
 
-
+/// LCD像素类型: 0: RGB565 1: GXGPU_RGB888
+/// LCD pixel type: 0: RGB565 1: GXGPU_RGB888
+@property(nonatomic, assign) NSInteger lcdPixelType;
 
 @end
 

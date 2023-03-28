@@ -28,27 +28,27 @@
     "466,466":{
         "number":{
             "background":"0,0",
-            "hourHigh":"49,37",
-            "hourLow":"81,37",
-            "minuteHigh":"130,37",
-            "minuteLow":"162,37",
-            "maohao":"113,37",
-            "weekText":"80,94",
-            "dayText":"133,94",
-            "weekTextWidth":50,
+            "hourHigh":"119,50",
+            "hourLow":"171,50",
+            "minuteHigh":"247,50",
+            "minuteLow":"299,50",
+            "maohao":"223,50",
+            "weekText":"140,145",
+            "dayText":"250,145",
+            "weekTextWidth":100,
             "weekTextAlign":2,
-            "weekTextFont":2,
-            "dayTextWidth":30,
-            "dayTextAlign":1,
-            "dayTextFont":2,
+            "weekTextFont":5,
+            "dayTextWidth":50,
+            "dayTextAlign":0,
+            "dayTextFont":5
         },
         "point":{
-            "hour":"223,126",
-            "arcHour":"10,112",
+            "hour":"223,124",
+            "arcHour":"10,110",
             "minute":"223,41",
             "arcMinute":"10,192",
             "second":"225,17",
-            "arcSecond":"8,213",
+            "arcSecond":"8,216"
         }
     }
 }

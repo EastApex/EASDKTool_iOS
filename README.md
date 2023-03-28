@@ -7,6 +7,14 @@
 https://github.com/EastApex/EASDKTool_iOS.git
 
 ### Release Notes:
+  <p> Date：2023-03-28
+  
+        SDK
+        Version：1.0.68.1
+        1.class EARespondModel: New App launch motion response status (id=47) :APP motion has ended.
+        2.class EAWatchModel: New type: LCD Pixel type: 0: RGB565 1: GXGPU_RGB888
+        3.ADAPTS 5526 chip watch face
+        
  <p> Date：2023-03-17
  
          SDK

@@ -130,9 +130,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// 次数【跳绳】
 @property(nonatomic, assign) NSInteger count;
 
-/// ignore：
-/// 有效时长【UTE设备特有】
-@property (nonatomic,assign) NSInteger validTime;
 
 @end
 

@@ -7,7 +7,7 @@
 
 import UIKit
 import EABluetooth
-
+import YYKit
 class Command: NSObject {
 
     class func getData(dataInfoType:EADataInfoType) {
@@ -98,8 +98,11 @@ class Command: NSObject {
          NotificationCenter.default.addObserver(self, selector: #selector(ingOTA), name: NSNotification.Name(kNTF_EAOTAAGPSDataing), object: nil)
          */
         
-        let path:NSString = Bundle.main.path(forResource:"001012_U6.1", ofType:"bin")! as NSString
-        let fileModel = EAFileModel.allocInit(withPath: path as String, otaType: .userWf, version: "1");
+        let path:String = Bundle.main.path(forResource:"001012_U6.1", ofType:"bin")! as String
+        
+        // set watch face id
+        let fileModel = EAFileModel.eaInitWatchFaceFile(withPath: path, version: "1", watchFaceId: "123456789");
+        
         EABleSendManager.default().upgradeWatchFaceFile(fileModel);
         
     }
@@ -224,6 +227,38 @@ class Command: NSObject {
         return result;
     }
     
+    class func customWatchFaceType4() -> NSInteger {
+        
+        let backgroundImage = self.getBgImage()
+
+        let eaWatchModel = EABleSendManager.default().getConnectWatchModel()
+        let number = "4"  //  4 occupies the largest width in the number
+        let colon = ":"
+        let font = UIFont.boldSystemFont(ofSize: 60)
+        let top = 30.0
+        let space = 2.0
+        let sizeToFit = number.size(for: font, size: CGSize(width: CGFLOAT_MAX, height: 1000), mode: .byWordWrapping)
+        let colonSizeToFit = colon.size(for: font, size: CGSize(width: CGFLOAT_MAX, height: 1000), mode: .byWordWrapping)
+
+        
+        let colonPoint  = CGPointMake(CGFloat(eaWatchModel.width)/2.0 - sizeToFit.width/2.0, top);
+        let hmPoint     = CGPointMake(CGFloat(eaWatchModel.width)/2.0 + colonSizeToFit.width/2.0, top);
+        let lmPoint     = CGPointMake(hmPoint.x + sizeToFit.width + space, top);
+        let lhPoint     = CGPointMake(CGFloat(eaWatchModel.width)/2.0 - sizeToFit.width - colonSizeToFit.width/2.0 - space, top);
+        let hhPoint     = CGPointMake(lhPoint.x - sizeToFit.width - space, top);
+
+        let numberModel_hh = EACustomNumberWatchFaceModel.eaAllocInit(with: .highHour, font: font, color: UIColor.blue, point: hhPoint)
+        let numberModel_lh = EACustomNumberWatchFaceModel.eaAllocInit(with: .lowHour, font: font, color: UIColor.blue, point: lhPoint)
+        let numberModel_hm = EACustomNumberWatchFaceModel.eaAllocInit(with: .highMinute, font: font, color: UIColor.blue, point: hmPoint)
+        let numberModel_lm = EACustomNumberWatchFaceModel.eaAllocInit(with: .lowMinute, font: font, color: UIColor.blue, point: lmPoint)
+        let numberModel_colon = EACustomNumberWatchFaceModel.eaAllocInit(with: .colon, font: font, color: UIColor.blue, point:colonPoint)
+        let list = NSArray(objects: numberModel_hh,numberModel_lh,numberModel_hm,numberModel_lm,numberModel_colon) as! [EACustomNumberWatchFaceModel]
+        
+//        let thumbnail = EAMakeWatchFaceManager.eaGetNumberThumbnail(with: backgroundImage, list: list)
+        let result = EAMakeWatchFaceManager.eaOtaNumberWatchFace(with: backgroundImage, list: list)
+        
+        return result
+    }
     
     class func getBgImage() -> UIImage {
         
@@ -242,15 +277,24 @@ class Command: NSObject {
                 break;
             }
             break
-//        case 368:
-//            switch eaWatchModel.height {
-//            case 448:
-//                backgroundImage = UIImage.init(named: "picture240*240")!;
-//                break;
-//            default:
-//                break;
-//            }
-//            break
+        case 368:
+            switch eaWatchModel.height {
+            case 448:
+                backgroundImage = UIImage.init(named: "picture368*448")!;
+                break;
+            default:
+                break;
+            }
+            break
+        case 466:
+            switch eaWatchModel.height {
+            case 466:
+                backgroundImage = UIImage.init(named: "picture466*466")!;
+                break;
+            default:
+                break;
+            }
+            break
         default:
             break
         }

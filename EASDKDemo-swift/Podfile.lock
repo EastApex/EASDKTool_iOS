@@ -1,5 +1,5 @@
 PODS:
-  - EABluetooth (0.1.0):
+  - EABluetooth (1.0.68.1):
     - Protobuf
     - Realm
     - SAMKeychain
@@ -31,7 +31,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  EABluetooth: bbae81d4001aebe389e48a4a6c37bbc3f4c2390f
+  EABluetooth: 0da984aaeb48db682f8fceb4a31cc6be20f88254
   Protobuf: 0cde852566359049847168e51bd1c690e0f70056
   Realm: d4f810e161fa2c2c589b9860b6eb09238deacd73
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
