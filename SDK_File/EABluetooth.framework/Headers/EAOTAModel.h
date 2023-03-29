@@ -76,12 +76,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// init
 + (EAFileModel *)eaInitWithPath:(NSString *)binPath otaType:(EAOtaRequestType )otaType version:(NSString *)version;
++ (EAFileModel *)eaInitWithData:(NSData *)binData otaType:(EAOtaRequestType )otaType version:(NSString *)version;
 
 /// init watch face file
 + (EAFileModel *)eaInitWatchFaceFileWithPath:(NSString *)binPath version:(NSString *)version watchFaceId:(NSString *)watchFaceId;
++ (EAFileModel *)eaInitWatchFaceFileWithData:(NSData *)binData version:(NSString *)version watchFaceId:(NSString *)watchFaceId;
 
 
 
+/// Deprecated
+/// 弃用
 + (EAFileModel *)allocInitWithPath:(NSString *)binPath otaType:(EAOtaRequestType )otaType version:(NSString *)version DEPRECATED_MSG_ATTRIBUTE("Please use \"eaInitWithPath: otaType: version:\"");
 @end
 

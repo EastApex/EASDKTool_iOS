@@ -13,19 +13,9 @@
  SDK access documentation
  https://www.showdoc.com.cn/2042713679210858/0
  
- Date：2023-03-17
- Version：1.0.66.1
- 1. Add command timeout response.
- 2. Modify mtu greater than 509 communication problem.
- 3. When modifying the search device, disconnect the connected device.
- 4. Modify the universal style custom dial
- 5. ENUM EALanguageType new language enumeration type (Vietnamese, Belarusian, Hungarian)
- 
- 1.添加命令超时回应。
- 2.修改 mtu 大于509 通讯问题。
- 3.修改 搜索设备时，断开已连接的设备。
- 4.修改通用样式自定义表盘
- 5.ENUM EALanguageType新增语言枚举类型（越南语、白俄罗斯语、匈牙利语）
+ Date：2023-03-28
+ Version：1.0.68.2
+ 1.Class EAFileModel add binData function.
   */
 
 #import <Foundation/Foundation.h>

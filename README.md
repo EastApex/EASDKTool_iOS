@@ -7,6 +7,12 @@
 https://github.com/EastApex/EASDKTool_iOS.git
 
 ### Release Notes:
+  <p> Date：2023-03-29
+  
+        SDK
+        Version：1.0.68.2
+        1.Class EAFileModel add binData function.
+        
   <p> Date：2023-03-28
   
         SDK
