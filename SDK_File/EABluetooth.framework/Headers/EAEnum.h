@@ -1583,7 +1583,7 @@ typedef NS_ENUM(NSUInteger,EASportType) {
     /// 板球
     EASportTypeBallCricket = 73,
 
-    /// Rugby
+    /// Rugby 、Football
     /// 橄榄球
     EASportTypeBallRugby = 74,
 
@@ -1716,82 +1716,103 @@ typedef NS_ENUM(NSUInteger,EASportType) {
     /// 双杠
     EASportTypeOtherParallel = 106,
 
+    /// ignore this enum-type
     /// Tennis
     /// 网球
     EASportTypeTennis = 107,
 
+    /// ignore this enum-type
     /// Baseball
     /// 棒球
     EASportTypeBaseball = 108,
 
+    /// ignore this enum-type
     /// Hockey
     /// 曲棍球
     EASportTypeHockey = 109,
 
+    /// ignore this enum-type
     /// CustomSport
     /// 自定义运动
     EASportTypeCustomSport = 110,
 
+    /// ignore this enum-type
     /// MarkTime
     /// 踏步
     EASportTypeMarkTime = 111,
 
+    /// ignore this enum-type
     /// Walking machine
     /// 漫步机
     EASportTypeWalkingMachine = 112,
 
+    /// ignore this enum-type
     /// Athletics
     /// 田径
     EASportTypeAthletics = 113,
 
+    /// ignore this enum-type
     /// Lumbar abdomen training
     /// 腰腹训练
     EASportTypeLumbarAbdomenTraining = 114,
 
+    /// ignore this enum-type
     /// Latin dance
     /// 拉丁舞
     EASportTypeLatinDance = 115,
 
+    /// ignore this enum-type
     /// Ballet
     /// 芭蕾
     EASportTypeBallet = 116,
 
+    /// ignore this enum-type
     /// Golf
     /// 高尔夫
     EASportTypeGolf = 117,
 
+    /// ignore this enum-type
     /// Folk dance
     /// 民族舞
     EASportTypeFolkDance = 118,
 
+    /// ignore this enum-type
     /// Lacrosse
     /// 长曲棍球
     EASportTypeLacrosse = 119,
 
+    /// ignore this enum-type
     /// Softball
     /// 垒球
     EASportTypeSoftball = 120,
 
+    /// ignore this enum-type
     /// PeakBall
     /// 匹克球
     EASportTypePeakBall = 121,
-
+    
+    /// ignore this enum-type
     /// Trampoline
     /// 蹦床
     EASportTypeTrampoline = 122,
 
+    /// ignore this enum-type
     /// Parkour
     /// 酷跑
     EASportTypeParkour = 123,
 
+    /// ignore this enum-type
     /// Push-ups
     /// 俯卧撑
     EASportTypePushUp = 124,
-
+    
+    
+    /// ignore this enum-type
     /// High jump
     /// 跳高
     EASportTypeHighJump = 125,
 
+    /// ignore this enum-type
     /// Long jump
     /// 跳远
     EASportTypeLongJump = 126,
@@ -2260,7 +2281,7 @@ typedef NS_ENUM(NSUInteger, EACWFTimerColorType) {
     
     EACWFTimerColorTypeBlack         = 0,
     EACWFTimerColorTypeWhite         = 1,
-//    EACWFTimerColorTypeYellow        = 2,
+
 };
 
 #pragma mark - 自定义表盘风格类型

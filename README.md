@@ -7,6 +7,17 @@
 https://github.com/EastApex/EASDKTool_iOS.git
 
 ### Release Notes:
+
+   <p>Date：2023-04-04
+ 
+        SDK
+        Version：1.0.68.3
+        1. Modify the 5526 custom watch face
+        2. Add a description. The Class EAReminderModel weekCycleBit
+        
+        Demo
+        1. Add sample code。Class EAReminderModel；
+
   <p> Date：2023-03-29
   
         SDK

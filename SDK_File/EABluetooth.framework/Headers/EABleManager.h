@@ -13,9 +13,11 @@
  SDK access documentation
  https://www.showdoc.com.cn/2042713679210858/0
  
- Date：2023-03-28
- Version：1.0.68.2
- 1.Class EAFileModel add binData function.
+ Date：2023-04-04
+ Version：1.0.68.3
+ 1. Modify the 5526 custom watch face
+ 2. Add a description. The Class EAReminderModel weekCycleBit
+ 
   */
 
 #import <Foundation/Foundation.h>

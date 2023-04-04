@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// ignore
 @property(nonatomic,strong) NSString *kehuhao;
 @property(nonatomic,strong) NSString *banben;
+@property(nonatomic,assign) NSInteger number;
 @end
 
 NS_ASSUME_NONNULL_END

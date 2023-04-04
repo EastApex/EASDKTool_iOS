@@ -438,27 +438,28 @@ class Cmd_Reminder {
     
     class func add() {
         
-        /// 0111110 ==>
-        /// Sunday:Close
-        /// Monday:Open
+        /// 1011100 ==>
+        /// Sunday:Open
+        /// Monday:Close
         /// Tuesday:Open
         /// Wednesday:Open
         /// Thursday:Open
-        /// Friday:Open
+        /// Friday:Close
         /// Saturday:Close
         
-//        let weekCycleBit = EADataValue.getWeekCycle(byWeekCycleBitString: "0111110")
-//        let reminderModel = EAReminderModel.eaInitCycleReminder(with: .alarm, weekCycleBit: weekCycleBit, hour: 8, minute: 0, onOff: 1, snooze: 1, snoozeDuration: 10, remindActionType: .longVibration, content: "");
+        let weekCycleBit = EADataValue.getWeekCycle(byWeekCycleBitString: "1011100")
+        let reminderModel = EAReminderModel.eaInitCycleReminder(with: .alarm, weekCycleBit: weekCycleBit, hour: 8, minute: 0, onOff: 1, snooze: 1, snoozeDuration: 10, remindActionType: .longVibration, content: "");
         
-        let reminderModel = EAReminderModel.eaInitSingleReminder(with: .alarm, year: 2023, month: 2, day: 15, hour: 13, minute: 14, onOff: 1, snooze: 0, snoozeDuration: 10, remindActionType: .longVibration, content: "")
         
-        let model = EAReminderOps.eaInitAddOne(with: reminderModel)
-        Command.setData(model: model);
-        
-        let reminderModel1 = EAReminderModel.eaInitSingleReminder(with: .sleep, year: 2023, month: 2, day: 17, hour: 14, minute: 14, onOff: 1, snooze: 0, snoozeDuration: 10, remindActionType: .longVibration, content: "")
-        
-        let model1 = EAReminderOps.eaInitAddOne(with: reminderModel1)
-        Command.setData(model: model1);
+//        let reminderModel = EAReminderModel.eaInitSingleReminder(with: .alarm, year: 2023, month: 2, day: 15, hour: 13, minute: 14, onOff: 1, snooze: 0, snoozeDuration: 10, remindActionType: .longVibration, content: "")
+//
+//        let model = EAReminderOps.eaInitAddOne(with: reminderModel)
+//        Command.setData(model: model);
+//
+//        let reminderModel1 = EAReminderModel.eaInitSingleReminder(with: .sleep, year: 2023, month: 2, day: 17, hour: 14, minute: 14, onOff: 1, snooze: 0, snoozeDuration: 10, remindActionType: .longVibration, content: "")
+//
+//        let model1 = EAReminderOps.eaInitAddOne(with: reminderModel1)
+//        Command.setData(model: model1);
     }
     
     class func edit() {

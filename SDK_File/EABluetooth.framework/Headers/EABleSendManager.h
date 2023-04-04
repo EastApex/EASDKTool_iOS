@@ -87,6 +87,9 @@ typedef void(^RespondBlock)(EARespondModel *respondModel);
 - (void)setBleQueueNil;
 - (void)setIsConnected:(BOOL)isConnected;
 - (EAWatchModel *)getConnectWatchModel;
+- (void)openCommunicationTimer;
+- (void)closeCommunicationTimer;
+- (NSArray *)analyzeBigDataString:(NSString *)pbDataString andIdNmuber:(NSInteger )idNumber;
 @end
 
 NS_ASSUME_NONNULL_END
