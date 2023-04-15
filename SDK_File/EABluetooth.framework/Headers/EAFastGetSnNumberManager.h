@@ -25,6 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSDictionary *)getSnNumbers;
 
+
+- (void)clear;
+
 @end
 
 NS_ASSUME_NONNULL_END

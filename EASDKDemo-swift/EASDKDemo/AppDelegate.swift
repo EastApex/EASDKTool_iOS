@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let config = EABleConfig.getDefault();
         config.debug = true;
         config.saveLog = true;// Whether to save logs. This parameter is disabled by default.This function takes effect only when 'config.debug' is set to YES
-//        config.deviceHeadNames = ["LCALL ACE"] //["APEX G02"];
+        config.deviceHeadNames = ["PRIMIA ACE"] //["APEX G02"];
         let bleManager = EABleManager.default()
         bleManager.bleConfig = config;
         

@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) EADeviceOpsStatus deviceOpsStatus;
 
 
++ (instancetype)eaInitDeviceOpsType:(EADeviceOpsType )deviceOpsType;
 
 
 

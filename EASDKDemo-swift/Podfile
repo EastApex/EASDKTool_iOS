@@ -6,9 +6,9 @@ target 'EASDKDemo' do
  use_frameworks!
 
 # pod 'QMUIKit'
- pod 'SnapKit'
-	#pod 'EABluetooth', :git =>  'https://github.com/EastApex/EASDKTool_iOS.git'
+  pod 'SnapKit'
+	pod 'EABluetooth', :git =>  'https://github.com/EastApex/EASDKTool_iOS.git'
 
-	pod 'EABluetooth', :path => '../'
+	#pod 'EABluetooth', :path => '../'
 
 end

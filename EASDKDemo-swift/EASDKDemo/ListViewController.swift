@@ -60,6 +60,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             "id:28 \nRaise the screen switch【抬手亮屏开关】",
             "id:30 \nBasic Device Information【设备基本信息】",
             "id:31 \nLevel 1 menu setting【一级菜单设置】",
+            "id:32 \nMenstrual【经期】",
             "id:33 \nwatch face 【表盘】",
             "id:34 \nMessage push switch【消息推送开关】",
             "id:38 \nHabit tracker【习惯追踪】",

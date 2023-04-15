@@ -13,11 +13,17 @@
  SDK access documentation
  https://www.showdoc.com.cn/2042713679210858/0
  
- Date：2023-04-04
- Version：1.0.68.3
- 1. Modify the 5526 custom watch face
- 2. Add a description. The Class EAReminderModel weekCycleBit
+ Date：2023-04-15
+ Version：1.0.68.4
+ 1. Modify the SDK log style
+ 2. Rectify the fault that commands cannot be sent because the 5526 service is changed.
+ 3. Fixed an issue where paired watches could not be found.
+ 4. Fix the 5526 watch face
  
+ 1. 修改SDK log样式
+ 2. 修复5526服务发生改变导致不能发送命令的问题。
+ 3. 修复已配对手表找不到的问题。
+ 4. 修复5526表盘问题
   */
 
 #import <Foundation/Foundation.h>
@@ -200,21 +206,23 @@ typedef void(^UpdateValueBlock)(CBCharacteristic *characteristic,NSError *error)
 /// 重连设备（传手表的uuidString）
 - (void)reConnectToPeripheralWithUUIDString:(NSString *)uuidString;
 
-/// cancel connection
+/// Cancel connection
 /// 取消连接（连接时可用）
 - (void)cancelConnectingPeripheral;
 
-/// Unbind the watch (remove association)
-/// 解绑设备（移除关联，不会自动重连）
+/// Disconnect from the watch, restart after killing the App, and connect automatically after initializing EASDK.
+/// 断开手表连接。重启App，初始化EASDK后自动连接。
+- (void)disconnectPeripheral;
+
+/// Disconnect from watch, restart after killing App, will not automatically connect after initializing EASDK.
+/// 断开手表连接。重启App，初始化EASDK后不会自动连接。
 - (void)unbindPeripheral;
 
-/// Unbind the device and reset (remove association)
-/// 解绑设备并重置（移除关联，不会自动重连）
+/// Disconnect from the watch and reset and clear the watch data.
+/// 断开与手表的连接，重置并清除手表数据。
 - (void)unbindAndResetPeripheral;
 
-/// Disconnects watch (does not remove association)
-/// 断连设备(不移除关联，会自动重连设备)
-- (void)disconnectPeripheral;
+
 
 /// Check whether to enable Bluetooth
 /// 是否开启蓝牙

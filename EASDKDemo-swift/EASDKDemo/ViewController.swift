@@ -109,6 +109,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         
         print("connectSucc")
         
+        bindingWatch("")
         showView()
         
  
@@ -162,7 +163,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         tbView.isHidden = true
         ids.removeAllObjects()
         
-        bindingWatch("")
+        
         
         let listViewController = WatchViewController()
         listCtl = UINavigationController(rootViewController: listViewController)

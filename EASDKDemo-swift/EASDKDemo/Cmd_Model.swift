@@ -22,6 +22,16 @@ class Cmd_WatchInfo {
             
             if baseModel.isKind(of: EAWatchModel.self) {
                 let model = baseModel as! EAWatchModel;
+                
+                if (model.bindingType == .bound) {
+                    
+                    //
+                }
+                else
+                {
+                    // will binding watch ,use class EABingingOps
+                    
+                }
                 print(model.id_p)
             }
         }
@@ -280,6 +290,7 @@ class Cmd_DND {
             
             if baseModel.isKind(of: EANotDisturbModel.self) {
                 let model = baseModel as! EANotDisturbModel;
+                print(model.watchSw)
             }
         }
     }
@@ -403,6 +414,16 @@ class Cmd_Weather {
 class Cmd_SocialSwitch {
     
     class func setData() {
+        /**
+         
+         social 会影响 APP推送的显示。1：显示 0：不显示
+         schedule 会影响手机日历提醒。1：显示 0：不显示
+         email 会影响手机邮箱APP提醒。1：显示 0：不显示
+         
+         "social" will affect the display of APP push. [1: displayed 0: not displayed]
+         "schedule" affects calendar reminders on your phone. [1: displayed 0: not displayed]
+         "email" affects mobile email APP alerts. [1: displayed 0: not displayed]
+         */
         
         let model = EASocialSwitchModel.eaInit(with: .oneLongVibration, incomingcall: 1, missedcall: 1, sms: 1, social: 1, email: 1, schedule: 1);
         Command.setData(model: model);
@@ -641,7 +662,8 @@ class Cmd_Menstrual {
     
     class func setData() {
         
-        let model = EAMenstruals.eaAllocInit(withStartDate: "2023-02-15", keepDay: 7, cycleDay: 28, judgeCurrentTime: true)
+//        let model = EAMenstruals.eaAllocInit(withStartDate: "2023-04-05", keepDay: 2, cycleDay: 20, judgeCurrentTime: true)
+        let model = EAMenstruals.eaAllocInit(withStartDate: "2023-04-05 00:00:00", keepDay: 2, cycleDay: 20)
         Command.setData(model: model);
     }
     class func getData(){
@@ -678,6 +700,9 @@ class Cmd_WatchFace {
 class Cmd_AppMessage {
     
     class func setData() {
+        
+//        Class EASocialSwitchModel.social 的开关会影响 APP 推送的显示。
+//        Class EASocialSwitchModel.social switch will affect APP push display
         
         let eaShowAppMessageModel = EAShowAppMessageModel.eaAllocInitWithAll(onOff: true)
         let model = eaShowAppMessageModel.getEAAppMessageSwitchData()

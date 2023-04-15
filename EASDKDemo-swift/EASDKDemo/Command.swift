@@ -99,7 +99,6 @@ class Command: NSObject {
          */
         
         let path:String = Bundle.main.path(forResource:"001012_U6.1", ofType:"bin")! as String
-        
         // set watch face id
         let fileModel = EAFileModel.eaInitWatchFaceFile(withPath: path, version: "1", watchFaceId: "123456789");
         
@@ -305,16 +304,16 @@ class Command: NSObject {
 
     class func unbind(){
         
+        //Disconnect from watch, restart after killing App, will not automatically connect after initializing EAsdk.
         EABleManager.default().unbindPeripheral();
+    }
+    class func disconnect(){
+        // Disconnect from the watch, restart after killing the App, and connect automatically after initializing EAsdk.
+        EABleManager.default().disconnectPeripheral();
     }
     
     class func unbindAndReset(){
-        
+        // Disconnect from the watch and reset and clear the watch data.
         EABleManager.default().unbindAndResetPeripheral();
-    }
-    
-    class func disconnect(){
-        
-        EABleManager.default().disconnectPeripheral();
     }
 }
