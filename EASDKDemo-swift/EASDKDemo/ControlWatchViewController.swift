@@ -42,6 +42,7 @@ class ControlWatchViewController: UIViewController  , UITableViewDelegate, UITab
         let setList:NSArray = [
             "Find Watch",
             "Stop Find Watch",
+            "Paired",
             "Other ...",
         ]
         let setInfo = NSMutableDictionary.init()
@@ -82,7 +83,7 @@ class ControlWatchViewController: UIViewController  , UITableViewDelegate, UITab
         switch indexPath.row {
         case 0: Cmd_DeviceOps.findWatch();break
         case 1: Cmd_DeviceOps.stopFindWatch();break
-        case 2: Cmd_DeviceOps.setData();break
+        case 2: Cmd_DeviceOps.pairWatch();break
         default:break;
         }
     }

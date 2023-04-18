@@ -90,7 +90,9 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
     func loadWatchData(){
         
         setSyncTime()
-
+        
+        // After paired，can use the ANCS service、App push 、Muisc control
+        Cmd_DeviceOps.pairWatch()
     }
     
     func addNotification(){

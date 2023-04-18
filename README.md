@@ -21,6 +21,11 @@ pod 'EABluetooth', :git =>  'https://github.com/EastApex/EASDKTool_iOS.git',:tag
 
 ### Release Notes:
 
+   <p>Date：2023-04-18
+ 
+        Demo
+        1.Add the pairing sample code. [ After paired，can use the ANCS service、App push 、Muisc control].When the watch is successfully connected, a pairing request can be initiated.
+        
    <p> Date：2023-04-15
    
         SDK

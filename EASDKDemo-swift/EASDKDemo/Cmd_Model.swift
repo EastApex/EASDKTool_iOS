@@ -265,6 +265,14 @@ class Cmd_DeviceOps {
         model.deviceOpsStatus = .execute
         Command.setData(model: model);
     }
+    class func pairWatch() {
+        
+        let model = EADeviceOps.init()
+        model.deviceOpsType = .showiPhonePairingAlert
+        model.deviceOpsStatus = .execute
+        Command.setData(model: model);
+    }
+    
     class func getData(){
         
         Command.notSupportGetData()
@@ -704,9 +712,41 @@ class Cmd_AppMessage {
 //        Class EASocialSwitchModel.social 的开关会影响 APP 推送的显示。
 //        Class EASocialSwitchModel.social switch will affect APP push display
         
-        let eaShowAppMessageModel = EAShowAppMessageModel.eaAllocInitWithAll(onOff: true)
-        let model = eaShowAppMessageModel.getEAAppMessageSwitchData()
-        Command.setData(model: model);
+        setAppNotificationsSettings(enabled: true) { succ in
+            
+            
+        }
+        
+//        // test 1.
+//        // open all
+//        let eaShowAppMessageModel1 = EAShowAppMessageModel.eaAllocInitWithAll(onOff: true)
+//        let model1 = eaShowAppMessageModel1.getEAAppMessageSwitchData()
+//        Command.setData(model: model1);
+//
+//        // open social
+//        let model11 = EASocialSwitchModel.eaInit(with: .oneLongVibration, incomingcall: 1, missedcall: 1, sms: 1, social: 1, email: 1, schedule: 1);
+//        Command.setData(model: model11);
+        
+//        // test 2.
+//        // close all
+//        let eaShowAppMessageModel2 = EAShowAppMessageModel.eaAllocInitWithAll(onOff: false)
+//        let model2 = eaShowAppMessageModel2.getEAAppMessageSwitchData()
+//        Command.setData(model: model2);
+//
+//        // close social
+//        let model22 = EASocialSwitchModel.eaInit(with: .oneLongVibration, incomingcall: 1, missedcall: 1, sms: 1, social: 1, email: 1, schedule: 1);
+//        Command.setData(model: model22);
+//
+//        // test 3.
+//        // close all,skype open
+//        let eaShowAppMessageModel3 = EAShowAppMessageModel.eaAllocInitWithAll(onOff: false)
+//        eaShowAppMessageModel3.skype = true
+//        let model3 = eaShowAppMessageModel3.getEAAppMessageSwitchData()
+//        Command.setData(model: model3);
+//
+//        // open social
+//        let model33 = EASocialSwitchModel.eaInit(with: .oneLongVibration, incomingcall: 1, missedcall: 1, sms: 1, social: 1, email: 1, schedule: 1);
+//        Command.setData(model: model33);
     }
     
     class func getData(){
@@ -720,6 +760,51 @@ class Cmd_AppMessage {
             }
         }
     }
+    
+    class func setAppNotificationsSettings(enabled: Bool,  callback: @escaping((Bool) -> Void)) {
+            let eaShowAppMessageModel = EAShowAppMessageModel.init()
+            eaShowAppMessageModel.linkedin = enabled
+            eaShowAppMessageModel.telegram = enabled
+            eaShowAppMessageModel.skype = enabled
+            eaShowAppMessageModel.messenger = enabled
+            eaShowAppMessageModel.facebook = enabled
+            eaShowAppMessageModel.instagram = enabled
+            eaShowAppMessageModel.whatsApp = enabled
+            eaShowAppMessageModel.twitter = enabled
+            eaShowAppMessageModel.gmail = enabled
+            eaShowAppMessageModel.snapchat = enabled
+            eaShowAppMessageModel.youtube = enabled
+            let model = eaShowAppMessageModel.getEAAppMessageSwitchData()
+            
+            let eaSocialSwitchModel = EASocialSwitchModel.init()
+            eaSocialSwitchModel.sSms.sw = 1
+            eaSocialSwitchModel.sIncomingcall.sw = 1
+            
+            if !enabled {
+                
+                eaSocialSwitchModel.sSocial.sw = 0
+            } else {
+                eaSocialSwitchModel.sSocial.sw = 1
+            }
+            
+            EABleSendManager.default().operationChange(model) { respondModel in
+                if respondModel.isKind(of: EARespondModel.self) {
+                    switch respondModel.eErrorCode{
+                    case .success:
+                        EABleSendManager.default().operationChange(eaSocialSwitchModel) { respondModel in
+                            switch respondModel.eErrorCode{
+                            case .success:
+                                callback(true)
+                            default:
+                                callback(false)
+                            }
+                        }
+                    default:
+                        callback(false)
+                    }
+                }
+            }
+        }
 }
 
 class Cmd_HabitTracker {
