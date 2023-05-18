@@ -433,6 +433,15 @@ class Cmd_SocialSwitch {
          "email" affects mobile email APP alerts. [1: displayed 0: not displayed]
          */
         
+//        let model = EASocialSwitchModel.init()
+//
+//        let social = EASocialOps.init()
+//        social.sw = 1
+//        social.remindActionType = .oneLongVibration;
+//
+//        model.sSocial = social;
+        
+        
         let model = EASocialSwitchModel.eaInit(with: .oneLongVibration, incomingcall: 1, missedcall: 1, sms: 1, social: 1, email: 1, schedule: 1);
         Command.setData(model: model);
     }
@@ -762,46 +771,51 @@ class Cmd_AppMessage {
     }
     
     class func setAppNotificationsSettings(enabled: Bool,  callback: @escaping((Bool) -> Void)) {
-            let eaShowAppMessageModel = EAShowAppMessageModel.init()
-            eaShowAppMessageModel.linkedin = enabled
-            eaShowAppMessageModel.telegram = enabled
-            eaShowAppMessageModel.skype = enabled
-            eaShowAppMessageModel.messenger = enabled
-            eaShowAppMessageModel.facebook = enabled
-            eaShowAppMessageModel.instagram = enabled
-            eaShowAppMessageModel.whatsApp = enabled
-            eaShowAppMessageModel.twitter = enabled
-            eaShowAppMessageModel.gmail = enabled
-            eaShowAppMessageModel.snapchat = enabled
-            eaShowAppMessageModel.youtube = enabled
+        
+        let someAppTypes:[UInt] = [EAShowAppType.wechat.rawValue]
+        let eaShowAppMessageModel = EAShowAppMessageModel.eaAllocInitWith(onOff: true, showAppTypes: someAppTypes)
+        
+//            let eaShowAppMessageModel = EAShowAppMessageModel.init()
+//            eaShowAppMessageModel.wechat = false
+//            eaShowAppMessageModel.qq = enabled
+//            eaShowAppMessageModel.telegram = enabled
+//            eaShowAppMessageModel.skype = true
+//            eaShowAppMessageModel.messenger = enabled
+//            eaShowAppMessageModel.facebook = enabled
+//            eaShowAppMessageModel.instagram = enabled
+//            eaShowAppMessageModel.whatsApp = enabled
+//            eaShowAppMessageModel.twitter = enabled
+//            eaShowAppMessageModel.gmail = enabled
+//            eaShowAppMessageModel.snapchat = enabled
+//            eaShowAppMessageModel.youtube = enabled
             let model = eaShowAppMessageModel.getEAAppMessageSwitchData()
             
-            let eaSocialSwitchModel = EASocialSwitchModel.init()
-            eaSocialSwitchModel.sSms.sw = 1
-            eaSocialSwitchModel.sIncomingcall.sw = 1
-            
-            if !enabled {
-                
-                eaSocialSwitchModel.sSocial.sw = 0
-            } else {
-                eaSocialSwitchModel.sSocial.sw = 1
-            }
+//            let eaSocialSwitchModel = EASocialSwitchModel.init()
+//            eaSocialSwitchModel.sSms.sw = 1
+//            eaSocialSwitchModel.sIncomingcall.sw = 1
+//
+//            if !enabled {
+//
+//                eaSocialSwitchModel.sSocial.sw = 0
+//            } else {
+//                eaSocialSwitchModel.sSocial.sw = 1
+//            }
             
             EABleSendManager.default().operationChange(model) { respondModel in
                 if respondModel.isKind(of: EARespondModel.self) {
-                    switch respondModel.eErrorCode{
-                    case .success:
-                        EABleSendManager.default().operationChange(eaSocialSwitchModel) { respondModel in
-                            switch respondModel.eErrorCode{
-                            case .success:
-                                callback(true)
-                            default:
-                                callback(false)
-                            }
-                        }
-                    default:
-                        callback(false)
-                    }
+//                    switch respondModel.eErrorCode{
+//                    case .success:
+//                        EABleSendManager.default().operationChange(eaSocialSwitchModel) { respondModel in
+//                            switch respondModel.eErrorCode{
+//                            case .success:
+//                                callback(true)
+//                            default:
+//                                callback(false)
+//                            }
+//                        }
+//                    default:
+//                        callback(false)
+//                    }
                 }
             }
         }

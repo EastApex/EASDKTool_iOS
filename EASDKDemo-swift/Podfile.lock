@@ -1,5 +1,5 @@
 PODS:
-  - EABluetooth (1.0.68.3):
+  - EABluetooth (1.0.68.4):
     - Protobuf
     - Realm
     - SAMKeychain
@@ -32,17 +32,17 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   EABluetooth:
-    :commit: d3233ccf2bff60db9a6bc28b790969d09abbcba6
+    :commit: 4b7a524950fac1667bdb092b48fbbfd844449c76
     :git: https://github.com/EastApex/EASDKTool_iOS.git
 
 SPEC CHECKSUMS:
-  EABluetooth: e0b51bf2b39acdd77129417f797710a58407a57b
+  EABluetooth: 9654465e70e38b3547229cc52ad282674e137b02
   Protobuf: 3acb308a1e208605afd50866b98ec220141bcb8c
   Realm: d4f810e161fa2c2c589b9860b6eb09238deacd73
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 2a5cc3c2f6891f8eb66f384e510fb5da9ad937c6
+PODFILE CHECKSUM: 6a4f71094238116d7fd5d918ec32981a04524d7e
 
 COCOAPODS: 1.11.3

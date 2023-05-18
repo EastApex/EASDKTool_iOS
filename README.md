@@ -2,19 +2,14 @@
 <p>https://www.showdoc.com.cn/2042713679210858/0
 <p>Password:123456
 
-
 ### github:
 https://github.com/EastApex/EASDKTool_iOS.git
-
 ### pod： 
-
 in your Podfile 
 add this 
 
 pod 'EABluetooth', :git =>  'https://github.com/EastApex/EASDKTool_iOS.git'
-
 or  use tag specified version
-
 pod 'EABluetooth', :git =>  'https://github.com/EastApex/EASDKTool_iOS.git',:tag => '1.0.68.3'
 
 

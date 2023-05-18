@@ -55,7 +55,6 @@ class ControlPhoneViewController: UIViewController , UITableViewDelegate, UITabl
     @objc func operatingPhone(_ no:NSNotification){
         
         let operatingModel = no.object as! EAPhoneOpsModel
-        
         /// see enum EAPhoneOps
         switch operatingModel.eOps {
             

@@ -83,11 +83,22 @@ class Command: NSObject {
         NotificationCenter.default.addObserver(self, selector: #selector(finishOTA), name: NSNotification.Name(kNTF_EAOTAAGPSDataFinish), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ingOTA), name: NSNotification.Name(kNTF_EAOTAAGPSDataing), object: nil)
         */
-        let file1 =  EAFileModel.allocInit(withPath: "", otaType: .apollo, version: "AP0.1B1.1")
-        let file2 =  EAFileModel.allocInit(withPath: "", otaType: .res, version: "R0.4")
-        let file3 =  EAFileModel.allocInit(withPath: "", otaType: .res, version: "R0.5")
-
-        return EABleSendManager.default().upgradeFiles([file1,file2,file3]);
+        
+        // ota file 1
+        let path1:String = Bundle.main.path(forResource:"xxxx_AP0.1B1.6", ofType:"bin")! as String
+        let version1:String = "AP0.1B1.6"
+        let file1 =  EAFileModel.eaInit(withPath: path1, otaType: .apollo, version: version1)
+        // ota file 2
+        let path2:String = Bundle.main.path(forResource:"xxxx_R0.4", ofType:"bin")! as String
+        let version2:String = "R0.4"
+        let file2 =  EAFileModel.eaInit(withPath: path2, otaType: .res, version: version2)
+        // ota file 3
+        let path3:String = Bundle.main.path(forResource:"xxxx_R0.5", ofType:"bin")! as String
+        let version3:String = "R0.5"
+        let file3 =  EAFileModel.eaInit(withPath: path3, otaType: .res, version: version3)
+        // ota
+        let status = EABleSendManager.default().upgradeFiles([file1,file2,file3]);
+        return status
     }
     
     class func onlineWatchFace(){
@@ -99,9 +110,7 @@ class Command: NSObject {
          */
         
         let path:String = Bundle.main.path(forResource:"001012_U6.1", ofType:"bin")! as String
-        // set watch face id
-        let fileModel = EAFileModel.eaInitWatchFaceFile(withPath: path, version: "1", watchFaceId: "123456789");
-        
+        let fileModel = EAFileModel.eaInitWatchFaceFile(withPath: path, version: "1", watchFaceId: "123456789"); // set watch face id
         EABleSendManager.default().upgradeWatchFaceFile(fileModel);
         
     }
