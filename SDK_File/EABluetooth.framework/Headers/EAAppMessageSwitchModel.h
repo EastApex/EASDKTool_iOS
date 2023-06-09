@@ -9,6 +9,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
+/**
+ Note a few things about testing your push:
+ 1. The watch must be paired with the phone to allow for notifications.
+ 2. The watch needs to disable DND
+ 3. Enable related Bluetooth protocols. Class EASocialSwitchModel and  Class  EAAppMessageSwitchData
+ */
+
+
 @class EAAppMessageSwitchData;
 
 typedef NS_OPTIONS(NSUInteger, EAShowAppType) {

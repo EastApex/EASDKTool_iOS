@@ -90,6 +90,22 @@ NS_ASSUME_NONNULL_BEGIN
 /// LCD pixel type: 0: RGB565 1: GXGPU_RGB888
 @property(nonatomic, assign) NSInteger lcdPixelType;
 
+
+/// apollo
+@property(nonatomic,readonly) NSString *apbVerion;
+
+/// res
+@property(nonatomic,readonly) NSString *resVerion;
+
+/// hr
+@property(nonatomic,readonly) NSString *hrVerion;
+
+/// tp
+@property(nonatomic,readonly) NSString *tpVerion;
+
+/// gps
+@property(nonatomic,readonly) NSString *gpsVerion;
+
 @end
 
 NS_ASSUME_NONNULL_END

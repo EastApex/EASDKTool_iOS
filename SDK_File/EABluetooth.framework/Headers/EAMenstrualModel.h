@@ -21,6 +21,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// 提示的天数：（如果e_type是安全期，days>0，则表示下一个经期的天数。如果是经期，days>0，则代表经期第几天)
 @property(nonatomic, assign) NSInteger days;
 
+////第几天
+//@property(nonatomic, assign) NSInteger rankDay;
+////还有几天离开
+//@property(nonatomic, assign) NSInteger leftDay;
 
 @end
 

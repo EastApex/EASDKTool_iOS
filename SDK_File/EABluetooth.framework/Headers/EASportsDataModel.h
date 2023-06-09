@@ -39,7 +39,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Sport type
 /// 运动类型
-@property(nonatomic, assign) EASportType eType;
+@property(nonatomic, assign) EASportType eType __attribute__((deprecated));
+
+/// Sport type
+/// 运动类型
+@property(nonatomic, assign) EAWatchSportType watchSportType;
 
 /// begin timestamp
 /// 起始时间戳

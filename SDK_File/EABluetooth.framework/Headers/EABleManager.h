@@ -14,7 +14,7 @@
  https://www.showdoc.com.cn/2042713679210858/0
  
  Date：2023-04-15
- Version：1.0.68.4
+ Version：1.0.71.1
  1. Modify the SDK log style
  2. Rectify the fault that commands cannot be sent because the 5526 service is changed.
  3. Fixed an issue where paired watches could not be found.
@@ -24,6 +24,7 @@
  2. 修复5526服务发生改变导致不能发送命令的问题。
  3. 修复已配对手表找不到的问题。
  4. 修复5526表盘问题
+ 5. fixed bug
   */
 
 #import <Foundation/Foundation.h>

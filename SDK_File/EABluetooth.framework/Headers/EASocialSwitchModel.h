@@ -43,6 +43,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// 短信
 @property(nonatomic, strong) EASocialOps *sSms;
 
+
+ /**
+  Note a few things about testing your push:
+  1. The watch must be paired with the phone to allow for notifications.
+  2. The watch needs to disable DND
+  3. Enable related Bluetooth protocols. Class EASocialSwitchModel and  Class  EAAppMessageSwitchData
+  */
+
 /// Social
 /// 社交（第三方App推送提醒 ）
 @property(nonatomic, strong) EASocialOps *sSocial;

@@ -1885,6 +1885,712 @@ typedef NS_ENUM(NSUInteger,EASportType) {
     
 };
 
+/// Sport type
+/// MARK: - 运动类型
+typedef NS_ENUM(NSUInteger,EAWatchSportType) {
+    
+    /// Daily
+    /// 日常运动
+    EAWatchSportDaily = 0,
+
+    /// Outdoor Walk
+    /// 户外步行
+    EAWatchSportOurdoorWalk = 1,
+
+    /// Outdoor Run
+    /// 户外跑步
+    EAWatchSportOurdoorRun = 2,
+
+    /// Hike
+    /// 远足
+    EAWatchSportHike = 3,
+
+    /// Mountaineer
+    /// 登山
+    EAWatchSportMountaineer = 4,
+
+    /// Trail Run
+    /// 越野跑
+    EAWatchSportTrailRun = 5,
+
+    /// Cycling
+    /// 户外单车、室外骑行、户外骑行
+    EAWatchSportCycling = 6,
+
+    /// Outdoor Swim
+    /// 户外游泳、室外游泳
+    EAWatchSportOutdoorSwim = 7,
+
+    /// Stepper
+    /// 踏步机
+    EAWatchSportStepper = 8,
+
+    /// Treadmill
+    /// 跑步机
+    EAWatchSportTreadmill = 9,
+
+    /// Physical Training
+    /// 体能训练
+    EAWatchSportPhysicalTraining = 10,
+
+    /// Indoor Cycle
+    /// 室内单车、室内骑行
+    EAWatchSportIndoorCycle = 11,
+
+    /// Elliptical Trainer
+    /// 椭圆机
+    EAWatchSportEllipticalTrainer = 12,
+
+    /// Yoga
+    /// 瑜伽
+    EAWatchSportYoga = 13,
+
+    /// Rowing
+    /// Rowing Machine
+    /// 划船机
+    EAWatchSportRowing = 14,
+
+    /// Indoor Swim
+    /// 室内游泳
+    EAWatchSportIndoorSwim = 15,
+
+    /// Rock Climb
+    /// 攀岩
+    EAWatchSportOdRockClimb = 16,
+
+    /// Skateboard
+    /// 滑板
+    EAWatchSportOdSkateboard = 17,
+
+    /// Roller Skating
+    /// 轮滑
+    EAWatchSportOdRollerSkating = 18,
+
+    /// Parkour
+    /// 跑酷
+    EAWatchSportOdParkour = 19,
+
+    /// Skydive
+    /// 跳伞
+    EAWatchSportOdSkydive = 20,
+
+    /// HIIT
+    EAWatchSportTrainHIIT = 21,
+
+    /// Weightlifting
+    /// 举重
+    EAWatchSportTrainWeightlifting = 22,
+
+    /// Plank
+    /// 平板支撑
+    EAWatchSportTrainPlank = 23,
+
+    /// Jumping Jack
+    /// 开合跳
+    EAWatchSportTrainumpingJack = 24,
+
+    /// Stair Machine
+    /// 爬楼机
+    EAWatchSportTrainStairMachine = 25,
+
+    /// Core Training
+    /// 核心训练
+    EAWatchSportTrainCoreTraining = 26,
+
+    /// Flexibility Training
+    /// 柔韧训练
+    EAWatchSportTrainFlexibilityTraining = 27,
+
+    /// Pilates
+    /// 普拉提
+    EAWatchSportTrainPilates = 28,
+
+    /// Stretch
+    /// 拉伸
+    EAWatchSportTrainStretch = 29,
+
+    /// Strength Training
+    /// 力量训练
+    EAWatchSportTrainStrengthTraining = 30,
+
+    /// Cross Training
+    /// 交叉训练
+    EAWatchSportTrainCrossTraining = 31,
+
+    /// Dumbbell Training
+    /// 哑铃训练
+    EAWatchSportTrainDumbbellTraining = 32,
+
+    /// Deadlift
+    /// 硬拉
+    EAWatchSportTrainDeadlift = 33,
+
+    /// Sit Ups
+    /// 仰卧起坐
+    EAWatchSportTrainSitUps = 34,
+
+    /// Functional Training
+    /// 功能性训练
+    EAWatchSportTrainFunctionalTraining= 35,
+
+    /// Upper Body Training
+    /// 上肢训练
+    EAWatchSportTrainUpperBodyTraining = 36,
+
+    /// Lower Body Training
+    /// 下肢训练
+    EAWatchSportTrainLowerBodyTraining = 37,
+
+    /// Abs Training
+    /// 腹肌训练
+    EAWatchSportTrainAbsTraining = 38,
+
+    /// Back Training
+    /// 背部训练
+    EAWatchSportTrainBackTraining = 39,
+
+    /// Sailboat
+    /// 帆船、帆船运动
+    EAWatchSportWaterSailboat = 40,
+
+    /// SUP
+    /// 浆板
+    EAWatchSportWaterSUP = 41,
+
+    /// Water Polo
+    /// 水球
+    EAWatchSportWaterPolo = 42,
+
+    /// Thrash
+    /// 划水
+    EAWatchSportWaterThrash = 43,
+
+    /// Kayak
+    /// 皮划艇、赛艇
+    EAWatchSportWaterKayak = 44,
+
+    /// Drifting
+    /// 漂流
+    EAWatchSportWaterDrifting = 45,
+
+    /// Boating
+    /// 划船
+    EAWatchSportWaterBoating = 46,
+
+    /// Fin Swim
+    /// 蹼泳
+    EAWatchSportWaterFinSwim = 47,
+
+    /// Diving
+    /// 跳水
+    EAWatchSportWaterDiving = 48,
+
+    /// Artistic Swim
+    /// 花样游泳
+    EAWatchSportWaterArtisticSwim = 49,
+
+    /// Snorkel
+    /// 潜水
+    EAWatchSportWaterSnorkel = 50,
+
+    /// Kitesurfing
+    /// 风筝冲浪、冲浪
+    EAWatchSportWaterKitesurfing = 51,
+
+    /// ATV
+    /// 沙滩车
+    EAWatchSportWaterAtv = 52,
+
+    /// Beach Soccer
+    /// 沙滩足球
+    EAWatchSportWaterBeachSoccer = 53,
+
+    /// Dance
+    /// 舞蹈
+    EAWatchSportDanceDance = 54,
+
+    /// Belly dance
+    /// 肚皮舞
+    EAWatchSportDanceBellyDance = 55,
+
+    /// Gymnastics
+    /// 体操
+    EAWatchSportDanceGymnastics = 56,
+
+    /// Aerobics
+    /// 健身操、室内健身
+    EAWatchSportDanceAerobics = 57,
+
+    /// Hip-Hop
+    /// 街舞
+    EAWatchSportDanceHipHop = 58,
+
+    /// Boxing
+    /// 拳击
+    EAWatchSportFightBoxing = 59,
+
+    /// Wushu
+    /// 武术
+    EAWatchSportFightWushu = 60,
+
+    /// Wrestling
+    /// 摔跤
+    EAWatchSportFightWrestling = 61,
+
+    /// Tai-Chi
+    /// 太极
+    EAWatchSportFightTaichi = 62,
+
+    /// Muay Thai
+    /// 泰拳
+    EAWatchSportFightMuayThai = 63,
+
+    /// Judo
+    /// 柔道
+    EAWatchSportFightJudo = 64,
+
+    /// Taekwondo
+    /// 跆拳道
+    EAWatchSportFightTaekwondo = 65,
+
+    /// Karate
+    /// 空手道
+    EAWatchSportFightKarate = 66,
+
+    /// Free Sparring
+    /// 自由搏击
+    EAWatchSportFightFreeSparring = 67,
+
+    /// Soccer
+    /// 足球
+    EAWatchSportBallSoccer = 68,
+
+    /// Basketball
+    /// 篮球
+    EAWatchSportBallBasketball = 69,
+
+    /// Volleyball
+    /// 排球
+    EAWatchSportBallVolleyball = 70,
+
+    /// Badminton
+    /// 羽毛球
+    EAWatchSportBallBadminton = 71,
+
+    /// Pingpong
+    /// 乒乓球
+    EAWatchSportBallPingpong = 72,
+
+    /// Cricket
+    /// 板球
+    EAWatchSportBallCricket = 73,
+
+    /// Rugby 、Football
+    /// 橄榄球
+    EAWatchSportBallFootball = 74,
+
+    /// Racquetball
+    /// 墙球
+    EAWatchSportBallRacquetball = 75,
+
+    /// Handball
+    /// 手球
+    EAWatchSportBallHandball = 76,
+
+    /// Squash
+    /// 壁球
+    EAWatchSportBallSquash = 77,
+
+    /// Shuttlecock
+    /// 毽球
+    EAWatchSportBallShuttlecock = 78,
+
+    /// Raga
+    /// 藤球
+    EAWatchSportBallRaga = 79,
+
+    /// Snowboard
+    /// 雪车
+    EAWatchSportSnowBoard = 80,
+
+    /// Skis
+    /// 双板滑雪、滑雪
+    EAWatchSportSnowSkis = 81,
+
+    /// Puck
+    /// 冰球
+    EAWatchSportSnowPuck = 82,
+
+    /// Skate
+    /// 滑冰
+    EAWatchSportSnowSkate = 83,
+
+    /// Curling
+    /// 冰壶
+    EAWatchSportSnowCurling = 84,
+
+    /// Snowmobile
+    /// 单板滑雪
+    EAWatchSportSnowmobile = 85,
+
+    /// Sled
+    /// 雪橇
+    EAWatchSportSnowSled = 86,
+
+    /// Meditation
+    /// 冥想
+    EAWatchSportLeisureMeditation = 87,
+
+    /// Kendo
+    /// 剑道
+    EAWatchSportLeisureKendo = 88,
+
+    /// Fence
+    /// 击剑
+    EAWatchSportLeisureFence = 89,
+
+    /// Bowling
+    /// 保龄球
+    EAWatchSportLeisureBowling = 90,
+
+    /// Billiards
+    /// 台球
+    EAWatchSportLeisureBilliards = 91,
+
+    /// Archery
+    /// 射箭
+    EAWatchSportLeisureArchery = 92,
+
+    /// Darts
+    /// 飞镖
+    EAWatchSportLeisureDarts = 93,
+
+    /// Riding a horse
+    /// 骑马
+    EAWatchSportRidingHorse = 94,
+
+    /// Hula Hoop
+    /// 呼啦圈
+    EAWatchSportLeisureHulaHoop = 95,
+
+    /// Flying a kite
+    /// Kite
+    /// 放风筝
+    EAWatchSportLeisureFlyingKite= 96,
+
+    /// Fishing
+    /// 钓鱼
+    EAWatchSportLeisureFishing = 97,
+
+    /// Fribee
+    /// 飞盘
+    EAWatchSportLeisureFribee = 98,
+
+    /// Equestrianism
+    /// 马术
+    EAWatchSportLeisureEquestrian = 99,
+
+    /// Racing
+    /// 赛车
+    EAWatchSportLeisureRacing = 100,
+
+    /// Free Exercise
+    /// 自由锻炼、自由训练
+    EAWatchSportOtherFreeExercise = 101,
+
+    /// Rope
+    /// 跳绳
+    EAWatchSportOtherRope = 102,
+
+    /// Climb
+    /// 上楼梯、爬楼梯
+    EAWatchSportOtherClimb = 103,
+
+    /// Push Pull
+    /// 拔河
+    EAWatchSportOtherPush = 104,
+
+    /// Horizontal Bar
+    /// 单杠
+    EAWatchSportOtherHorizontal = 105,
+
+    /// Parallel Bars
+    /// 双杠
+    EAWatchSportOtherParallel = 106,
+
+    /// ignore this enum-type
+    /// Tennis
+    /// 网球
+    EAWatchSportTennis = 107,
+
+    /// ignore this enum-type
+    /// Baseball
+    /// 棒球
+    EAWatchSportBaseball = 108,
+
+    /// ignore this enum-type
+    /// Hockey
+    /// 曲棍球
+    EAWatchSportHockey = 109,
+
+    /// ignore this enum-type
+    /// CustomSport
+    /// 自定义运动
+    EAWatchSportCustomSport = 110,
+
+    /// ignore this enum-type
+    /// MarkTime
+    /// 踏步
+    EAWatchSportMarkTime = 111,
+
+    /// ignore this enum-type
+    /// Walking machine
+    /// 漫步机
+    EAWatchSportWalkingMachine = 112,
+
+    /// ignore this enum-type
+    /// Athletics
+    /// 田径
+    EAWatchSportAthletics = 113,
+
+    /// ignore this enum-type
+    /// Lumbar abdomen training
+    /// 腰腹训练
+    EAWatchSportLumbarAbdomenTraining = 114,
+
+    /// ignore this enum-type
+    /// Latin dance
+    /// 拉丁舞
+    EAWatchSportLatinDance = 115,
+
+    /// ignore this enum-type
+    /// Ballet
+    /// 芭蕾
+    EAWatchSportBallet = 116,
+
+    /// ignore this enum-type
+    /// Golf
+    /// 高尔夫
+    EAWatchSportGolf = 117,
+
+    /// ignore this enum-type
+    /// Folk dance
+    /// 民族舞
+    EAWatchSportFolkDance = 118,
+
+    /// ignore this enum-type
+    /// Lacrosse
+    /// 长曲棍球
+    EAWatchSportLacrosse = 119,
+
+    /// ignore this enum-type
+    /// Softball
+    /// 垒球
+    EAWatchSportSoftball = 120,
+
+    /// ignore this enum-type
+    /// PeakBall
+    /// 匹克球
+    EAWatchSportPeakBall = 121,
+    
+    /// ignore this enum-type
+    /// Trampoline
+    /// 蹦床
+    EAWatchSportTrampoline = 122,
+
+    /// ignore this enum-type
+    /// Parkour
+    /// 酷跑
+    EAWatchSportParkour = 123,
+
+    /// ignore this enum-type
+    /// Push-ups
+    /// 俯卧撑
+    EAWatchSportPushUp = 124,
+    
+    /// ignore this enum-type
+    /// High jump
+    /// 跳高
+    EAWatchSportHighJump = 125,
+
+    /// ignore this enum-type
+    /// Long jump
+    /// 跳远
+    EAWatchSportLongJump = 126,
+
+    /// 室内跑步
+    /// Indoor Running
+    EAWatchSportIdRunning = 127,
+
+    /// 户外健走
+    /// Fast Walking
+    EAWatchSportFastWalking = 128,
+
+    /// 室内健走
+    /// Indoor walking
+    EAWatchSportIdWalking = 129,
+
+    /// 小轮车
+    /// BMX
+    EAWatchSportBmx = 130,
+
+    /// 有氧训练
+    /// Aerobic Training
+    EAWatchSportAerobicTraining = 131,
+
+    /// 无氧训练
+    /// Anaerobic Training
+    EAWatchSportAnaerobicTraining = 132,
+
+    /// 混合有氧
+    /// Mix Aerobic
+    EAWatchSportMixAerobic = 133,
+
+    /// 打猎
+    /// Hunting
+    EAWatchSportHunting = 134,
+
+    /// 遛狗
+    /// Walk the Dog
+    EAWatchSportWalkTheDog = 135,
+
+    /// 蹦极跳
+    /// Bungee Jumping
+    EAWatchSportBungeeJumping = 136,
+
+    /// 摩托艇
+    /// MotorBoat
+    EAWatchSportMotorBoat = 137,
+
+    /// 户外溜冰
+    /// Outdoor Ice Skating
+    EAWatchSportOutdoorIceSkating = 138,
+
+    /// 室内溜冰
+    /// Indoor Ice Skating
+    EAWatchSportIndoorIceSkating = 139,
+
+    /// 冬季两项
+    ///  Biathlon *
+    EAWatchSportBiathlon = 140,
+
+    /// 门球
+    /// Croquet
+    EAWatchSportCroquet = 141,
+
+    /// 沙滩排球
+    /// Volleyball
+    EAWatchSportVolleyball = 142,
+
+    /// 躲避球
+    /// Dodge Ball
+    EAWatchSportDodgeBall = 143,
+
+    /// 美式足球
+    /// Football
+    EAWatchSportAmericanFootball = 144,
+
+    /// 交谊舞
+    /// Social Dancing
+    EAWatchSportSocialDancing = 145,
+
+    /// 尊巴
+    /// Zumba
+    EAWatchSportZumba = 146,
+
+    /// 迪斯科
+    /// Disco
+    EAWatchSportDisco = 147,
+
+    /// 华尔兹
+    /// Waltz
+    EAWatchSportWaltz = 148,
+
+    /// 爵士舞
+    /// Jazz Dance
+    EAWatchSportJazzDance = 159,
+
+    /// 探戈
+    /// Tango
+    EAWatchSportTango = 150,
+
+    /// 踢踏舞
+    /// Tap Dance
+    EAWatchSportTapDance = 151,
+
+    /// 障碍赛
+    /// Show Jumper
+    EAWatchSportShowJumper = 152,
+    
+    
+    
+    /// Intelligent movement: Daily
+    /// 智慧运动: 日常运动
+    EAWatchSportDailyEx = 32768,
+
+    /// Intelligent movement:
+    /// 智慧运动: 户外步行
+    EAWatchSportOurdoorWalkingEx = 32769,
+
+    /// Intelligent movement:
+    /// 智慧运动: 户外跑步
+    EAWatchSportOurdoorRunningEx = 32770,
+
+    /// Intelligent movement:
+    /// 智慧运动: 户外徒步
+    EAWatchSportOurdoorOnFootEx = 32771,
+
+    /// Intelligent movement:
+    /// 智慧运动: 户外登山
+    EAWatchSportOurdoorOnMountaineeringEx = 32772,
+
+    /// Intelligent movement:
+    /// 智慧运动: 户外越野跑
+    EAWatchSportOurdoorTrailRunningEx = 32773,
+
+    /// Intelligent movement:
+    /// 智慧运动: 户外单车
+    EAWatchSportOurdoorCyclingEx = 32774,
+
+    /// Intelligent movement:
+    /// 智慧运动: 户外游泳
+    EAWatchSportOutdoorSwimmingEx = 32775,
+
+    /// Intelligent movement:
+    /// 智慧运动: 室内步行
+    EAWatchSportIndoorWalkingEx = 32776,
+
+    /// Intelligent movement:
+    /// 智慧运动: 室内跑步
+    EAWatchSportIndoorRunningEx = 32777,
+
+    /// Intelligent movement:
+    /// 智慧运动: 室内锻炼
+    EAWatchSportIndoorExerciseEx = 32778,
+
+    /// Intelligent movement:
+    /// 智慧运动: 室内单车
+    EAWatchSportIndoorCyclingEx = 32779,
+
+    /// Intelligent movement:
+    /// 智慧运动: 椭圆机
+    EAWatchSportEllipticalEx = 32780,
+
+    /// Intelligent movement:
+    /// 智慧运动: 瑜伽
+    EAWatchSportYogaEx = 32781,
+
+    /// Intelligent movement:
+    /// 智慧运动: 划船机
+    EAWatchSportRowingEx = 32782,
+
+    /// Intelligent movement:
+    /// 智慧运动: 室内游泳
+    EAWatchSportIndoorSwimmingEx = 32783,
+    
+};
+
+
 /// OTA respond status
 /// MARK: - OTA 响应类型
 typedef NS_ENUM(NSUInteger,EAOtaRespondStatus) {

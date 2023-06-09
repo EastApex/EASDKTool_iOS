@@ -24,16 +24,25 @@ typedef void(^RespondBlock)(EARespondModel *respondModel);
 /// The singleton 单例
 + (instancetype)defaultManager;
 
+
 /// Get data 获取数据
 - (void)operationGetInfoWithType:(EADataInfoType)dataInfoType result:(ResultGetInfoBlock )result;
 /// Get data from class ’EARequestModel‘ 获取数据
 - (void)operationGetInfoWithRequestModel:(EARequestModel *)requestModel result:(ResultGetInfoBlock )result;
+
 /// Set data 修改数据
 - (void)operationChangeModel:(EABaseModel *)changeModel respond:(RespondBlock )respond;
+
+/// App controlled watch App操控手表
+- (void)operationControlledWatchWithType:(EADeviceOpsType)deviceOpsType result:(RespondBlock )respond;
+
+
 
 ///备注：2个获取大数据方法不能同时使用。需要等待手表发送完成大数据消息才会有数据【监听通知 kNTF_EAGetDeviceOpsPhoneMessage】,然后调用 getBigDataWithBigDataType: 获取相关大数据详细内容
 ///Note: The two methods of obtaining big data cannot be used at the same time.Data will not be available until the watch sends the big data message[Listening notification kNTF_EAGetDeviceOpsPhoneMessage],Then call getBigDataWithBigDataType: access to relevant data details
 
+/// Get big data 获取所有大数据
+- (void)operationgGetBigDataRespond:(RespondBlock )respond;
 /// Get big data 获取所有大数据
 - (void)operationgGetBigData:(EAGetBigDataRequestModel *)model respond:(RespondBlock )respond;
 /// only get one big data 单独获取大数据
@@ -51,8 +60,10 @@ typedef void(^RespondBlock)(EARespondModel *respondModel);
 
 /// upgrade [OTA]
 - (BOOL)upgradeFiles:(NSArray<EAFileModel *> *)list;
+
 /// Watch face [OTA]
 - (BOOL)upgradeWatchFaceFile:(EAFileModel *)watchFaceFile;
+
 /// AGPS OTA
 - (BOOL)upgrade:(EAOTA *)ota;
 

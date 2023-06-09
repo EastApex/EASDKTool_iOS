@@ -28,7 +28,7 @@ typedef NS_ENUM(NSUInteger, EAAppLaunchScreenSportStatus) {
 
 /// 运动类型
 /// Type of motion
-@property(nonatomic, assign) EASportType eSportType;
+@property(nonatomic, assign) EAWatchSportType eSportType;
 
 /// 运动状态：0结束 1开启 2暂停 3继续
 /// Motion status: 0 End 1 Start 2 Pause 3 Continue
@@ -43,7 +43,7 @@ typedef NS_ENUM(NSUInteger, EAAppLaunchScreenSportStatus) {
 ///   - sportType: Type of motion【运动类型】
 ///   - status: Motion status【运动状态】
 ///   - interval:Interval for reporting data【手表上报数据间隔时长】
-+ (instancetype )eaInitWithSportType:(EASportType )sportType status:(EAAppLaunchScreenSportStatus)status interval:(NSInteger)interval;
++ (instancetype )eaInitWithSportType:(EAWatchSportType )sportType status:(EAAppLaunchScreenSportStatus)status interval:(NSInteger)interval;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -16,6 +16,16 @@ pod 'EABluetooth', :git =>  'https://github.com/EastApex/EASDKTool_iOS.git',:tag
 
 ### Release Notes:
 
+    <p>Date：2023-04-15
+    
+        SDK
+        Version：1.0.71.1
+        1. Modify the SDK log style
+        2. Rectify the fault that commands cannot be sent because the 5526 service is changed.
+        3. Fixed an issue where paired watches could not be found.
+        4. Fix the 5526 watch face
+ 
+
    <p>Date：2023-04-18
  
         Demo

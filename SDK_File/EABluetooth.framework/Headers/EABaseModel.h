@@ -15,7 +15,7 @@
 @class GPBMessage;
 NS_ASSUME_NONNULL_BEGIN
 
-@interface EABaseModel : NSObject
+@interface EABaseModel : NSObject<NSCopying>
 
 
 /// MARK: - 通用转换方法

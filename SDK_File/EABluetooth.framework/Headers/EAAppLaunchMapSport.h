@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 运动类型(仅支持运动类型序号为 1~6)
 /// Motion type (Only motion type numbered from 1 to 6)
-@property(nonatomic, assign) EASportType eSportType;
+@property(nonatomic, assign) EAWatchSportType eSportType;
 
 /// 手表上报数据间隔时长(默认5秒)：（单位：秒)
 /// Interval for reporting data (Default: 5 seconds) : (Unit: second
@@ -38,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - status: Motion Status
 ///   - eSportType: Motion Type
 ///   - interval: Interval for reporting data
-+ (instancetype )eaInitWithStatus:(EAAppLaunchSportStatus)status sportType:(EASportType)eSportType interval:(NSInteger)interval;
++ (instancetype )eaInitWithStatus:(EAAppLaunchSportStatus)status sportType:(EAWatchSportType)eSportType interval:(NSInteger)interval;
 
 
 /// Detects whether motion can be turned on

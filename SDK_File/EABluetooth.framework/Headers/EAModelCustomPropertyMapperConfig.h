@@ -47,6 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSDictionary *)distanceUintMapper;
 
+- (NSDictionary *)sportModelMapper;
 @end
 
 NS_ASSUME_NONNULL_END
