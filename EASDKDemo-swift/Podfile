@@ -7,6 +7,8 @@ target 'EASDKDemo' do
 
 # pod 'QMUIKit'
   pod 'SnapKit'
+  pod 'RealmSwift'
+
 	pod 'EABluetooth', :git =>  'https://github.com/EastApex/EASDKTool_iOS.git'
 
 	#pod 'EABluetooth', :path => '../'
