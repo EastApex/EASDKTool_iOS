@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EABluetooth'
-  s.version          = '1.0.71.3'
+  s.version          = '1.0.71.4'
   s.summary          = 'A short description of EABluetooth.'
 
 # This description is used to generate tags and improve search results.
@@ -39,10 +39,10 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
 
-  # s.dependency 'Protobuf'
-  # s.dependency 'YYKit'
-   # s.dependency 'Realm'  # realm 数据库
-  # s.dependency 'SAMKeychain'
+  s.dependency 'Protobuf'
+  s.dependency 'YYKit'
+  s.dependency 'BGFMDB'  # realm 数据库
+  s.dependency 'SAMKeychain'
 
   
 # s.resources = "Resources/*"  #工程需要引入的资源文件（图片，xib等）
