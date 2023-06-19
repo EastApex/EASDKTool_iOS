@@ -8,10 +8,10 @@ target 'EASDKDemo' do
 # pod 'QMUIKit'
   pod 'SnapKit'
   
-  pod 'RealmSwift'
-  pod 'Protobuf'
-  pod 'YYKit'
-  pod 'SAMKeychain'
+  # pod 'RealmSwift'
+  # pod 'Protobuf'
+  # pod 'YYKit'
+  # pod 'SAMKeychain'
 	pod 'EABluetooth', :git =>  'https://github.com/EastApex/EASDKTool_iOS.git'
 
 	#pod 'EABluetooth', :path => '../'
