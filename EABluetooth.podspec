@@ -41,7 +41,7 @@ TODO: Add long description of the pod here.
 
   s.dependency 'Protobuf'
   s.dependency 'YYKit'
-  s.dependency 'BGFMDB'  # realm 数据库
+  s.dependency 'BGFMDB' 
   s.dependency 'SAMKeychain'
 
   
