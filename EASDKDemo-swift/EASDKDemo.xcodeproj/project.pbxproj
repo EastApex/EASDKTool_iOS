@@ -61,6 +61,7 @@
 		1386FC8F299B8B720000BE56 /* Cmd_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cmd_Model.swift; sourceTree = "<group>"; };
 		1386FC91299CB6A00000BE56 /* RemiderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemiderViewController.swift; sourceTree = "<group>"; };
 		138DDF3E28C1CA2B000D48F1 /* 001012_U6.1.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 001012_U6.1.bin; sourceTree = "<group>"; };
+		13EE2F742A4057BC0012B93C /* EASDKDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EASDKDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		7E7B7B216959EA38E55ABEBA /* Pods_EASDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EASDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E2E0464A7DB631C96C412E /* Pods-EASDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EASDKDemo.debug.xcconfig"; path = "Target Support Files/Pods-EASDKDemo/Pods-EASDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		BD846100A9CFFC529E35E5CF /* Pods-EASDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EASDKDemo.release.xcconfig"; path = "Target Support Files/Pods-EASDKDemo/Pods-EASDKDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 				1386FC83299B7E790000BE56 /* Command.swift */,
 				1386FC8F299B8B720000BE56 /* Cmd_Model.swift */,
 				138DDF3E28C1CA2B000D48F1 /* 001012_U6.1.bin */,
+				13EE2F742A4057BC0012B93C /* EASDKDemo-Bridging-Header.h */,
 				137C4C21289B917500DD28DC /* Main.storyboard */,
 				137C4C24289B917700DD28DC /* Assets.xcassets */,
 				137C4C26289B917700DD28DC /* LaunchScreen.storyboard */,
