@@ -273,6 +273,14 @@ class Cmd_DeviceOps {
         Command.setData(model: model);
     }
     
+    class func stopSearchPhone() {
+        
+        let model = EADeviceOps.init()
+        model.deviceOpsType = .stopSearchPhone
+        model.deviceOpsStatus = .execute
+        Command.setData(model: model);
+    }
+    
     class func getData(){
         
         Command.notSupportGetData()

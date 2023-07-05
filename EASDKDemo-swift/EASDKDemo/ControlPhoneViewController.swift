@@ -12,12 +12,18 @@ class ControlPhoneViewController: UIViewController , UITableViewDelegate, UITabl
     var tableView : UITableView!
     static let cellId = "cellIdl"
     var dataSource : NSMutableArray!
-    
+    var alertView : UIAlertController!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         view.backgroundColor = UIColor.white
+        
+        alertView = UIAlertController.init(title: "Alert", message: "", preferredStyle: .alert)
+        alertView.addAction(UIAlertAction.init(title: "OK", style: .default,handler: { action in
+                
+            Cmd_DeviceOps.stopSearchPhone()
+        }))
         
         tableView = UITableView.init(frame: view.bounds, style: .grouped)
         tableView.contentInsetAdjustmentBehavior = .never
@@ -63,10 +69,15 @@ class ControlPhoneViewController: UIViewController , UITableViewDelegate, UITabl
         case .searchPhone:
             
             print("Find phone: start");
+            self.present(alertView, animated: true)
+            
             break
         case .stopSearchPhone:
             print("Find phone: stop");
+            alertView.dismiss(animated: true)
             break
+            
+            
             /// take photo
             /// note:
             /// 1.App needs to take a photo function,and enable the camera and album permissions.

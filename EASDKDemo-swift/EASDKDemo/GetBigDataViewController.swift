@@ -94,7 +94,6 @@ class GetBigDataViewController: UIViewController  , UITableViewDelegate, UITable
             let habitTrackerData = EABleSendManager.default().getBigData(withBigDataType: .habitTrackerData);
             // sleep data
             let sleepData = EABleSendManager.default().getBigData(withBigDataType: .sleepData);
-            
             break
         default:
             
@@ -135,6 +134,25 @@ class GetBigDataViewController: UIViewController  , UITableViewDelegate, UITable
         case 2: Command.getBigData(.stepData);break
         default:break;
         }
+    }
+    
+    
+    
+    func eg_sleepData(_ sleepData : NSArray){
+        
+        // 如何处理睡眠数据
+        // 1.调用这个方法获取sleepData “ let sleepData = EABleSendManager.default().getBigData(withBigDataType: .sleepData); ”
+        // 2.遍历sleepData，根据时间戳从小到大排序。获得新的 new_sleepData 数组数据。
+        // 3.遍历new_sleepData，找出所有 EASleepDataModel.eSleepNode == EASleepNode.enter && EASleepDataModel.eSleepNode == EASleepNode.quit 为一次睡眠数据，此时得到 allOnceSleepData。
+        // 4.遍历allOnceSleepData,统计每次睡眠的总时长，浅睡、深睡、Res等时长。
+        
+    
+        // How to process the sleep data
+        // 1. call this method to get sleepData " let sleepData = EABleSendManager.default().getBigData(withBigDataType: .sleepData); "
+        // 2. Iterate through sleepData, sorting from smallest to largest based on timestamp. Get the new new_sleepData array data.
+        // 3. Iterate through new_sleepData to find all EASleepDataModel.eSleepNode == EASleepNode.enter && EASleepDataModel.eSleepNode == EASleepNode.quit as once sleep data, then get allOnceSleepData.
+        // 4. Iterate through allOnceSleepData, counting the total duration of each sleep, light sleep, deep sleep, Res, etc.
+        
     }
 
 }

@@ -5,7 +5,11 @@ PODS:
   - BGFMDB/BG (2.0.13):
     - BGFMDB/FMDB
   - BGFMDB/FMDB (2.0.13)
-  - EABluetooth (1.0.71.3)
+  - EABluetooth (1.0.71.4):
+    - BGFMDB
+    - Protobuf
+    - SAMKeychain
+    - YYKit
   - Protobuf (3.21.11)
   - SAMKeychain (1.5.3)
   - SnapKit (5.6.0)
@@ -35,17 +39,17 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   EABluetooth:
-    :commit: f69563206076f4d5a93cfeb367a8ff1088e5a129
+    :commit: df6d39beea576bc2119a02913d48711f97423885
     :git: https://github.com/EastApex/EASDKTool_iOS.git
 
 SPEC CHECKSUMS:
   BGFMDB: 48e6823027232402a678acc7f71484b1fc9171d0
-  EABluetooth: 967c454f6e30a0f2f309c137b83bc658da8a7f3a
+  EABluetooth: 577dc2e6a6715bc1f9fce215b8815ea7378e9085
   Protobuf: 3acb308a1e208605afd50866b98ec220141bcb8c
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: e34b60f0c60a043971e6c2d13dbac2367bd2fc16
+PODFILE CHECKSUM: eb017b4081f6fc0884e01a65800cdf4d115341bd
 
 COCOAPODS: 1.11.3
