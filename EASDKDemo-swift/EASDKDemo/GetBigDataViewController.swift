@@ -154,5 +154,186 @@ class GetBigDataViewController: UIViewController  , UITableViewDelegate, UITable
         // 4. Iterate through allOnceSleepData, counting the total duration of each sleep, light sleep, deep sleep, Res, etc.
         
     }
+    
+    
+    func eg_sportData() {
+        
+        
+                // How to adapt heart rate, GPS, pace, and speed data to a sports log.
+                // 1. First call the method Command.getAllBigData() and wait for the notification kNTF_EAGetDeviceOpsPhoneMessage.
+                // 2. Process and save heart rate data, GPS data, pace data, speed data.
+                // 3. process the motion data, match the heart rate data, GPS data, step frequency data, pace data within the motion time range [from the saved heart rate data, GPS data, step frequency data, pace data, according to the motion start time and end time].
+                // 4. Save the exercise data after matching.
+                
+                /* eg.
+                 
+                 hr data :
+                  {
+                  hrValue = 107;
+                  timeStamp = 1689066010;
+                  },
+                  {
+                  hrValue = 99;
+                  timeStamp = 1689066011;
+                  },
+                  {
+                  hrValue = 100;
+                  timeStamp = 1689066012;
+                  },
+                  {
+                  hrValue = 108;
+                  timeStamp = 1689066013;
+                  },
+                  {
+                  hrValue = 120;
+                  timeStamp = 1689066014;
+                  },
+                  {
+                  hrValue = 111;
+                  timeStamp = 1689066015;
+                  },
+                  
+                  sport data :
+                  {
+                      averageAltitude = 0;
+                      averageHeartRate = 127;
+                      averageHeartRateMax = 150;
+                      averageHeartRateMin = 107;
+                      averagePace = 954;
+                      averageSpeed = 377;
+                      averageStepFreq = 75;
+                      averageStride = 83;
+                      averageTemperature = 0;
+                      beginTimeStamp = 1689066011;
+                      calorie = 11753;
+                      count = 0;
+                      distance = 9965;
+                      duration = 5;
+                      eType = 2;
+                      endTimeStamp = 1689066014;
+                      steps = 120;
+                      timeStamp = 0;
+                      trainingEffectAerobic = 37;
+                      trainingEffectAnaerobic = 16;
+                      trainingEffectFatconsumption = 11;
+                      trainingEffectLimit = 0;
+                      trainingEffectNormal = 0;
+                      trainingEffectWarmUp = 3;
+                  }
+                  
+                 
+                 We know that the start time of the exercise is [beginTimeStamp = 1689066011] and the end time is [endTimeStamp = 1689066014].
+                 Then we can get the heart rate data from 1689066011~1689066014 from the heart rate data
+                 We get.
+                 {
+                 hrValue = 99;
+                 timeStamp = 1689066011;
+                 },
+                 {
+                 hrValue = 100;
+                 timeStamp = 1689066012;
+                 },
+                 {
+                 hrValue = 108;
+                 timeStamp = 1689066013;
+                 },
+                 {
+                 hrValue = 120;
+                 timeStamp = 1689066014;
+                 },
+                 
+                 Then this heart rate data is the heart rate data for the exercise.
+                 */
+        
+        
+        // 如何给运动记录 适配其心率数据、GPS数据、步频数据、配速数据
+        // 1.首先调用方法 Command.getAllBigData()，等待 通知 kNTF_EAGetDeviceOpsPhoneMessage
+        // 2.处理并保存 心率数据、GPS数据、步频数据、配速数据
+        // 3.处理 运动数据，匹配运动时间范围内的 心率数据、GPS数据、步频数据、配速数据【从保存的心率数据、GPS数据、步频数据、配速数据获取，根据运动开始时间和结束时间】
+        // 4.匹配完成后 保存运动数据。
+        
+        /* eg:
+         
+        hr data :
+         {
+         hrValue = 107;
+         timeStamp = 1689066010;
+         },
+         {
+         hrValue = 99;
+         timeStamp = 1689066011;
+         },
+         {
+         hrValue = 100;
+         timeStamp = 1689066012;
+         },
+         {
+         hrValue = 108;
+         timeStamp = 1689066013;
+         },
+         {
+         hrValue = 120;
+         timeStamp = 1689066014;
+         },
+         {
+         hrValue = 111;
+         timeStamp = 1689066015;
+         },
+         
+         sport data :
+         {
+             averageAltitude = 0;
+             averageHeartRate = 127;
+             averageHeartRateMax = 150;
+             averageHeartRateMin = 107;
+             averagePace = 954;
+             averageSpeed = 377;
+             averageStepFreq = 75;
+             averageStride = 83;
+             averageTemperature = 0;
+             beginTimeStamp = 1689066011;
+             calorie = 11753;
+             count = 0;
+             distance = 9965;
+             duration = 95;
+             eType = 2;
+             endTimeStamp = 1689066014;
+             steps = 120;
+             timeStamp = 0;
+             trainingEffectAerobic = 37;
+             trainingEffectAnaerobic = 16;
+             trainingEffectFatconsumption = 11;
+             trainingEffectLimit = 0;
+             trainingEffectNormal = 0;
+             trainingEffectWarmUp = 3;
+         }
+         
+         我们知道 运动的开始时间为 【beginTimeStamp = 1689066011】 ，结束时间为 【endTimeStamp = 1689066014】
+         那么 我们就可以从心率数据里 获取 1689066011~1689066014的心率数据
+         得到
+         {
+         hrValue = 99;
+         timeStamp = 1689066011;
+         },
+         {
+         hrValue = 100;
+         timeStamp = 1689066012;
+         },
+         {
+         hrValue = 108;
+         timeStamp = 1689066013;
+         },
+         {
+         hrValue = 120;
+         timeStamp = 1689066014;
+         },
+         
+         那么这段心率数据就是运动的心率数据了。
+         */
+        
+        
+        
+        
+    }
 
 }

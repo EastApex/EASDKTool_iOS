@@ -79,6 +79,11 @@
 #import <EABluetooth/EAVibrateIntensity.h>
 #import <EABluetooth/EAAppLaunchScreenSport.h>
 #import <EABluetooth/EAMenstrualReminder.h>
+#import <EABluetooth/EAWatchFaceDelete.h>
+#import <EABluetooth/EASos.h>
+#import <EABluetooth/EASportHrWarning.h>
+#import <EABluetooth/EASleepScoreData.h>
+#import <EABluetooth/EASportHrData.h>
 
 // ops
 #import <EABluetooth/EABingingOps.h>

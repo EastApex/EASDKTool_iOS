@@ -11,10 +11,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-/**
+///
  #pragma  【id的值 == EADataInfoType的值】
  #pragma  【Value of id == Value of EADataInfoType】
- */
+ 
 
 
 
@@ -188,8 +188,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) BOOL supportAppMapSport;
 
 ///（id = 48）
-/// 支持app启动检测（心率、血氧、压力、呼吸等功能）
-/// Support app startup detection (heart rate, blood oxygen, pressure, breathing and other functions)
+/// 支持app启动检测（心率、血氧、压力等功能）
+/// Support app startup detection (heart rate, blood oxygen, pressure and other functions)
 @property(nonatomic, assign) BOOL supportAppDetection;
 
 /// （id = 49）
@@ -233,6 +233,50 @@ NS_ASSUME_NONNULL_BEGIN
 /// 经期提醒
 @property(nonatomic, assign) BOOL menstrualReminder;
 
+
+/// （id = 48）
+/// Support app startup detection (heart rate
+/// 支持app启动检测（心率）
+@property(nonatomic, assign) BOOL supportAppDetectionHr;
+
+/// （id = 48）
+/// Support app startup detection (blood oxygen)
+/// 支持app启动检测（血氧）
+@property(nonatomic, assign) BOOL supportAppDetectionSqO2;
+
+/// （id = 48）
+/// Support app startup detection (Stress)
+/// 支持app启动检测（压力）
+@property(nonatomic, assign) BOOL supportAppDetectionStress;
+
+/// (id=56)
+/// Remove custom (online) watch faces
+/// 删除自定义（在线）表盘协议
+@property(nonatomic, assign) BOOL wfDelete;
+
+/// (id=57)
+/// Exercise heart rate alarm
+/// 运动心率报警
+@property(nonatomic, assign) BOOL hrSportWarning;
+
+/// (id=58)
+/// Emergency contact(Sos)
+/// 紧急联系人
+@property(nonatomic, assign) BOOL contactSos;
+
+/// Support heart rate data separation (min: normal heart rate \\ exercise heart rate)
+/// 支持心率数据分离(分:普通心率\\运动心率)
+@property(nonatomic, assign) BOOL hrDataSeparation;
+
+/// id=3009
+/// The pace data supports whether the mile pace option is available
+/// 配速数据支持是否为英里配速选项
+@property(nonatomic, assign) BOOL supportMilePaceData;
+
+/// (id=22)
+/// Schedule reminders: Whether user-defined reminders are supported
+/// 日程提醒: 是否支持 用户自定义提醒
+@property(nonatomic, assign) BOOL scheduleSettingUser;
 
 @end
 

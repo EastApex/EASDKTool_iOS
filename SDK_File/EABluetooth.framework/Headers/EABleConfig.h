@@ -38,6 +38,7 @@ NSString *logString = [NSString stringWithFormat:@""format,##__VA_ARGS__];\
 @property (nonatomic, assign) NSInteger scanchannel __attribute__((deprecated));
 
 /// 测试专用（请在调试阶段设置使用=》0:删除大数据，1:不删除大数据）
+/// Test special (please set use in the debugging stage => 0: delete big data, 1: do not delete big data)
 @property (nonatomic, assign) NSInteger isTest;
 
 /// Whether to save logs. This parameter is disabled by default.This function takes effect only when debug is set to YES

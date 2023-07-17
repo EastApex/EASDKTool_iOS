@@ -25,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSDictionary *)getSnNumbers;
 
+- (NSArray *)getPairedWatches;
 
 - (void)clear;
 

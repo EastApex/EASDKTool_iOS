@@ -13,18 +13,9 @@
  SDK access documentation
  https://www.showdoc.com.cn/2042713679210858/0
  
- Date：2023-04-15
- Version：1.0.71.1
- 1. Modify the SDK log style
- 2. Rectify the fault that commands cannot be sent because the 5526 service is changed.
- 3. Fixed an issue where paired watches could not be found.
- 4. Fix the 5526 watch face
- 
- 1. 修改SDK log样式
- 2. 修复5526服务发生改变导致不能发送命令的问题。
- 3. 修复已配对手表找不到的问题。
- 4. 修复5526表盘问题
- 5. fixed bug
+ Date：2023-07-17
+ Version：1.0.75.1
+
   */
 
 #import <Foundation/Foundation.h>
@@ -150,6 +141,9 @@ typedef NS_ENUM(NSUInteger, EAConnectStatus) {
 @end
 
 
+
+
+
 /// Bluetooth data
 /// 蓝牙数据
 typedef void(^UpdateValueBlock)(CBCharacteristic *characteristic,NSError *error);
@@ -173,8 +167,12 @@ typedef void(^UpdateValueBlock)(CBCharacteristic *characteristic,NSError *error)
 @property(nonatomic,assign) EAConnectStateType connectState;
 
 /// 当前连接的设备
+/// Currently connected device
 @property (nonatomic, strong) EAPeripheralModel *eaPeripheralModel;
 
+/// 蓝牙状态
+/// Bluetooth status
+@property(nonatomic,assign) EABleState bleState;
 
 /// The singleton
 /// 单例
@@ -199,8 +197,8 @@ typedef void(^UpdateValueBlock)(CBCharacteristic *characteristic,NSError *error)
 /// 重连设备
 - (void)reConnectToPeripheral;
 
-/// reconnection（Need the SN number of the watch）
-/// 重连设备（传手表的SN号）
+/// reconnection（Need the SN number or mac address of the watch）
+/// 重连设备（传手表的SN号或者mac address）
 - (void)reConnectToPeripheral:(NSString *)sn;
 
 /// reconnection（Need the uuidString of the watch）

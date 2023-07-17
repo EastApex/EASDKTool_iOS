@@ -80,7 +80,7 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     /// EANotDisturbModel
     EADataInfoTypeNotDisturb = 13,
     
-    /// ignore：
+    /// ignore
     /// id = 14: Home time zone setting
     /// id = 14: 家乡时区设置
     /// EAHomeTimeZoneItem
@@ -125,13 +125,13 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     /// 'EAReminderRespondModel' is deprecated, please adopt EARespondModel
     EADataInfoTypeReminderRespond = 23,
     
-    /// ignore：
+    /// ignore
     /// id = 24: Distance uint
     /// id = 24: 距离单位
     /// EADistanceUintModel
     EADataInfoTypeDistanceUnit = 24,
     
-    /// ignore：
+    /// ignore
     /// id = 25: Weight unit
     /// id = 25: 重量单位
     /// EAWeightUnitModel
@@ -182,11 +182,11 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     /// EAShowAppMessageModel
     EADataInfoTypeAppMessage = 34,
     
-    /// ignore：
+    /// ignore
     /// id = 36: 血压校准值 （老人表）*/
     EADataInfoTypeBloodPressure = 36,
     
-    /// ignore：
+    /// ignore
     /// id = 37: 自动监测 心率 血氧 血压 （老人表）
     EADataInfoTypeAutoMonitor = 37,
     
@@ -221,7 +221,7 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     EADataInfoTypeReadTelephoneBook = 43,
     
     
-    /// id = 44: 手表支持的功能（备注：EAWatchModel.projSettings = 1 才支持此协议）
+    /// id = 44: 手表支持的功能（备注EAWatchModel.projSettings = 1 才支持此协议）
     /// id = 44: The watch supports Settings(note: EAWatchModel.projSettings = 1 to support this agreement)
     /// EAWatchSupportModel
     EADataInfoTypeWatchSupport = 44,
@@ -236,7 +236,7 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     /// EAAppLaunchMapSport
     EADataInfoTypeAppLaunchMapSport = 46,
     
-    /// id = 47: App发送地图运动数据（定时发送：单位秒）
+    /// id = 47: App发送地图运动数据（定时发送单位秒）
     /// id = 47: App sends map motion data (timed transmission: unit of second)
     /// EAAppSendMapSportDetails
     EADataInfoTypeAppSendMapSportDetails = 47,
@@ -251,35 +251,51 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     /// EAOnlyGetBigData
     EADataInfoTypeOnlyGetBigData = 49,
     
-    /// id = 50 ：自动睡眠血氧监测（夜间血氧监测）
+    /// id = 50 自动睡眠血氧监测（夜间血氧监测）
     /// id = 50: Automatic sleep oxygen monitoring (night oxygen monitoring)
     /// EASleepBloodOxygenMonitor
     EADataInfoTypeSleepBloodOxygenMonitor = 50,
     
-    /// id = 51 ：自动压力监测
+    /// id = 51 自动压力监测
     /// id = 51: Automatic pressure monitoring
     /// EAStressMonitor
     EADataInfoTypeStressMonitor = 51,
     
-    /// id = 52 ：实时数据开关
+    /// id = 52 实时数据开关
     /// id = 52: real-time data switch
     /// EASendRealTimeDataOnOff
     EADataInfoTypeSendRealTimeDataOnOff = 52,
     
-    /// id = 53 ：震动模式
+    /// id = 53 震动模式
     /// id = 53: vibrate mode
     /// EAVibrateIntensity
     EADataInfoTypeVibrateIntensity = 53,
     
-    /// id = 54 ：APP启动手表运动（投屏运动）
-    /// id = 54: APP starts watch motion (screen motion)
+    /// id = 54 APP启动手表运动（投屏运动）
+    /// id = 54 APP starts watch motion (screen motion)
     /// EAAppLaunchScreenSport
     EADataInfoTypeAppLaunchScreenSport = 54,
     
-    /// id = 55 ：经期提醒
-    /// id = 55: Menstrual reminder
+    /// id = 55 经期提醒
+    /// id = 55 Menstrual reminder
     /// EAMenstrualReminder
     EADataInfoTypeMenstrualReminder = 55,
+    
+    /// id = 56 删除表盘
+    /// id = 56 Remove custom (online) watch faces
+    /// EAWatchFaceDelete
+    EADataInfoTypeWatchFaceDelete = 56,
+    
+    /// id = 57 运动心率报警
+    /// id = 57 Exercise heart rate warning
+    /// EASportHrWarning
+    EADataInfoTypeSportHrWarning = 57,
+    
+    /// id = 58
+    /// 紧急联系人
+    /// Sos
+    /// EASos
+    EADataInfoTypeSos = 58,
     
     /// Operating Phone Commands
     /// 操作手机命令
@@ -354,7 +370,18 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     /// EAHabitTrackerDataModel
     EADataInfoTypeHabitTrackerData = 3011,
     
+    /// 睡眠得分数据
+    /// Sleep score data
+    /// EASleepScoreData
+    EADataInfoTypeSleepScoreData = 3012,
+    
+    
+    /// 多运动心率数据
+    /// Sport heart rate data
+    /// EASportHrData
+    EADataInfoTypeSportHrData = 3013,
 
+    
     /// OTA命令
     EADataInfoTypeOTARequest = 9001,
     
@@ -413,11 +440,11 @@ typedef NS_ENUM(NSUInteger, EARespondCodeType) {
     /// 失败
     EARespondCodeTypeFail = 1,
     
-    /// App发起运动回应状态（id=46）:手表正在运动，请结束后再开
+    /// App发起运动回应状态（id=46）:手表正在运动，请结束后再开始
     /// App launch motion response status (id=46) : Watch is moving, please open it after the end
     EARespondCodeTypeWatchInMotion = 2,
 
-    /// App发起运动回应状态（id=47）:APP运动已经结束。
+    /// App发起运动回应状态（id=47）:APP运动已经结束
     /// App launch campaign response status (id=47) :APP campaign has ended.
     EARespondCodeTypeWatchEndMotion = 3,
     
@@ -562,6 +589,10 @@ typedef NS_ENUM(NSUInteger,EABindingOpsType) {
     /// End of the binding
     /// 绑定结束
     EABindingOpsTypeEnd = 2,
+    
+    /// Time out of the binding
+    /// 绑定超时
+    EABindingOpsTypeTimeOut = 3,
 };
 
 
@@ -741,10 +772,10 @@ typedef NS_ENUM(NSUInteger,EADeviceOpsType) {
     /// 停止寻找手机(上位机需求)
     EADeviceOpsTypeStopSearchPhone = 7,
     
-    /// 工厂模式专用：进入工厂测试模式
+    /// 工厂模式专用进入工厂测试模式
     EADeviceOpsTypeEnterFactoryTestMode = 8,
 
-    /// 工厂模式专用：退出工厂测试模式
+    /// 工厂模式专用退出工厂测试模式
     EADeviceOpsTypeExitFactoryTestMode = 9,
     
     /// Looking for a watch
@@ -1043,34 +1074,34 @@ typedef NS_ENUM(NSUInteger,EAReminderEventType) {
 typedef NS_ENUM(NSUInteger,EAReminderEventOps) {
     
     /// add
-    /// 操作：新增
+    /// 操作新增
     EAReminderEventOpsAdd = 0,
     
     ///edit
-    /// 操作：编辑
+    /// 操作编辑
     EAReminderEventOpsEdit = 1,
     
     /// delete this
-    /// 操作：删除此条
+    /// 操作删除此条
     EAReminderEventOpsDel = 2,
     
     /// delete all remind 【Except for the alarm clock】
-    /// 操作：删除全部提醒
+    /// 操作删除全部提醒
     EAReminderEventOpsDelRemind = 3,
     
     /// delete all alarm
-    /// 操作：删除全部闹钟
+    /// 操作删除全部闹钟
     EAReminderEventOpsDelAlarm = 4,
     
     /// delete all alarm clock & remind
-    ///  操作：删除全部闹钟及提醒
+    ///  操作删除全部闹钟及提醒
     EAReminderEventOpsDelRemindAlarm = 5,
     
-    /// 操作：根据类型替换所有(需要id=44：reminder_all_in_and_replace_type_setting为1才支持)
+    /// 操作根据类型替换所有(需要id=44reminder_all_in_and_replace_type_setting为1才支持)
     /// replace all with type(This parameter is supported only when id=44: reminder_all_in_and_replace_type_setting is 1)
     EAReminderEventOpsReplaceType = 6,
 
-    /// 操作：替换所有(需要id=44：reminder_all_in_and_replace_type_setting为1才支持)
+    /// 操作替换所有(需要id=44reminder_all_in_and_replace_type_setting为1才支持)
     /// replace all(This parameter is supported only when id=44: reminder_all_in_and_replace_type_setting is 1)
     EAReminderEventOpsAllIn = 7,
 };
@@ -1177,13 +1208,13 @@ typedef NS_ENUM(NSUInteger,EAPhoneOps) {
     /// 停止寻找手表(固件需求)
     EAPhoneOpsStopSearchWatch = 11,
     
-    /// 手表发起：暂停app运动
+    /// 手表发起暂停app运动
     EAPhoneOpsAppSportPause = 13,
 
-    /// 手表发起：继续app运动
+    /// 手表发起继续app运动
     EAPhoneOpsAppSportContinue = 14,
 
-    /// 手表发起：结束app运动
+    /// 手表发起结束app运动
     EAPhoneOpsAppSportEnd = 15,
     
     ///  接听来电(android) */
@@ -2522,6 +2553,22 @@ typedef NS_ENUM(NSUInteger,EAWatchSportType) {
     /// Show Jumper
     EAWatchSportShowJumper = 152,
     
+    /// 攀爬 :
+    /// climbing
+    EAWatchSportClimbing = 153,
+
+    /// 冲浪 :
+    /// Surfing
+    EAWatchSportWaterSurfing = 154,
+
+    /// 广场舞 :
+    /// Square Dancing
+    EAWatchSportSquareDancing = 155,
+
+    /// 高山滑雪 :
+    /// Alpine Skiing
+    EAWatchSportDownhillskiing = 156,
+    
     
     
     /// Intelligent movement: Daily
@@ -2838,19 +2885,19 @@ typedef NS_ENUM(NSUInteger, EAMenstruationType) {
     
     /// Second safe period,
     /// 第2次安全期
-    EAMenstruationTypeSecondSafePeriod,
+    EAMenstruationTypeSecondSafePeriod = 1,
     
     /// SecondSafePeriod,
     /// 经期
-    EAMenstruationTypePeriod,
+    EAMenstruationTypePeriod = 2,
     
     /// Easy pregnancy
     /// 易孕期
-    EAMenstruationTypeEasyPregnancy,
+    EAMenstruationTypeEasyPregnancy = 3,
     
     /// Ovulation day
     /// 排卵日
-    EAMenstruationTypeOvulationDay,
+    EAMenstruationTypeOvulationDay = 4,
     
     /// Un setting
     /// 未设置时间
@@ -2881,23 +2928,23 @@ typedef NS_ENUM(NSUInteger, EAGesturesBrightType) {
 typedef NS_ENUM(NSUInteger,EAHabitTrackerOps) {
     
     /// add
-    /// 操作：新增
+    /// 操作新增
     EAHabitTrackerOpsAdd = 0,
     
-    ///edit
-    /// 操作：编辑
+    /// edit
+    /// 操作编辑
     EAHabitTrackerOpsEdit = 1,
     
     /// delete this
-    /// 操作：删除此条
+    /// 操作删除此条
     EAHabitTrackerOpsDel = 2,
     
     /// delete all
-    /// 操作：删除全部
+    /// 操作删除全部
     EAHabitTrackerOpsDelAll = 3,
     
     /// delete more
-    /// 操作：删除多天
+    /// 操作删除多天
     EAHabitTrackerOpsDelMore = 4,
 };
 
@@ -3082,6 +3129,16 @@ typedef NS_ENUM(NSUInteger, EABigDataType) {
     EABigDataTypeHabitTracker = 11, // 习惯
 };
 
-
+/// 蓝牙状态
+/// MARK: - Bluetooth status
+typedef NS_ENUM(NSUInteger,EABleState) {
+    
+    EABleStateUnknown = 0,
+    EABleStateResetting,
+    EABleStateUnsupported,
+    EABleStateUnauthorized,
+    EABleStatePoweredOff,
+    EABleStatePoweredOn,
+};
 
 #endif /* EAEnumh */

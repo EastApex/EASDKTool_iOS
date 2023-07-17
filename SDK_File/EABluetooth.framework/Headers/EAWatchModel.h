@@ -91,20 +91,20 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSInteger lcdPixelType;
 
 
+/// 支持闹钟数量：0:默认支持10个  n:支持n个
+/// Number of alarms supported: 0: 10 alarms are supported by default. n: n alarms are supported
+@property(nonatomic, assign) NSInteger numOfAlarmSupported;
+
+/// 支持日程数量：0:默认支持10个  n:支持n个
+/// Number of supported schedules: 0: 10 by default n: n supported
+@property(nonatomic, assign) NSInteger numOfScheduleSupported;
+
 /// apollo
 @property(nonatomic,readonly) NSString *apbVerion;
 
 /// res
 @property(nonatomic,readonly) NSString *resVerion;
 
-/// hr
-@property(nonatomic,readonly) NSString *hrVerion;
-
-/// tp
-@property(nonatomic,readonly) NSString *tpVerion;
-
-/// gps
-@property(nonatomic,readonly) NSString *gpsVerion;
 
 @end
 
