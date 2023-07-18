@@ -46,7 +46,7 @@ typedef void(^ResultBlock)(EARespondCodeType eaRespondCodeType);
 
 /// Obtaining and processing sleep data(Sleep combined interval: 60 minutes)
 /// 获取并处理睡眠数据(睡眠合并间隔：60分钟)
-- (NSArray *)eaGetObtainingSleepData:(NSInteger)mergeTime;
+- (NSArray *)eaGetProcessingSleepData:(NSInteger)mergeTime;
 
 
 
