@@ -40,27 +40,27 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 已存在线自定义表盘id4
 /// Id of a custom watch face
-@property(nonatomic, readwrite, copy, null_resettable) NSString *userWfId4;
+@property(nonatomic, copy) NSString *userWfId4;
 
 /// 已存在线自定义表盘id5
 /// Id of a custom watch face
-@property(nonatomic, readwrite, copy, null_resettable) NSString *userWfId5;
+@property(nonatomic, copy) NSString *userWfId5;
 
 /// 已存在线自定义表盘id6
 /// Id of a custom watch face
-@property(nonatomic, readwrite, copy, null_resettable) NSString *userWfId6;
+@property(nonatomic, copy) NSString *userWfId6;
 
 /// 已存在线自定义表盘id7
 /// Id of a custom watch face
-@property(nonatomic, readwrite, copy, null_resettable) NSString *userWfId7;
+@property(nonatomic, copy) NSString *userWfId7;
 
 /// 已存在线自定义表盘id8
 /// Id of a custom watch face
-@property(nonatomic, readwrite, copy, null_resettable) NSString *userWfId8;
+@property(nonatomic, copy) NSString *userWfId8;
 
 /// 已存在线自定义表盘id9
 /// Id of a custom watch face
-@property(nonatomic, readwrite, copy, null_resettable) NSString *userWfId9;
+@property(nonatomic, copy) NSString *userWfId9;
 
 
 /// Set the built-in dial

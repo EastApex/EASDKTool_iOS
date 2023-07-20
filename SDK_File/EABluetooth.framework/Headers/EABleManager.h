@@ -13,8 +13,8 @@
  SDK access documentation
  https://www.showdoc.com.cn/2042713679210858/0
  
- Date：2023-07-17
- Version：1.0.75.1
+ Date：2023-07-20
+ Version：1.0.75.2
 
   */
 
