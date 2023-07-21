@@ -102,7 +102,6 @@ typedef void(^RespondBlock)(EARespondModel *respondModel);
 - (EAWatchModel *)getConnectWatchModel;
 - (void)openCommunicationTimer;
 - (void)closeCommunicationTimer;
-- (NSArray *)analyzeBigDataString:(NSString *)pbDataString andIdNmuber:(NSInteger )idNumber;
 @end
 
 NS_ASSUME_NONNULL_END

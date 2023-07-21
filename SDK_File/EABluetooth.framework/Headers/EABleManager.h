@@ -13,8 +13,8 @@
  SDK access documentation
  https://www.showdoc.com.cn/2042713679210858/0
  
- Date：2023-07-20
- Version：1.0.75.2
+ Date：2023-07-21
+ Version：1.0.76.1
 
   */
 
@@ -76,6 +76,10 @@ typedef NS_ENUM(NSUInteger, EAConnectStatus) {
 /// Notification Name:Connection attempt succeeded (service not obtained)
 /// 尝试连接成功（未获取服务）
 #define kNTF_EAConnectStatusSucceedUnGetServer  @"EAConnectStatusSucceedUnGetServer"
+
+/// Connecting
+/// 连接中
+#define kNTF_EAConnectStatusConnecting          @"EAConnectStatusConnecting"
 
 /// ANCS
 #define kNTF_EAEADidUpdateANCSAuthorization     @"EADidUpdateANCSAuthorization"

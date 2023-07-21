@@ -92,7 +92,7 @@
 #import <EABluetooth/EAMtuModel.h>
 #import <EABluetooth/EAAppOps.h>
 #import <EABluetooth/EAAppOpsDataModel.h>
-
+#import <EABluetooth/EAOpsBt.h>
 // ota
 #import <EABluetooth/EAOtaRequest.h>
 #import <EABluetooth/EAOtaRespond.h>

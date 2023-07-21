@@ -297,6 +297,12 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     /// EASos
     EADataInfoTypeSos = 58,
     
+    /// id = 59
+    /// Classic Bluetooth BT Control
+    /// EAOpsBt
+    EADataInfoTypeOpsBt = 59,
+    
+    
     /// Operating Phone Commands
     /// 操作手机命令
     /// EAPhoneOpsModel
@@ -448,6 +454,18 @@ typedef NS_ENUM(NSUInteger, EARespondCodeType) {
     /// App launch campaign response status (id=47) :APP campaign has ended.
     EARespondCodeTypeWatchEndMotion = 3,
     
+    
+    /// 经典蓝牙BT控制失败原因(id=59): 设备进入了勿扰模式
+    /// Classic Bluetooth BT Control Failure Reason (id=59): Device is in Do Not Disturb Mode
+    EARespondCodeTypeBtOnFailNotDisturb = 4,
+
+    /// 经典蓝牙BT控制失败原因(id=59): 设备低电量
+    /// Classic Bluetooth BT Control Failure Reason (id=59):Low Battery
+    EARespondCodeTypeBtOnFailLowPower = 5,
+
+    /// 经典蓝牙BT控制失败原因(id=59): 设备正在充电
+    /// Classic Bluetooth BT Control Failure Reason (id=59):Charging.
+    EARespondCodeTypeBtOnFailCharging = 6,
     
     /// The maximum number supported is exceeded
     /// 超过支持的最大数量
@@ -1209,33 +1227,44 @@ typedef NS_ENUM(NSUInteger,EAPhoneOps) {
     EAPhoneOpsStopSearchWatch = 11,
     
     /// 手表发起暂停app运动
+    /// Watch launches pause app campaign
     EAPhoneOpsAppSportPause = 13,
 
     /// 手表发起继续app运动
+    /// Watch launches continue app campaign
     EAPhoneOpsAppSportContinue = 14,
 
     /// 手表发起结束app运动
+    /// Watch launches end app campaign
     EAPhoneOpsAppSportEnd = 15,
     
-    ///  接听来电(android) */
+    ///  接听来电(android)
     EAPhoneOpsIncomingCallAccept = 16,
 
-    ///  拒接来电(android) */
+    ///  拒接来电(android)
     EAPhoneOpsIncomingCallReject = 17,
 
-    ///  勿扰打开 */
+    ///  Do not disturb open
     EAPhoneOpsNotDisturbOpen = 18,
 
-    ///  勿扰关闭 */
+    ///  Do not disturb close
     EAPhoneOpsNotDisturbClose = 19,
 
-    ///  抬手亮屏打开 */
+    ///  抬手亮屏打开
+    ///  Lift your hand to light up the screen and turn it on
     EAPhoneOpsGesturesOpen = 20,
 
-    ///  抬手亮屏关闭 */
+    ///  抬手亮屏关闭
+    ///  Lift your hand to light up the screen and turn it off
     EAPhoneOpsGesturesClose = 21,
     
-    
+    /// 经典蓝牙BT打开
+    /// Classic Bluetooth BT Open
+    EAPhoneOpsBtOn = 22,
+
+    ///  经典蓝牙BT关闭
+    ///  Classic Bluetooth BT Close
+    EAPhoneOpsBtOff = 23,
 };
 
 /// Operating mobile phone status
@@ -3139,6 +3168,15 @@ typedef NS_ENUM(NSUInteger,EABleState) {
     EABleStateUnauthorized,
     EABleStatePoweredOff,
     EABleStatePoweredOn,
+};
+
+
+/// BT
+/// MARK: - BT
+typedef NS_ENUM(NSUInteger,EABtType) {
+    
+    EABtTypeOff = 0,
+    EABtTypeOn,
 };
 
 #endif /* EAEnumh */

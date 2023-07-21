@@ -50,6 +50,42 @@ typedef void(^ResultBlock)(EARespondCodeType eaRespondCodeType);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/// ignore：
+/// test
+- (NSArray *)analyzeBigDataString:(NSString *)pbDataString andIdNmuber:(NSInteger )idNumber;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -278,6 +278,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// 日程提醒: 是否支持 用户自定义提醒
 @property(nonatomic, assign) BOOL scheduleSettingUser;
 
+/// (id=59)
+/// Classic Bluetooth BT Control
+/// 功能与协议: 是否支持 经典蓝牙BT控制 (id=59)
+@property(nonatomic, assign) BOOL supportBtOps;
+
 @end
 
 NS_ASSUME_NONNULL_END
