@@ -283,6 +283,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// 功能与协议: 是否支持 经典蓝牙BT控制 (id=59)
 @property(nonatomic, assign) BOOL supportBtOps;
 
+/// (id=60)
+/// User-defined reply messages
+/// 功能与协议: 是否支持 用户自定义回复消息
+@property(nonatomic, assign) BOOL supportUserMsg;
+
 @end
 
 NS_ASSUME_NONNULL_END

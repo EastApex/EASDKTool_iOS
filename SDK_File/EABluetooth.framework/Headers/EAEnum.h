@@ -302,11 +302,19 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     /// EAOpsBt
     EADataInfoTypeOpsBt = 59,
     
+    /// id = 60
+    /// User-defined reply messages
+    /// EAReplayUserMessage、EAReplayUserMessageData
+    EADataInfoTypeReplayUserMessage = 60,
+    
     
     /// Operating Phone Commands
     /// 操作手机命令
     /// EAPhoneOpsModel
     EADataInfoTypePhoneOps = 2001,
+    
+    /// Reply messages
+    EADataInfoTypeReplayMessage = 2005,
     
     /// MTU
     EADataInfoTypeMTU = 2006,

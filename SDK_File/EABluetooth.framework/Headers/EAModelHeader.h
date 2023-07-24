@@ -84,15 +84,18 @@
 #import <EABluetooth/EASportHrWarning.h>
 #import <EABluetooth/EASleepScoreData.h>
 #import <EABluetooth/EASportHrData.h>
+#import <EABluetooth/EAReplayUserMessage.h>
+#import <EABluetooth/EAReplayMessage.h>
+#import <EABluetooth/EAMtuModel.h>
 
 // ops
 #import <EABluetooth/EABingingOps.h>
 #import <EABluetooth/EADeviceOps.h>
 #import <EABluetooth/EAPhoneOpsModel.h>
-#import <EABluetooth/EAMtuModel.h>
 #import <EABluetooth/EAAppOps.h>
 #import <EABluetooth/EAAppOpsDataModel.h>
 #import <EABluetooth/EAOpsBt.h>
+
 // ota
 #import <EABluetooth/EAOtaRequest.h>
 #import <EABluetooth/EAOtaRespond.h>

@@ -13,8 +13,8 @@
  SDK access documentation
  https://www.showdoc.com.cn/2042713679210858/0
  
- Date：2023-07-21
- Version：1.0.76.1
+ Date：2023-07-24
+ Version：1.0.71.1
 
   */
 
@@ -116,6 +116,9 @@ typedef NS_ENUM(NSUInteger, EAConnectStatus) {
 #define kNTF_EAAppOpsData                   @"EAAppOpsData"
 
 
+/// 回复信息
+/// ReplayMessage
+#define kNTF_EAReplayMessage                @"EAReplayMessage"
 
 
 
