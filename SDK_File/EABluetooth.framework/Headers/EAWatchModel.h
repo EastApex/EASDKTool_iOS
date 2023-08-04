@@ -105,6 +105,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// res
 @property(nonatomic,readonly) NSString *resVerion;
 
+/// number version  -> x.x.x
+@property(nonatomic,readonly) NSString *numberVersion;
 
 @end
 

@@ -55,18 +55,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, assign) NSString *timestamps;
 @property(nonatomic, assign) NSString *sleepNodes;
-
 @property(nonatomic,strong) NSArray<EAItemSleepModel *> *itemSleepArray;
-
-
 @end
 
 
 @interface EADaySleepModel : NSObject
 
-/// <#name#>
 @property(nonatomic,strong) NSArray<EAOneSleepModel *> *oneSleepArray;
-
 @property(nonatomic, assign) NSInteger dayTimestamp;
 
 @end

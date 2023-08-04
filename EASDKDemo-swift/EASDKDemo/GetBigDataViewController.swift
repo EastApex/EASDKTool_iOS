@@ -67,33 +67,37 @@ class GetBigDataViewController: UIViewController  , UITableViewDelegate, UITable
             
             /**
              
-             When the watch sends this notification type [.big8803DataUpdateFinish], it means that the watch big data has been sent. At this time, you can call the SDK method to obtain different types of big data [EABleSendManager.default().getBigData()].
+             When the watch sends this notification type [.big8803DataUpdateFinish], it means that the watch big data has been sent. At this time, you can call the SDK method to obtain different types of big data [EABleBigDataManager.default().eaGetBigData()].
              
              */
             
             
             // daliy step data
-            let stepData = EABleSendManager.default().getBigData(withBigDataType: .stepData);
+            let stepData = EABleBigDataManager.default().eaGetBigData(withBigDataType: .stepData);
             // heart rate data
-            let heartRateData = EABleSendManager.default().getBigData(withBigDataType: .heartRateData);
+            let heartRateData = EABleBigDataManager.default().eaGetBigData(withBigDataType: .heartRateData);
             // sports data
-            let sportsData = EABleSendManager.default().getBigData(withBigDataType: .sportsData);
+            let sportsData = EABleBigDataManager.default().eaGetBigData(withBigDataType: .sportsData);
             // stress data
-            let stressData = EABleSendManager.default().getBigData(withBigDataType: .stressData);
+            let stressData = EABleBigDataManager.default().eaGetBigData(withBigDataType: .stressData);
             // Blood oxygen data
-            let bloodOxygenData = EABleSendManager.default().getBigData(withBigDataType: .bloodOxygenData);
+            let bloodOxygenData = EABleBigDataManager.default().eaGetBigData(withBigDataType: .bloodOxygenData);
             // resting heart rate
-            let restingHeartRateData = EABleSendManager.default().getBigData(withBigDataType: .restingHeartRateData);
+            let restingHeartRateData = EABleBigDataManager.default().eaGetBigData(withBigDataType: .restingHeartRateData);
             // GPS data
-            let gpsData = EABleSendManager.default().getBigData(withBigDataType: .gpsData);
+            let gpsData = EABleBigDataManager.default().eaGetBigData(withBigDataType: .gpsData);
             // stride frequency
-            let stepFreqData = EABleSendManager.default().getBigData(withBigDataType: .stepFreqData);
+            let stepFreqData = EABleBigDataManager.default().eaGetBigData(withBigDataType: .stepFreqData);
             // stride Pace
-            let stepPaceData = EABleSendManager.default().getBigData(withBigDataType: .stepPaceData);
+            let stepPaceData = EABleBigDataManager.default().eaGetBigData(withBigDataType: .stepPaceData);
             // habit tracker data
-            let habitTrackerData = EABleSendManager.default().getBigData(withBigDataType: .habitTrackerData);
+            let habitTrackerData = EABleBigDataManager.default().eaGetBigData(withBigDataType: .habitTrackerData);
             // sleep data
-            let sleepData = EABleSendManager.default().getBigData(withBigDataType: .sleepData);
+            let sleepData = EABleBigDataManager.default().eaGetBigData(withBigDataType: .sleepData);
+            
+            // sport heart rate data
+            let sportHrData = EABleBigDataManager.default().eaGetBigData(withBigDataType: .sportHrData);
+            
             break
         default:
             
@@ -141,14 +145,14 @@ class GetBigDataViewController: UIViewController  , UITableViewDelegate, UITable
     func eg_sleepData(_ sleepData : NSArray){
         
         // 如何处理睡眠数据
-        // 1.调用这个方法获取sleepData “ let sleepData = EABleSendManager.default().getBigData(withBigDataType: .sleepData); ”
+        // 1.调用这个方法获取sleepData “ let sleepData = EABleBigDataManager.default().eaGetBigData(withBigDataType: .sleepData); ”
         // 2.遍历sleepData，根据时间戳从小到大排序。获得新的 new_sleepData 数组数据。
         // 3.遍历new_sleepData，找出所有 EASleepDataModel.eSleepNode == EASleepNode.enter && EASleepDataModel.eSleepNode == EASleepNode.quit 为一次睡眠数据，此时得到 allOnceSleepData。
         // 4.遍历allOnceSleepData,统计每次睡眠的总时长，浅睡、深睡、Res等时长。
         
     
         // How to process the sleep data
-        // 1. call this method to get sleepData " let sleepData = EABleSendManager.default().getBigData(withBigDataType: .sleepData); "
+        // 1. call this method to get sleepData " let sleepData = EABleBigDataManager.default().eaGetBigData(withBigDataType: .sleepData); "
         // 2. Iterate through sleepData, sorting from smallest to largest based on timestamp. Get the new new_sleepData array data.
         // 3. Iterate through new_sleepData to find all EASleepDataModel.eSleepNode == EASleepNode.enter && EASleepDataModel.eSleepNode == EASleepNode.quit as once sleep data, then get allOnceSleepData.
         // 4. Iterate through allOnceSleepData, counting the total duration of each sleep, light sleep, deep sleep, Res, etc.

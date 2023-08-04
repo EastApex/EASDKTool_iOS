@@ -707,6 +707,7 @@ class Cmd_WatchFace {
         
         let model = EADialPlateModel.eaInitBuiltInWatchFace(withID: 1)
         Command.setData(model: model);
+
     }
     
     class func getData(){

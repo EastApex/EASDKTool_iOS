@@ -109,6 +109,12 @@ class Command: NSObject {
          NotificationCenter.default.addObserver(self, selector: #selector(ingOTA), name: NSNotification.Name(kNTF_EAOTAAGPSDataing), object: nil)
          */
         
+        // 1. setting watch face
+        let model = EADialPlateModel.init()
+        model.userWfId = "will replace wfid";
+        Command.setData(model: model);
+        
+        // 2. ota watch face
         let path:String = Bundle.main.path(forResource:"001012_U6.1", ofType:"bin")! as String
         let fileModel = EAFileModel.eaInitWatchFaceFile(withPath: path, version: "1", watchFaceId: "123456789"); // set watch face id
         EABleSendManager.default().upgradeWatchFaceFile(fileModel);

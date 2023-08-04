@@ -288,6 +288,20 @@ NS_ASSUME_NONNULL_BEGIN
 /// 功能与协议: 是否支持 用户自定义回复消息
 @property(nonatomic, assign) BOOL supportUserMsg;
 
+/// (id=32)
+/// support OvulationDay
+/// 功能与协议: 是否支持  经期排卵日
+@property(nonatomic, assign) BOOL supportOvulationDay;
+
+/// (id = 51)
+/// 功能与协议: 是否支持 压力监测 时间间隔
+@property(nonatomic, assign) BOOL stressMonitorInterval;
+
+/// (id = 34)
+/// 功能与协议: 消息推送开关支持最多128个字节（否则64个）
+@property(nonatomic, assign) BOOL appSwNum128Bytes;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

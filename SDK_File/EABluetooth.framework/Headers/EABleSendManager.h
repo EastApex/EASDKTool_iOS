@@ -102,6 +102,7 @@ typedef void(^RespondBlock)(EARespondModel *respondModel);
 - (EAWatchModel *)getConnectWatchModel;
 - (void)openCommunicationTimer;
 - (void)closeCommunicationTimer;
+
 @end
 
 NS_ASSUME_NONNULL_END

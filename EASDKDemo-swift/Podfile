@@ -12,21 +12,21 @@ target 'EASDKDemo' do
   pod 'YYKit'
   pod 'SAMKeychain'
   pod 'BGFMDB'
-	pod 'EABluetooth', :git =>  'https://github.com/EastApex/EASDKTool_iOS.git'
+	#pod 'EABluetooth', :git =>  'https://github.com/EastApex/EASDKTool_iOS.git'
 
-	#pod 'EABluetooth', :path => '../'
+	pod 'EABluetooth', :path => '../'
 
 
 
  # if Xcode version is 14.3 will open this
 
-#  post_install do |installer|
-#    installer.pods_project.targets.each do |target|
-#      target.build_configurations.each do |config|
-#        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
-#      end
-#    end
-#  end
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
+      end
+    end
+  end
 
  # else ignore 
   
