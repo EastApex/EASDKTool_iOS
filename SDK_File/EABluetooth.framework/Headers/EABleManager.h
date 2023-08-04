@@ -103,6 +103,14 @@ typedef NS_ENUM(NSUInteger, EAConnectStatus) {
 /// OTA进度
 #define kNTF_EAOTAAGPSDataing               @"EAOTADataing"
 
+
+/// Notification Name: OTA progress fail
+/// OTA失败
+#define kNTF_EAOTAFail                  @"kNTF_EAOTAFail"
+
+
+
+
 /// 实时数据
 /// Real time data
 #define kNTF_EARealTimeData                 @"EARealTimeData"
