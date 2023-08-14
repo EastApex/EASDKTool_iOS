@@ -23,6 +23,8 @@ class Cmd_WatchInfo {
             if baseModel.isKind(of: EAWatchModel.self) {
                 let model = baseModel as! EAWatchModel;
                 
+                let numberVersion = model.numberVersion;
+                
                 if (model.bindingType == .bound) {
                     
                     //

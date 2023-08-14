@@ -233,95 +233,68 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
     
     func bindingWatch(_ userId:String){
         
+        /**
+         After the watch is successfully connected
+         1. Get the watch information first
+         2. Determine the binding status of watch information
+         3. Unbound: Determine whether the watch information supports the user binding page
+            3.1 Support: Call the binding method, set bindWatch.ops = .normalBegin, let the watch display the binding page, wait User click Feedback according to user click:
+                3.1.1 Binding: Call the binding method again, set bindWatch.ops = .end to complete the binding, and then the watch data interaction can be carried out.
+                3.1.2 Unbound: App disconnects the watch EABleManager.default().cancelConnectingPeripheral()
+            3.2 Not supported: Call the binding method, set bindWatch.ops = .end to complete the binding, and then the watch data interaction can be carried out
+         4. Bound: There is no need to call the binding method, and the watch data interaction can be carried out.
+         */
+        
+        
         EABleSendManager.default().operationGetInfo(with: EADataInfoType.watch) { baseModel in
-
-            /**
-             Judge bindingType == .unBound need set EABingingOps().ops = .end to complete the binding
-             【判断bindingType == . unbound需要设置EABingingOps()。Ops = .end完成绑定】
-             */
+    
+            // Determine whether the watch is bound: unbound -> execute the binding process
             if (baseModel as! EAWatchModel).bindingType == .unBound {
 
-                let bindWatch = EABingingOps()
-                bindWatch.ops = EABindingOpsType.end //  Set EABindingOpsType. End to complete the binding 【设置 EABindingOpsType.end 完成绑定】
-                EABleSendManager.default().operationChange(bindWatch) { respondModel in
-
-                    self.loadWatchData();
+                // Determine whether the watch supports the user to determine the binding function:
+                // Support -> Set < bindWatch.ops = .normalBegin > Let the watch display the binding page
+                if ((baseModel as! EAWatchModel).isWaitForBinding == 1) {
+                    
+                    let bindWatch = EABingingOps()
+                    bindWatch.ops = .normalBegin // To start the binding, the user needs to click on the watch to confirm it
+                    EABleSendManager.default().operationChange(bindWatch) { respondModel in
+                        
+                        // Determine whether the user clicks the binding:
+                        // YES: < Set bindWatch.ops = .end > binding completed
+                        if ( respondModel.eErrorCode == .success) {
+                            
+                            let bindWatch = EABingingOps()
+                            bindWatch.ops = .end //  Set EABindingOpsType. End to complete the binding
+                            EABleSendManager.default().operationChange(bindWatch) { respondModel in
+                                
+                                // Interactive data with the watch
+                                self.loadWatchData();
+                            }
+                        }
+                        else
+                        {
+                            //NO: Refuse, disconnect from the watch
+                            EABleManager.default().cancelConnectingPeripheral();
+                        }
+                    }
+                }
+                else
+                {
+                    //Not supported -> < Set bindWatch.ops = .end > binding completed
+                    let bindWatch = EABingingOps()
+                    bindWatch.ops = .end //  Set EABindingOpsType. End to complete the binding
+                    EABleSendManager.default().operationChange(bindWatch) { respondModel in
+                        
+                        // Interactive data with the watch
+                        self.loadWatchData();
+                    }
                 }
             }else {
                 
+                // Bound,interactive data with the watch
                 self.loadWatchData();
             }
         }
-        
-    
-         /*
-         // 获取手表信息
-         EABleSendManager.default().operationGetInfo(with: EADataInfoType.watch) { baseModel in
-
-             // 判断手表是否被绑定了
-             let watchModel = baseModel as! EAWatchModel
-             if (watchModel.bindingType == .bound) { // 已绑定
-
-                 // 判断此手表是否是用户自己的手表
-                 if (watchModel.userId == userId) { // 用户自己的手表
-
-                     // do 读取或者同步手表数据
-                     self.loadWatchData()
-                 }else {
-
-                     // 不是用户自己的手表
-                     EABleManager.default().cancelConnectingPeripheral();// 设备要断开连接
-                 }
-
-             }else {
-
-                 // 未绑定
-                 // 判断 设置是否支持 手表界面需要点击确认才能完成绑定
-                 if (watchModel.isWaitForBinding == 1) {
-                     // 需要手表操作确定绑定、
-                     let bindWatch = EABingingOps()
-                     bindWatch.ops = EABindingOpsType.normalBegin // 开始绑定
-                     EABleSendManager.default().operationChange(bindWatch) { respondModel in
-
-                         // 等待手表确认
-
-                         if respondModel.eErrorCode == .success { // 用户点击确认
-
-                             let bindWatch = EABingingOps()
-                             bindWatch.ops = EABindingOpsType.end //  Set EABindingOpsType. End to complete the binding 【设置 EABindingOpsType.end 完成绑定】
-                             bindWatch.userId = userId
-                             EABleSendManager.default().operationChange(bindWatch) { respondModel in
-
-                                 // 绑定结束
-                                 // do 读取或者同步手表数据
-                                 self.loadWatchData()
-                             }
-                         }else {
-
-                             // 用户点击取消
-                             // 绑定结束
-                             EABleManager.default().cancelConnectingPeripheral();// 设备要断开连接
-                         }
-
-                     }
-
-
-                 }else {
-
-                     let bindWatch = EABingingOps()
-                     bindWatch.ops = EABindingOpsType.end //  Set EABindingOpsType. End to complete the binding 【设置 EABindingOpsType.end 完成绑定】
-                     bindWatch.userId = userId
-                     EABleSendManager.default().operationChange(bindWatch) { respondModel in
-
-                         // 绑定结束
-                         // do 读取或者同步手表数据
-                         self.loadWatchData()
-                     }
-                 }
-             }
-         }
-         
-         */
     }
     
 
