@@ -13,8 +13,8 @@
  SDK access documentation
  https://www.showdoc.com.cn/2042713679210858/0
  
- Date：2023-08-14
- Version：1.0.79.4
+ Date：2023-08-15
+ Version：1.0.79.6
  
  
   */
@@ -107,7 +107,7 @@ typedef NS_ENUM(NSUInteger, EAConnectStatus) {
 
 /// Notification Name: OTA progress fail
 /// OTA失败
-#define kNTF_EAOTAFail                  @"kNTF_EAOTAFail"
+#define kNTF_EAOTAFail                      @"EAOTAFail"
 
 
 
@@ -131,8 +131,8 @@ typedef NS_ENUM(NSUInteger, EAConnectStatus) {
 
 
 
-#define kKeychainService        @"com.eastapex.bluetooth"
-#define kKeychainDataAccount    @"data_apexwear"
+#define kKeychainService                    @"com.eastapex.bluetooth"
+#define kKeychainDataAccount                @"data_apexwear"
 
 
 @protocol EABleManagerDelegate <NSObject>
