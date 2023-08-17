@@ -62,7 +62,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 ///  Online custom dial ID [cannot be modified]
 /// 在线自定义表盘id 【不支持修改】
-@property(nonatomic, copy,readonly) NSString *userWfId;
+//@property(nonatomic, copy) NSString *userWfId;
 
 /// 睡眠血氧监测开关 【不支持修改】
 @property(nonatomic, assign) NSInteger sleepBloodOxygenSw;
