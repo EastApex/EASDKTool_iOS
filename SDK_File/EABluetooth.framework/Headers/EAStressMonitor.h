@@ -17,16 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// Zero off, one on
 @property(nonatomic, assign) BOOL sw;
 
-/// 间隔时间，单位：分钟(最低不少于60分钟)
-/// Interval time, unit: minutes (minimum 60 minutes)
-@property(nonatomic, assign) NSInteger interval;
-
 /// init【初始化】
 /// - Parameters:
 ///   - sw: on-off Zero off, one on[0关，1开]
 + (instancetype )eaInitWithOnOff:(BOOL)sw;
 
-+ (instancetype )eaInitWithOnOff:(BOOL)sw interval:(NSInteger)interval;
+
 
 @end
 

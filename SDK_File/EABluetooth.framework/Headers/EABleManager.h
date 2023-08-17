@@ -13,10 +13,18 @@
  SDK access documentation
  https://www.showdoc.com.cn/2042713679210858/0
  
- Date：2023-08-15
- Version：1.0.79.6
+ Date：2023-04-15
+ Version：1.0.71.4
+ 1. Modify the SDK log style
+ 2. Rectify the fault that commands cannot be sent because the 5526 service is changed.
+ 3. Fixed an issue where paired watches could not be found.
+ 4. Fix the 5526 watch face
  
- 
+ 1. 修改SDK log样式
+ 2. 修复5526服务发生改变导致不能发送命令的问题。
+ 3. 修复已配对手表找不到的问题。
+ 4. 修复5526表盘问题
+ 5. fixed bug
   */
 
 #import <Foundation/Foundation.h>
@@ -78,10 +86,6 @@ typedef NS_ENUM(NSUInteger, EAConnectStatus) {
 /// 尝试连接成功（未获取服务）
 #define kNTF_EAConnectStatusSucceedUnGetServer  @"EAConnectStatusSucceedUnGetServer"
 
-/// Connecting
-/// 连接中
-#define kNTF_EAConnectStatusConnecting          @"EAConnectStatusConnecting"
-
 /// ANCS
 #define kNTF_EAEADidUpdateANCSAuthorization     @"EADidUpdateANCSAuthorization"
 
@@ -104,14 +108,6 @@ typedef NS_ENUM(NSUInteger, EAConnectStatus) {
 /// OTA进度
 #define kNTF_EAOTAAGPSDataing               @"EAOTADataing"
 
-
-/// Notification Name: OTA progress fail
-/// OTA失败
-#define kNTF_EAOTAFail                      @"EAOTAFail"
-
-
-
-
 /// 实时数据
 /// Real time data
 #define kNTF_EARealTimeData                 @"EARealTimeData"
@@ -125,14 +121,11 @@ typedef NS_ENUM(NSUInteger, EAConnectStatus) {
 #define kNTF_EAAppOpsData                   @"EAAppOpsData"
 
 
-/// 回复信息
-/// ReplayMessage
-#define kNTF_EAReplayMessage                @"EAReplayMessage"
 
 
 
-#define kKeychainService                    @"com.eastapex.bluetooth"
-#define kKeychainDataAccount                @"data_apexwear"
+#define kKeychainService        @"com.eastapex.bluetooth"
+#define kKeychainDataAccount    @"data_apexwear"
 
 
 @protocol EABleManagerDelegate <NSObject>
@@ -213,8 +206,8 @@ typedef void(^UpdateValueBlock)(CBCharacteristic *characteristic,NSError *error)
 /// 重连设备
 - (void)reConnectToPeripheral;
 
-/// reconnection（Need the SN number or mac address of the watch）
-/// 重连设备（传手表的SN号或者mac address）
+/// reconnection（Need the SN number of the watch）
+/// 重连设备（传手表的SN号）
 - (void)reConnectToPeripheral:(NSString *)sn;
 
 /// reconnection（Need the uuidString of the watch）
@@ -225,19 +218,13 @@ typedef void(^UpdateValueBlock)(CBCharacteristic *characteristic,NSError *error)
 /// 取消连接（连接时可用）
 - (void)cancelConnectingPeripheral;
 
-/// Disconnect the watch. Restart the App, and EASDK will automatically connect the watch.
-/// 断开手表连接。重启App，EASDK自动连接。
+/// Disconnect from the watch, restart after killing the App, and connect automatically after initializing EASDK.
+/// 断开手表连接。重启App，初始化EASDK后自动连接。
 - (void)disconnectPeripheral;
 
-
-/// Disconnect the watch. Restart the App, EASDK will not automatically connect to the watch.
-/// 断开手表连接。重启App，EASDK不会自动连接。
-- (void)disconnectAndNotReConnectPeripheral;
-
-/// Disconnect the watch. Restart the App, EASDK will not automatically connect to the watch.
-/// 断开手表连接。重启App，EASDK不会自动连接。
-- (void)unbindPeripheral DEPRECATED_MSG_ATTRIBUTE("Please use \"disconnectAndNotReConnectPeripheral\"");
-
+/// Disconnect from watch, restart after killing App, will not automatically connect after initializing EASDK.
+/// 断开手表连接。重启App，初始化EASDK后不会自动连接。
+- (void)unbindPeripheral;
 
 /// Disconnect from the watch and reset and clear the watch data.
 /// 断开与手表的连接，重置并清除手表数据。

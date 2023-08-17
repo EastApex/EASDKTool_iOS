@@ -74,32 +74,6 @@ typedef NS_OPTIONS(NSUInteger, EAShowAppType) {
     EAShowAppTypeAppleEmail     = 49,
     EAShowAppTypeDingTalk       = 50,
     EAShowAppTypeAlipay         = 51,
-    EAShowAppTypeTrueCaller     = 52,
-    EAShowAppTypeHotstar        = 53,
-    EAShowAppTypePhonePe        = 54,
-    EAShowAppTypeZomato         = 55,
-    EAShowAppTypeDailyhunt      = 56,
-    EAShowAppTypeInshorts       = 57,
-    EAShowAppTypeJioTv          = 58,
-    EAShowAppTypeYahoo          = 59,
-    EAShowAppTypePaytm          = 60,
-    EAShowAppTypeSwiggy         = 61,
-    EAShowAppTypeCalendar       = 62,
-    EAShowAppTypeWynkMusic      = 63,
-    EAShowAppTypeGaana          = 64,
-    EAShowAppTypeFlipkart       = 65,
-    EAShowAppTypeNetflix        = 66,
-    EAShowAppTypeAmazonPrime    = 67,
-    EAShowAppTypeGooglePay      = 68,
-    EAShowAppTypeOla            = 69,
-    EAShowAppTypeZalo           = 70,
-    EAShowAppTypeBookMyShow     = 71,
-    EAShowAppTypeMakeMyTrip     = 72,
-    EAShowAppTypeFastrackReflexWord = 73,
-    EAShowAppTypeYtMusic        = 74,
-    EAShowAppTypeDunzo          = 75,
-    EAShowAppTypeGoogleDrive    = 76,
-    EAShowAppTypeTitanSmartWord = 77,
 };
 
 
@@ -159,34 +133,6 @@ typedef NS_OPTIONS(NSUInteger, EAShowAppType) {
 @property(nonatomic,assign) BOOL appleEmail;
 @property(nonatomic,assign) BOOL dingTalk ;
 @property(nonatomic,assign) BOOL alipay;
-@property(nonatomic,assign) BOOL trueCaller;
-@property(nonatomic,assign) BOOL hotstar;
-@property(nonatomic,assign) BOOL phonePe;
-@property(nonatomic,assign) BOOL zomato;
-@property(nonatomic,assign) BOOL dailyhunt;
-@property(nonatomic,assign) BOOL inshorts;
-@property(nonatomic,assign) BOOL jioTv;
-@property(nonatomic,assign) BOOL yahoo;
-@property(nonatomic,assign) BOOL paytm;
-@property(nonatomic,assign) BOOL swiggy;
-@property(nonatomic,assign) BOOL calendar;
-@property(nonatomic,assign) BOOL wynkMusic;
-@property(nonatomic,assign) BOOL gaana;
-@property(nonatomic,assign) BOOL flipkart;
-@property(nonatomic,assign) BOOL netflix;
-@property(nonatomic,assign) BOOL amazonPrime;
-@property(nonatomic,assign) BOOL googlePay;
-@property(nonatomic,assign) BOOL ola;
-@property(nonatomic,assign) BOOL zalo;
-@property(nonatomic,assign) BOOL bookMyShow;
-@property(nonatomic,assign) BOOL makeMyTrip;
-@property(nonatomic,assign) BOOL fastrackReflexWord;
-@property(nonatomic,assign) BOOL ytMusic;
-@property(nonatomic,assign) BOOL dunzo;
-@property(nonatomic,assign) BOOL googleDrive;
-@property(nonatomic,assign) BOOL titanSmartWord;
-
-
 // 获取App推送蓝牙传输对象数据
 - (EAAppMessageSwitchData *)getEAAppMessageSwitchData;
 
@@ -214,7 +160,60 @@ typedef NS_OPTIONS(NSUInteger, EAShowAppType) {
 
 
 @interface EAAppMessageSwitchModel : EABaseModel
-
+/**
+ unknow=0;        //类型：其他社交类型
+ wechat =1;
+ qq=2;
+ facebook=3;
+ twitter = 4;
+ messenger =5;
+ hangouts =6;
+ gmail = 7;
+ viber=8;
+ snapchat=9;
+ whatsApp=10;
+ instagram =11;
+ linkedin =12;
+ line =13;
+ skype =14;
+ booking =15;
+ airbnb =16;
+ flipboard =17;
+ spotify =18;
+ pandora =19;
+ telegram =20;
+ dropbox =21;
+ waze =22;
+ lift =23;
+ slack =24;
+ shazam =25;
+ deliveroo =26;
+ kakaotalk =27;
+ pinterest =28;
+ tumblr =29;
+ vk =30;
+ youtube=31;
+ outlook=32;
+ Amazon = 33,
+ Discord = 34,
+ Github = 35,
+ GoogleMaps = 36,
+ NewsBreak = 37,
+ Reddit = 38,
+ Teams = 39,
+ Tiktok = 40,
+ Twitch = 41,
+ UberEats = 42,
+ Doordash = 43,
+ Grubhub = 44,
+ Instacart = 45,
+ Postmates = 46,
+ Zoom = 47,
+ Uber = 48,
+ AppleEmail = 49,
+ DingTalk = 50,
+ Alipay = 51,
+ */
 @property(nonatomic, assign) BOOL sw;
 
 @end

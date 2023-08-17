@@ -249,7 +249,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
         EABleSendManager.default().operationGetInfo(with: EADataInfoType.watch) { baseModel in
     
             // Determine whether the watch is bound: unbound -> execute the binding process
-            if (baseModel as! EAWatchModel).bindingType == .unBound {
+            if (baseModel as! EAWatchModel).userId != userId {
 
                 // Determine whether the watch supports the user to determine the binding function:
                 // Support -> Set < bindWatch.ops = .normalBegin > Let the watch display the binding page
@@ -265,6 +265,7 @@ class ViewController: UIViewController, EABleManagerDelegate, UITableViewDataSou
                             
                             let bindWatch = EABingingOps()
                             bindWatch.ops = .end //  Set EABindingOpsType. End to complete the binding
+                            bindWatch.userId = userId
                             EABleSendManager.default().operationChange(bindWatch) { respondModel in
                                 
                                 // Interactive data with the watch

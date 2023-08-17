@@ -255,16 +255,12 @@ class Cmd_DeviceOps {
     }
     
     class func findWatch() {
-        let model = EADeviceOps.init()
-        model.deviceOpsType = .startSearchWatch
-        model.deviceOpsStatus = .execute
+        let model = EADeviceOps.eaInitDeviceOpsType(.startSearchWatch)
         Command.setData(model: model);
     }
     class func stopFindWatch() {
         
-        let model = EADeviceOps.init()
-        model.deviceOpsType = .stopSearchWatch
-        model.deviceOpsStatus = .execute
+        let model = EADeviceOps.eaInitDeviceOpsType(.stopSearchWatch)
         Command.setData(model: model);
     }
     class func pairWatch() {

@@ -51,17 +51,6 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - judge: Whether to determine the current time to obtain the most recent menstrual data.【是否需要判断当前时间获取最近的经期数据】
 + (EAMenstruals *)eaAllocInitWithStartDate:(NSString *)start keepDay:(NSInteger)keepDay cycleDay:(NSInteger)cycleDay judgeCurrentTime:(BOOL)judge;
 
-
-
-/// Obtain period data
-/// - Parameters:
-///   - start: indicates the start date. eg. 2022-02-06 [yyyy-MM-dd]
-///   - keepDay: indicates the keepDay duration. eg.7 [value:5~15]
-///   - cycleDay: indicates the keepDay duration. eg.7  [value:22~45]
-///   - showOvulationDay:
-///   - judge: Whether to determine the current time to obtain the most recent menstrual data.【是否需要判断当前时间获取最近的经期数据】
-+ (EAMenstruals *)eaAllocInitWithStartDate:(NSString *)start keepDay:(NSInteger)keepDay cycleDay:(NSInteger)cycleDay showOvulationDay:(BOOL)showOvulationDay judgeCurrentTime:(BOOL)judge;
-
 @end
 
 

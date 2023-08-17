@@ -29,10 +29,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) BOOL easyPregnancyEndSw;
 
 
-/// 排卵日提醒开关，默认关闭
-/// Ovulation day reminder switch, default off
-@property(nonatomic, assign) BOOL ovulationDaySw;
-
 /// Open or close with one key【一键开启或者关闭】
 /// - Parameter onOff: on or Off
 + (instancetype )eaInitWithOnOff:(BOOL)onOff;

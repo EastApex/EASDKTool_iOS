@@ -98,6 +98,12 @@ class GetBigDataViewController: UIViewController  , UITableViewDelegate, UITable
             // sport heart rate data
             let sportHrData = EABleBigDataManager.default().eaGetBigData(withBigDataType: .sportHrData);
             
+            // sleep score data
+            let sleepScoreData = EABleBigDataManager.default().eaGetBigData(withBigDataType: .sleepScoreData);
+            
+            
+            EASleepScoreData
+            
             break
         default:
             
