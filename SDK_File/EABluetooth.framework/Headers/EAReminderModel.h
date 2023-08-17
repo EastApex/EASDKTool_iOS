@@ -71,12 +71,12 @@ weekCycleBit 为127 即 开启每天监测功能
 @property(nonatomic, assign) NSInteger hour;
 
 @property(nonatomic, assign) NSInteger minute;
+//
+//@property(nonatomic, assign) NSInteger year;
 
-@property(nonatomic, assign) NSInteger year;
-
-@property(nonatomic, assign) NSInteger month;
-
-@property(nonatomic, assign) NSInteger day;
+//@property(nonatomic, assign) NSInteger month;
+//
+//@property(nonatomic, assign) NSInteger day;
 
 /** 周期：位对应从bit0~bit6对应周日~周六
     The same of EAAutoCheckSleepModel.weekCycleBit
@@ -98,30 +98,7 @@ weekCycleBit 为127 即 开启每天监测功能
 @property(nonatomic, strong) NSString *content;
 
 
-/// Single Reminder【单次提醒】
-/// - Parameters:
-///   - reminderEventType: Reminder Event Type
-///   - year: year
-///   - month: month
-///   - day: day
-///   - hour: hour
-///   - minute: minute
-///   - onOff: onOff
-///   - snooze:  Secondary reminder on-off(Snooze on-off)
-///   - snoozeDuration: Sleep duration(Snooze Duration)
-///   - remindActionType: Remind action type
-///   - content: if reminderEventType==.User [EAReminderEventTypeUser] needs to be set
-+ (instancetype)eaInitSingleReminderWithReminderEventType:(EAReminderEventType)reminderEventType
-                                                     year:(NSInteger)year
-                                                    month:(NSInteger)month
-                                                      day:(NSInteger)day
-                                                     hour:(NSInteger)hour
-                                                   minute:(NSInteger)minute
-                                                    onOff:(NSInteger)onOff
-                                                   snooze:(NSInteger)snooze
-                                           snoozeDuration:(NSInteger)snoozeDuration
-                                         remindActionType:(EARemindActionType )remindActionType
-                                                  content:(NSString *)content;
+
 
 
 
@@ -145,6 +122,32 @@ weekCycleBit 为127 即 开启每天监测功能
                                           snoozeDuration:(NSInteger)snoozeDuration
                                         remindActionType:(EARemindActionType )remindActionType
                                                  content:(NSString *)content;
+
+
+/// Single Reminder【单次提醒】
+/// - Parameters:
+///   - reminderEventType: Reminder Event Type
+///   - year: year
+///   - month: month
+///   - day: day
+///   - hour: hour
+///   - minute: minute
+///   - onOff: onOff
+///   - snooze:  Secondary reminder on-off(Snooze on-off)
+///   - snoozeDuration: Sleep duration(Snooze Duration)
+///   - remindActionType: Remind action type
+///   - content: if reminderEventType==.User [EAReminderEventTypeUser] needs to be set
+//+ (instancetype)eaInitSingleReminderWithReminderEventType:(EAReminderEventType)reminderEventType
+//                                                     year:(NSInteger)year
+//                                                    month:(NSInteger)month
+//                                                      day:(NSInteger)day
+//                                                     hour:(NSInteger)hour
+//                                                   minute:(NSInteger)minute
+//                                                    onOff:(NSInteger)onOff
+//                                                   snooze:(NSInteger)snooze
+//                                           snoozeDuration:(NSInteger)snoozeDuration
+//                                         remindActionType:(EARemindActionType )remindActionType
+//                                                  content:(NSString *)content DEPRECATED_MSG_ATTRIBUTE("Not Sopport this");
 
 @end
 
