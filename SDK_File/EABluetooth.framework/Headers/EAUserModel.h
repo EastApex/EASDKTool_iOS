@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// Note：This parameter is optional. It is not required
 /// Skin Color
 /// 肤色
-@property(nonatomic, assign) EASkinColorType eSkinColor __attribute__((deprecated));
+@property(nonatomic, assign) EASkinColorType eSkinColor;
 
 
 

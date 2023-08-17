@@ -17,13 +17,17 @@ NS_ASSUME_NONNULL_BEGIN
 /// Raised my hand against the bright screen type
 @property(nonatomic, assign) EAGesturesBrightType eBrightSrc;
 
-//@property(nonatomic, assign) NSInteger beginHour;
-//
-//@property(nonatomic, assign) NSInteger beginMinute;
-//
-//@property(nonatomic,  assign) NSInteger endHour;
-//
-//@property(nonatomic,  assign) NSInteger endMinute;
+
+@property(nonatomic, assign) NSInteger beginHour;
+
+@property(nonatomic, assign) NSInteger beginMinute;
+
+@property(nonatomic,  assign) NSInteger endHour;
+
+@property(nonatomic,  assign) NSInteger endMinute;
+
+
+
 
 
 /// 【全天候开启】
