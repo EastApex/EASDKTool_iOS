@@ -308,6 +308,11 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     EADataInfoTypeReplayUserMessage = 60,
     
     
+    /// id = 61
+    /// Watch Log
+    /// EAWatchLog
+    EADataInfoTypeWatchLog = 61,
+    
     /// Operating Phone Commands
     /// 操作手机命令
     /// EAPhoneOpsModel

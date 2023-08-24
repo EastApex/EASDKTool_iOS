@@ -14,7 +14,8 @@ target 'EASDKDemo' do
   pod 'BGFMDB'
 	#pod 'EABluetooth', :git =>  'https://github.com/EastApex/EASDKTool_iOS.git'
 
-	pod 'EABluetooth', :path => '../'
+	#pod 'EABluetooth', :path => '../'
+	pod 'EABluetooth', :git =>  'https://github.com/EastApex/EASDKTool_iOS.git',:tag => '1.0.79.6'
 
 
 

@@ -265,9 +265,7 @@ class Cmd_DeviceOps {
     }
     class func pairWatch() {
         
-        let model = EADeviceOps.init()
-        model.deviceOpsType = .showiPhonePairingAlert
-        model.deviceOpsStatus = .execute
+        let model = EADeviceOps.eaInitDeviceOpsType(.showiPhonePairingAlert)
         Command.setData(model: model);
     }
     

@@ -301,7 +301,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 功能与协议: 消息推送开关支持最多128个字节（否则64个）
 @property(nonatomic, assign) BOOL appSwNum128Bytes;
 
-
+/// (id = 61)
+/// 功能与协议: 否支持 固件log的bin
+@property(nonatomic, assign) BOOL supportWatchLog;
 @end
 
 NS_ASSUME_NONNULL_END

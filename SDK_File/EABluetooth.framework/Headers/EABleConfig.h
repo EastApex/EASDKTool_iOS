@@ -21,6 +21,10 @@ NSString *logString = [NSString stringWithFormat:@""format,##__VA_ARGS__];\
 }\
 }\
 
+#define kEADocumentsPath          [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
+#define kEATempPath               NSTemporaryDirectory()
+
+
 
 
 

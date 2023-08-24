@@ -15,10 +15,21 @@ pod 'EABluetooth', :git =>  'https://github.com/EastApex/EASDKTool_iOS.git',:tag
 
 
 ### Release Notes:
+
     <p>Date：2023-08-15
     
         SDK
-        Versionv1.0.79.1
+        Version v1.0.80.1
+        id = 44     ： 项目功能列表 新增项: uint32 support_user_log_bin = 60; //功能与协议: 是否支持 固件log的bin (id = 61) 
+        id = 61     ： 固件log的bin<协议新增>
+        
+    <p>Date：
+
+
+    <p>Date：2023-08-15
+    
+        SDK
+        Version v1.0.79.1
         id = 44     ： 项目功能列表 新增项: uint32 stress_monitor_interval = 58; //功能与协议: 是否支持 压力监测 时间间隔 (id = 51) 
              新增项: uint32 app_sw_num128bytes = 59;//功能与协议: 消息推送开关支持最多128个字节（否则64个） (id = 34) 
         id = 34     ： 增加数组至128字节(只影响固件)
