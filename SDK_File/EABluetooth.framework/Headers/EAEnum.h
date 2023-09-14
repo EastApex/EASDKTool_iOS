@@ -3116,6 +3116,8 @@ typedef NS_ENUM(NSUInteger, EATimeType) {
     
     EATimeTypeDate              = 1000,      // 101:Date【几号】
     EATimeTypeWeek              = 1001,      // 101:Week【星期几】
+    
+    EATimeTypeAmPmNull          = 1100,      // 1100:
 };
 
 typedef NS_ENUM(NSUInteger, EAPointerType) {

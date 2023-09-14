@@ -16,6 +16,14 @@ pod 'EABluetooth', :git =>  'https://github.com/EastApex/EASDKTool_iOS.git',:tag
 
 ### Release Notes:
 
+    <p>Date：2023-09-14
+    
+        SDK
+        Version v1.0.80.2
+        
+        修复 自定义数字表盘 日期和星期 间距近的问题
+        新增 自定义数字表盘 am pm （12小时制）
+        
     <p>Date：2023-08-15
     
         SDK
@@ -23,10 +31,8 @@ pod 'EABluetooth', :git =>  'https://github.com/EastApex/EASDKTool_iOS.git',:tag
         id = 44     ： 项目功能列表 新增项: uint32 support_user_log_bin = 60; //功能与协议: 是否支持 固件log的bin (id = 61) 
         id = 61     ： 固件log的bin<协议新增>
         
+
     <p>Date：
-
-
-    <p>Date：2023-08-15
     
         SDK
         Version v1.0.79.1

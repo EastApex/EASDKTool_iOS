@@ -964,7 +964,6 @@ class Cmd_MonitorReminder {
             
             if baseModel.isKind(of: EAMonitorReminder.self) {
                 
-                
             }
         }
     }
@@ -983,7 +982,6 @@ class Cmd_MonitorReminder {
         EABleSendManager.default().operationGetInfo(with: request) { baseModel in
             
             if baseModel.isKind(of: EAMonitorReminder.self) {
-                
                 
             }
         }
