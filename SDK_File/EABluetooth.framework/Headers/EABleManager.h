@@ -14,10 +14,9 @@
  https://www.showdoc.com.cn/2042713679210858/0
  
  Date：2023-08-24
- Version：1.0.80.2
+ Version：1.0.80.3
  
  Fixed：自定义数字表盘 日期和星期 间隔
- Add: 自定义数字表盘新增 Am Pm 显示（12小时制）
  
   */
 

@@ -63,10 +63,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, copy) NSString *userWfId9;
 
 
-/// Set the built-in dial
+/// show the built-in watch face
 + (instancetype)eaInitBuiltInWatchFaceWithID:(NSInteger )id_p;
 
-
+/// show the custom watch face
++ (instancetype)eaInitCustomWatchFaceWithID:(NSString *)userWfId;
 
 
 @end

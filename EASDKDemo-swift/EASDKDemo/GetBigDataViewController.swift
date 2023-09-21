@@ -102,7 +102,7 @@ class GetBigDataViewController: UIViewController  , UITableViewDelegate, UITable
             let sleepScoreData = EABleBigDataManager.default().eaGetBigData(withBigDataType: .sleepScoreData);
             
             
-            EASleepScoreData
+            
             
             break
         default:

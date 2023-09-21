@@ -16,6 +16,14 @@ pod 'EABluetooth', :git =>  'https://github.com/EastApex/EASDKTool_iOS.git',:tag
 
 ### Release Notes:
 
+    <p>Date：2023-09-21
+    
+        SDK
+        Version v1.0.80.3
+        
+        修复 自定义数字表盘 日期和星期 间距近的问题
+        新增 显示设置自定义表方法
+        
     <p>Date：2023-09-14
     
         SDK
