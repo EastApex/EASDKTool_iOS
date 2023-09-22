@@ -14,9 +14,9 @@
  https://www.showdoc.com.cn/2042713679210858/0
  
  Date：2023-08-24
- Version：1.0.80.3
+ Version：1.0.83.1
  
- Fixed：自定义数字表盘 日期和星期 间隔
+ 
  
   */
 

@@ -751,6 +751,10 @@ typedef NS_ENUM(NSUInteger,EALanguageType) {
     ///匈牙利语
     ///Hungarian
     EALanguageTypeHungarian = 26,
+    
+    /// 印地语
+    /// Hindi
+    EALanguageTypeHindi = 27,
 };
 
 
@@ -824,6 +828,14 @@ typedef NS_ENUM(NSUInteger,EADeviceOpsType) {
     /// Enable Watch operation The pairing box is displayed on the IOS phone
     /// 使能手表操作IOS手机弹出配对框
     EADeviceOpsTypeShowiPhonePairingAlert = 13,
+    
+    /// 关闭bt信息回复功能
+    /// Disable the bt message reply function
+    EADeviceOpsTypeBtMsgOff = 14,
+
+    /// 打开bt信息回复功能
+    /// open the bt message reply function
+    EADeviceOpsTypeBtMsgOn = 15,
 };
 
 
@@ -1278,6 +1290,10 @@ typedef NS_ENUM(NSUInteger,EAPhoneOps) {
     ///  经典蓝牙BT关闭
     ///  Classic Bluetooth BT Close
     EAPhoneOpsBtOff = 23,
+    
+    /// 经典蓝牙BT打开(已连接)
+    /// Classic Bluetooth BT connected
+    EAPhoneOpsBtConnected = 24,
 };
 
 /// Operating mobile phone status
@@ -3191,7 +3207,8 @@ typedef NS_ENUM(NSUInteger,EABleState) {
 typedef NS_ENUM(NSUInteger,EABtType) {
     
     EABtTypeOff = 0,
-    EABtTypeOn,
+    EABtTypeOn = 1,
+    EABtTypeConnected = 2,
 };
 
 #endif /* EAEnumh */

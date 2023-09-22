@@ -258,7 +258,6 @@ class Command: NSObject {
     class func customWatchFaceType3() -> NSInteger {
         
         let backgroundImage = self.getBgImage()
-//        let thumbnail = EAMakeWatchFaceManager.eaGetDefaultNumberThumbnail(with: backgroundImage, color: .red)
         let result = EAMakeWatchFaceManager.eaOtaDefaultNumberWatchFace(with: backgroundImage, color: UIColor.white)
         return result;
     }
