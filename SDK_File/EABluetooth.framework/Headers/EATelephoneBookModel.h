@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameter list: Contact number group【联系人数组】
 + (instancetype)eaAllocInitWithList:(NSArray <EAContactModel *>*)list;
 
-
++ (instancetype)eaAllocInitReverseWithList:(NSArray <EAContactModel *>*)list;
 
 @end
 
