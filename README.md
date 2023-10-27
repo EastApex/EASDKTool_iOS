@@ -16,6 +16,12 @@ pod 'EABluetooth', :git =>  'https://github.com/EastApex/EASDKTool_iOS.git',:tag
 
 ### Release Notes:
 
+    <p>Date：2023-10-27
+    
+        SDK
+        Version v1.0.83.3
+        Fixed sleep data bug
+        
     <p>Date：2023-10-20
     
         SDK

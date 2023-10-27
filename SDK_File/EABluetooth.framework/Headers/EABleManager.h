@@ -13,10 +13,10 @@
  SDK access documentation
  https://www.showdoc.com.cn/2042713679210858/0
  
- Date：2023-08-24
- Version：1.0.83.2
+ Date：2023-10-27
+ Version：1.0.83.3
  
- 1.fixed custom watch face bug.
+ 1.fixed sleep data bug.
 
   */
 

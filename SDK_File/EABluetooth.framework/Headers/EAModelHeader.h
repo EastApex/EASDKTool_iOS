@@ -87,7 +87,7 @@
 #import <EABluetooth/EAReplayUserMessage.h>
 #import <EABluetooth/EAReplayMessage.h>
 #import <EABluetooth/EAMtuModel.h>
-
+#import <EABluetooth/EAWatchLog.h>
 // ops
 #import <EABluetooth/EABingingOps.h>
 #import <EABluetooth/EADeviceOps.h>
