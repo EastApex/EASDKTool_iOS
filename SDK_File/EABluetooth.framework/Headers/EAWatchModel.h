@@ -87,7 +87,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSInteger maxWatchSize;
 
 /// LCD像素类型: 0: RGB565 1: GXGPU_RGB888
-/// LCD pixel type: 0: RGB565 1: GXGPU_RGB888
+/// LCD pixel type: 0: RGB565 1: GXGPU_RGB888 2: ARGB8565(杰理) 
 @property(nonatomic, assign) NSInteger lcdPixelType;
 
 

@@ -307,11 +307,13 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     /// EAReplayUserMessage、EAReplayUserMessageData
     EADataInfoTypeReplayUserMessage = 60,
     
-    
+
     /// id = 61
-    /// Watch Log
-    /// EAWatchLog
     EADataInfoTypeWatchLog = 61,
+    
+    /// id = 63
+    EADataInfoTypeWriteDevDebug = 63,
+    
     
     /// Operating Phone Commands
     /// 操作手机命令
@@ -399,6 +401,11 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     /// Sport heart rate data
     /// EASportHrData
     EADataInfoTypeSportHrData = 3013,
+
+    
+    
+    EADataInfoTypeDebugLogData = 3997,
+    EADataInfoTypeDebugGpsNmeaData = 3998,
 
     
     /// OTA命令

@@ -88,6 +88,10 @@
 #import <EABluetooth/EAReplayMessage.h>
 #import <EABluetooth/EAMtuModel.h>
 #import <EABluetooth/EAWatchLog.h>
+#import <EABluetooth/EAWriteDevDebug.h>
+#import <EABluetooth/EADebugGpsNmeaData.h>
+#import <EABluetooth/EADebugLogData.h>
+
 // ops
 #import <EABluetooth/EABingingOps.h>
 #import <EABluetooth/EADeviceOps.h>

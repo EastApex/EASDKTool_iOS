@@ -14,7 +14,7 @@
  https://www.showdoc.com.cn/2042713679210858/0
  
  Date：2023-10-27
- Version：1.0.83.3
+ Version：1.0.87.1
  
  1.fixed sleep data bug.
 
@@ -129,6 +129,11 @@ typedef NS_ENUM(NSUInteger, EAConnectStatus) {
 /// 回复信息
 /// ReplayMessage
 #define kNTF_EAReplayMessage                @"EAReplayMessage"
+
+
+
+/// GPS bug
+#define kNTF_EADebugGpsNmeaData             @"EADebugGpsNmeaData"
 
 
 
