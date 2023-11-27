@@ -13,10 +13,10 @@
  SDK access documentation
  https://www.showdoc.com.cn/2042713679210858/0
  
- Date：2023-10-27
- Version：1.0.87.1
+ Date：2023-11-27
+ Version：1.0.87.2
  
- 1.fixed sleep data bug.
+ 1.Fix menstruation-prone digital display issues【修复经期易孕期数字显示问题】
 
   */
 
