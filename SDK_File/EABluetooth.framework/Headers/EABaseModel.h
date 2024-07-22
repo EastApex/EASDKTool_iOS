@@ -13,7 +13,13 @@
 #import <EABluetooth/EADataInfoModel.h>
 
 @class GPBMessage;
+@class EABaseModel;
+@class EARespondModel;
 NS_ASSUME_NONNULL_BEGIN
+
+typedef void(^ResultGetInfoBlock)(EABaseModel *baseModel);
+typedef void(^RespondBlock)(EARespondModel *respondModel);
+
 
 @interface EABaseModel : NSObject<NSCopying>
 
@@ -41,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype )getModelByData:(NSData *)data;
 
-
+- (void)eaSend:(void (^)(EARespondCodeType respondCodeType ))completion;
 @end
 
 

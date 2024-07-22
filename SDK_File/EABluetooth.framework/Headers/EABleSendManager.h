@@ -14,8 +14,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-typedef void(^ResultGetInfoBlock)(EABaseModel *baseModel);
-typedef void(^RespondBlock)(EARespondModel *respondModel);
+//typedef void(^ResultGetInfoBlock)(EABaseModel *baseModel);
+//typedef void(^RespondBlock)(EARespondModel *respondModel);
 
 
 @interface EABleSendManager : NSObject

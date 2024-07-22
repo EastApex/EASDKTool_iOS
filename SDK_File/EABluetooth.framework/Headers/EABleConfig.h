@@ -70,7 +70,8 @@ NSString *logString = [NSString stringWithFormat:@""format,##__VA_ARGS__];\
 /// 扫描所有设备 ，默认关闭
 @property (nonatomic, assign) BOOL canScanAllDevices;
 
-
+/// ignore：
+@property (nonatomic, assign) BOOL canSaveWatchFaceFile;
 
 /// 初始化默认配置,不是单例（debug:NO,scanchannel:8800,canScanAllDevices:NO,isTest:NO,saveLog:NO）
 + (EABleConfig *)getDefaultConfig;

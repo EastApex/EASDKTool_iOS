@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (instancetype)initWithRequestId:(NSInteger )requestId type:(NSInteger )type;
++ (instancetype)eaInitWithRequestId:(NSInteger )requestId type:(NSInteger )type;
 
 
 

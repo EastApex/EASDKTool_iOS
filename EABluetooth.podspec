@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EABluetooth'
-  s.version          = '1.0.87.4'
+  s.version          = '1.1.01.1'
   s.summary          = 'A short description of EABluetooth.'
 
 # This description is used to generate tags and improve search results.
@@ -43,7 +43,7 @@ TODO: Add long description of the pod here.
   s.dependency 'YYKit'
   s.dependency 'BGFMDB' 
   s.dependency 'SAMKeychain'
-
+  s.dependency 'SVGKit'
   
 # s.resources = "Resources/*"  #工程需要引入的资源文件（图片，xib等）
    s.resource_bundles = {'EAWatchFace' => ['SDK_File/EAWatchFace.bundle/*']} #工程需要引入的bundle

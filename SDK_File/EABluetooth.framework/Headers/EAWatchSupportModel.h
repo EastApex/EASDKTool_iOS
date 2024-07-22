@@ -304,6 +304,18 @@ NS_ASSUME_NONNULL_BEGIN
 /// (id = 61)
 /// 功能与协议: 否支持 固件log的bin
 @property(nonatomic, assign) BOOL supportWatchLog;
+
+/// （id = 14）
+///  功能与协议:世界时间
+@property(nonatomic, assign) BOOL supportHomeZone;
+
+/// （id = 64）
+/// 功能与协议:股票
+@property(nonatomic, assign) BOOL supportStocks;
+
+/// （id = 65）
+/// 功能与协议:离腕锁屏
+@property(nonatomic, assign) BOOL supportPwd;
 @end
 
 NS_ASSUME_NONNULL_END

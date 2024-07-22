@@ -47,7 +47,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// Time stamp
 @property(nonatomic, assign) NSInteger timestamp;
 
-
+/** 当前速度（单位: M/H） */
+@property(nonatomic, assign) NSInteger speed;
 
 
 @end

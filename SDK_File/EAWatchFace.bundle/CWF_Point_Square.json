@@ -104,4 +104,30 @@
             "arcSecond":"6,113"
         }
     },
+    "240,296":{
+        "number":{
+            "background":"0,0",
+            "hourHigh":"28,27",
+            "hourLow":"68,27",
+            "minuteHigh":"140,27",
+            "minuteLow":"180,27",
+            "maohao":"117,27",
+            "weekText":"50,75",
+            "dayText":"140,75",
+            "weekTextWidth":100,
+            "weekTextAlign":2,
+            "weekTextFont":4,
+            "dayTextWidth":50,
+            "dayTextAlign":0,
+            "dayTextFont":4
+        },
+        "point":{
+            "hour":"112,89",
+            "arcHour":"8,57",
+            "minute":"112,49",
+            "arcMinute":"8,100",
+            "second":"114,36",
+            "arcSecond":"6,113"
+        }
+    },
 }

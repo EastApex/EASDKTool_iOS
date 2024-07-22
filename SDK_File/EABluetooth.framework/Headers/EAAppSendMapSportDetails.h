@@ -35,6 +35,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** 断连后需要回传总次数（跳绳当前跳了多少下） */
 @property(nonatomic, assign) NSInteger count;
 
+/** 当前速度（单位: M/H） */
+@property(nonatomic, assign) NSInteger speed;
+
 + (instancetype )eaInitWithDuration:(NSInteger)duration distance:(NSInteger)distance pace:(NSInteger)pace;
 
 + (instancetype )eaInitWithDuration:(NSInteger)duration distance:(NSInteger)distance pace:(NSInteger)pace calorie:(NSInteger)calorie step:(NSInteger)step count:(NSInteger)count;

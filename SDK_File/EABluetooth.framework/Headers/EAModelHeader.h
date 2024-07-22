@@ -91,6 +91,8 @@
 #import <EABluetooth/EAWriteDevDebug.h>
 #import <EABluetooth/EADebugGpsNmeaData.h>
 #import <EABluetooth/EADebugLogData.h>
+#import <EABluetooth/EAStocks.h>
+#import <EABluetooth/EAPwd.h>
 
 // ops
 #import <EABluetooth/EABingingOps.h>

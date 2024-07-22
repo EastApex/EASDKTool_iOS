@@ -314,6 +314,16 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     /// id = 63
     EADataInfoTypeWriteDevDebug = 63,
     
+    /// id = 64
+    /// Stocks
+    /// EAStocks
+    EADataInfoTypeStocks = 64,
+    
+    /// id = 65
+    /// watch password
+    /// EAPwd
+    EADataInfoTypePwd = 65,
+    
     
     /// Operating Phone Commands
     /// 操作手机命令
@@ -762,6 +772,38 @@ typedef NS_ENUM(NSUInteger,EALanguageType) {
     /// 印地语
     /// Hindi
     EALanguageTypeHindi = 27,
+    
+    /// 乌克兰语
+    /// Ukrainian
+    EALanguageTypeUkrainian = 28,
+    
+    /// 罗马尼亚语
+    /// Romanian
+    EALanguageTypeRomanian = 29,
+
+    /// 摩尔多瓦语 
+    /// Moldovan
+    EALanguageTypeMoldovan = 30,
+    
+    /// 孟加拉语
+    /// Bengali
+    EALanguageTypeBengali = 31,
+
+    /// 斯洛伐克语
+    /// Slovak
+    EALanguageTypeSlovak = 32,
+
+    /// 丹麦语
+    /// Danish
+    EALanguageTypeDanish = 33,
+
+    /// 挪威语
+    /// Norwegian
+    EALanguageTypeNorwegian = 34,
+
+    /// 芬兰语
+    /// Finnish
+    EALanguageTypeFinnish = 35,
 };
 
 
@@ -1301,6 +1343,11 @@ typedef NS_ENUM(NSUInteger,EAPhoneOps) {
     /// 经典蓝牙BT打开(已连接)
     /// Classic Bluetooth BT connected
     EAPhoneOpsBtConnected = 24,
+    
+    /// OTA失败
+    /// Ota Fail
+    EAPhoneOpsOtaFail = 25,
+    
 };
 
 /// Operating mobile phone status
@@ -2633,6 +2680,42 @@ typedef NS_ENUM(NSUInteger,EAWatchSportType) {
     /// 高山滑雪 :
     /// Alpine Skiing
     EAWatchSportDownhillskiing = 156,
+    
+    /** 竞走 */
+    EAWatchSportWalkingRace = 157,
+
+    /** 室内冲浪 */
+    EAWatchSportIndoorSurfing = 158,
+
+    /** 战绳 */
+    EAWatchSportBattleRope = 159,
+
+    /** 室内健身 */
+    EAWatchSportIndoorFitness = 160,
+
+    /** 越野摩托 */
+    EAWatchSportScramblingMotorcycle = 161,
+
+    /** 回力球 */
+    EAWatchSportHiliBall = 162,
+
+    /** 钢管舞 */
+    EAWatchSportPoleDancing = 163,
+
+    /** 现代舞 */
+    EAWatchSportModernDance = 164,
+
+    /** 桌上足球 */
+    EAWatchSportTableFootball = 165,
+
+    /** 秋千 */
+    EAWatchSportSwing = 166,
+
+    /** 踢毽子 */
+    EAWatchSportShuttlecockKicking = 167,
+
+    /** 室内溜冰 */
+    EAWatchSportIndoorSkatingRink = 168,
     
     
     

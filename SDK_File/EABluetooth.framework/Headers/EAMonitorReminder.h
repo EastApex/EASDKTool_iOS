@@ -117,6 +117,10 @@ NS_ASSUME_NONNULL_BEGIN
 //                                       stepThreshold:(NSInteger)stepThreshold;
 
 
++ (void)eaGetDrinkReminder:(ResultGetInfoBlock )result;
++ (void)eaGetWashHandsReminder:(ResultGetInfoBlock )result;
++ (void)eaGetTakeMedicineReminder:(ResultGetInfoBlock )result;
+
 
 @end
 

@@ -22,6 +22,18 @@ NS_ASSUME_NONNULL_BEGIN
 /// number
 @property(nonatomic, strong) NSString *num;
 
+/** 名字 扩展1 */
+@property(nonatomic, strong) NSString *nameEx1;
+
+/** 号码 扩展1 */
+@property(nonatomic, strong) NSString *numEx1;
+
+/** 名字 扩展2 */
+@property(nonatomic, strong) NSString *nameEx2;
+
+/** 号码 扩展2 */
+@property(nonatomic, strong) NSString *numEx2;
+
 
 @end
 

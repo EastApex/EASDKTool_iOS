@@ -13,11 +13,41 @@
  SDK access documentation
  https://www.showdoc.com.cn/2042713679210858/0
  
- Date：2023-11-27
- Version：1.0.87.4
+ Date：2024-03-27
+ Version：1.0.92.3
+ 适配全尺寸指针表盘
  
- 1.Fix menstruation-prone digital display issues【修复经期易孕期数字显示问题】
+ Date：2024-03-25
+ Version：1.0.92.2
+ 修复闪退问题
+ 
+ Date：2024-03-05
+ Version：1.0.92.1
+ 新增2种语言枚举类型【29罗马尼亚语 30摩尔多瓦语】
+ 
+ Date：2024-03-04
+ Version：1.0.90.2
+ 修复ota被拒后闪退问题
 
+ Date：2024-05-28
+ Version：1.0.98.1
+ 1.新增/修改协议
+ c8801:  id = 5      ：新增 时区城市名称
+ c8801:  id = 44     ：新增字段：世界时间（id = 14）、股票（id = 64）、离腕锁屏（id = 65）
+ c8801:  id = 64     ：新增协议：股票
+ c8801:  id = 65     ：新增协议：离腕锁屏
+ c8801:  id = 10     ：新增 语言枚举值：bengali =31; //孟加拉语  slovak =32; //斯洛伐克语   danish =33; //丹麦语   norwegian =34; //挪威语   finnish =35;
+ c8801:  id = 65     ：离腕锁屏密码更改为字符串
+ c8801:  id = 58     ：紧急联系人 扩展多两个联系人(猎声)
+ c8801:  id = 46     ：App发起运动(App地图地图需要参与) 增加多运动枚举类型（157~168）
+         id = 54     ：APP启动手表运动（投屏运动）增加多运动枚举类型（157~168）
+ c8803:  id = 3005   : 多运动数据 增加多运动枚举类型（157~168）
+         id = 3014   ：新增协议：温度大数据
+ c8801:  id = 47     ：新增 App运动发送数据：当前速度
+ c8802:  id = 2008   ：新增参数： 当前速度
+ 
+ 2.
+ 
   */
 
 #import <Foundation/Foundation.h>
@@ -190,7 +220,7 @@ typedef void(^UpdateValueBlock)(CBCharacteristic *characteristic,NSError *error)
 
 /// 当前连接的设备
 /// Currently connected device
-@property (nonatomic, strong) EAPeripheralModel *eaPeripheralModel;
+@property (nonatomic, strong, nullable) EAPeripheralModel *eaPeripheralModel;
 
 /// 蓝牙状态
 /// Bluetooth status
@@ -200,6 +230,7 @@ typedef void(^UpdateValueBlock)(CBCharacteristic *characteristic,NSError *error)
 /// 单例
 + (instancetype)defaultManager;
 
+- (void)setEASdkKey:(NSString *)eaKey;
 
 #pragma mark - Equipment related Methods 设备相关方法
 
@@ -271,7 +302,9 @@ typedef void(^UpdateValueBlock)(CBCharacteristic *characteristic,NSError *error)
 
 - (BOOL)isScanning;
 
+- (BOOL)checkKey;
 
+- (NSString *)getPeripheralId;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -57,7 +57,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 同步模式：
 @property(nonatomic, assign) EASyncType syncType;
 
-
+/// time zone city name
+/// 时区城市名称
+@property(nonatomic, strong) NSString *place;
 
 
 

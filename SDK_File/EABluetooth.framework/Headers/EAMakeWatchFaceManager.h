@@ -53,7 +53,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Type2：Create thumbnail of pointer watch face【创建指针表盘缩略图】
 /// @return Thumbnail
-+ (UIImage *)eaGetPointerThumbnailWithImage:(UIImage *)image colorType:(EACWFTimerColorType )colorType scaleStyle :(EACWFPointerScaleStyle)scaleStyle;
++ (UIImage *)eaGetDefaultPointerThumbnailWithImage:(UIImage *)image colorType:(EACWFTimerColorType )colorType;
 
 /// Type3： Create thumbnail of default style digital watch face
 /// @return Thumbnail
@@ -68,9 +68,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIImage *)eaGetPointerThumbnailWithImage:(UIImage *)image list:(NSArray <EACustomPointerWatchFaceModel *>*)pointerList ;
 
 
-/// Type1：Create thumbnails of digital watch face【创建数字表盘缩略图】
-/// @return Thumbnail
-+ (UIImage *)eaGetNumberThumbnailWithImage:(UIImage *)image colorType:(EACWFTimerColorType )colorType DEPRECATED_MSG_ATTRIBUTE("Please use \"eaGetDefaultNumberThumbnailWithImage: color:\"");
+
 
 /**
 
@@ -90,8 +88,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - watch face ota 【表盘OTA】
 
-/// Type2：Pointer watch face with custom  picture【自定义图片的指针表盘】
-+ (NSInteger )eaOtaPointerWatchFaceWithImage:(UIImage *)image colorType:(EACWFTimerColorType )colorType scaleStyle :(EACWFPointerScaleStyle)scaleStyle;
+
+/// Type2：Default style digital watch face【默认指针表盘】
++ (NSInteger )eaOtaDefaultPointerWatchFaceWithImage:(UIImage *)image colorType:(EACWFTimerColorType )colorType;
 
 /// Type3：Default style digital watch face【默认数字表盘】
 + (NSInteger )eaOtaDefaultNumberWatchFaceWithImage:(UIImage *)image color:(UIColor *)color ;
@@ -100,13 +99,15 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSInteger )eaOtaNumberWatchFaceWithImage:(UIImage *)image list:(NSArray <EACustomNumberWatchFaceModel *>*)numberList;
 
 /// Type5：Advanced custom pointer watch face【高级自定义指针表盘】
-+ (NSInteger )eaOtaPointerWatchFaceWithImage:(UIImage *)image list:(NSArray <EACustomPointerWatchFaceModel *>*)pointerList;
++ (NSInteger )eaOtaPointerWatchFaceWithImage:(UIImage *)image list:(NSArray <EACustomPointerWatchFaceModel *>*)pointerList colorType:(EACWFTimerColorType )colorType;
 
 
 
-/// Type2：Pointer watch face with custom  picture【自定义图片的指针表盘】
-+ (NSInteger )eaOtaPointerWatchFaceWithImage:(UIImage *)image colorType:(EACWFTimerColorType )colorType scaleStyle :(EACWFPointerScaleStyle)scaleStyle watchFaceId:(NSString *)watchFaceId;
+
  
+/// Type2：Default style digital watch face【默认指针表盘】
++ (NSInteger )eaOtaDefaultPointerWatchFaceWithImage:(UIImage *)image colorType:(EACWFTimerColorType )colorType watchFaceId:(NSString *)watchFaceId;
+
 /// Type3：Default style digital watch face【默认数字表盘】
 + (NSInteger )eaOtaDefaultNumberWatchFaceWithImage:(UIImage *)image color:(UIColor *)color watchFaceId:(NSString *)watchFaceId;
 
@@ -114,18 +115,29 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSInteger )eaOtaNumberWatchFaceWithImage:(UIImage *)image list:(NSArray <EACustomNumberWatchFaceModel *>*)numberList watchFaceId:(NSString *)watchFaceId;
 
 /// Type5：Advanced custom pointer watch face【高级自定义指针表盘】
-+ (NSInteger )eaOtaPointerWatchFaceWithImage:(UIImage *)image list:(NSArray <EACustomPointerWatchFaceModel *>*)pointerList watchFaceId:(NSString *)watchFaceId;
++ (NSInteger )eaOtaPointerWatchFaceWithImage:(UIImage *)image list:(NSArray <EACustomPointerWatchFaceModel *>*)pointerList colorType:(EACWFTimerColorType )colorType watchFaceId:(NSString *)watchFaceId;
 
 
 
 
 
++ (UIImage *)eaGetPointerThumbnailWithImage:(UIImage *)image colorType:(EACWFTimerColorType )colorType scaleStyle :(EACWFPointerScaleStyle)scaleStyle DEPRECATED_MSG_ATTRIBUTE("Please use \"eaGetDefaultPointerThumbnailWithImage: colorType:\"");
 
+/// Type1：Create thumbnails of digital watch face【创建数字表盘缩略图】
+/// @return Thumbnail
++ (UIImage *)eaGetNumberThumbnailWithImage:(UIImage *)image colorType:(EACWFTimerColorType )colorType DEPRECATED_MSG_ATTRIBUTE("Please use \"eaGetDefaultNumberThumbnailWithImage: color:\"");
 
 /// Type1：Digital watch face with custom picture【自定义图片的数字表盘】
 + (NSInteger )eaOtaNumberWatchFaceWithImage:(UIImage *)image colorType:(EACWFTimerColorType )colorType DEPRECATED_MSG_ATTRIBUTE("Please use \"eaOtaDefaultNumberWatchFaceWithImage: color:\"");
 
+/// Type2：Pointer watch face with custom  picture【自定义图片的指针表盘】
++ (NSInteger )eaOtaPointerWatchFaceWithImage:(UIImage *)image colorType:(EACWFTimerColorType )colorType scaleStyle :(EACWFPointerScaleStyle)scaleStyle DEPRECATED_MSG_ATTRIBUTE("Please use \"eaOtaDefaultPointerWatchFaceWithImage: colorType:\"");
 
+/// Type2：Pointer watch face with custom  picture【自定义图片的指针表盘】
++ (NSInteger )eaOtaPointerWatchFaceWithImage:(UIImage *)image colorType:(EACWFTimerColorType )colorType scaleStyle :(EACWFPointerScaleStyle)scaleStyle watchFaceId:(NSString *)watchFaceId DEPRECATED_MSG_ATTRIBUTE("Please use \"eaOtaDefaultPointerWatchFaceWithImage: colorType: watchFaceId:\"");
+
+
++ (UIImage *)testLoadSvg;
 
 
 @end

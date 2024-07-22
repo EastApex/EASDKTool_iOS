@@ -28,6 +28,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 固件版本：
 @property(nonatomic, copy) NSString *firmwareVersion;
 
+/** 客户版本号(如果有值，则用于显示给客户)：最多支持32字节的utf8，字符串（大小详见对应OPTIONS文件） */
+@property(nonatomic,  copy) NSString *customFirmwareVersion;
+
 /// Whether the binding
 /// 是否绑定
 @property(nonatomic, assign) EABindingType bindingType;
@@ -98,6 +101,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 支持日程数量：0:默认支持10个  n:支持n个
 /// Number of supported schedules: 0: 10 by default n: n supported
 @property(nonatomic, assign) NSInteger numOfScheduleSupported;
+
+
+
 
 /// apollo
 @property(nonatomic,readonly) NSString *apbVerion;
