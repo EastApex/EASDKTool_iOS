@@ -21,8 +21,9 @@ NSString *logString = [NSString stringWithFormat:@""format,##__VA_ARGS__];\
 }\
 }\
 
-#define kEADocumentsPath          [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
-#define kEATempPath               NSTemporaryDirectory()
+#define kEADocumentsPath            [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
+#define kEAWatchFacePath            [kEADocumentsPath stringByAppendingPathComponent:@"EAWatchFace"]
+#define kEATempPath                 NSTemporaryDirectory()
 
 
 
@@ -83,8 +84,8 @@ NSString *logString = [NSString stringWithFormat:@""format,##__VA_ARGS__];\
 
 + (BOOL)saveLogEnable;
 
-
 + (void)writeLog:(NSString *)logLastString;
+
 @end
 
 NS_ASSUME_NONNULL_END

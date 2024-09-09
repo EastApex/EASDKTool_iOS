@@ -9,6 +9,43 @@
 #define EAEnumh
 
 
+
+
+/// Connect status
+/// MARK: -  绑定类型
+typedef NS_ENUM(NSUInteger, EAConnectStatus) {
+    
+    /// Connect failed
+    /// 连接失败
+    EAConnectStatusFailed = 0,
+    
+    /// Connect succeed
+    /// 连接成功
+    EAConnectStatusSucceed = 1,
+    
+    /// Disconnect
+    /// 断开连接
+    EAConnectStatusDisconnect = 2,
+    
+    /// Bluetooth on
+    /// 蓝牙开启
+    EABlePoweredOn = 3,
+    
+    /// Bluetooth off
+    /// 蓝牙关闭
+    EABlePoweredOff = 4,
+    
+    /// Connect failed and need removed pairing
+    /// 连接失败,需要忽略设备
+    EAConnectStatusFailedWithRemovedPairing = 5,
+    
+    /// Connect failed time out
+    /// 连接失败,超时
+    EAConnectStatusFailedWithTimeOut = 6,
+    
+};
+
+
 /// 数据类型
 /// Watch data type
 typedef NS_ENUM(NSUInteger, EADataInfoType) {
@@ -309,6 +346,7 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     
 
     /// id = 61
+    /// EAWatchLog
     EADataInfoTypeWatchLog = 61,
     
     /// id = 63
@@ -323,6 +361,22 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     /// watch password
     /// EAPwd
     EADataInfoTypePwd = 65,
+    
+    
+    /// id = 66
+    /// template body
+    /// EATemplateBody
+    EADataInfoTypeTemplateBody = 66,
+    
+    /// id = 67
+    /// template environment
+    /// EATemplateEnvironment
+    EADataInfoTypeTemplateEnvironment = 67,
+    
+    /// id = 68
+    ///what support sport for App mac sport (id = 46) & APP starts watch motion (screen motion)(id = 54)
+    /// EASportSupport
+    EADataInfoTypeAppSportSupport = 68,
     
     
     /// Operating Phone Commands
@@ -412,6 +466,19 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     /// EASportHrData
     EADataInfoTypeSportHrData = 3013,
 
+    /// 体温数据
+    /// template body data
+    /// EATemplateBodyData
+    EADataInfoTypeTemplateBodyData = 3014,
+    
+    
+    /// 环境温度数据
+    /// template environment data
+    /// EATemplateEnvironmentData
+    EADataInfoTypeTemplateEnvironmentData = 3015,
+    
+    
+    
     
     
     EADataInfoTypeDebugLogData = 3997,
@@ -885,6 +952,10 @@ typedef NS_ENUM(NSUInteger,EADeviceOpsType) {
     /// 打开bt信息回复功能
     /// open the bt message reply function
     EADeviceOpsTypeBtMsgOn = 15,
+    
+    
+    /** 宠物器需求：清除用户数据（需要按2次按钮确认） */
+    EADeviceOpsTypeClearUserdata = 16,
 };
 
 
@@ -1347,6 +1418,9 @@ typedef NS_ENUM(NSUInteger,EAPhoneOps) {
     /// OTA失败
     /// Ota Fail
     EAPhoneOpsOtaFail = 25,
+    
+    /** 宠物器需求：绑定清除用户数据成功回应 ，默认15秒失败*/
+    EAPhoneOpsClearUserdataSucc = 26,
     
 };
 
@@ -2813,6 +2887,10 @@ typedef NS_ENUM(NSUInteger,EAOtaRespondStatus) {
     /// Complete
     /// 传输完成
     EAOtaRespondStatusComplete = 5,
+    
+    /// 
+    /// 海思字库图库 升级需求
+    EAOtaRespondStatusHisJsonReq = 6,
 };
 
 /// MARK: - OTA 请求类型
@@ -2846,6 +2924,18 @@ typedef NS_ENUM(NSUInteger,EAOtaRequestType) {
     /// Watch face
     /// 自定义表盘
     EAOtaRequestTypeUserWf = 7,
+    
+    /// 海思字库图库的json文件 
+    EAOtaRequestTypeHisResJson = 8,
+
+    /// 海思字库图库
+    EAOtaRequestTypeHisRes = 9,
+    
+    
+    
+    
+    /// 海思字库图库
+    EAOtaRequestTypeHisResZip = 999,
 };
 
 
@@ -3289,6 +3379,8 @@ typedef NS_ENUM(NSUInteger,EABleState) {
     EABleStateUnauthorized,
     EABleStatePoweredOff,
     EABleStatePoweredOn,
+    
+    
 };
 
 

@@ -36,22 +36,21 @@ NS_ASSUME_NONNULL_BEGIN
 /// App controlled watch App操控手表
 - (void)operationControlledWatchWithType:(EADeviceOpsType)deviceOpsType result:(RespondBlock )respond;
 
-
 /// Retrieve audio data [Call this method to retrieve audio data only when notification 'recording completed' is received]
 /// 获取音频数据【通知收到 ‘录音完成’ 才能调用此方法获取录音数据】
 - (NSData *)getAudioDataData;
 
 
+
+
 /// upgrade [OTA]
-- (BOOL)upgradeFiles:(NSArray<EAFileModel *> *)list;
+- (BOOL)upgradeFiles:(NSArray<EAFileModel *> *)list DEPRECATED_MSG_ATTRIBUTE("Please use \"Class EAOTAManager func\"");
 
 /// Watch face [OTA]
-- (BOOL)upgradeWatchFaceFile:(EAFileModel *)watchFaceFile;
+- (BOOL)upgradeWatchFaceFile:(EAFileModel *)watchFaceFile DEPRECATED_MSG_ATTRIBUTE("Please use \"Class EAOTAManager func\"");
 
-/// AGPS OTA
-- (BOOL)upgrade:(EAOTA *)ota;
-
-
+/// OTA
+- (BOOL)upgrade:(EAOTA *)ota DEPRECATED_MSG_ATTRIBUTE("Please use \"upgradeFiles:\"");
 
 ///备注：2个获取大数据方法不能同时使用。需要等待手表发送完成大数据消息才会有数据【监听通知 kNTF_EAGetDeviceOpsPhoneMessage】,然后调用 getBigDataWithBigDataType: 获取相关大数据详细内容
 ///Note: The two methods of obtaining big data cannot be used at the same time.Data will not be available until the watch sends the big data message[Listening notification kNTF_EAGetDeviceOpsPhoneMessage],Then call getBigDataWithBigDataType: access to relevant data details
@@ -103,6 +102,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)openCommunicationTimer;
 - (void)closeCommunicationTimer;
 - (BOOL)getOTAState;
+#pragma mark - Test 分析蓝牙数据
+- (void)test_analyzeDataString:(NSString *)dataString inCharacteristicUUID:(NSString *)characteristicUUIDString;
 @end
 
 NS_ASSUME_NONNULL_END

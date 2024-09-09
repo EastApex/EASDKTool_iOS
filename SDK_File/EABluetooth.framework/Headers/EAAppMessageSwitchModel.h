@@ -216,6 +216,10 @@ typedef NS_OPTIONS(NSUInteger, EAShowAppType) {
 @interface EAAppMessageSwitchModel : EABaseModel
 
 @property(nonatomic, assign) BOOL sw;
+@property(nonatomic, assign) EAShowAppType showAppType;
+@property(nonatomic, strong) NSString *appName;
+
++ (instancetype)eaInitAppMessageSwitchModel:(EAShowAppType)showAppType sw:(BOOL)sw;
 
 @end
 
@@ -226,7 +230,8 @@ typedef NS_OPTIONS(NSUInteger, EAShowAppType) {
 @property(nonatomic,strong) NSMutableArray<EAAppMessageSwitchModel*> *sAppSwArray;
 
 
-
++ (void)eaUpdateAppMessageSwitch:(EAAppMessageSwitchModel *)appMessageSwitchModel respond:(void (^)(EARespondModel *respondModel))respond;
++ (void)eaUpdateAppMessagesSwitch:(NSArray <EAAppMessageSwitchModel *> *)updateList  respond:(void (^)(EARespondModel *respondModel))respond;
 
 
 

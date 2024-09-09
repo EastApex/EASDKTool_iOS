@@ -25,8 +25,8 @@ FOUNDATION_EXPORT const unsigned char EABluetoothVersionString[];
 #import <EABluetooth/EABleConfig.h>
 #import <EABluetooth/EAEnum.h>
 #import <EABluetooth/EABleBigDataManager.h>
-
-#import <EABluetooth/EACreatThumbnail.h>  
+#import <EABluetooth/EAOTAManager.h>
+#import <EABluetooth/EACreatThumbnail.h>
 
 
 

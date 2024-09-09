@@ -13,85 +13,23 @@
  SDK access documentation
  https://www.showdoc.com.cn/2042713679210858/0
  
- Date：2024-03-27
- Version：1.0.92.3
- 适配全尺寸指针表盘
- 
- Date：2024-03-25
- Version：1.0.92.2
- 修复闪退问题
- 
- Date：2024-03-05
- Version：1.0.92.1
- 新增2种语言枚举类型【29罗马尼亚语 30摩尔多瓦语】
- 
- Date：2024-03-04
- Version：1.0.90.2
- 修复ota被拒后闪退问题
-
- Date：2024-05-28
- Version：1.0.98.1
- 1.新增/修改协议
- c8801:  id = 5      ：新增 时区城市名称
- c8801:  id = 44     ：新增字段：世界时间（id = 14）、股票（id = 64）、离腕锁屏（id = 65）
- c8801:  id = 64     ：新增协议：股票
- c8801:  id = 65     ：新增协议：离腕锁屏
- c8801:  id = 10     ：新增 语言枚举值：bengali =31; //孟加拉语  slovak =32; //斯洛伐克语   danish =33; //丹麦语   norwegian =34; //挪威语   finnish =35;
- c8801:  id = 65     ：离腕锁屏密码更改为字符串
- c8801:  id = 58     ：紧急联系人 扩展多两个联系人(猎声)
- c8801:  id = 46     ：App发起运动(App地图地图需要参与) 增加多运动枚举类型（157~168）
-         id = 54     ：APP启动手表运动（投屏运动）增加多运动枚举类型（157~168）
- c8803:  id = 3005   : 多运动数据 增加多运动枚举类型（157~168）
-         id = 3014   ：新增协议：温度大数据
- c8801:  id = 47     ：新增 App运动发送数据：当前速度
- c8802:  id = 2008   ：新增参数： 当前速度
- 
- 2.
  
   */
+
+#define kEASDKVERSION   @"1.1.02"
+#define kEASDKBUILD     @"2"
+
+
 
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "EAPeripheralModel.h"
 #import "EABleConfig.h"
+#import "EABaseModel.h"
 #import <EABluetooth/EAEnum.h>
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
-
-/// Connect status
-/// MARK: -  绑定类型
-typedef NS_ENUM(NSUInteger, EAConnectStatus) {
-    
-    /// Connect failed
-    /// 连接失败
-    EAConnectStatusFailed = 0,
-    
-    /// Connect succeed
-    /// 连接成功
-    EAConnectStatusSucceed = 1,
-    
-    /// Disconnect
-    /// 断开连接
-    EAConnectStatusDisconnect = 2,
-    
-    /// Bluetooth on
-    /// 蓝牙开启
-    EABlePoweredOn = 3,
-    
-    /// Bluetooth off
-    /// 蓝牙关闭
-    EABlePoweredOff = 4,
-    
-    /// Connect failed and need removed pairing
-    /// 连接失败,需要忽略设备
-    EAConnectStatusFailedWithRemovedPairing = 5,
-    
-    /// Connect failed time out
-    /// 连接失败,超时
-    EAConnectStatusFailedWithTimeOut = 6,
-    
-};
 
 /// Notification Name:Connect failed
 /// 连接失败
@@ -141,8 +79,9 @@ typedef NS_ENUM(NSUInteger, EAConnectStatus) {
 #define kNTF_EAOTAFail                      @"EAOTAFail"
 
 
-
-
+#define kNTF_EAOTAHisResFileKeys            @"EAOTAHisResFileKeys"
+#define kNTF_EAOTAHisResFileFail            @"EAOTAHisResFileFail"
+#define kNTF_EAOTARespond                   @"EAOTARespond"
 /// 实时数据
 /// Real time data
 #define kNTF_EARealTimeData                 @"EARealTimeData"
@@ -194,12 +133,6 @@ typedef NS_ENUM(NSUInteger, EAConnectStatus) {
 
 
 
-
-
-/// Bluetooth data
-/// 蓝牙数据
-typedef void(^UpdateValueBlock)(CBCharacteristic *characteristic,NSError *error);
-
 @interface EABleManager : NSObject
 
 /// The bluetooth Settings
@@ -208,7 +141,7 @@ typedef void(^UpdateValueBlock)(CBCharacteristic *characteristic,NSError *error)
 
 /// Searching for watch Agents
 /// 搜索设备代理
-@property(nonatomic,assign) id<EABleManagerDelegate> delegate;
+@property(nonatomic,weak) id<EABleManagerDelegate> delegate;
 
 /// ignore：Bluetooth data Broker
 /// 忽略：蓝牙数据代理
@@ -225,6 +158,7 @@ typedef void(^UpdateValueBlock)(CBCharacteristic *characteristic,NSError *error)
 /// 蓝牙状态
 /// Bluetooth status
 @property(nonatomic,assign) EABleState bleState;
+
 
 /// The singleton
 /// 单例
@@ -299,11 +233,8 @@ typedef void(^UpdateValueBlock)(CBCharacteristic *characteristic,NSError *error)
 
 /// ignore：
 - (void)writeValue:(NSData *)Data forCharacteristic:(EACharacteristicType )characteristicType;
-
 - (BOOL)isScanning;
-
 - (BOOL)checkKey;
-
 - (NSString *)getPeripheralId;
 @end
 

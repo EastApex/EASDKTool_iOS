@@ -72,6 +72,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// 设置表盘id，最长32
 @property(nonatomic,strong) NSString *watchFaceId;
 
+/// 海思ResId
+@property(nonatomic,assign,readonly) NSInteger hisResId;
+
+- (instancetype )initWithHisResId:(NSInteger)hisResId ;
 
 
 /// init
@@ -85,6 +89,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (EAFileModel *)eaInitWatchFaceFileWithData:(NSData *)binData version:(NSString *)version watchFaceId:(NSString *)watchFaceId;
 
 
+/// init
++ (EAFileModel *)eaInitHisResWithPath:(NSString *)zipPath;
+
+
 
 /// Deprecated
 /// 弃用
@@ -96,8 +104,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-@interface EAOTAModel : EAFileModel
+@interface EAOTAModel : EABaseModel
 
+
+@property(nonatomic,assign) EAOtaRequestType otaType;
+
+@property(nonatomic,strong) NSString *binPath;
+
+@property(nonatomic,copy) NSString *version;
+
+@property(nonatomic,strong) NSData *binData;
+
+@property(nonatomic,strong) NSString *watchFaceId;
 
  ///当前ota Bin 包大小 单位 bytes）
 @property(nonatomic,assign) NSInteger currentSize;
@@ -111,6 +129,8 @@ NS_ASSUME_NONNULL_BEGIN
  ///序号
 @property(nonatomic,assign) NSInteger number;
 
+/// 海思ResId
+@property(nonatomic,assign) NSInteger hisResId;
 
 
 - (NSData *)getOtaData;

@@ -93,7 +93,11 @@
 #import <EABluetooth/EADebugLogData.h>
 #import <EABluetooth/EAStocks.h>
 #import <EABluetooth/EAPwd.h>
-
+#import <EABluetooth/EATemplateBody.h>
+#import <EABluetooth/EATemplateEnvironment.h>
+#import <EABluetooth/EATemplateBodyData.h>
+#import <EABluetooth/EATemplateEnvironmentData.h>
+#import <EABluetooth/EASportSupport.h>
 // ops
 #import <EABluetooth/EABingingOps.h>
 #import <EABluetooth/EADeviceOps.h>

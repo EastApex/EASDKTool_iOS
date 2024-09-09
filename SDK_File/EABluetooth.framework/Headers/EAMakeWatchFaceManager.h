@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <EABluetooth/EAEnum.h>
 #import "EACustomNumberWatchFaceModel.h"
+#import <EABluetooth/EAOTAManager.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface EAMakeWatchFaceManager : NSObject
@@ -87,38 +88,77 @@ NS_ASSUME_NONNULL_BEGIN
  */
 
 #pragma mark - watch face ota 【表盘OTA】
+/// Type2：Default style digital watch face【默认指针表盘】
++ (NSInteger )eaOtaDefaultPointerWatchFaceWithImage:(UIImage *)image colorType:(EACWFTimerColorType )colorType watchFaceId:(NSString *)watchFaceId progress:(void (^)(CGFloat progress))progress complete:(OTACompleteBlock)complete;
+
+/// Type3：Default style digital watch face【默认数字表盘】
++ (NSInteger )eaOtaDefaultNumberWatchFaceWithImage:(UIImage *)image color:(UIColor *)color watchFaceId:(NSString *)watchFaceId progress:(void (^)(CGFloat progress))progress complete:(OTACompleteBlock)complete;
+
+/// Type4：Advanced custom digital watch face【高级自定义数字表盘】
++ (NSInteger )eaOtaNumberWatchFaceWithImage:(UIImage *)image list:(NSArray <EACustomNumberWatchFaceModel *>*)numberList watchFaceId:(NSString *)watchFaceId progress:(void (^)(CGFloat progress))progress complete:(OTACompleteBlock)complete;
+
+/// Type5：Advanced custom pointer watch face【高级自定义指针表盘】
++ (NSInteger )eaOtaPointerWatchFaceWithImage:(UIImage *)image list:(NSArray <EACustomPointerWatchFaceModel *>*)pointerList colorType:(EACWFTimerColorType )colorType watchFaceId:(NSString *)watchFaceId progress:(void (^)(CGFloat progress))progress complete:(OTACompleteBlock)complete;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /// Type2：Default style digital watch face【默认指针表盘】
-+ (NSInteger )eaOtaDefaultPointerWatchFaceWithImage:(UIImage *)image colorType:(EACWFTimerColorType )colorType;
++ (NSInteger )eaOtaDefaultPointerWatchFaceWithImage:(UIImage *)image colorType:(EACWFTimerColorType )colorType DEPRECATED_MSG_ATTRIBUTE("Please use \"aOtaDefaultPointerWatchFaceWithImage: colorType: watchFaceId: progress: complete:\"");
 
 /// Type3：Default style digital watch face【默认数字表盘】
-+ (NSInteger )eaOtaDefaultNumberWatchFaceWithImage:(UIImage *)image color:(UIColor *)color ;
++ (NSInteger )eaOtaDefaultNumberWatchFaceWithImage:(UIImage *)image color:(UIColor *)color DEPRECATED_MSG_ATTRIBUTE("Please use \"eaOtaDefaultNumberWatchFaceWithImage: color: watchFaceId: progress: complete:\"") ;
 
 /// Type4：Advanced custom digital watch face【高级自定义数字表盘】
-+ (NSInteger )eaOtaNumberWatchFaceWithImage:(UIImage *)image list:(NSArray <EACustomNumberWatchFaceModel *>*)numberList;
++ (NSInteger )eaOtaNumberWatchFaceWithImage:(UIImage *)image list:(NSArray <EACustomNumberWatchFaceModel *>*)numberList DEPRECATED_MSG_ATTRIBUTE("Please use \"eaOtaNumberWatchFaceWithImage: list: watchFaceId: progress: complete:\"");
 
 /// Type5：Advanced custom pointer watch face【高级自定义指针表盘】
-+ (NSInteger )eaOtaPointerWatchFaceWithImage:(UIImage *)image list:(NSArray <EACustomPointerWatchFaceModel *>*)pointerList colorType:(EACWFTimerColorType )colorType;
-
-
-
++ (NSInteger )eaOtaPointerWatchFaceWithImage:(UIImage *)image list:(NSArray <EACustomPointerWatchFaceModel *>*)pointerList colorType:(EACWFTimerColorType )colorType DEPRECATED_MSG_ATTRIBUTE("Please use \"eaOtaPointerWatchFaceWithImage: list: colorType: watchFaceId: progress: complete:\"");
 
  
-/// Type2：Default style digital watch face【默认指针表盘】
-+ (NSInteger )eaOtaDefaultPointerWatchFaceWithImage:(UIImage *)image colorType:(EACWFTimerColorType )colorType watchFaceId:(NSString *)watchFaceId;
++ (NSInteger )eaOtaDefaultPointerWatchFaceWithImage:(UIImage *)image colorType:(EACWFTimerColorType )colorType watchFaceId:(NSString *)watchFaceId DEPRECATED_MSG_ATTRIBUTE("Please use \"aOtaDefaultPointerWatchFaceWithImage: colorType: watchFaceId: progress: complete:\"");
 
-/// Type3：Default style digital watch face【默认数字表盘】
-+ (NSInteger )eaOtaDefaultNumberWatchFaceWithImage:(UIImage *)image color:(UIColor *)color watchFaceId:(NSString *)watchFaceId;
++ (NSInteger )eaOtaDefaultNumberWatchFaceWithImage:(UIImage *)image color:(UIColor *)color watchFaceId:(NSString *)watchFaceId DEPRECATED_MSG_ATTRIBUTE("Please use \"eaOtaDefaultNumberWatchFaceWithImage: color: watchFaceId: progress: complete:\"");
 
-/// Type4：Advanced custom digital watch face【高级自定义数字表盘】
-+ (NSInteger )eaOtaNumberWatchFaceWithImage:(UIImage *)image list:(NSArray <EACustomNumberWatchFaceModel *>*)numberList watchFaceId:(NSString *)watchFaceId;
++ (NSInteger )eaOtaNumberWatchFaceWithImage:(UIImage *)image list:(NSArray <EACustomNumberWatchFaceModel *>*)numberList watchFaceId:(NSString *)watchFaceId DEPRECATED_MSG_ATTRIBUTE("Please use \"eaOtaNumberWatchFaceWithImage: list: watchFaceId: progress: complete:\"");
 
-/// Type5：Advanced custom pointer watch face【高级自定义指针表盘】
-+ (NSInteger )eaOtaPointerWatchFaceWithImage:(UIImage *)image list:(NSArray <EACustomPointerWatchFaceModel *>*)pointerList colorType:(EACWFTimerColorType )colorType watchFaceId:(NSString *)watchFaceId;
-
-
-
++ (NSInteger )eaOtaPointerWatchFaceWithImage:(UIImage *)image list:(NSArray <EACustomPointerWatchFaceModel *>*)pointerList colorType:(EACWFTimerColorType )colorType watchFaceId:(NSString *)watchFaceId DEPRECATED_MSG_ATTRIBUTE("Please use \"eaOtaPointerWatchFaceWithImage: list: colorType: watchFaceId: progress: complete:\"");
 
 
 + (UIImage *)eaGetPointerThumbnailWithImage:(UIImage *)image colorType:(EACWFTimerColorType )colorType scaleStyle :(EACWFPointerScaleStyle)scaleStyle DEPRECATED_MSG_ATTRIBUTE("Please use \"eaGetDefaultPointerThumbnailWithImage: colorType:\"");

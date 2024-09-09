@@ -40,7 +40,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSInteger isTestMode;
 
 /// 自定义表盘控件位置由固件决定（0:不支持固件更改  1: 数字 2: 指针）
-@property(nonatomic, assign)NSInteger WfOtaBefore;
+@property(nonatomic, assign) NSInteger WfOtaBefore;
+
+/** 海思字库图库id (一对一对应后面发的bin，不能出错) */
+@property(nonatomic, assign) NSInteger hisResId;
+@property(nonatomic, assign) NSInteger hisFileNum;
+
 
 /// MARK: - 
 + (EAOtaRequest *)getModelByData:(NSData *)data;

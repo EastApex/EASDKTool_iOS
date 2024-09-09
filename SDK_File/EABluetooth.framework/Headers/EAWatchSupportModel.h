@@ -316,6 +316,21 @@ NS_ASSUME_NONNULL_BEGIN
 /// （id = 65）
 /// 功能与协议:离腕锁屏
 @property(nonatomic, assign) BOOL supportPwd;
+
+/// （id = 66）
+/// 功能与协议:自动体表温度监测
+@property(nonatomic, assign) BOOL supportTemplateBody;
+
+/// （id = 67）
+///  功能与协议:自动环境温度监测
+@property(nonatomic, assign) BOOL supportTemplateEnvironment;
+
+
+/// （id = 68）
+/// 功能与协议:手表支持APP发起运动的类型 
+@property(nonatomic, assign) BOOL supportAppSportSupport;
+
+
 @end
 
 NS_ASSUME_NONNULL_END
