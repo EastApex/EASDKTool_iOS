@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EABluetooth'
-  s.version          = '1.1.02.2'
+  s.version          = '1.1.02.3'
   s.summary          = 'A short description of EABluetooth.'
 
 # This description is used to generate tags and improve search results.

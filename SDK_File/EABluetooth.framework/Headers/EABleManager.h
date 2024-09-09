@@ -17,7 +17,7 @@
   */
 
 #define kEASDKVERSION   @"1.1.02"
-#define kEASDKBUILD     @"2"
+#define kEASDKBUILD     @"3"
 
 
 
