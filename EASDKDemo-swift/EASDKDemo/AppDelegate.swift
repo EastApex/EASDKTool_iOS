@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let bleManager = EABleManager.default()
         bleManager.bleConfig = config;
-        
+        bleManager.setEASdkKey("EASDKDemo");
         return true
     }
 

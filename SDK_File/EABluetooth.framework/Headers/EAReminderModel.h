@@ -153,8 +153,8 @@ weekCycleBit 为127 即 开启每天监测功能
 
 
 
-/// id = 22 : 提醒（闹钟）
-/// id = 22: Reminder (alarm clock)
+/// id = 22 : 提醒（闹钟、日程）
+/// id = 22: Reminder (alarm clock 、 schedule)
 @interface EAReminderOps : EABaseModel
 
 /// Reminder event operations

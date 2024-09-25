@@ -69,6 +69,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIImage *)eaGetPointerThumbnailWithImage:(UIImage *)image list:(NSArray <EACustomPointerWatchFaceModel *>*)pointerList ;
 
 
+/// Type2：Create thumbnail of pointer watch face【创建指针表盘缩略图】
+/// @return Thumbnail
++ (UIImage *)eaGetDefaultPointerThumbnailWithImage:(UIImage *)image colorType:(EACWFTimerColorType )colorType scaleStyle:(EACWFPointerScaleStyle)scaleStyle;
 
 
 /**
@@ -101,8 +104,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSInteger )eaOtaPointerWatchFaceWithImage:(UIImage *)image list:(NSArray <EACustomPointerWatchFaceModel *>*)pointerList colorType:(EACWFTimerColorType )colorType watchFaceId:(NSString *)watchFaceId progress:(void (^)(CGFloat progress))progress complete:(OTACompleteBlock)complete;
 
 
+/// Type2：Default style digital watch face【默认指针表盘】
++ (NSInteger )eaOtaDefaultPointerWatchFaceWithImage:(UIImage *)image colorType:(EACWFTimerColorType )colorType scaleStyle:(EACWFPointerScaleStyle)scaleStyle watchFaceId:(NSString *)watchFaceId progress:(void (^)(CGFloat progress))progress complete:(OTACompleteBlock)complete;
 
-
+/// Type5：Advanced custom pointer watch face【高级自定义指针表盘】
++ (NSInteger )eaOtaPointerWatchFaceWithImage:(UIImage *)image list:(NSArray <EACustomPointerWatchFaceModel *>*)pointerList colorType:(EACWFTimerColorType )colorType scaleStyle:(EACWFPointerScaleStyle)scaleStyle watchFaceId:(NSString *)watchFaceId progress:(void (^)(CGFloat progress))progress complete:(OTACompleteBlock)complete;
 
 
 

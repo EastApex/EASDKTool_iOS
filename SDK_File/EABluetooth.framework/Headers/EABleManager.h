@@ -17,7 +17,7 @@
   */
 
 #define kEASDKVERSION   @"1.1.02"
-#define kEASDKBUILD     @"3"
+#define kEASDKBUILD     @"10"
 
 
 
@@ -164,6 +164,19 @@ NS_ASSUME_NONNULL_BEGIN
 /// 单例
 + (instancetype)defaultManager;
 
+
+/**
+ 
+ eaKey is an arbitrary fixed value, and this value is added to the EASDKKEY field of the project's info.plist.
+ <key>EASDKKEY</key>
+ <string>_______</string>
+ 
+ eaKey为随意固定值，并且添加此值在项目的info.plist的EASDKKEY字段里。
+ <key>EASDKKEY</key>
+ <string>_______</string>
+ 
+ See：https://github.com/EastApex/EASDKTool_iOS/blob/main/EASDKKEY.jpg
+ */
 - (void)setEASdkKey:(NSString *)eaKey;
 
 #pragma mark - Equipment related Methods 设备相关方法

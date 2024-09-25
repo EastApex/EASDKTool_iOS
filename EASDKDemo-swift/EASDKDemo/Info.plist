@@ -23,5 +23,7 @@
 	</dict>
 	<key>UIFileSharingEnabled</key>
 	<true/>
+	<key>EASDKKEY</key>
+	<string>EASDKDemo</string>
 </dict>
 </plist>

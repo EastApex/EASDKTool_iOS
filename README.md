@@ -8,13 +8,39 @@ https://github.com/EastApex/EASDKTool_iOS.git
 in your Podfile 
 add this 
 
+```
 pod 'EABluetooth', :git =>  'https://github.com/EastApex/EASDKTool_iOS.git'
+```
 or  use tag specified version
+```
 pod 'EABluetooth', :git =>  'https://github.com/EastApex/EASDKTool_iOS.git',:tag => '1.0.68.3'
+```
+
+If you haven't updated to the latest version, please use the command 
+```
+pod update EABluetooth --no-repo-update
+```
+or 
+```
+pod update
+```
 
 
 
 ### Release Notes:
+    
+    <p>Date：2024-09-25
+    
+        SDK
+        Version v1.1.02.10
+        1.修复自定义表盘bug
+        
+    <p>Date：2024-09-04
+    
+        SDK
+        Version v1.1.02.3
+        Add some function
+        
 
     <p>Date：2023-10-27
     

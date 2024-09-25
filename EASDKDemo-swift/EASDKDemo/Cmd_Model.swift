@@ -1033,11 +1033,20 @@ class Cmd_SendRealTimeDataOnOff {
     
     class func setData() {
         
+        /**
+         The method of notifying kNTF_EARealTimeData needs to be implemented.
+         需要实现通知 kNTF_EARealTimeData 方法。
+         */
+        
         let model = EASendRealTimeDataOnOff.eaInitWith(onOff: true)
         Command.setData(model: model);
     }
     class func getData(){
                 
+        /**
+         The method of notifying kNTF_EARealTimeData needs to be implemented.
+         需要实现通知 kNTF_EARealTimeData 方法。
+         */
         EABleSendManager.default().operationGetInfo(with: .sendRealTimeDataOnOff) { baseModel in
             
             if baseModel.isKind(of: EASendRealTimeDataOnOff.self) {

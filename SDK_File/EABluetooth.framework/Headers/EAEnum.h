@@ -1500,8 +1500,8 @@ typedef NS_ENUM(NSUInteger,EASleepNode) {
     EASleepNodeSummary = 8,
 };
 
-/// Sport type
-/// MARK: - 运动类型
+/// Sport type (Deprecated. Please use EAWatchSportType.)
+/// MARK: - 运动类型（弃用，请使用EAWatchSportType）
 typedef NS_ENUM(NSUInteger,EASportType) {
     
     /// Daily
@@ -3286,8 +3286,8 @@ typedef NS_ENUM(NSUInteger, EACWFStyleType) {
 typedef NS_ENUM(NSUInteger, EACWFPointerScaleStyle) {
     
     EACWFPointerScaleStyleNone          = 0,    // None【无刻度】
-//    EACWFPointerScaleStyleBar           = 1,    // Bar scale【条形刻度】
-//    EACWFPointerScaleStyleDigitalBar    = 2,    // Digital bar scale【数字条形刻度】
+    EACWFPointerScaleStyleBar           = 1,    // Bar scale【条形刻度】
+    EACWFPointerScaleStyleDigitalBar    = 2,    // Digital bar scale【数字条形刻度】
 //    EACWFPointerScaleStyleRoman         = 3,    // Roman number【罗马数字】
 //    EACWFPointerScaleStyleDiamond       = 4,    // Diamond【钻石】
 };
@@ -3379,8 +3379,6 @@ typedef NS_ENUM(NSUInteger,EABleState) {
     EABleStateUnauthorized,
     EABleStatePoweredOff,
     EABleStatePoweredOn,
-    
-    
 };
 
 

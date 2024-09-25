@@ -1,18 +1,29 @@
 PODS:
-  - EABluetooth (0.1.0):
-    - Protobuf (~> 3.14.0)
-    - Realm
+  - BGFMDB (2.0.13):
+    - BGFMDB/BG (= 2.0.13)
+    - BGFMDB/FMDB (= 2.0.13)
+  - BGFMDB/BG (2.0.13):
+    - BGFMDB/FMDB
+  - BGFMDB/FMDB (2.0.13)
+  - CocoaLumberjack (3.8.5):
+    - CocoaLumberjack/Core (= 3.8.5)
+  - CocoaLumberjack/Core (3.8.5)
+  - EABluetooth (1.1.02.3):
+    - BGFMDB
+    - Protobuf
     - SAMKeychain
+    - SVGKit
     - YYKit
+    - ZipArchive
   - Masonry (1.1.0)
-  - Protobuf (3.14.0)
-  - Realm (10.33.0):
-    - Realm/Headers (= 10.33.0)
-  - Realm/Headers (10.33.0)
+  - Protobuf (3.28.2)
   - SAMKeychain (1.5.3)
+  - SVGKit (3.0.0):
+    - CocoaLumberjack (~> 3.0)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
+  - ZipArchive (1.4.0)
 
 DEPENDENCIES:
   - EABluetooth (from `https://github.com/EastApex/EASDKTool_iOS.git`)
@@ -20,11 +31,14 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - BGFMDB
+    - CocoaLumberjack
     - Masonry
     - Protobuf
-    - Realm
     - SAMKeychain
+    - SVGKit
     - YYKit
+    - ZipArchive
 
 EXTERNAL SOURCES:
   EABluetooth:
@@ -32,17 +46,20 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   EABluetooth:
-    :commit: 23302af3f38fd369627c32cb088deaf1dc8e822e
+    :commit: 5d493514f7ca2ef9690bde7fb2a9c275860a1907
     :git: https://github.com/EastApex/EASDKTool_iOS.git
 
 SPEC CHECKSUMS:
-  EABluetooth: 96bbf13370680a21cf06b55d8ba4ef8fa21a7fff
+  BGFMDB: 48e6823027232402a678acc7f71484b1fc9171d0
+  CocoaLumberjack: 6a459bc897d6d80bd1b8c78482ec7ad05dffc3f0
+  EABluetooth: 063aa16f7c2fc51d9d66eed01e260068b8705857
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  Protobuf: 0cde852566359049847168e51bd1c690e0f70056
-  Realm: d4f810e161fa2c2c589b9860b6eb09238deacd73
+  Protobuf: 28c89b24435762f60244e691544ed80f50d82701
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+  SVGKit: 1ad7513f8c74d9652f94ed64ddecda1a23864dea
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+  ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
 PODFILE CHECKSUM: 7f4e3cc4bdceabb76ffc1cfd78748b92d93dbf98
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.15.2
