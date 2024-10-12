@@ -330,6 +330,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// 功能与协议:手表支持APP发起运动的类型 
 @property(nonatomic, assign) BOOL supportAppSportSupport;
 
+///
+/// 功能与协议:手表是否支持OTA音乐文件
+@property(nonatomic, assign) BOOL musicOtaSupport;
+
+/// （id = 69）
+/// 功能与协议: 手表心率最高值及最小值
+@property(nonatomic, assign) BOOL hrMaxMinShowSupport;
+
 
 @end
 

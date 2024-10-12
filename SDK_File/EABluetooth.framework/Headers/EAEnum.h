@@ -378,6 +378,10 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     /// EASportSupport
     EADataInfoTypeAppSportSupport = 68,
     
+    /// id = 69
+    ///
+    /// EAHrMaxMinShow
+    EADataInfoTypeHrMaxMinShow = 69,
     
     /// Operating Phone Commands
     /// 操作手机命令
@@ -2931,7 +2935,8 @@ typedef NS_ENUM(NSUInteger,EAOtaRequestType) {
     /// 海思字库图库
     EAOtaRequestTypeHisRes = 9,
     
-    
+    /// 海思音乐: 支持类型AAC,wav,flac,sbc,ogg,mp3
+    EAOtaRequestTypeHisMusic = 10,
     
     
     /// 海思字库图库

@@ -98,6 +98,9 @@
 #import <EABluetooth/EATemplateBodyData.h>
 #import <EABluetooth/EATemplateEnvironmentData.h>
 #import <EABluetooth/EASportSupport.h>
+#import <EABluetooth/EAHrMaxMinShow.h>
+
+
 // ops
 #import <EABluetooth/EABingingOps.h>
 #import <EABluetooth/EADeviceOps.h>

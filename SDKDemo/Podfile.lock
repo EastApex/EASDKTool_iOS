@@ -8,7 +8,7 @@ PODS:
   - CocoaLumberjack (3.8.5):
     - CocoaLumberjack/Core (= 3.8.5)
   - CocoaLumberjack/Core (3.8.5)
-  - EABluetooth (1.1.02.3):
+  - EABluetooth (1.1.02.10):
     - BGFMDB
     - Protobuf
     - SAMKeychain
@@ -46,13 +46,13 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   EABluetooth:
-    :commit: 5d493514f7ca2ef9690bde7fb2a9c275860a1907
+    :commit: 35b7cb1898fa17caa3eacb889d5764cf095ea4c4
     :git: https://github.com/EastApex/EASDKTool_iOS.git
 
 SPEC CHECKSUMS:
   BGFMDB: 48e6823027232402a678acc7f71484b1fc9171d0
   CocoaLumberjack: 6a459bc897d6d80bd1b8c78482ec7ad05dffc3f0
-  EABluetooth: 063aa16f7c2fc51d9d66eed01e260068b8705857
+  EABluetooth: db0c4fdee33936895836e93e695638da6556bf16
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   Protobuf: 28c89b24435762f60244e691544ed80f50d82701
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c

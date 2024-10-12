@@ -13,8 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// time numeric models
 /// 时间数字模型
-@interface EACustomNumberWatchFaceModel : NSObject
-
+@interface EACustomNumberWatchFaceModel : NSObject  
 
 /// Time type
 /// 时间类型
@@ -46,6 +45,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSArray *)getRGB;
 
 + (CGSize)eaGetNumberSizeForFont:(UIFont *)font;
+
+- (EACustomNumberWatchFaceModel *)change011022Font;
 
 @end
 

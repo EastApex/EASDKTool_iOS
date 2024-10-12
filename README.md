@@ -29,11 +29,19 @@ pod update
 
 ### Release Notes:
     
+    <p>Date：2024-10-09
+    
+        SDK
+        Version v1.1.05.1
+        1. Fix the problem that Chinese week is not displayed on some dials.
+        2. Add the function to obtain the maximum and minimum heart rate of the watch.
+        3. Fix the OTA problem of the A03 watch platform.
+        
     <p>Date：2024-09-25
     
         SDK
         Version v1.1.02.10
-        1.修复自定义表盘bug
+        1. Fix the bug of custom watch face.
         
     <p>Date：2024-09-04
     

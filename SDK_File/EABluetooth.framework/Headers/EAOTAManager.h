@@ -21,6 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 typedef void(^CheckHisResCompleteBlock)(NSArray * _Nullable hisresFiles);
 typedef void(^CheckHisResErrorBlock)(NSError * _Nullable error);
 typedef void(^OTACompleteBlock)(BOOL succ, NSError * _Nullable error);
+typedef void(^UncompressProgressBlock)(CGFloat progress);
+typedef void(^CheckJsonProgressBlock)(CGFloat progress);
+
 
 @interface EAOTAManager : NSObject
 
@@ -42,7 +45,7 @@ typedef void(^OTACompleteBlock)(BOOL succ, NSError * _Nullable error);
 ///   - hisResZipFile: HisRes.zip
 ///   - progress: progress【解压进度】
 ///   - complete: HisRes.bin file that needs to be upgraded【需要升级的HisRes.bin文件】
-- (void)eaCheckHisRes:(EAFileModel *)hisResZipFile progress:(void (^)(CGFloat progress))progress complete:(CheckHisResCompleteBlock)complete fail:(CheckHisResErrorBlock)fail;
+- (void)eaCheckHisRes:(EAFileModel *)hisResZipFile uncompressProgress:(UncompressProgressBlock)uncompressProgressBlock checkProgress:(CheckJsonProgressBlock)checkJsonProgressBlock complete:(CheckHisResCompleteBlock)complete fail:(CheckHisResErrorBlock)fail;
 
 
 

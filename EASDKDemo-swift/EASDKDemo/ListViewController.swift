@@ -77,6 +77,15 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             "id:51 \nPressure monitoring【压力监测】",
             "id:52 \nReal-time data switch【实时数据开关】",
             "id:53 \nVibrate mode【震动模式】",
+//            "id:54 \nAPP starts watch motion (screen motion)【APP启动手表运动（投屏运动）】",
+//            "id:55 \nMenstrual reminder【经期提醒】",
+//            "id:56 \nRemove custom (online) watch faces【删除表盘】",
+//            "id:57 \nExercise heart rate warning【运动心率报警】",
+//            "id:58 \nSOS【紧急联系人】",
+//            "id:56 \nClassic Bluetooth BT Control【BT控制】",
+//            "id:57 \nExercise heart rate warning【运动心率报警】",
+            
+            
         ]
         let setInfo = NSMutableDictionary.init()
         setInfo.setValue("Command【指令】", forKey: "title")
