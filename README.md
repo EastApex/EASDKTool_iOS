@@ -29,6 +29,12 @@ pod update
 
 ### Release Notes:
     
+    <p>Date：2024-10-21
+    
+        SDK
+        Version v1.1.05.5
+        1. Fixed an issue where reconnection may result in disconnection.
+        
     <p>Date：2024-10-14
     
         SDK

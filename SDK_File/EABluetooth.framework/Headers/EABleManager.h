@@ -14,10 +14,11 @@
  https://www.showdoc.com.cn/2042713679210858/0
  
  
+ 
   */
 
 #define kEASDKVERSION   @"1.1.05"
-#define kEASDKBUILD     @"3"
+#define kEASDKBUILD     @"5"
 
 
 
