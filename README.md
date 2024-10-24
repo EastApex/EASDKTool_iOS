@@ -29,6 +29,13 @@ pod update
 
 ### Release Notes:
     
+    <p>Date：2024-10-24
+    
+        SDK
+        Version v1.1.05.6
+        1.In the method centralManager: didDisconnectPeripheral: error: Add more print information, 
+        2.Custom digital dial date week size is too large.
+        
     <p>Date：2024-10-21
     
         SDK
