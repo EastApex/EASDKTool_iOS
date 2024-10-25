@@ -17,10 +17,10 @@
  
   */
 /**
- 10/24: 在方法 centralManager: didDisconnectPeripheral: error:添加更多的打印信息, 自定义数字表盘日期星期字号过大问题
+ 10/25: 在方法 centralManager: didDisconnectPeripheral: error:添加更多的打印信息
  */
 #define kEASDKVERSION   @"1.1.05"
-#define kEASDKBUILD     @"6"
+#define kEASDKBUILD     @"7"
 
 
 
