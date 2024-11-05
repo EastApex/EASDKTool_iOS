@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 if ([EABleConfig logEnable]) {\
 NSLog(@"[EASDKLog]%s-%d " format, __func__,__LINE__, ##__VA_ARGS__);\
 if ([EABleConfig saveLogEnable]) {\
-NSString *logFirstString = [NSString stringWithFormat:@"【%s:%d】** ",__func__,__LINE__];\
+NSString *logFirstString = [NSString stringWithFormat:@"%s:%d ||** ",__func__,__LINE__];\
 NSString *logString = [NSString stringWithFormat:@""format,##__VA_ARGS__];\
 [EABleConfig writeLog:[logFirstString stringByAppendingString:logString]];\
 }\

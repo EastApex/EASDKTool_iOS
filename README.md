@@ -29,6 +29,12 @@ pod update
 
 ### Release Notes:
     
+        <p>Date：2024-11-05
+    
+        SDK
+        Version v1.1.05.8
+        1.Fixed bug
+        
     <p>Date：2024-10-24
     
         SDK
