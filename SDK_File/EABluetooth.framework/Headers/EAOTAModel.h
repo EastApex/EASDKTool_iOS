@@ -89,6 +89,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (EAFileModel *)eaInitWatchFaceFileWithData:(NSData *)binData version:(NSString *)version watchFaceId:(NSString *)watchFaceId;
 
 
+/// init His watch face file
++ (EAFileModel *)eaInitHisWatchFaceFileWithPath:(NSString *)binPath;
++ (EAFileModel *)eaInitHisWatchFaceFileWithData:(NSData *)binData;
+
+
 /// init
 + (EAFileModel *)eaInitHisResWithPath:(NSString *)zipPath;
 
@@ -139,6 +144,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (uint16_t)getCrcValue:(BOOL)isRes andBinPath:(NSString *)binPath;
 
+- (uint16_t )getHisWfCrcValueWithBinPath:(NSString *)binPath;
 /// 初始化OTA更新
 /// @param binPath binPath
 /// @param otaType EAOtaRequestType

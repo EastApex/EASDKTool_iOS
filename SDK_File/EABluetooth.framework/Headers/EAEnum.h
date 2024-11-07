@@ -2938,6 +2938,9 @@ typedef NS_ENUM(NSUInteger,EAOtaRequestType) {
     /// 海思音乐: 支持类型AAC,wav,flac,sbc,ogg,mp3
     EAOtaRequestTypeHisMusic = 10,
     
+    /// Watch face
+    /// 海思表盘
+    EAOtaRequestTypeHisWf = 998,
     
     /// 海思字库图库
     EAOtaRequestTypeHisResZip = 999,

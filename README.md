@@ -28,7 +28,14 @@ pod update
 
 
 ### Release Notes:
+
+    <p>Date：2024-11-07
     
+        SDK
+        Version v1.1.05.10
+        1.Fixed bug
+        2.Support ota His watch face.
+        
     <p>Date：2024-11-06
     
         SDK
