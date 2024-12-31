@@ -338,6 +338,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// 功能与协议: 手表心率最高值及最小值
 @property(nonatomic, assign) BOOL hrMaxMinShowSupport;
 
+/// （id = 70）
+/// 功能与协议: muslim朝拜时间
+@property(nonatomic, assign) BOOL muslimDirTimeSupport;
+
+/// （id = 71）
+/// 功能与协议: muslim日历
+@property(nonatomic, assign) BOOL muslimTimestampSupport;
 
 @end
 

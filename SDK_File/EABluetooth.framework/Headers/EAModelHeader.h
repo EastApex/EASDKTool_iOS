@@ -99,7 +99,8 @@
 #import <EABluetooth/EATemplateEnvironmentData.h>
 #import <EABluetooth/EASportSupport.h>
 #import <EABluetooth/EAHrMaxMinShow.h>
-
+#import <EABluetooth/EAMuslimDirectionTime.h>
+#import <EABluetooth/EAMuslimCalendar.h>
 
 // ops
 #import <EABluetooth/EABingingOps.h>

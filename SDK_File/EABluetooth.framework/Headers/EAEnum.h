@@ -379,9 +379,17 @@ typedef NS_ENUM(NSUInteger, EADataInfoType) {
     EADataInfoTypeAppSportSupport = 68,
     
     /// id = 69
-    ///
     /// EAHrMaxMinShow
     EADataInfoTypeHrMaxMinShow = 69,
+    
+    /// id = 70
+    /// EAMuslimDirectionTime
+    EADataInfoTypeMuslimDirectionTime = 70,
+    
+    /// id = 71
+    /// EAMuslimCalendar
+    EADataInfoTypeMuslimCalendar = 71,
+    
     
     /// Operating Phone Commands
     /// 操作手机命令
@@ -960,6 +968,9 @@ typedef NS_ENUM(NSUInteger,EADeviceOpsType) {
     
     /** 宠物器需求：清除用户数据（需要按2次按钮确认） */
     EADeviceOpsTypeClearUserdata = 16,
+    
+    /** 开启手机拍照 */
+    EADeviceOpsTypeStartPhoneCamera = 17,
 };
 
 
